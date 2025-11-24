@@ -1,0 +1,451 @@
+{
+  "summary": {
+    "fields_old": 168,
+    "fields_new": 168,
+    "added": 2,
+    "removed": 2,
+    "modified": 9
+  },
+  "added_fields": [
+    "Id",
+    "Name"
+  ],
+  "removed_fields": [
+    "Namee",
+    "eco"
+  ],
+  "modified_fields": {
+    "BillingCity": {
+      "old": {
+        "label": "Billing City",
+        "name": "BillingCity",
+        "custom": false,
+        "picklistValues": [],
+        "referenceTo": [],
+        "type": "string",
+        "precision": 1,
+        "scale": 0,
+        "length": 40
+      },
+      "new": {
+        "label": "Billing City",
+        "name": "BillingCity",
+        "custom": false,
+        "picklistValues": [],
+        "referenceTo": [],
+        "type": "string",
+        "precision": 0,
+        "scale": 0,
+        "length": 40
+      },
+      "diffs": [
+        {
+          "attribute": "precision",
+          "old": 1,
+          "new": 0
+        }
+      ]
+    },
+    "BillingPostalCode": {
+      "old": {
+        "label": "Billing Zip/Postal Code",
+        "name": "BillingPostalCode",
+        "custom": false,
+        "picklistValues": [],
+        "referenceTo": [],
+        "type": "string",
+        "precision": 0,
+        "scale": 0,
+        "length": 3
+      },
+      "new": {
+        "label": "Billing Zip/Postal Code",
+        "name": "BillingPostalCode",
+        "custom": false,
+        "picklistValues": [],
+        "referenceTo": [],
+        "type": "string",
+        "precision": 0,
+        "scale": 0,
+        "length": 20
+      },
+      "diffs": [
+        {
+          "attribute": "length",
+          "old": 3,
+          "new": 20
+        }
+      ]
+    },
+    "BillingState": {
+      "old": {
+        "label": "Billing State/Province",
+        "name": "BillingState",
+        "custom": false,
+        "picklistValues": [],
+        "referenceTo": [],
+        "type": "string",
+        "precision": 0,
+        "scale": 2,
+        "length": 80
+      },
+      "new": {
+        "label": "Billing State/Province",
+        "name": "BillingState",
+        "custom": false,
+        "picklistValues": [],
+        "referenceTo": [],
+        "type": "string",
+        "precision": 0,
+        "scale": 0,
+        "length": 80
+      },
+      "diffs": [
+        {
+          "attribute": "scale",
+          "old": 2,
+          "new": 0
+        }
+      ]
+    },
+    "BillingStreet": {
+      "old": {
+        "label": "Billing Street",
+        "name": "BillingStreet",
+        "custom": false,
+        "picklistValues": [],
+        "referenceTo": [],
+        "type": "textareaa",
+        "precision": 0,
+        "scale": 0,
+        "length": 255
+      },
+      "new": {
+        "label": "Billing Street",
+        "name": "BillingStreet",
+        "custom": false,
+        "picklistValues": [],
+        "referenceTo": [],
+        "type": "textarea",
+        "precision": 0,
+        "scale": 0,
+        "length": 255
+      },
+      "diffs": [
+        {
+          "attribute": "type",
+          "old": "textareaa",
+          "new": "textarea"
+        }
+      ]
+    },
+    "IsDeleted": {
+      "old": {
+        "label": "Deleted",
+        "name": "IsDeleted",
+        "custom": true,
+        "picklistValues": [],
+        "referenceTo": [],
+        "type": "boolean",
+        "precision": 0,
+        "scale": 0,
+        "length": 0
+      },
+      "new": {
+        "label": "Deleted",
+        "name": "IsDeleted",
+        "custom": false,
+        "picklistValues": [],
+        "referenceTo": [],
+        "type": "boolean",
+        "precision": 0,
+        "scale": 0,
+        "length": 0
+      },
+      "diffs": [
+        {
+          "attribute": "custom",
+          "old": true,
+          "new": false
+        }
+      ]
+    },
+    "MasterRecordId": {
+      "old": {
+        "label": "Master Record IDD",
+        "name": "MasterRecordId",
+        "custom": false,
+        "picklistValues": [],
+        "referenceTo": [
+          "Account"
+        ],
+        "type": "reference",
+        "precision": 0,
+        "scale": 0,
+        "length": 18
+      },
+      "new": {
+        "label": "Master Record ID",
+        "name": "MasterRecordId",
+        "custom": false,
+        "picklistValues": [],
+        "referenceTo": [
+          "Account"
+        ],
+        "type": "reference",
+        "precision": 0,
+        "scale": 0,
+        "length": 18
+      },
+      "diffs": [
+        {
+          "attribute": "label",
+          "old": "Master Record IDD",
+          "new": "Master Record ID"
+        }
+      ]
+    },
+    "ParentId": {
+      "old": {
+        "label": "Parent Account ID",
+        "name": "ParentId",
+        "custom": false,
+        "picklistValues": [],
+        "referenceTo": [
+          "Accountt"
+        ],
+        "type": "reference",
+        "precision": 0,
+        "scale": 0,
+        "length": 18
+      },
+      "new": {
+        "label": "Parent Account ID",
+        "name": "ParentId",
+        "custom": false,
+        "picklistValues": [],
+        "referenceTo": [
+          "Account"
+        ],
+        "type": "reference",
+        "precision": 0,
+        "scale": 0,
+        "length": 18
+      },
+      "diffs": [
+        {
+          "attribute": "referenceTo",
+          "detail": {
+            "added": [
+              "Account"
+            ],
+            "removed": [
+              "Accountt"
+            ]
+          }
+        }
+      ]
+    },
+    "RecordTypeId": {
+      "old": {
+        "label": "Record Type ID",
+        "name": "RecordTypeId",
+        "custom": false,
+        "picklistValues": [],
+        "referenceTo": [],
+        "type": "reference",
+        "precision": 0,
+        "scale": 0,
+        "length": 18
+      },
+      "new": {
+        "label": "Record Type ID",
+        "name": "RecordTypeId",
+        "custom": false,
+        "picklistValues": [],
+        "referenceTo": [
+          "RecordType"
+        ],
+        "type": "reference",
+        "precision": 0,
+        "scale": 0,
+        "length": 18
+      },
+      "diffs": [
+        {
+          "attribute": "referenceTo",
+          "detail": {
+            "added": [
+              "RecordType"
+            ],
+            "removed": []
+          }
+        }
+      ]
+    },
+    "Type": {
+      "old": {
+        "label": "Account Type",
+        "name": "Type",
+        "custom": false,
+        "picklistValues": [
+          {
+            "active": false,
+            "label": "Analyst",
+            "value": "Analyst"
+          },
+          {
+            "active": true,
+            "label": "Competittor",
+            "value": "Competitor"
+          },
+          {
+            "active": true,
+            "label": "Customer",
+            "value": "Customerr"
+          },
+          {
+            "active": true,
+            "label": "Integrator",
+            "value": "Integrator"
+          },
+          {
+            "active": true,
+            "label": "Investor",
+            "value": "Investor"
+          },
+          {
+            "active": true,
+            "label": "Partner",
+            "value": "Partner"
+          },
+          {
+            "active": true,
+            "label": "Press",
+            "value": "Press"
+          },
+          {
+            "active": true,
+            "label": "Prospect",
+            "value": "Prospect"
+          },
+          {
+            "active": true,
+            "label": "Reseller",
+            "value": "Reseller"
+          },
+          {
+            "active": true,
+            "label": "Other",
+            "value": "Other"
+          }
+        ],
+        "referenceTo": [],
+        "type": "picklist",
+        "precision": 0,
+        "scale": 0,
+        "length": 255
+      },
+      "new": {
+        "label": "Account Type",
+        "name": "Type",
+        "custom": false,
+        "picklistValues": [
+          {
+            "active": true,
+            "label": "Analyst",
+            "value": "Analyst"
+          },
+          {
+            "active": true,
+            "label": "Competitor",
+            "value": "Competitor"
+          },
+          {
+            "active": true,
+            "label": "Customer",
+            "value": "Customer"
+          },
+          {
+            "active": true,
+            "label": "Integrator",
+            "value": "Integrator"
+          },
+          {
+            "active": true,
+            "label": "Investor",
+            "value": "Investor"
+          },
+          {
+            "active": true,
+            "label": "Partner",
+            "value": "Partner"
+          },
+          {
+            "active": true,
+            "label": "Press",
+            "value": "Press"
+          },
+          {
+            "active": true,
+            "label": "Prospect",
+            "value": "Prospect"
+          },
+          {
+            "active": true,
+            "label": "Reseller",
+            "value": "Reseller"
+          },
+          {
+            "active": true,
+            "label": "Other",
+            "value": "Other"
+          }
+        ],
+        "referenceTo": [],
+        "type": "picklist",
+        "precision": 0,
+        "scale": 0,
+        "length": 255
+      },
+      "diffs": [
+        {
+          "attribute": "picklistValues",
+          "detail": {
+            "added": [
+              "Customer"
+            ],
+            "removed": [
+              "Customerr"
+            ],
+            "changed": [
+              {
+                "value": "Competitor",
+                "old": {
+                  "label": "Competittor",
+                  "active": true
+                },
+                "new": {
+                  "label": "Competitor",
+                  "active": true
+                }
+              },
+              {
+                "value": "Analyst",
+                "old": {
+                  "label": "Analyst",
+                  "active": false
+                },
+                "new": {
+                  "label": "Analyst",
+                  "active": true
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "text_report": "Old fields: 168\nNew fields: 168\nAdded fields: 2\nRemoved fields: 2\nModified fields: 9\n\nAdded:\n  + Id\n  + Name\nRemoved:\n  - Namee\n  - eco\n\nModified:\n* BillingCity\n    - precision -> old: 1 new: 0\n* BillingPostalCode\n    - length -> old: 3 new: 20\n* BillingState\n    - scale -> old: 2 new: 0\n* BillingStreet\n    - type -> old: textareaa new: textarea\n* IsDeleted\n    - custom -> old: True new: False\n* MasterRecordId\n    - label -> old: Master Record IDD new: Master Record ID\n* ParentId\n    - referenceTo {\"added\": [\"Account\"], \"removed\": [\"Accountt\"]}\n* RecordTypeId\n    - referenceTo {\"added\": [\"RecordType\"], \"removed\": []}\n* Type\n    - picklistValues {\"added\": [\"Customer\"], \"removed\": [\"Customerr\"], \"changed\": [{\"value\": \"Competitor\", \"old\": {\"label\": \"Competittor\", \"active\": true}, \"new\": {\"label\": \"Competitor\", \"active\": true}}, {\"value\": \"Analyst\", \"old\": {\"label\": \"Analyst\", \"active\": false}, \"new\": {\"label\": \"Analyst\", \"active\": true}}]}"
+}

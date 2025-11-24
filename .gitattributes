@@ -1,0 +1,13 @@
+# Normalize line endings in this repository
+* text=auto
+
+# Force LF in source files to avoid platform diffs
+*.py text eol=lf
+*.json text eol=lf
+*.md text eol=lf
+
+# Keep binary files as-is
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary

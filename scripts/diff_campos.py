@@ -1,5 +1,6 @@
 import json
 import sys
+import os
 import argparse
 from collections import defaultdict
 
@@ -122,6 +123,41 @@ def print_summary(report):
                     print('    -', d['attribute'], '->', 'old:', d.get('old'), 'new:', d.get('new'))
 
 
+def format_summary(report):
+    """Return a human-readable string similar to the terminal output produced by print_summary."""
+    out_lines = []
+    s = report.get('summary', {})
+    out_lines.append(f"Old fields: {s.get('fields_old')}")
+    out_lines.append(f"New fields: {s.get('fields_new')}")
+    out_lines.append(f"Added fields: {s.get('added')}")
+    out_lines.append(f"Removed fields: {s.get('removed')}")
+    out_lines.append(f"Modified fields: {s.get('modified')}")
+    out_lines.append('')
+
+    if report.get('added_fields'):
+        out_lines.append('Added:')
+        for n in report['added_fields']:
+            out_lines.append(f"  + {n}")
+    if report.get('removed_fields'):
+        out_lines.append('Removed:')
+        for n in report['removed_fields']:
+            out_lines.append(f"  - {n}")
+    if report.get('modified_fields'):
+        out_lines.append('')
+        out_lines.append('Modified:')
+        for name, info in report['modified_fields'].items():
+            out_lines.append(f"* {name}")
+            for d in info['diffs']:
+                if 'detail' in d:
+                    # pretty-print JSON detail inline
+                    detail = json.dumps(d['detail'], ensure_ascii=False)
+                    out_lines.append(f"    - {d['attribute']} {detail}")
+                else:
+                    out_lines.append(f"    - {d['attribute']} -> old: {d.get('old')} new: {d.get('new')}")
+
+    return '\n'.join(out_lines)
+
+
 def main():
     parser = argparse.ArgumentParser(description='Compare two simplified Salesforce fields JSON files')
     parser.add_argument('old', help='Old JSON file path')
@@ -137,6 +173,11 @@ def main():
     print_summary(report)
 
     if args.report:
+        # embed a human-readable text version into the JSON report
+        try:
+            report['text_report'] = format_summary(report)
+        except Exception:
+            report['text_report'] = ''
         with open(args.report, 'w', encoding='utf-8') as fh:
             json.dump(report, fh, ensure_ascii=False, indent=2)
         print('\nWrote report to', args.report)
