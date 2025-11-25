@@ -81,6 +81,8 @@ def main():
     parser.add_argument('--keep-temp', action='store_true', help='Keep temporary files (not used except for backwards compatibility)')
     args = parser.parse_args()
 
+    run_download()
+
     incoming_list = []
     use_map = False
     map_path = None
