@@ -1,0 +1,439 @@
+{
+  "fields": [
+    {
+      "label": "Action Plan ID",
+      "name": "Id",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "id",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Owner ID",
+      "name": "OwnerId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Group",
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Deleted",
+      "name": "IsDeleted",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Name",
+      "name": "Name",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Currency ISO Code",
+      "name": "CurrencyIsoCode",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Peruvian Sol",
+          "value": "PEN"
+        },
+        {
+          "active": true,
+          "label": "U.S. Dollar",
+          "value": "USD"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 3
+    },
+    {
+      "label": "Created Date",
+      "name": "CreatedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Created By ID",
+      "name": "CreatedById",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Last Modified Date",
+      "name": "LastModifiedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Modified By ID",
+      "name": "LastModifiedById",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "System Modstamp",
+      "name": "SystemModstamp",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Viewed Date",
+      "name": "LastViewedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Referenced Date",
+      "name": "LastReferencedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Target Record ID",
+      "name": "TargetId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Account",
+        "Asset",
+        "AssetAccountParticipant",
+        "AssetContactParticipant",
+        "BusinessLicense",
+        "Campaign",
+        "Case",
+        "ChangeRequest",
+        "Contact",
+        "Contract",
+        "Incident",
+        "IndividualApplication",
+        "Lead",
+        "Opportunity",
+        "PZ_RecordAttributeBasePricing__c",
+        "Problem",
+        "RecordAlert",
+        "Visit",
+        "WorkOrder",
+        "WorkOrderLineItem",
+        "et4ae5__Triggered_Send_Execution__c",
+        "pz_PrintHistory__c",
+        "pz_QSFUserandOfficeJunction__c",
+        "pz_QSF_Audio_Recording__c",
+        "pz_QSF_Office__c",
+        "pz_QSF_Quenda_WS__c",
+        "vlocity_cmt__AccountAdServer__c",
+        "vlocity_cmt__ActivityTemplate__c",
+        "vlocity_cmt__AdServer__c",
+        "vlocity_cmt__ApplicationPartyRelationship__c",
+        "vlocity_cmt__ApplicationTemplate__c",
+        "vlocity_cmt__Application__c",
+        "vlocity_cmt__AssessmentAnswer__c",
+        "vlocity_cmt__AssessmentQuestion__c",
+        "vlocity_cmt__Assessment__c",
+        "vlocity_cmt__CampaignMemberActionLog__c",
+        "vlocity_cmt__Catalog__c",
+        "vlocity_cmt__ContractTerm__c",
+        "vlocity_cmt__DocumentTemplateElement__c",
+        "vlocity_cmt__Element__c",
+        "vlocity_cmt__Household__c",
+        "vlocity_cmt__MediaProperty__c",
+        "vlocity_cmt__OmniScriptDefinition__c",
+        "vlocity_cmt__OrchestrationItem__c",
+        "vlocity_cmt__OrderItemAdPlacement__c",
+        "vlocity_cmt__OrderPayment__c",
+        "vlocity_cmt__OutboundConfiguration__c",
+        "vlocity_cmt__PartyRelationship__c",
+        "vlocity_cmt__QuoteLineItemAdPlacement__c",
+        "vlocity_cmt__RuleProperty__c",
+        "vlocity_cmt__ScreeningRuleGroup__c",
+        "vlocity_cmt__ScreeningRule__c",
+        "vlocity_cmt__StateTransition__c",
+        "vlocity_cmt__StatementLineItem__c",
+        "vlocity_cmt__UserAdServer__c",
+        "vlocity_cmt__VlocityScheduledJob__c",
+        "vlocity_cmt__VlocityUILayout__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Action Plan Template Version ID",
+      "name": "ActionPlanTemplateVersionId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "ActionPlanTemplateVersion"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Action Plan Type",
+      "name": "ActionPlanType",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Industries",
+          "value": "Industries"
+        },
+        {
+          "active": true,
+          "label": "Assessment Execution",
+          "value": "Retail"
+        },
+        {
+          "active": true,
+          "label": "Sales",
+          "value": "Sales"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Status",
+      "name": "ActionPlanState",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "No se inició",
+          "value": "No se inició"
+        },
+        {
+          "active": true,
+          "label": "En curso",
+          "value": "En curso"
+        },
+        {
+          "active": true,
+          "label": "Cancelado",
+          "value": "Cancelado"
+        },
+        {
+          "active": true,
+          "label": "Completado",
+          "value": "Completado"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Start Date",
+      "name": "StartDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Skip Nonwork Days",
+      "name": "IsUsingHolidayHours",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Recurrence Schedule ID",
+      "name": "RecurringScheduleId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "RecurrenceSchedule"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Record Creation Type",
+      "name": "RecordCreationType",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Master",
+          "value": "Master"
+        },
+        {
+          "active": true,
+          "label": "Autocreated",
+          "value": "Autocreated"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Schedule Frequency",
+      "name": "ScheduleFrequency",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 50
+    },
+    {
+      "label": "Status Code",
+      "name": "StatusCode",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Not Started",
+          "value": "NotStarted"
+        },
+        {
+          "active": true,
+          "label": "In Progress",
+          "value": "InProgress"
+        },
+        {
+          "active": true,
+          "label": "Completed",
+          "value": "Completed"
+        },
+        {
+          "active": true,
+          "label": "Canceled",
+          "value": "Canceled"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "End Date",
+      "name": "EndDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Actual End Date",
+      "name": "ActualEndDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Actual Start Date",
+      "name": "ActualStartDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Should Allow Override",
+      "name": "ShouldAllowOverride",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    }
+  ]
+}

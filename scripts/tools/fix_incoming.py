@@ -7,46 +7,30 @@ import time
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
 ROOT_DIR = os.path.dirname(THIS_DIR)
 INCOMING_DIR = os.path.join(ROOT_DIR, 'incoming_objects')
+SCRIPTS_DIR = os.path.join(ROOT_DIR, 'scripts')
 
 # Try to import the canonical objects list from the download script so we can
 # resolve friendly names in the map (like "Party_Relationship") to real
 # Salesforce API names (like "vlocity_cmt__PartyRelationship__c").
 try:
-    # first try relative import
-    from download_campos import objects as DOWNLOAD_OBJECTS
+    from scripts.download_campos import objects as DOWNLOAD_OBJECTS
 except Exception:
-    try:
-        # fallback to package-like import when run from repo root
-        from scripts.download_campos import objects as DOWNLOAD_OBJECTS
-    except Exception:
-        DOWNLOAD_OBJECTS = []
+    DOWNLOAD_OBJECTS = []
 
 
 def resolve_api_name(obj_name):
-    """Return the API name for an object token from the map.
-
-    If the map lists a friendly name (label or safe label like "Party_Relationship"),
-    try to match it against the `DOWNLOAD_OBJECTS` list and return the configured
-    `apiName`. If no mapping is found, return the original `obj_name` unchanged.
-    """
     if not obj_name:
         return obj_name
-    # If we couldn't import the download list, just return what we were given
     if not DOWNLOAD_OBJECTS:
         return obj_name
-
-    # exact apiName match
     for o in DOWNLOAD_OBJECTS:
         if o.get('apiName') == obj_name:
             return obj_name
-
-    # try matching by label or safe_label
     for o in DOWNLOAD_OBJECTS:
         label = o.get('label') or o.get('apiName')
         safe = label.replace(' ', '_')
         if obj_name == label or obj_name == safe:
             return o.get('apiName') or label
-
     return obj_name
 
 
@@ -60,7 +44,6 @@ def read_json_flexible(path):
     if not data:
         return None
 
-    # try BOM-aware and common encodings
     candidates = []
     if data.startswith(b"\xef\xbb\xbf"):
         candidates.append('utf-8-sig')
@@ -89,7 +72,6 @@ def describe_object(api, out_path, target_org=None, timeout=120, retries=2, dry_
             print('DRY-RUN:', ' '.join(cmd), '>', out_path)
             return 0
         try:
-            # try direct exec
             with open(out_path, 'wb') as f:
                 proc = subprocess.run(cmd, stdout=f, stderr=subprocess.PIPE, timeout=timeout)
             if proc.returncode == 0:
@@ -98,7 +80,6 @@ def describe_object(api, out_path, target_org=None, timeout=120, retries=2, dry_
                 err = proc.stderr.decode(errors='ignore') if proc.stderr else ''
                 print(f'Attempt {attempt} failed for {api}: rc={proc.returncode} err={err}')
         except FileNotFoundError:
-            # fallback to shell on Windows (sf shim)
             target_part = f' --target-org {target_org}' if target_org else ''
             cmd_line = f'sf force:schema:sobject:describe --sobjecttype "{api}" --json{target_part}'
             try:
@@ -143,7 +124,6 @@ def main():
             return 1
         entries = data.get('objects', [])
     else:
-        # autodiscover incoming files
         for fname in sorted(os.listdir(INCOMING_DIR)):
             if fname.startswith('incoming-') and fname.endswith('.json'):
                 obj = fname[len('incoming-'):-5]
@@ -152,7 +132,6 @@ def main():
     to_fix = []
     for entry in entries:
         incoming = entry.get('incoming')
-        # entry may provide a friendly name in 'object' (label or safe_label) or an apiName
         raw_obj = entry.get('object') or entry.get('api') or entry.get('apiName')
         api = resolve_api_name(raw_obj)
         incoming_path = incoming if os.path.isabs(incoming) else os.path.join(INCOMING_DIR, incoming)

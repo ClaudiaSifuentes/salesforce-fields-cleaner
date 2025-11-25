@@ -1,0 +1,15 @@
+{
+  "summary": {
+    "fields_old": 176,
+    "fields_new": 177,
+    "added": 1,
+    "removed": 0,
+    "modified": 0
+  },
+  "added_fields": [
+    "Id"
+  ],
+  "removed_fields": [],
+  "modified_fields": {},
+  "text_report": "Old fields: 176\nNew fields: 177\nAdded fields: 1\nRemoved fields: 0\nModified fields: 0\n\nAdded:\n  + Id"
+}

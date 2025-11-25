@@ -8,8 +8,20 @@ login_cmd = "sf force:auth:web:login -a pluz--dev -d --instance-url https://pluz
 
 # default objects list
 objects = [
+    {"label": "Account", "apiName": "Account"},
+    {"label": "Contact", "apiName": "Contact"},
+    {"label": "Party_Relationship", "apiName": "vlocity_cmt__PartyRelationship__c"},
+    {"label": "Premises", "apiName": "vlocity_cmt__Premises__c"},
+    {"label": "Service_Point", "apiName": "vlocity_cmt__ServicePoint__c"},
     {"label": "Inventory_Item", "apiName": "vlocity_cmt__InventoryItem__c"},
     {"label": "Case", "apiName": "Case"},
+    {"label": "Contract", "apiName": "Contract"},
+    {"label": "Asset", "apiName": "Asset"},
+    {"label": "Action_Plan", "apiName": "ActionPlan"},
+    {"label": "Action_Plan_Item", "apiName": "ActionPlanItem"},
+    {"label": "Quote", "apiName": "Quote"},
+    {"label": "Quote_Line_Item", "apiName": "QuoteLineItem"},
+    {"label": "Work_Order", "apiName": "WorkOrder"},
     {"label": "Task", "apiName": "Task"},
     {"label": "Payment_Adjustment", "apiName": "vlocity_cmt__PaymentAdjustment__c"},
 ]

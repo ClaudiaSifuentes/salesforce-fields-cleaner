@@ -4,6 +4,7 @@ import json
 import subprocess
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SCRIPTS_DIR = os.path.join(ROOT, 'scripts')
 MAP_PATH = os.path.join(ROOT, 'objects_map.json')
 SIMPLIFIED_DIR = os.path.join(ROOT, 'simplified_objects')
 BASELINE_DIR = os.path.join(ROOT, 'baseline_objects')
@@ -15,7 +16,7 @@ def ensure_dirs():
             os.makedirs(d)
 
 def run_diff(old_path, new_path, report_path):
-    cmd = [sys.executable, os.path.join(os.path.dirname(__file__), 'diff_campos.py'), old_path, new_path, report_path]
+    cmd = [sys.executable, os.path.join(SCRIPTS_DIR, 'diff_campos.py'), old_path, new_path, report_path]
     proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     return proc.returncode, proc.stdout.decode(errors='replace')
 
@@ -32,7 +33,6 @@ def main():
     summary = []
     for entry in entries:
         obj = entry.get('object')
-        incoming = entry.get('incoming')
         simplified = entry.get('simplified')
         baseline = entry.get('baseline')
         report = entry.get('report')

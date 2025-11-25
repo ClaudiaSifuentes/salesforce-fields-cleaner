@@ -3,6 +3,7 @@ import subprocess
 import sys
 
 ROOT = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+SCRIPTS_DIR = os.path.join(ROOT, 'scripts')
 IN_DIR = os.path.join(ROOT, 'incoming_objects')
 OUT_DIR = os.path.join(ROOT, 'simplified_objects')
 
@@ -11,7 +12,7 @@ def ensure_out():
         os.makedirs(OUT_DIR)
 
 def run_clean(in_path, out_path):
-    cmd = [sys.executable, os.path.join(os.path.dirname(__file__), 'clean_campos.py'), in_path, out_path]
+    cmd = [sys.executable, os.path.join(SCRIPTS_DIR, 'clean_campos.py'), in_path, out_path]
     proc = subprocess.run(cmd, stdout=subprocess.PIPE, stderr=subprocess.STDOUT)
     return proc.returncode, proc.stdout.decode(errors='replace')
 

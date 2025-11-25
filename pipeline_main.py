@@ -24,6 +24,16 @@ DOWNLOADSCRIPT = os.path.join(SCRIPTS_DIR, 'download_campos.py')
 CLEANSCRIPT = os.path.join(SCRIPTS_DIR, 'clean_campos.py')
 DIFFSCRIPT = os.path.join(SCRIPTS_DIR, 'diff_campos.py')
 
+# Try to import download list (objects) from the download script so the pipeline
+# can process exactly the same set of objects the downloader would.
+try:
+    from download_campos import objects as DOWNLOAD_OBJECTS
+except Exception:
+    try:
+        from scripts.download_campos import objects as DOWNLOAD_OBJECTS
+    except Exception:
+        DOWNLOAD_OBJECTS = []
+
 
 def is_simplified(path):
     try:
@@ -76,8 +86,22 @@ def run_diff(old_simplified, new_simplified, report_path=None):
     if report_path:
         print(f'Report written to {report_path}')
 
-def run_download():
+def run_download(target_org=None, only=None, parallel=None, timeout=None, retries=None, dry_run=False):
+    # Build download command and forward selected options to download_campos.py
     cmd = [sys.executable, DOWNLOADSCRIPT]
+    if target_org:
+        cmd += ['--target-org', target_org]
+    if only:
+        cmd += ['--only', only]
+    if parallel is not None:
+        cmd += ['--parallel', str(parallel)]
+    if timeout is not None:
+        cmd += ['--timeout', str(timeout)]
+    if retries is not None:
+        cmd += ['--retries', str(retries)]
+    if dry_run:
+        cmd += ['--dry-run']
+
     proc = subprocess.run(cmd, capture_output=True, text=False)
     out = proc.stdout.decode('utf-8', errors='replace') if proc.stdout is not None else ''
     err = proc.stderr.decode('utf-8', errors='replace') if proc.stderr is not None else ''
@@ -98,10 +122,16 @@ def main():
     parser.add_argument('--report', help='Optional path to write JSON report produced by diff script')
     parser.add_argument('--keep-temp', action='store_true', help='Keep temporary files (not used except for backwards compatibility)')
     parser.add_argument('--skip-download', action='store_true', help='Skip running the download step')
+    # Download options forwarded to download_campos.py
+    parser.add_argument('--target-org', help='sf target org alias to pass to download script')
+    parser.add_argument('--only', help='Comma-separated list of objects to download (labels or apiNames)')
+    parser.add_argument('--parallel', type=int, default=1, help='Number of parallel describes for download step')
+    parser.add_argument('--timeout', type=int, default=120, help='Timeout seconds per describe for download step')
+    parser.add_argument('--retries', type=int, default=2, help='Retries per describe for download step')
     args = parser.parse_args()
 
     if not args.skip_download:
-        run_download()
+        run_download(target_org=args.target_org, only=args.only, parallel=args.parallel, timeout=args.timeout, retries=args.retries)
 
     incoming_list = []
     use_map = False
@@ -159,8 +189,8 @@ def main():
         print('Diff script not found:', DIFFSCRIPT)
         raise SystemExit(3)
 
-    simplified_main = os.path.join(SIMPLIFIED_DIR, 'simplified-account.json')
-    baseline_main = os.path.join(BASELINE_DIR, 'baseline-account.json')
+    simplified_main = os.path.join(SIMPLIFIED_DIR, 'simplified-Account.json')
+    baseline_main = os.path.join(BASELINE_DIR, 'baseline-Account.json')
 
     def most_recent_json(dirpath):
         files = glob.glob(os.path.join(dirpath, '*.json'))
@@ -185,12 +215,31 @@ def main():
     if use_map:
         objs_iter = objs
     else:
-        objs_iter = []
-        for incoming_path in incoming_list:
-            incoming_basename = os.path.basename(incoming_path)
-            obj_basename = os.path.splitext(incoming_basename)[0]
-            obj_name = obj_basename.split('incoming-', 1)[1] if obj_basename.startswith('incoming-') else obj_basename
-            objs_iter.append({'object': obj_name, 'incoming': incoming_basename, 'simplified': f'simplified-{obj_name}.json', 'baseline': f'baseline-{obj_name}.json', 'report': f'report-{obj_name}.json'})
+        # If we have a DOWNLOAD_OBJECTS list from the downloader, prefer using it
+        # so the pipeline processes the same objects the downloader would.
+        if DOWNLOAD_OBJECTS:
+            # If --only was passed, filter the download list accordingly
+            tokens = None
+            if args.only:
+                tokens = [t.strip() for t in args.only.split(',') if t.strip()]
+            objs_iter = []
+            for o in DOWNLOAD_OBJECTS:
+                label = o.get('label') or o.get('apiName')
+                api = o.get('apiName') or label
+                safe = label.replace(' ', '_')
+                # filter by tokens if requested
+                if tokens:
+                    if not (label in tokens or safe in tokens or api in tokens):
+                        continue
+                incoming_basename = f'incoming-{safe}.json'
+                objs_iter.append({'object': safe, 'incoming': incoming_basename, 'simplified': f'simplified-{safe}.json', 'baseline': f'baseline-{safe}.json', 'report': f'report-{safe}.json'})
+        else:
+            objs_iter = []
+            for incoming_path in incoming_list:
+                incoming_basename = os.path.basename(incoming_path)
+                obj_basename = os.path.splitext(incoming_basename)[0]
+                obj_name = obj_basename.split('incoming-', 1)[1] if obj_basename.startswith('incoming-') else obj_basename
+                objs_iter.append({'object': obj_name, 'incoming': incoming_basename, 'simplified': f'simplified-{obj_name}.json', 'baseline': f'baseline-{obj_name}.json', 'report': f'report-{obj_name}.json'})
 
     try:
         for entry in objs_iter:
