@@ -6,6 +6,8 @@ import sys
 import shutil
 import glob
 import time
+import logging
+import traceback
 
 
 THIS_DIR = os.path.dirname(os.path.abspath(__file__))
@@ -40,38 +42,54 @@ def is_simplified(path):
 
 def run_clean(input_path, output_path):
     cmd = [sys.executable, CLEANSCRIPT, input_path, output_path]
-    proc = subprocess.run(cmd, capture_output=True, text=True)
+    proc = subprocess.run(cmd, capture_output=True, text=False)
+    # decode using utf-8 with replacement to avoid console encoding errors
+    out = proc.stdout.decode('utf-8', errors='replace') if proc.stdout is not None else ''
+    err = proc.stderr.decode('utf-8', errors='replace') if proc.stderr is not None else ''
     if proc.returncode != 0:
         print('clean_campos.py failed:')
-        print(proc.stdout)
-        print(proc.stderr)
+        if out:
+            print(out)
+        if err:
+            print(err)
         raise SystemExit(2)
-    print(proc.stdout.strip())
+    if out:
+        print(out.strip())
 
 
 def run_diff(old_simplified, new_simplified, report_path=None):
     cmd = [sys.executable, DIFFSCRIPT, old_simplified, new_simplified]
     if report_path:
         cmd.append(report_path)
-    proc = subprocess.run(cmd, capture_output=True, text=True)
+    proc = subprocess.run(cmd, capture_output=True, text=False)
+    out = proc.stdout.decode('utf-8', errors='replace') if proc.stdout is not None else ''
+    err = proc.stderr.decode('utf-8', errors='replace') if proc.stderr is not None else ''
     if proc.returncode != 0:
         print('diff_campos.py failed:')
-        print(proc.stdout)
-        print(proc.stderr)
+        if out:
+            print(out)
+        if err:
+            print(err)
         raise SystemExit(3)
-    print(proc.stdout)
+    if out:
+        print(out)
     if report_path:
         print(f'Report written to {report_path}')
 
 def run_download():
     cmd = [sys.executable, DOWNLOADSCRIPT]
-    proc = subprocess.run(cmd, capture_output=True, text=True)
+    proc = subprocess.run(cmd, capture_output=True, text=False)
+    out = proc.stdout.decode('utf-8', errors='replace') if proc.stdout is not None else ''
+    err = proc.stderr.decode('utf-8', errors='replace') if proc.stderr is not None else ''
     if proc.returncode != 0:
         print('download_campos.py failed:')
-        print(proc.stdout)
-        print(proc.stderr)
+        if out:
+            print(out)
+        if err:
+            print(err)
         raise SystemExit(3)
-    print(proc.stdout.strip())
+    if out:
+        print(out.strip())
 
 def main():
     parser = argparse.ArgumentParser(description='Pipeline: clean then diff fields JSON')
@@ -79,9 +97,11 @@ def main():
     parser.add_argument('--map', dest='map', help='Path to objects map JSON (defaults to objects_map.json in this folder)')
     parser.add_argument('--report', help='Optional path to write JSON report produced by diff script')
     parser.add_argument('--keep-temp', action='store_true', help='Keep temporary files (not used except for backwards compatibility)')
+    parser.add_argument('--skip-download', action='store_true', help='Skip running the download step')
     args = parser.parse_args()
 
-    run_download()
+    if not args.skip_download:
+        run_download()
 
     incoming_list = []
     use_map = False
@@ -125,10 +145,17 @@ def main():
         if not os.path.isdir(d):
             os.makedirs(d, exist_ok=True)
 
+    # Setup logging to a file so we can diagnose unexpected interruptions
+    log_file = os.path.join(THIS_DIR, 'pipeline_run.log')
+    logging.basicConfig(filename=log_file, level=logging.INFO, format='%(asctime)s %(levelname)s: %(message)s')
+    logging.info('Pipeline started with args: %s', sys.argv[1:])
+
     if not os.path.isfile(CLEANSCRIPT):
+        logging.error('Cleaner script not found: %s', CLEANSCRIPT)
         print('Cleaner script not found:', CLEANSCRIPT)
         raise SystemExit(2)
     if not os.path.isfile(DIFFSCRIPT):
+        logging.error('Diff script not found: %s', DIFFSCRIPT)
         print('Diff script not found:', DIFFSCRIPT)
         raise SystemExit(3)
 
@@ -165,65 +192,78 @@ def main():
             obj_name = obj_basename.split('incoming-', 1)[1] if obj_basename.startswith('incoming-') else obj_basename
             objs_iter.append({'object': obj_name, 'incoming': incoming_basename, 'simplified': f'simplified-{obj_name}.json', 'baseline': f'baseline-{obj_name}.json', 'report': f'report-{obj_name}.json'})
 
-    for entry in objs_iter:
-        incoming_name = entry.get('incoming')
-        incoming_path = incoming_name if os.path.isabs(incoming_name) else os.path.join(INCOMING_DIR, incoming_name)
-        if not os.path.isfile(incoming_path):
-            print('Incoming file not found, skipping:', incoming_path)
-            continue
-        obj_name = entry.get('object') or os.path.splitext(os.path.basename(incoming_path))[0].split('incoming-', 1)[-1]
-        print('\n=== Processing object:', obj_name, '===')
+    try:
+        for entry in objs_iter:
+            incoming_name = entry.get('incoming')
+            incoming_path = incoming_name if os.path.isabs(incoming_name) else os.path.join(INCOMING_DIR, incoming_name)
+            if not os.path.isfile(incoming_path):
+                print('Incoming file not found, skipping:', incoming_path)
+                continue
+            obj_name = entry.get('object') or os.path.splitext(os.path.basename(incoming_path))[0].split('incoming-', 1)[-1]
+            logging.info('Starting processing object: %s (incoming: %s)', obj_name, incoming_path)
+            print('\n=== Processing object:', obj_name, '===')
 
-        simplified_name = entry.get('simplified') or f'simplified-{obj_name}.json'
-        baseline_name = entry.get('baseline') or f'baseline-{obj_name}.json'
-        report_name = entry.get('report') or f'report-{obj_name}.json'
+            simplified_name = entry.get('simplified') or f'simplified-{obj_name}.json'
+            baseline_name = entry.get('baseline') or f'baseline-{obj_name}.json'
+            report_name = entry.get('report') or f'report-{obj_name}.json'
 
-        simplified_main_obj = simplified_name if os.path.isabs(simplified_name) else os.path.join(SIMPLIFIED_DIR, simplified_name)
-        baseline_main_obj = baseline_name if os.path.isabs(baseline_name) else os.path.join(BASELINE_DIR, baseline_name)
-        temp_simpl_obj = os.path.join(SIMPLIFIED_DIR, f'simplified-{obj_name}.tmp.json')
-        report_obj = report_name if os.path.isabs(report_name) else os.path.join(REPORT_DIR, report_name)
+            simplified_main_obj = simplified_name if os.path.isabs(simplified_name) else os.path.join(SIMPLIFIED_DIR, simplified_name)
+            baseline_main_obj = baseline_name if os.path.isabs(baseline_name) else os.path.join(BASELINE_DIR, baseline_name)
+            temp_simpl_obj = os.path.join(SIMPLIFIED_DIR, f'simplified-{obj_name}.tmp.json')
+            report_obj = report_name if os.path.isabs(report_name) else os.path.join(REPORT_DIR, report_name)
 
-        if os.path.isfile(baseline_main_obj):
-            baseline_file_obj = baseline_main_obj
-            print('Using baseline file:', baseline_file_obj)
-        else:
-            candidates = sorted(glob.glob(os.path.join(BASELINE_DIR, f'*{obj_name}.json')),
-                                key=os.path.getmtime, reverse=True)
-            if candidates:
-                baseline_file_obj = candidates[0]
-                print('Using baseline file (matched):', baseline_file_obj)
+            if os.path.isfile(baseline_main_obj):
+                baseline_file_obj = baseline_main_obj
+                print('Using baseline file:', baseline_file_obj)
             else:
-                baseline_file_obj = os.path.join(BASELINE_DIR, f'empty_baseline_{obj_name}.json')
-                with open(baseline_file_obj, 'w', encoding='utf-8') as fh:
-                    json.dump({'fields': []}, fh, indent=2, ensure_ascii=False)
-                print('No baseline found for', obj_name, '- created empty baseline at:', baseline_file_obj)
+                candidates = sorted(glob.glob(os.path.join(BASELINE_DIR, f'*{obj_name}.json')),
+                                    key=os.path.getmtime, reverse=True)
+                if candidates:
+                    baseline_file_obj = candidates[0]
+                    print('Using baseline file (matched):', baseline_file_obj)
+                else:
+                    baseline_file_obj = os.path.join(BASELINE_DIR, f'empty_baseline_{obj_name}.json')
+                    with open(baseline_file_obj, 'w', encoding='utf-8') as fh:
+                        json.dump({'fields': []}, fh, indent=2, ensure_ascii=False)
+                    print('No baseline found for', obj_name, '- created empty baseline at:', baseline_file_obj)
 
-        print('Cleaning', incoming_path, '->', temp_simpl_obj)
-        run_clean(incoming_path, temp_simpl_obj)
+            print('Cleaning', incoming_path, '->', temp_simpl_obj)
+            logging.info('Cleaning %s -> %s', incoming_path, temp_simpl_obj)
+            run_clean(incoming_path, temp_simpl_obj)
 
-        report_path_obj = args.report if args.report else report_obj
-        print('Comparing baseline -> new simplified for', obj_name)
-        run_diff(baseline_file_obj, temp_simpl_obj, report_path_obj)
+            report_path_obj = args.report if args.report else report_obj
+            print('Comparing baseline -> new simplified for', obj_name)
+            logging.info('Comparing baseline %s -> new simplified %s', baseline_file_obj, temp_simpl_obj)
+            run_diff(baseline_file_obj, temp_simpl_obj, report_path_obj)
 
-        try:
-            if os.path.isfile(temp_simpl_obj):
-                if os.path.isfile(baseline_main_obj):
-                    bak = os.path.join(BACKUP_DIR, time.strftime(f'backup_%Y%m%dT%H%M%S_baseline-{obj_name}.json'))
-                    try:
-                        shutil.move(baseline_main_obj, bak)
-                        print('Backed up existing baseline to', bak)
-                    except Exception as e:
-                        print('Failed to backup existing baseline:', e)
-                if os.path.isfile(simplified_main_obj):
-                    try:
-                        shutil.move(simplified_main_obj, baseline_main_obj)
-                        print('Promoted previous simplified -> baseline for', obj_name)
-                    except Exception as e:
-                        print('Failed to promote previous simplified to baseline:', e)
-                shutil.move(temp_simpl_obj, simplified_main_obj)
-                print('Updated simplified file for', obj_name, ':', simplified_main_obj)
-        except Exception as e:
-            print('Warning: failed to finalize promotion of simplified/baseline files for', obj_name, e)
+            try:
+                if os.path.isfile(temp_simpl_obj):
+                    if os.path.isfile(baseline_main_obj):
+                        bak = os.path.join(BACKUP_DIR, time.strftime(f'backup_%Y%m%dT%H%M%S_baseline-{obj_name}.json'))
+                        try:
+                            shutil.move(baseline_main_obj, bak)
+                            print('Backed up existing baseline to', bak)
+                        except Exception as e:
+                            print('Failed to backup existing baseline:', e)
+                    if os.path.isfile(simplified_main_obj):
+                        try:
+                            shutil.move(simplified_main_obj, baseline_main_obj)
+                            print('Promoted previous simplified -> baseline for', obj_name)
+                        except Exception as e:
+                            print('Failed to promote previous simplified to baseline:', e)
+                    shutil.move(temp_simpl_obj, simplified_main_obj)
+                    print('Updated simplified file for', obj_name, ':', simplified_main_obj)
+            except Exception as e:
+                logging.warning('Failed to finalize promotion for %s: %s', obj_name, e)
+                print('Warning: failed to finalize promotion of simplified/baseline files for', obj_name, e)
+    except KeyboardInterrupt:
+        logging.error('Pipeline interrupted by KeyboardInterrupt')
+        logging.error('Stack trace:\n%s', traceback.format_exc())
+        print('\nPipeline interrupted (KeyboardInterrupt). Check pipeline_run.log for details.')
+        raise
+    except Exception:
+        logging.error('Unhandled exception in pipeline: %s', traceback.format_exc())
+        raise
 
     if args.keep_temp:
         print('Kept intermediate files in:', SIMPLIFIED_DIR)

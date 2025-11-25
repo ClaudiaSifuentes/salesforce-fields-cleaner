@@ -96,31 +96,40 @@ def make_report(old_by_name, new_by_name):
 
 
 def print_summary(report):
+    def _safe_print(*parts, sep=' ', end='\n'):
+        s = sep.join(str(p) for p in parts) + end
+        try:
+            # normal print (may raise UnicodeEncodeError on some consoles)
+            sys.stdout.write(s)
+        except UnicodeEncodeError:
+            # write bytes utf-8 replacing unencodable chars
+            sys.stdout.buffer.write(s.encode('utf-8', errors='replace'))
+
     s = report.get('summary', {})
-    print('Old fields:', s.get('fields_old'))
-    print('New fields:', s.get('fields_new'))
-    print('Added fields:', s.get('added'))
-    print('Removed fields:', s.get('removed'))
-    print('Modified fields:', s.get('modified'))
-    print('')
+    _safe_print('Old fields:', s.get('fields_old'))
+    _safe_print('New fields:', s.get('fields_new'))
+    _safe_print('Added fields:', s.get('added'))
+    _safe_print('Removed fields:', s.get('removed'))
+    _safe_print('Modified fields:', s.get('modified'))
+    _safe_print('')
 
     if report.get('added_fields'):
-        print('Added:')
+        _safe_print('Added:')
         for n in report['added_fields']:
-            print('  +', n)
+            _safe_print('  +', n)
     if report.get('removed_fields'):
-        print('Removed:')
+        _safe_print('Removed:')
         for n in report['removed_fields']:
-            print('  -', n)
+            _safe_print('  -', n)
     if report.get('modified_fields'):
-        print('\nModified:')
+        _safe_print('\nModified:')
         for name, info in report['modified_fields'].items():
-            print(' *', name)
+            _safe_print(' *', name)
             for d in info['diffs']:
                 if 'detail' in d:
-                    print('    -', d['attribute'], json.dumps(d['detail'], ensure_ascii=False))
+                    _safe_print('    -', d['attribute'], json.dumps(d['detail'], ensure_ascii=False))
                 else:
-                    print('    -', d['attribute'], '->', 'old:', d.get('old'), 'new:', d.get('new'))
+                    _safe_print('    -', d['attribute'], '->', 'old:', d.get('old'), 'new:', d.get('new'))
 
 
 def format_summary(report):

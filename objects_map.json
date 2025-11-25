@@ -1,0 +1,116 @@
+{
+  "objects": [
+    {
+      "object": "Account",
+      "incoming": "incoming-Account.json",
+      "simplified": "simplified-Account.json",
+      "baseline": "baseline-Account.json",
+      "report": "report-Account.json"
+    },
+    {
+      "object": "Contact",
+      "incoming": "incoming-Contact.json",
+      "simplified": "simplified-Contact.json",
+      "baseline": "baseline-Contact.json",
+      "report": "report-Contact.json"
+    },
+    {
+      "object": "Party_Relationship",
+      "incoming": "incoming-Party_Relationship.json",
+      "simplified": "simplified-Party_Relationship.json",
+      "baseline": "baseline-Party_Relationship.json",
+      "report": "report-Party_Relationship.json"
+    },
+    {
+      "object": "Premises",
+      "incoming": "incoming-Premises.json",
+      "simplified": "simplified-Premises.json",
+      "baseline": "baseline-Premises.json",
+      "report": "report-Premises.json"
+    },
+    {
+      "object": "Service_Point",
+      "incoming": "incoming-Service_Point.json",
+      "simplified": "simplified-Service_Point.json",
+      "baseline": "baseline-Service_Point.json",
+      "report": "report-Service_Point.json"
+    },
+    {
+      "object": "Inventory_Item",
+      "incoming": "incoming-Inventory_Item.json",
+      "simplified": "simplified-Inventory_Item.json",
+      "baseline": "baseline-Inventory_Item.json",
+      "report": "report-Inventory_Item.json"
+    },
+    {
+      "object": "Case",
+      "incoming": "incoming-Case.json",
+      "simplified": "simplified-Case.json",
+      "baseline": "baseline-Case.json",
+      "report": "report-Case.json"
+    },
+    {
+      "object": "Contract",
+      "incoming": "incoming-Contract.json",
+      "simplified": "simplified-Contract.json",
+      "baseline": "baseline-Contract.json",
+      "report": "report-Contract.json"
+    },
+    {
+      "object": "Asset",
+      "incoming": "incoming-Asset.json",
+      "simplified": "simplified-Asset.json",
+      "baseline": "baseline-Asset.json",
+      "report": "report-Asset.json"
+    },
+    {
+      "object": "Action_Plan",
+      "incoming": "incoming-Action_Plan.json",
+      "simplified": "simplified-Action_Plan.json",
+      "baseline": "baseline-Action_Plan.json",
+      "report": "report-Action_Plan.json"
+    },
+    {
+      "object": "Action_Plan_Item",
+      "incoming": "incoming-Action_Plan_Item.json",
+      "simplified": "simplified-Action_Plan_Item.json",
+      "baseline": "baseline-Action_Plan_Item.json",
+      "report": "report-Action_Plan_Item.json"
+    },
+    {
+      "object": "Quote",
+      "incoming": "incoming-Quote.json",
+      "simplified": "simplified-Quote.json",
+      "baseline": "baseline-Quote.json",
+      "report": "report-Quote.json"
+    },
+    {
+      "object": "Quote_Line_Item",
+      "incoming": "incoming-Quote_Line_Item.json",
+      "simplified": "simplified-Quote_Line_Item.json",
+      "baseline": "baseline-Quote_Line_Item.json",
+      "report": "report-Quote_Line_Item.json"
+    },
+    {
+      "object": "Work_Order",
+      "incoming": "incoming-Work_Order.json",
+      "simplified": "simplified-Work_Order.json",
+      "baseline": "baseline-Work_Order.json",
+      "report": "report-Work_Order.json"
+    },
+    {
+      "object": "Task",
+      "incoming": "incoming-Task.json",
+      "simplified": "simplified-Task.json",
+      "baseline": "baseline-Task.json",
+      "report": "report-Task.json"
+    },
+    {
+      "object": "Payment_Adjustment",
+      "incoming": "incoming-Payment_Adjustment.json",
+      "simplified": "simplified-Payment_Adjustment.json",
+      "baseline": "baseline-Payment_Adjustment.json",
+      "report": "report-Payment_Adjustment.json"
+    }
+  ]
+}
