@@ -18,6 +18,7 @@ INCOMING_DIR = os.path.join(THIS_DIR, 'incoming_objects')
 REPORT_DIR = os.path.join(THIS_DIR, 'report_objects')
 BACKUP_DIR = os.path.join(THIS_DIR, 'backup_objects')
 
+DOWNLOADSCRIPT = os.path.join(SCRIPTS_DIR, 'download_campos.py')
 CLEANSCRIPT = os.path.join(SCRIPTS_DIR, 'clean_campos.py')
 DIFFSCRIPT = os.path.join(SCRIPTS_DIR, 'diff_campos.py')
 
@@ -62,6 +63,15 @@ def run_diff(old_simplified, new_simplified, report_path=None):
     if report_path:
         print(f'Report written to {report_path}')
 
+def run_download():
+    cmd = [sys.executable, DOWNLOADSCRIPT]
+    proc = subprocess.run(cmd, capture_output=True, text=True)
+    if proc.returncode != 0:
+        print('download_campos.py failed:')
+        print(proc.stdout)
+        print(proc.stderr)
+        raise SystemExit(3)
+    print(proc.stdout.strip())
 
 def main():
     parser = argparse.ArgumentParser(description='Pipeline: clean then diff fields JSON')
