@@ -23,6 +23,7 @@ BACKUP_DIR = os.path.join(THIS_DIR, 'backup_objects')
 DOWNLOADSCRIPT = os.path.join(SCRIPTS_DIR, 'download_campos.py')
 CLEANSCRIPT = os.path.join(SCRIPTS_DIR, 'clean_campos.py')
 DIFFSCRIPT = os.path.join(SCRIPTS_DIR, 'diff_campos.py')
+EXPORTSCRIPT = os.path.join(SCRIPTS_DIR, 'export_reports_csv.py')
 
 # Try to import download list (objects) from the download script so the pipeline
 # can process exactly the same set of objects the downloader would.
@@ -85,6 +86,27 @@ def run_diff(old_simplified, new_simplified, report_path=None):
         print(out)
     if report_path:
         print(f'Report written to {report_path}')
+
+
+def run_export(reports_dir, simplified_dir, baseline_dir, out_csv=None, out_modified=None):
+    """Run the CSV exporter to aggregate report-*.json into CSVs."""
+    cmd = [sys.executable, EXPORTSCRIPT, '--reports-dir', reports_dir, '--simplified-dir', simplified_dir, '--baseline-dir', baseline_dir]
+    if out_csv:
+        cmd += ['--out', out_csv]
+    if out_modified:
+        cmd += ['--out-modified', out_modified]
+    proc = subprocess.run(cmd, capture_output=True, text=False)
+    out = proc.stdout.decode('utf-8', errors='replace') if proc.stdout is not None else ''
+    err = proc.stderr.decode('utf-8', errors='replace') if proc.stderr is not None else ''
+    if proc.returncode != 0:
+        print('export_reports_csv.py failed:')
+        if out:
+            print(out)
+        if err:
+            print(err)
+        raise SystemExit(4)
+    if out:
+        print(out.strip())
 
 def run_download(target_org=None, only=None, parallel=None, timeout=None, retries=None, dry_run=False):
     # Build download command and forward selected options to download_campos.py
@@ -305,6 +327,7 @@ def main():
             except Exception as e:
                 logging.warning('Failed to finalize promotion for %s: %s', obj_name, e)
                 print('Warning: failed to finalize promotion of simplified/baseline files for', obj_name, e)
+        # end for
     except KeyboardInterrupt:
         logging.error('Pipeline interrupted by KeyboardInterrupt')
         logging.error('Stack trace:\n%s', traceback.format_exc())
@@ -313,6 +336,22 @@ def main():
     except Exception:
         logging.error('Unhandled exception in pipeline: %s', traceback.format_exc())
         raise
+
+    # After processing all objects, run the CSV exporter to aggregate per-object reports
+    try:
+        print('\nRunning CSV exporter to aggregate reports...')
+        out_csv = os.path.join(REPORT_DIR, 'reports_summary.csv')
+        out_modified = os.path.join(REPORT_DIR, 'reports_modified.csv')
+        if os.path.isfile(EXPORTSCRIPT):
+            run_export(REPORT_DIR, SIMPLIFIED_DIR, BASELINE_DIR, out_csv=out_csv, out_modified=out_modified)
+            print('CSV export completed:')
+            print(' -', out_csv)
+            print(' -', out_modified)
+        else:
+            print('Exporter script not found, skipping CSV aggregation:', EXPORTSCRIPT)
+    except Exception as e:
+        logging.error('CSV export failed: %s', traceback.format_exc())
+        print('Warning: CSV export failed:', e)
 
     if args.keep_temp:
         print('Kept intermediate files in:', SIMPLIFIED_DIR)

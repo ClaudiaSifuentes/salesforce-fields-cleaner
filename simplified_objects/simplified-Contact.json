@@ -221,23 +221,23 @@
       "custom": false,
       "picklistValues": [
         {
-          "active": false,
-          "label": "Address2",
+          "active": true,
+          "label": "Address",
           "value": "Address"
         },
         {
-          "active": false,
+          "active": true,
           "label": "Near Address",
-          "value": "NearAddresss"
+          "value": "NearAddress"
         },
         {
           "active": true,
           "label": "Block",
-          "value": "Block_Nuevo"
+          "value": "Block"
         },
         {
           "active": true,
-          "label": "Street2",
+          "label": "Street",
           "value": "Street"
         },
         {

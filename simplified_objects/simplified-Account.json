@@ -1,15 +1,26 @@
 {
   "fields": [
     {
-      "label": "Deeleted",
-      "name": "IsDeleted",
-      "custom": true,
+      "label": "Account ID",
+      "name": "Id",
+      "custom": false,
       "picklistValues": [],
       "referenceTo": [],
-      "type": "int",
-      "precision": 3,
-      "scale": 4,
-      "length": 5
+      "type": "id",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Deleted",
+      "name": "IsDeleted",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
     },
     {
       "label": "Master Record ID",
@@ -26,7 +37,7 @@
     },
     {
       "label": "Account Name",
-      "name": "Naame",
+      "name": "Name",
       "custom": false,
       "picklistValues": [],
       "referenceTo": [],
@@ -208,7 +219,7 @@
         {
           "active": true,
           "label": "Address",
-          "value": "NuevoAddress"
+          "value": "Address"
         },
         {
           "active": true,
@@ -227,18 +238,23 @@
         },
         {
           "active": true,
+          "label": "Extended Zip",
+          "value": "ExtendedZip"
+        },
+        {
+          "active": true,
           "label": "Zip",
           "value": "Zip"
         },
         {
-          "active": false,
+          "active": true,
           "label": "Neighborhood",
           "value": "Neighborhood"
         },
         {
           "active": true,
           "label": "City",
-          "value": "Ciudad"
+          "value": "City"
         },
         {
           "active": true,
@@ -252,7 +268,7 @@
         },
         {
           "active": true,
-          "label": "desconocido",
+          "label": "Unknown",
           "value": "Unknown"
         }
       ],
@@ -440,28 +456,6 @@
       "length": 40
     },
     {
-      "label": "Account Fax",
-      "name": "Fax",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "phone",
-      "precision": 0,
-      "scale": 0,
-      "length": 40
-    },
-    {
-      "label": "Account Number",
-      "name": "AccountNumber",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 40
-    },
-    {
       "label": "Website",
       "name": "Website",
       "custom": false,
@@ -482,17 +476,6 @@
       "precision": 0,
       "scale": 0,
       "length": 255
-    },
-    {
-      "label": "SIC Code",
-      "name": "Sic",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 20
     },
     {
       "label": "Industry",
@@ -667,17 +650,6 @@
       "length": 255
     },
     {
-      "label": "Annual Revenue",
-      "name": "AnnualRevenue",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "currency",
-      "precision": 18,
-      "scale": 0,
-      "length": 0
-    },
-    {
       "label": "Employees",
       "name": "NumberOfEmployees",
       "custom": false,
@@ -689,49 +661,6 @@
       "length": 0
     },
     {
-      "label": "Ownership",
-      "name": "Ownership",
-      "custom": false,
-      "picklistValues": [
-        {
-          "active": true,
-          "label": "Public",
-          "value": "Public"
-        },
-        {
-          "active": true,
-          "label": "Private",
-          "value": "Private"
-        },
-        {
-          "active": true,
-          "label": "Subsidiary",
-          "value": "Subsidiary"
-        },
-        {
-          "active": true,
-          "label": "Other",
-          "value": "Other"
-        }
-      ],
-      "referenceTo": [],
-      "type": "picklist",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
-    },
-    {
-      "label": "Ticker Symbol",
-      "name": "TickerSymbol",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 20
-    },
-    {
       "label": "Account Description",
       "name": "Description",
       "custom": false,
@@ -741,44 +670,6 @@
       "precision": 0,
       "scale": 0,
       "length": 32000
-    },
-    {
-      "label": "Account Rating",
-      "name": "Rating",
-      "custom": false,
-      "picklistValues": [
-        {
-          "active": true,
-          "label": "Hot",
-          "value": "Hot"
-        },
-        {
-          "active": true,
-          "label": "Warm",
-          "value": "Warm"
-        },
-        {
-          "active": true,
-          "label": "Cold",
-          "value": "Cold"
-        }
-      ],
-      "referenceTo": [],
-      "type": "picklist",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
-    },
-    {
-      "label": "Account Site",
-      "name": "Site",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 80
     },
     {
       "label": "Account Currency",
@@ -3314,17 +3205,6 @@
       "precision": 0,
       "scale": 0,
       "length": 0
-    },
-    {
-      "label": "Address Identity Concatenated",
-      "name": "pz_AddressIdentityConcatenated__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
     }
   ]
 }
