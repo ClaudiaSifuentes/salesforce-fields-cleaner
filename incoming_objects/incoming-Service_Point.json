@@ -4380,28 +4380,28 @@
             "defaultValue": false,
             "label": "No Aplica",
             "validFor": null,
-            "value": "0"
+            "value": "No Aplica"
           },
           {
             "active": true,
             "defaultValue": false,
             "label": "Urbano",
             "validFor": null,
-            "value": "1"
+            "value": "Urbano"
           },
           {
             "active": true,
             "defaultValue": false,
             "label": "Rural",
             "validFor": null,
-            "value": "2"
+            "value": "Rural"
           },
           {
             "active": true,
             "defaultValue": false,
             "label": "Urbano Provincial",
             "validFor": null,
-            "value": "3"
+            "value": "Urbano Provincial"
           }
         ],
         "polymorphicForeignKey": false,

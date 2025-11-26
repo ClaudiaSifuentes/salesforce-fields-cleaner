@@ -3335,7 +3335,7 @@
       "length": 0
     },
     {
-      "label": "Estado.",
+      "label": "Estado",
       "name": "pz_Status__c",
       "custom": true,
       "picklistValues": [

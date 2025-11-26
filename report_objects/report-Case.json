@@ -1,13 +1,80 @@
 {
   "summary": {
     "fields_old": 453,
-    "fields_new": 453,
-    "added": 0,
+    "fields_new": 458,
+    "added": 5,
     "removed": 0,
     "modified": 0
   },
-  "added_fields": [],
+  "added_fields": [
+    {
+      "label": "Closed When Created",
+      "name": "IsClosedOnCreate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Detalle de prórroga",
+      "name": "pz_ExtensionDetail__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 32768
+    },
+    {
+      "label": "Fecha/hora de fin de prórroga",
+      "name": "pz_ExtensionEndDatetime__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Motivo de prórroga",
+      "name": "pz_ExtensionReason__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Flexibilidad de pago",
+          "value": "Flexibilidad de pago"
+        },
+        {
+          "active": true,
+          "label": "Gestión de facturación",
+          "value": "Gestión de facturación"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Fecha/hora de inicio de prórroga",
+      "name": "pz_ExtensionStartDatetime__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    }
+  ],
   "removed_fields": [],
   "modified_fields": {},
-  "text_report": "Old fields: 453\nNew fields: 453\nAdded fields: 0\nRemoved fields: 0\nModified fields: 0\n"
+  "text_report": "Old fields: 453\nNew fields: 458\nAdded fields: 5\nRemoved fields: 0\nModified fields: 0\n\nAdded:\n  + IsClosedOnCreate\n    - label: Closed When Created type: boolean custom: False\n  + pz_ExtensionDetail__c\n    - label: Detalle de prórroga type: textarea custom: True\n  + pz_ExtensionEndDatetime__c\n    - label: Fecha/hora de fin de prórroga type: datetime custom: True\n  + pz_ExtensionReason__c\n    - label: Motivo de prórroga type: picklist custom: True\n    - picklistValues: Flexibilidad de pago,Gestión de facturación\n  + pz_ExtensionStartDatetime__c\n    - label: Fecha/hora de inicio de prórroga type: datetime custom: True"
 }

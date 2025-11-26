@@ -6331,7 +6331,7 @@
         "highScaleNumber": false,
         "htmlFormatted": false,
         "idLookup": false,
-        "inlineHelpText": null,
+        "inlineHelpText": "DEPRECADO No utilizar",
         "label": "Fecha de vencimiento interno",
         "length": 0,
         "mask": null,

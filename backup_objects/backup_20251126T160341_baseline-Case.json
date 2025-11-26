@@ -1599,17 +1599,6 @@
       "length": 18
     },
     {
-      "label": "Closed When Created",
-      "name": "IsClosedOnCreate",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "boolean",
-      "precision": 0,
-      "scale": 0,
-      "length": 0
-    },
-    {
       "label": "Sla Policy Start Time",
       "name": "SlaStartDate",
       "custom": false,
@@ -4445,6 +4434,11 @@
       "picklistValues": [
         {
           "active": true,
+          "label": "CS SJL",
+          "value": "CS SJL"
+        },
+        {
+          "active": true,
           "label": "App",
           "value": "App"
         },
@@ -4565,16 +4559,6 @@
         },
         {
           "active": true,
-          "label": "C.S. San Miguel",
-          "value": "C.S. San Miguel"
-        },
-        {
-          "active": true,
-          "label": "C.S. Plaza Center San Martin de Porres",
-          "value": "C.S. Plaza Center San Martin de Porres"
-        },
-        {
-          "active": true,
           "label": "C.S. Minka",
           "value": "C.S. Minka"
         },
@@ -4585,8 +4569,18 @@
         },
         {
           "active": true,
-          "label": "CS SJL",
-          "value": "CS SJL"
+          "label": "C.S. Torrico",
+          "value": "C.S. Torrico"
+        },
+        {
+          "active": true,
+          "label": "C.S. San Miguel",
+          "value": "C.S. San Miguel"
+        },
+        {
+          "active": true,
+          "label": "C.S. Mallplaza Comas",
+          "value": "C.S. Mallplaza Comas"
         },
         {
           "active": true,
@@ -4595,13 +4589,8 @@
         },
         {
           "active": true,
-          "label": "C.S. Torrico",
-          "value": "C.S. Torrico"
-        },
-        {
-          "active": true,
-          "label": "C.S. Mallplaza Comas",
-          "value": "C.S. Mallplaza Comas"
+          "label": "C.S. Plaza Center San Martin de Porres",
+          "value": "C.S. Plaza Center San Martin de Porres"
         },
         {
           "active": true,
@@ -10572,61 +10561,6 @@
       "picklistValues": [],
       "referenceTo": [],
       "type": "date",
-      "precision": 0,
-      "scale": 0,
-      "length": 0
-    },
-    {
-      "label": "Motivo de prórroga",
-      "name": "pz_ExtensionReason__c",
-      "custom": true,
-      "picklistValues": [
-        {
-          "active": true,
-          "label": "Flexibilidad de pago",
-          "value": "Flexibilidad de pago"
-        },
-        {
-          "active": true,
-          "label": "Gestión de facturación",
-          "value": "Gestión de facturación"
-        }
-      ],
-      "referenceTo": [],
-      "type": "picklist",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
-    },
-    {
-      "label": "Detalle de prórroga",
-      "name": "pz_ExtensionDetail__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "textarea",
-      "precision": 0,
-      "scale": 0,
-      "length": 32768
-    },
-    {
-      "label": "Fecha/hora de inicio de prórroga",
-      "name": "pz_ExtensionStartDatetime__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "datetime",
-      "precision": 0,
-      "scale": 0,
-      "length": 0
-    },
-    {
-      "label": "Fecha/hora de fin de prórroga",
-      "name": "pz_ExtensionEndDatetime__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "datetime",
       "precision": 0,
       "scale": 0,
       "length": 0

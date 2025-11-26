@@ -321,17 +321,6 @@
       "length": 0
     },
     {
-      "label": "Status",
-      "name": "Status",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "picklist",
-      "precision": 0,
-      "scale": 0,
-      "length": 40
-    },
-    {
       "label": "Action",
       "name": "vlocity_cmt__Action__c",
       "custom": true,
@@ -1707,19 +1696,6 @@
       "precision": 0,
       "scale": 0,
       "length": 255
-    },
-    {
-      "label": "Amended Order Item",
-      "name": "vlocity_cmt__AmendedOrderItemId__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [
-        "OrderItem"
-      ],
-      "type": "reference",
-      "precision": 0,
-      "scale": 0,
-      "length": 18
     },
     {
       "label": "Producto Principal",

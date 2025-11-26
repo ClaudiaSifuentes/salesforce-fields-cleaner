@@ -1,13 +1,150 @@
 {
   "summary": {
     "fields_old": 168,
-    "fields_new": 168,
-    "added": 0,
+    "fields_new": 177,
+    "added": 9,
     "removed": 0,
     "modified": 0
   },
-  "added_fields": [],
+  "added_fields": [
+    {
+      "label": "Account Number",
+      "name": "AccountNumber",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Annual Revenue",
+      "name": "AnnualRevenue",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Account Fax",
+      "name": "Fax",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "phone",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Ownership",
+      "name": "Ownership",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Public",
+          "value": "Public"
+        },
+        {
+          "active": true,
+          "label": "Private",
+          "value": "Private"
+        },
+        {
+          "active": true,
+          "label": "Subsidiary",
+          "value": "Subsidiary"
+        },
+        {
+          "active": true,
+          "label": "Other",
+          "value": "Other"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Account Rating",
+      "name": "Rating",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Hot",
+          "value": "Hot"
+        },
+        {
+          "active": true,
+          "label": "Warm",
+          "value": "Warm"
+        },
+        {
+          "active": true,
+          "label": "Cold",
+          "value": "Cold"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "SIC Code",
+      "name": "Sic",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 20
+    },
+    {
+      "label": "Account Site",
+      "name": "Site",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 80
+    },
+    {
+      "label": "Ticker Symbol",
+      "name": "TickerSymbol",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 20
+    },
+    {
+      "label": "Address Identity Concatenated",
+      "name": "pz_AddressIdentityConcatenated__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    }
+  ],
   "removed_fields": [],
   "modified_fields": {},
-  "text_report": "Old fields: 168\nNew fields: 168\nAdded fields: 0\nRemoved fields: 0\nModified fields: 0\n"
+  "text_report": "Old fields: 168\nNew fields: 177\nAdded fields: 9\nRemoved fields: 0\nModified fields: 0\n\nAdded:\n  + AccountNumber\n    - label: Account Number type: string custom: False\n  + AnnualRevenue\n    - label: Annual Revenue type: currency custom: False\n  + Fax\n    - label: Account Fax type: phone custom: False\n  + Ownership\n    - label: Ownership type: picklist custom: False\n    - picklistValues: Public,Private,Subsidiary,Other\n  + Rating\n    - label: Account Rating type: picklist custom: False\n    - picklistValues: Hot,Warm,Cold\n  + Sic\n    - label: SIC Code type: string custom: False\n  + Site\n    - label: Account Site type: string custom: False\n  + TickerSymbol\n    - label: Ticker Symbol type: string custom: False\n  + pz_AddressIdentityConcatenated__c\n    - label: Address Identity Concatenated type: string custom: True"
 }

@@ -4,10 +4,140 @@
     "fields_new": 148,
     "added": 0,
     "removed": 0,
-    "modified": 0
+    "modified": 1
   },
   "added_fields": [],
   "removed_fields": [],
-  "modified_fields": {},
-  "text_report": "Old fields: 148\nNew fields: 148\nAdded fields: 0\nRemoved fields: 0\nModified fields: 0\n"
+  "modified_fields": {
+    "pz_Zone__c": {
+      "old": {
+        "label": "Zonificación",
+        "name": "pz_Zone__c",
+        "custom": true,
+        "picklistValues": [
+          {
+            "active": true,
+            "label": "No Aplica",
+            "value": "0"
+          },
+          {
+            "active": true,
+            "label": "Urbano",
+            "value": "1"
+          },
+          {
+            "active": true,
+            "label": "Rural",
+            "value": "2"
+          },
+          {
+            "active": true,
+            "label": "Urbano Provincial",
+            "value": "3"
+          }
+        ],
+        "referenceTo": [],
+        "type": "picklist",
+        "precision": 0,
+        "scale": 0,
+        "length": 255
+      },
+      "new": {
+        "label": "Zonificación",
+        "name": "pz_Zone__c",
+        "custom": true,
+        "picklistValues": [
+          {
+            "active": true,
+            "label": "No Aplica",
+            "value": "No Aplica"
+          },
+          {
+            "active": true,
+            "label": "Urbano",
+            "value": "Urbano"
+          },
+          {
+            "active": true,
+            "label": "Rural",
+            "value": "Rural"
+          },
+          {
+            "active": true,
+            "label": "Urbano Provincial",
+            "value": "Urbano Provincial"
+          }
+        ],
+        "referenceTo": [],
+        "type": "picklist",
+        "precision": 0,
+        "scale": 0,
+        "length": 255
+      },
+      "diffs": [
+        {
+          "attribute": "picklistValues",
+          "detail": {
+            "added": [],
+            "removed": [],
+            "changed": [
+              {
+                "value": "No Aplica",
+                "old": {
+                  "label": "No Aplica",
+                  "value": "0",
+                  "active": true
+                },
+                "new": {
+                  "label": "No Aplica",
+                  "value": "No Aplica",
+                  "active": true
+                }
+              },
+              {
+                "value": "Urbano Provincial",
+                "old": {
+                  "label": "Urbano Provincial",
+                  "value": "3",
+                  "active": true
+                },
+                "new": {
+                  "label": "Urbano Provincial",
+                  "value": "Urbano Provincial",
+                  "active": true
+                }
+              },
+              {
+                "value": "Rural",
+                "old": {
+                  "label": "Rural",
+                  "value": "2",
+                  "active": true
+                },
+                "new": {
+                  "label": "Rural",
+                  "value": "Rural",
+                  "active": true
+                }
+              },
+              {
+                "value": "Urbano",
+                "old": {
+                  "label": "Urbano",
+                  "value": "1",
+                  "active": true
+                },
+                "new": {
+                  "label": "Urbano",
+                  "value": "Urbano",
+                  "active": true
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "text_report": "Old fields: 148\nNew fields: 148\nAdded fields: 0\nRemoved fields: 0\nModified fields: 1\n\n\nModified:\n* pz_Zone__c\n    - picklistValues {\"added\": [], \"removed\": [], \"changed\": [{\"value\": \"No Aplica\", \"old\": {\"label\": \"No Aplica\", \"value\": \"0\", \"active\": true}, \"new\": {\"label\": \"No Aplica\", \"value\": \"No Aplica\", \"active\": true}}, {\"value\": \"Urbano Provincial\", \"old\": {\"label\": \"Urbano Provincial\", \"value\": \"3\", \"active\": true}, \"new\": {\"label\": \"Urbano Provincial\", \"value\": \"Urbano Provincial\", \"active\": true}}, {\"value\": \"Rural\", \"old\": {\"label\": \"Rural\", \"value\": \"2\", \"active\": true}, \"new\": {\"label\": \"Rural\", \"value\": \"Rural\", \"active\": true}}, {\"value\": \"Urbano\", \"old\": {\"label\": \"Urbano\", \"value\": \"1\", \"active\": true}, \"new\": {\"label\": \"Urbano\", \"value\": \"Urbano\", \"active\": true}}]}"
 }

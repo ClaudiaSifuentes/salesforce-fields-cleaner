@@ -1,7 +1,7 @@
 {
   "fields": [
     {
-      "label": "Quote Line Item ID",
+      "label": "Asset ID",
       "name": "Id",
       "custom": false,
       "picklistValues": [],
@@ -12,19 +12,73 @@
       "length": 18
     },
     {
-      "label": "Deleted",
-      "name": "IsDeleted",
+      "label": "Contact ID",
+      "name": "ContactId",
       "custom": false,
       "picklistValues": [],
-      "referenceTo": [],
-      "type": "boolean",
+      "referenceTo": [
+        "Contact"
+      ],
+      "type": "reference",
       "precision": 0,
       "scale": 0,
-      "length": 0
+      "length": 18
     },
     {
-      "label": "Line Item Number",
-      "name": "LineNumber",
+      "label": "Account ID",
+      "name": "AccountId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Account"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Parent Asset ID",
+      "name": "ParentId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Asset"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Root Asset ID",
+      "name": "RootAssetId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Asset"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Product ID",
+      "name": "Product2Id",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Product2"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Product Code",
+      "name": "ProductCode",
       "custom": false,
       "picklistValues": [],
       "referenceTo": [],
@@ -34,26 +88,48 @@
       "length": 255
     },
     {
-      "label": "Currency ISO Code",
-      "name": "CurrencyIsoCode",
+      "label": "Product Family",
+      "name": "ProductFamily",
       "custom": false,
       "picklistValues": [
         {
           "active": true,
-          "label": "Peruvian Sol",
-          "value": "PEN"
+          "label": "None",
+          "value": "None"
         },
         {
           "active": true,
-          "label": "U.S. Dollar",
-          "value": "USD"
+          "label": "Multiplay",
+          "value": "Multiplay"
         }
       ],
       "referenceTo": [],
       "type": "picklist",
       "precision": 0,
       "scale": 0,
-      "length": 3
+      "length": 255
+    },
+    {
+      "label": "Product Description",
+      "name": "ProductDescription",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 4000
+    },
+    {
+      "label": "Competitor Asset",
+      "name": "IsCompetitorProduct",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
     },
     {
       "label": "Created Date",
@@ -115,6 +191,533 @@
       "length": 0
     },
     {
+      "label": "Deleted",
+      "name": "IsDeleted",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Currency ISO Code",
+      "name": "CurrencyIsoCode",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Peruvian Sol",
+          "value": "PEN"
+        },
+        {
+          "active": true,
+          "label": "U.S. Dollar",
+          "value": "USD"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 3
+    },
+    {
+      "label": "Asset Name",
+      "name": "Name",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Serial Number",
+      "name": "SerialNumber",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 80
+    },
+    {
+      "label": "Install Date",
+      "name": "InstallDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Manufacture Date",
+      "name": "ManufactureDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Status Reason",
+      "name": "StatusReason",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Online",
+          "value": "Online"
+        },
+        {
+          "active": true,
+          "label": "Paused",
+          "value": "Paused"
+        },
+        {
+          "active": true,
+          "label": "Standby",
+          "value": "Standby"
+        },
+        {
+          "active": true,
+          "label": "Offline",
+          "value": "Offline"
+        },
+        {
+          "active": true,
+          "label": "Not Ready",
+          "value": "Not Ready"
+        },
+        {
+          "active": true,
+          "label": "Off",
+          "value": "Off"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Unique Identifier",
+      "name": "Uuid",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "External Id",
+      "name": "ExternalIdentifier",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Purchase Date",
+      "name": "PurchaseDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Usage End Date",
+      "name": "UsageEndDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Status",
+      "name": "Status",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Habilitado",
+          "value": "Habilitado"
+        },
+        {
+          "active": true,
+          "label": "Deshabilitado",
+          "value": "Deshabilitado"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Digital Asset Status",
+      "name": "DigitalAssetStatus",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "On",
+          "value": "On"
+        },
+        {
+          "active": true,
+          "label": "Off",
+          "value": "Off"
+        },
+        {
+          "active": true,
+          "label": "Warning",
+          "value": "Warning"
+        },
+        {
+          "active": true,
+          "label": "Error",
+          "value": "Error"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Price",
+      "name": "Price",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Quantity",
+      "name": "Quantity",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 12,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Description",
+      "name": "Description",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 32000
+    },
+    {
+      "label": "Owner ID",
+      "name": "OwnerId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Location ID",
+      "name": "LocationId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Location"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Asset Provided By ID",
+      "name": "AssetProvidedById",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Account"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Asset Serviced By ID",
+      "name": "AssetServicedById",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Account"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Internal Asset",
+      "name": "IsInternal",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Asset Level",
+      "name": "AssetLevel",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "int",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Product SKU",
+      "name": "StockKeepingUnit",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 180
+    },
+    {
+      "label": "Consequence Of Failure",
+      "name": "ConsequenceOfFailure",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Insignificant",
+          "value": "Insignificant"
+        },
+        {
+          "active": true,
+          "label": "Minor",
+          "value": "Minor"
+        },
+        {
+          "active": true,
+          "label": "Moderate",
+          "value": "Moderate"
+        },
+        {
+          "active": true,
+          "label": "Major",
+          "value": "Major"
+        },
+        {
+          "active": true,
+          "label": "Critical",
+          "value": "Critical"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Street",
+      "name": "Street",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "City",
+      "name": "City",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "State",
+      "name": "State",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 80
+    },
+    {
+      "label": "Postal Code",
+      "name": "PostalCode",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 20
+    },
+    {
+      "label": "Country",
+      "name": "Country",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 80
+    },
+    {
+      "label": "Latitude",
+      "name": "Latitude",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 15,
+      "length": 0
+    },
+    {
+      "label": "Longitude",
+      "name": "Longitude",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 15,
+      "length": 0
+    },
+    {
+      "label": "Geocode Accuracy",
+      "name": "GeocodeAccuracy",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Address",
+          "value": "Address"
+        },
+        {
+          "active": true,
+          "label": "Near Address",
+          "value": "NearAddress"
+        },
+        {
+          "active": true,
+          "label": "Block",
+          "value": "Block"
+        },
+        {
+          "active": true,
+          "label": "Street",
+          "value": "Street"
+        },
+        {
+          "active": true,
+          "label": "Extended Zip",
+          "value": "ExtendedZip"
+        },
+        {
+          "active": true,
+          "label": "Zip",
+          "value": "Zip"
+        },
+        {
+          "active": true,
+          "label": "Neighborhood",
+          "value": "Neighborhood"
+        },
+        {
+          "active": true,
+          "label": "City",
+          "value": "City"
+        },
+        {
+          "active": true,
+          "label": "County",
+          "value": "County"
+        },
+        {
+          "active": true,
+          "label": "State",
+          "value": "State"
+        },
+        {
+          "active": true,
+          "label": "Unknown",
+          "value": "Unknown"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Address",
+      "name": "Address",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "address",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
       "label": "Last Viewed Date",
       "name": "LastViewedDate",
       "custom": false,
@@ -135,201 +738,6 @@
       "precision": 0,
       "scale": 0,
       "length": 0
-    },
-    {
-      "label": "Quote ID",
-      "name": "QuoteId",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [
-        "Quote"
-      ],
-      "type": "reference",
-      "precision": 0,
-      "scale": 0,
-      "length": 18
-    },
-    {
-      "label": "Price Book Entry ID",
-      "name": "PricebookEntryId",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [
-        "PricebookEntry"
-      ],
-      "type": "reference",
-      "precision": 0,
-      "scale": 0,
-      "length": 18
-    },
-    {
-      "label": "Line Item ID",
-      "name": "OpportunityLineItemId",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [
-        "OpportunityLineItem"
-      ],
-      "type": "reference",
-      "precision": 0,
-      "scale": 0,
-      "length": 18
-    },
-    {
-      "label": "Quantity",
-      "name": "Quantity",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "double",
-      "precision": 12,
-      "scale": 2,
-      "length": 0
-    },
-    {
-      "label": "Sales Price",
-      "name": "UnitPrice",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "currency",
-      "precision": 18,
-      "scale": 2,
-      "length": 0
-    },
-    {
-      "label": "Discount (Percentage)",
-      "name": "Discount",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "percent",
-      "precision": 5,
-      "scale": 2,
-      "length": 0
-    },
-    {
-      "label": "Has Revenue Schedule",
-      "name": "HasRevenueSchedule",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "boolean",
-      "precision": 0,
-      "scale": 0,
-      "length": 0
-    },
-    {
-      "label": "Has Quantity Schedule",
-      "name": "HasQuantitySchedule",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "boolean",
-      "precision": 0,
-      "scale": 0,
-      "length": 0
-    },
-    {
-      "label": "Line Item Description",
-      "name": "Description",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
-    },
-    {
-      "label": "Date",
-      "name": "ServiceDate",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "date",
-      "precision": 0,
-      "scale": 0,
-      "length": 0
-    },
-    {
-      "label": "Product ID",
-      "name": "Product2Id",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [
-        "Product2"
-      ],
-      "type": "reference",
-      "precision": 0,
-      "scale": 0,
-      "length": 18
-    },
-    {
-      "label": "Sort Order",
-      "name": "SortOrder",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "int",
-      "precision": 0,
-      "scale": 0,
-      "length": 0
-    },
-    {
-      "label": "Schedule",
-      "name": "HasSchedule",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "boolean",
-      "precision": 0,
-      "scale": 0,
-      "length": 0
-    },
-    {
-      "label": "List Price",
-      "name": "ListPrice",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "currency",
-      "precision": 18,
-      "scale": 2,
-      "length": 0
-    },
-    {
-      "label": "Subtotal ",
-      "name": "Subtotal",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "currency",
-      "precision": 18,
-      "scale": 2,
-      "length": 0
-    },
-    {
-      "label": "Total Price",
-      "name": "TotalPrice",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "currency",
-      "precision": 18,
-      "scale": 2,
-      "length": 0
-    },
-    {
-      "label": "Status",
-      "name": "Status",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "picklist",
-      "precision": 0,
-      "scale": 0,
-      "length": 40
     },
     {
       "label": "Action",
@@ -374,21 +782,19 @@
       "length": 255
     },
     {
-      "label": "Asset",
-      "name": "vlocity_cmt__AssetId__c",
+      "label": "Activation Date",
+      "name": "vlocity_cmt__ActivationDate__c",
       "custom": true,
       "picklistValues": [],
-      "referenceTo": [
-        "Asset"
-      ],
-      "type": "reference",
+      "referenceTo": [],
+      "type": "date",
       "precision": 0,
       "scale": 0,
-      "length": 18
+      "length": 0
     },
     {
-      "label": "Asset Reference Id",
-      "name": "vlocity_cmt__AssetReferenceId__c",
+      "label": "Activation Name",
+      "name": "vlocity_cmt__ActivationName__c",
       "custom": true,
       "picklistValues": [],
       "referenceTo": [],
@@ -398,28 +804,12 @@
       "length": 255
     },
     {
-      "label": "Async Operation",
-      "name": "vlocity_cmt__AsyncOperation__c",
+      "label": "Asset Reference Id",
+      "name": "vlocity_cmt__AssetReferenceId__c",
       "custom": true,
-      "picklistValues": [
-        {
-          "active": true,
-          "label": "Price",
-          "value": "Price"
-        },
-        {
-          "active": true,
-          "label": "Validate",
-          "value": "Validate"
-        },
-        {
-          "active": true,
-          "label": "Mass Update",
-          "value": "Mass Update"
-        }
-      ],
+      "picklistValues": [],
       "referenceTo": [],
-      "type": "picklist",
+      "type": "string",
       "precision": 0,
       "scale": 0,
       "length": 255
@@ -504,6 +894,23 @@
       "length": 18
     },
     {
+      "label": "Billing Hold",
+      "name": "vlocity_cmt__BillingHold__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Other",
+          "value": "Other"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
       "label": "Reference Time",
       "name": "vlocity_cmt__CatalogItemReferenceDateTime__c",
       "custom": true,
@@ -526,37 +933,28 @@
       "length": 0
     },
     {
-      "label": "Cpq Cardinality Message",
-      "name": "vlocity_cmt__CpqCardinalityMessage__c",
+      "label": "Contract",
+      "name": "vlocity_cmt__ContractId__c",
       "custom": true,
       "picklistValues": [],
-      "referenceTo": [],
-      "type": "textarea",
+      "referenceTo": [
+        "Contract"
+      ],
+      "type": "reference",
       "precision": 0,
       "scale": 0,
-      "length": 32768
+      "length": 18
     },
     {
-      "label": "Cpq Message Data",
-      "name": "vlocity_cmt__CpqMessageData__c",
+      "label": "Contract Number",
+      "name": "vlocity_cmt__ContractNumber__c",
       "custom": true,
       "picklistValues": [],
       "referenceTo": [],
-      "type": "textarea",
+      "type": "string",
       "precision": 0,
       "scale": 0,
-      "length": 32768
-    },
-    {
-      "label": "Cpq Pricing Message",
-      "name": "vlocity_cmt__CpqPricingMessage__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "textarea",
-      "precision": 0,
-      "scale": 0,
-      "length": 32768
+      "length": 80
     },
     {
       "label": "Currency Payment Mode",
@@ -572,6 +970,23 @@
           "active": true,
           "label": "Loyalty",
           "value": "Loyalty"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Deregulation Status",
+      "name": "vlocity_cmt__DeregulationStatus__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Other",
+          "value": "Other"
         }
       ],
       "referenceTo": [],
@@ -713,17 +1128,6 @@
       "length": 0
     },
     {
-      "label": "Filter",
-      "name": "vlocity_cmt__Filter__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "textarea",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
-    },
-    {
       "label": "Financed Amount Total",
       "name": "vlocity_cmt__FinancedAmountTotal__c",
       "custom": true,
@@ -757,7 +1161,7 @@
       "length": 0
     },
     {
-      "label": "InCartQuantityMap",
+      "label": "In Cart Quantity Map",
       "name": "vlocity_cmt__InCartQuantityMap__c",
       "custom": true,
       "picklistValues": [],
@@ -766,6 +1170,19 @@
       "precision": 0,
       "scale": 0,
       "length": 131072
+    },
+    {
+      "label": "Inventory Item",
+      "name": "vlocity_cmt__InventoryItemId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "vlocity_cmt__InventoryItem__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
     },
     {
       "label": "Item Name",
@@ -790,28 +1207,6 @@
       "length": 131072
     },
     {
-      "label": "JSONNode",
-      "name": "vlocity_cmt__JSONNode__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
-    },
-    {
-      "label": "Last Priced At",
-      "name": "vlocity_cmt__LastPricedAt__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "datetime",
-      "precision": 0,
-      "scale": 0,
-      "length": 0
-    },
-    {
       "label": "Line Number",
       "name": "vlocity_cmt__LineNumber__c",
       "custom": true,
@@ -821,52 +1216,6 @@
       "precision": 0,
       "scale": 0,
       "length": 255
-    },
-    {
-      "label": "Locked By User",
-      "name": "vlocity_cmt__LockedBy__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [
-        "User"
-      ],
-      "type": "reference",
-      "precision": 0,
-      "scale": 0,
-      "length": 18
-    },
-    {
-      "label": "Locked For",
-      "name": "vlocity_cmt__LockedFor__c",
-      "custom": true,
-      "picklistValues": [
-        {
-          "active": true,
-          "label": "Async Operation",
-          "value": "Async Operation"
-        },
-        {
-          "active": true,
-          "label": "Manual Edit",
-          "value": "Manual Edit"
-        }
-      ],
-      "referenceTo": [],
-      "type": "picklist",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
-    },
-    {
-      "label": "Modification#",
-      "name": "vlocity_cmt__Modification__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "double",
-      "precision": 18,
-      "scale": 0,
-      "length": 0
     },
     {
       "label": "One Time Calculated Price",
@@ -979,89 +1328,33 @@
       "length": 0
     },
     {
-      "label": "Overage Calculated Price",
-      "name": "vlocity_cmt__OverageCalculatedPrice__c",
+      "label": "Order",
+      "name": "vlocity_cmt__OrderId__c",
       "custom": true,
       "picklistValues": [],
-      "referenceTo": [],
-      "type": "currency",
-      "precision": 18,
-      "scale": 2,
-      "length": 0
-    },
-    {
-      "label": "Overage Charge",
-      "name": "vlocity_cmt__OverageCharge__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "currency",
-      "precision": 18,
-      "scale": 2,
-      "length": 0
-    },
-    {
-      "label": "Overage Discount Price",
-      "name": "vlocity_cmt__OverageDiscountPrice__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "currency",
-      "precision": 18,
-      "scale": 2,
-      "length": 0
-    },
-    {
-      "label": "Overage Manual Discount",
-      "name": "vlocity_cmt__OverageManualDiscount__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "percent",
-      "precision": 5,
-      "scale": 2,
-      "length": 0
-    },
-    {
-      "label": "Overage Total",
-      "name": "vlocity_cmt__OverageTotal__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "currency",
-      "precision": 18,
-      "scale": 2,
-      "length": 0
-    },
-    {
-      "label": "Overage UOM",
-      "name": "vlocity_cmt__OverageUOM__c",
-      "custom": true,
-      "picklistValues": [
-        {
-          "active": true,
-          "label": "Per minute",
-          "value": "Per minute"
-        },
-        {
-          "active": true,
-          "label": "Per text",
-          "value": "Per text"
-        },
-        {
-          "active": true,
-          "label": "Per gigabyte",
-          "value": "Per gigabyte"
-        }
+      "referenceTo": [
+        "Order"
       ],
-      "referenceTo": [],
-      "type": "picklist",
+      "type": "reference",
       "precision": 0,
       "scale": 0,
-      "length": 255
+      "length": 18
     },
     {
-      "label": "Parent Item ID",
+      "label": "Order Product",
+      "name": "vlocity_cmt__OrderProductId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "OrderItem"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "ParentItemId",
       "name": "vlocity_cmt__ParentItemId__c",
       "custom": true,
       "picklistValues": [],
@@ -1070,6 +1363,17 @@
       "precision": 0,
       "scale": 0,
       "length": 255
+    },
+    {
+      "label": "User Password",
+      "name": "vlocity_cmt__Password__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 20
     },
     {
       "label": "Premises",
@@ -1085,6 +1389,30 @@
       "length": 18
     },
     {
+      "label": "Price List",
+      "name": "vlocity_cmt__PriceListId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "vlocity_cmt__PriceList__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Pricebook Entry Id",
+      "name": "vlocity_cmt__PricebookEntryId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
       "label": "Pricing Log",
       "name": "vlocity_cmt__PricingLogData__c",
       "custom": true,
@@ -1096,33 +1424,7 @@
       "length": 131072
     },
     {
-      "label": "Prior Quote Line Item",
-      "name": "vlocity_cmt__PriorQuoteLineItemId__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [
-        "QuoteLineItem"
-      ],
-      "type": "reference",
-      "precision": 0,
-      "scale": 0,
-      "length": 18
-    },
-    {
-      "label": "Product",
-      "name": "vlocity_cmt__Product2Id__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [
-        "Product2"
-      ],
-      "type": "reference",
-      "precision": 0,
-      "scale": 0,
-      "length": 18
-    },
-    {
-      "label": "ProductAttribXN",
+      "label": "Product Attribute",
       "name": "vlocity_cmt__ProductAttribXN__c",
       "custom": true,
       "picklistValues": [],
@@ -1166,43 +1468,6 @@
       "precision": 0,
       "scale": 0,
       "length": 255
-    },
-    {
-      "label": "Query",
-      "name": "vlocity_cmt__Query__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
-    },
-    {
-      "label": "Quote Group",
-      "name": "vlocity_cmt__QuoteGroupId__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [
-        "vlocity_cmt__QuoteGroup__c"
-      ],
-      "type": "reference",
-      "precision": 0,
-      "scale": 0,
-      "length": 18
-    },
-    {
-      "label": "Quote Member",
-      "name": "vlocity_cmt__QuoteMemberId__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [
-        "vlocity_cmt__QuoteMember__c"
-      ],
-      "type": "reference",
-      "precision": 0,
-      "scale": 0,
-      "length": 18
     },
     {
       "label": "Recurring Calculated Price",
@@ -1315,50 +1580,6 @@
       "length": 255
     },
     {
-      "label": "Recurring UOM",
-      "name": "vlocity_cmt__Recurring_UOM__c",
-      "custom": true,
-      "picklistValues": [
-        {
-          "active": true,
-          "label": "Monthly",
-          "value": "Monthly"
-        },
-        {
-          "active": true,
-          "label": "Yearly",
-          "value": "Yearly"
-        }
-      ],
-      "referenceTo": [],
-      "type": "picklist",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
-    },
-    {
-      "label": "Relationship Type",
-      "name": "vlocity_cmt__RelationshipType__c",
-      "custom": true,
-      "picklistValues": [
-        {
-          "active": true,
-          "label": "Child",
-          "value": "Child"
-        },
-        {
-          "active": true,
-          "label": "Realization",
-          "value": "Realization"
-        }
-      ],
-      "referenceTo": [],
-      "type": "picklist",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
-    },
-    {
       "label": "Relies on Item",
       "name": "vlocity_cmt__ReliesOnItemId__c",
       "custom": true,
@@ -1370,7 +1591,7 @@
       "length": 255
     },
     {
-      "label": "Root Item ID",
+      "label": "RootItemId",
       "name": "vlocity_cmt__RootItemId__c",
       "custom": true,
       "picklistValues": [],
@@ -1392,17 +1613,6 @@
       "length": 0
     },
     {
-      "label": "Serial Number",
-      "name": "vlocity_cmt__SerialNumber__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
-    },
-    {
       "label": "Service Account",
       "name": "vlocity_cmt__ServiceAccountId__c",
       "custom": true,
@@ -1414,17 +1624,6 @@
       "precision": 0,
       "scale": 0,
       "length": 18
-    },
-    {
-      "label": "Service Date",
-      "name": "vlocity_cmt__ServiceDate__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "date",
-      "precision": 0,
-      "scale": 0,
-      "length": 0
     },
     {
       "label": "Service Identifier",
@@ -1449,49 +1648,6 @@
       "precision": 0,
       "scale": 0,
       "length": 18
-    },
-    {
-      "label": "Source Line Number",
-      "name": "vlocity_cmt__SourceLineNumber__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
-    },
-    {
-      "label": "Sub Action",
-      "name": "vlocity_cmt__SubAction__c",
-      "custom": true,
-      "picklistValues": [
-        {
-          "active": true,
-          "label": "Move",
-          "value": "Move"
-        },
-        {
-          "active": true,
-          "label": "Cancel",
-          "value": "Cancel"
-        },
-        {
-          "active": true,
-          "label": "Replace",
-          "value": "Replace"
-        },
-        {
-          "active": true,
-          "label": "Reassign",
-          "value": "Reassign"
-        }
-      ],
-      "referenceTo": [],
-      "type": "picklist",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
     },
     {
       "label": "Subscription",
@@ -1586,48 +1742,15 @@
       "length": 0
     },
     {
-      "label": "Validation Date",
-      "name": "vlocity_cmt__ValidationDate__c",
+      "label": "User Name",
+      "name": "vlocity_cmt__Username__c",
       "custom": true,
       "picklistValues": [],
       "referenceTo": [],
-      "type": "datetime",
+      "type": "string",
       "precision": 0,
       "scale": 0,
-      "length": 0
-    },
-    {
-      "label": "Priced",
-      "name": "vlocity_cmt__IsPriced__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "boolean",
-      "precision": 0,
-      "scale": 0,
-      "length": 0
-    },
-    {
-      "label": "Is Product Track Agreement",
-      "name": "vlocity_cmt__IsProductTrackAgreement__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "boolean",
-      "precision": 0,
-      "scale": 0,
-      "length": 0
-    },
-    {
-      "label": "Validated",
-      "name": "vlocity_cmt__IsValidated__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "boolean",
-      "precision": 0,
-      "scale": 0,
-      "length": 0
+      "length": 20
     },
     {
       "label": "Product Group Key",
@@ -1641,128 +1764,14 @@
       "length": 1300
     },
     {
-      "label": "Potencia",
-      "name": "pz_ContractPower__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "double",
-      "precision": 14,
-      "scale": 2,
-      "length": 0
-    },
-    {
-      "label": "Código de producto",
-      "name": "pz_ProductCode__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 8
-    },
-    {
-      "label": "Quote Line Item",
-      "name": "pz_ReferenceCPQFields__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [
-        "QuoteLineItem"
-      ],
-      "type": "reference",
-      "precision": 0,
-      "scale": 0,
-      "length": 18
-    },
-    {
-      "label": "Tension",
-      "name": "pz_TensionLevel__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 100
-    },
-    {
-      "label": "Regulado",
-      "name": "pz_regulated__c",
-      "custom": true,
-      "picklistValues": [
-        {
-          "active": true,
-          "label": "SI",
-          "value": "SI"
-        },
-        {
-          "active": true,
-          "label": "NO",
-          "value": "NO"
-        }
-      ],
-      "referenceTo": [],
-      "type": "picklist",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
-    },
-    {
-      "label": "Amended Order Item",
-      "name": "vlocity_cmt__AmendedOrderItemId__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [
-        "OrderItem"
-      ],
-      "type": "reference",
-      "precision": 0,
-      "scale": 0,
-      "length": 18
-    },
-    {
-      "label": "Producto Principal",
-      "name": "pz_IsMainProduct__c",
+      "label": "Estado",
+      "name": "pz_Active__c",
       "custom": true,
       "picklistValues": [],
       "referenceTo": [],
       "type": "boolean",
       "precision": 0,
       "scale": 0,
-      "length": 0
-    },
-    {
-      "label": "Sub tipo conexión",
-      "name": "pz_RegulatorSubType__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 100
-    },
-    {
-      "label": "IGV",
-      "name": "pz_Tax__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "currency",
-      "precision": 18,
-      "scale": 2,
-      "length": 0
-    },
-    {
-      "label": "Total",
-      "name": "GrandTotal__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "currency",
-      "precision": 18,
-      "scale": 2,
       "length": 0
     }
   ]

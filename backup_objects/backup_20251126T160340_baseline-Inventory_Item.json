@@ -1,0 +1,650 @@
+{
+  "fields": [
+    {
+      "label": "Record ID",
+      "name": "Id",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "id",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Owner ID",
+      "name": "OwnerId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Group",
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Deleted",
+      "name": "IsDeleted",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Inventory Item Name",
+      "name": "Name",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 80
+    },
+    {
+      "label": "Currency ISO Code",
+      "name": "CurrencyIsoCode",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Peruvian Sol",
+          "value": "PEN"
+        },
+        {
+          "active": true,
+          "label": "U.S. Dollar",
+          "value": "USD"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 3
+    },
+    {
+      "label": "Record Type ID",
+      "name": "RecordTypeId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "RecordType"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Created Date",
+      "name": "CreatedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Created By ID",
+      "name": "CreatedById",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Last Modified Date",
+      "name": "LastModifiedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Modified By ID",
+      "name": "LastModifiedById",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "System Modstamp",
+      "name": "SystemModstamp",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Viewed Date",
+      "name": "LastViewedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Referenced Date",
+      "name": "LastReferencedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Account",
+      "name": "vlocity_cmt__AccountId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "Account"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Activation Date",
+      "name": "vlocity_cmt__ActivationDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Address",
+      "name": "vlocity_cmt__Address__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 32768
+    },
+    {
+      "label": "Attribute Selected Values",
+      "name": "vlocity_cmt__AttributeSelectedValues__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 32768
+    },
+    {
+      "label": "Average Monthly Usage",
+      "name": "vlocity_cmt__AverageMonthlyUsage__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Billing Account Id",
+      "name": "vlocity_cmt__BillingAccountId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "Account"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Disconnect Location",
+      "name": "vlocity_cmt__DisconnectLocation__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Meter removed",
+          "value": "Meter removed"
+        },
+        {
+          "active": true,
+          "label": "Line cut",
+          "value": "Line cut"
+        },
+        {
+          "active": true,
+          "label": "Switch flipped",
+          "value": "Switch flipped"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Gas Pressure Level",
+      "name": "vlocity_cmt__GasPressureLevel__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Install Date",
+      "name": "vlocity_cmt__InstallDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Is Migrated",
+      "name": "vlocity_cmt__IsMigrated__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Type",
+      "name": "vlocity_cmt__ItemType__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Smart Meter",
+          "value": "Smart Meter"
+        },
+        {
+          "active": true,
+          "label": "Prepay Meter",
+          "value": "Prepay Meter"
+        },
+        {
+          "active": true,
+          "label": "Interval Meter",
+          "value": "Interval Meter"
+        },
+        {
+          "active": true,
+          "label": "Two-way Meter",
+          "value": "Two-way Meter"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "JSONAttribute",
+      "name": "vlocity_cmt__JSONAttribute__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 131072
+    },
+    {
+      "label": "Line Number",
+      "name": "vlocity_cmt__LineNumber__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Installed Premise",
+      "name": "vlocity_cmt__PremiseId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "vlocity_cmt__Premises__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Product",
+      "name": "vlocity_cmt__ProductId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "Product2"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Provisioning Status",
+      "name": "vlocity_cmt__ProvisioningStatus__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Qualification Expiration Date",
+      "name": "vlocity_cmt__QualificationExpirationDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Serial Number",
+      "name": "vlocity_cmt__SerialNumber__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 80
+    },
+    {
+      "label": "Service Account Id",
+      "name": "vlocity_cmt__ServiceAccountId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "Account"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Installed Service Point",
+      "name": "vlocity_cmt__ServicePointId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "vlocity_cmt__ServicePoint__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Status",
+      "name": "vlocity_cmt__Status__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Habilitado",
+          "value": "Habilitado"
+        },
+        {
+          "active": true,
+          "label": "Cortado",
+          "value": "Cortado"
+        },
+        {
+          "active": true,
+          "label": "En Proceso de reconexión",
+          "value": "En Proceso de reconexión"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Lectura Remota",
+      "name": "PZ_RemoteReading__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Tradicional",
+          "value": "Tradicional"
+        },
+        {
+          "active": true,
+          "label": "Inteligente",
+          "value": "Inteligente"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Nro. Componente",
+      "name": "pz_ComponentNumber__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 15
+    },
+    {
+      "label": "Marca",
+      "name": "pz_Brand__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 6
+    },
+    {
+      "label": "Fecha Lectura Terreno",
+      "name": "pz_DateofFieldReading__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Novedad",
+      "name": "pz_Novelty__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1
+    },
+    {
+      "label": "Año Fabricación",
+      "name": "pz_YearManufacture__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 4,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Nro Fabrica",
+      "name": "pz_FactoryNumber__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 15
+    },
+    {
+      "label": "Fecha Calibración",
+      "name": "pz_CalibrationDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 8
+    },
+    {
+      "label": "Es Control Interno",
+      "name": "pz_isInternalControl__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Si",
+          "value": "S"
+        },
+        {
+          "active": true,
+          "label": "No",
+          "value": "N"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Es Prototipo",
+      "name": "pz_isPrototype__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Si",
+          "value": "S"
+        },
+        {
+          "active": true,
+          "label": "No",
+          "value": "N"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Modelo",
+      "name": "pz_Model__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 6
+    },
+    {
+      "label": "Tipo Cálculo Medidor",
+      "name": "pz_MeterCalculationType__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Cálculo Absoluto",
+          "value": "C"
+        },
+        {
+          "active": true,
+          "label": "Cálculo Acumulativo",
+          "value": "A"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Código Factor Medición",
+      "name": "pz_FactorCode__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 10
+    }
+  ]
+}

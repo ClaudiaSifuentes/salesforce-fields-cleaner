@@ -456,28 +456,6 @@
       "length": 40
     },
     {
-      "label": "Account Fax",
-      "name": "Fax",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "phone",
-      "precision": 0,
-      "scale": 0,
-      "length": 40
-    },
-    {
-      "label": "Account Number",
-      "name": "AccountNumber",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 40
-    },
-    {
       "label": "Website",
       "name": "Website",
       "custom": false,
@@ -498,17 +476,6 @@
       "precision": 0,
       "scale": 0,
       "length": 255
-    },
-    {
-      "label": "SIC Code",
-      "name": "Sic",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 20
     },
     {
       "label": "Industry",
@@ -683,17 +650,6 @@
       "length": 255
     },
     {
-      "label": "Annual Revenue",
-      "name": "AnnualRevenue",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "currency",
-      "precision": 18,
-      "scale": 0,
-      "length": 0
-    },
-    {
       "label": "Employees",
       "name": "NumberOfEmployees",
       "custom": false,
@@ -705,49 +661,6 @@
       "length": 0
     },
     {
-      "label": "Ownership",
-      "name": "Ownership",
-      "custom": false,
-      "picklistValues": [
-        {
-          "active": true,
-          "label": "Public",
-          "value": "Public"
-        },
-        {
-          "active": true,
-          "label": "Private",
-          "value": "Private"
-        },
-        {
-          "active": true,
-          "label": "Subsidiary",
-          "value": "Subsidiary"
-        },
-        {
-          "active": true,
-          "label": "Other",
-          "value": "Other"
-        }
-      ],
-      "referenceTo": [],
-      "type": "picklist",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
-    },
-    {
-      "label": "Ticker Symbol",
-      "name": "TickerSymbol",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 20
-    },
-    {
       "label": "Account Description",
       "name": "Description",
       "custom": false,
@@ -757,44 +670,6 @@
       "precision": 0,
       "scale": 0,
       "length": 32000
-    },
-    {
-      "label": "Account Rating",
-      "name": "Rating",
-      "custom": false,
-      "picklistValues": [
-        {
-          "active": true,
-          "label": "Hot",
-          "value": "Hot"
-        },
-        {
-          "active": true,
-          "label": "Warm",
-          "value": "Warm"
-        },
-        {
-          "active": true,
-          "label": "Cold",
-          "value": "Cold"
-        }
-      ],
-      "referenceTo": [],
-      "type": "picklist",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
-    },
-    {
-      "label": "Account Site",
-      "name": "Site",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 80
     },
     {
       "label": "Account Currency",
@@ -3330,17 +3205,6 @@
       "precision": 0,
       "scale": 0,
       "length": 0
-    },
-    {
-      "label": "Address Identity Concatenated",
-      "name": "pz_AddressIdentityConcatenated__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
     }
   ]
 }

@@ -685,17 +685,6 @@
       "length": 18
     },
     {
-      "label": "Contract Name",
-      "name": "Name",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 80
-    },
-    {
       "label": "Deleted",
       "name": "IsDeleted",
       "custom": false,
