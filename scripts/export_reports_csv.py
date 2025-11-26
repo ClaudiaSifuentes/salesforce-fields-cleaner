@@ -103,6 +103,39 @@ def summarize_report(path: Path, simplified_dir: Path, baseline_dir: Path) -> Li
             return f"value={val},label={lab},active={act}"
         return str(it)
 
+    def _resolve_pick_value(opt: Any, obj_name: str, field_name: str) -> Optional[str]:
+        """Return the picklist `value` for an option dict or label/value token.
+        If opt is a dict and has 'value', return it. If it has only label, try to find
+        the matching picklist entry in `simplified_dir` or `baseline_dir` metadata.
+        """
+        if opt is None:
+            return None
+        if isinstance(opt, dict):
+            v = opt.get('value')
+            if v is not None:
+                return v
+            # try to resolve by label
+            lbl = opt.get('label')
+        else:
+            # opt might be a plain token (value or label)
+            lbl = str(opt)
+            v = None
+        # search metadata for matching picklist item by label or value
+        try:
+            mf = find_field_meta(obj_name, field_name, simplified_dir, baseline_dir)
+            if isinstance(mf, dict) and mf.get('picklistValues'):
+                for pv in mf.get('picklistValues'):
+                    if not isinstance(pv, dict):
+                        continue
+                    if lbl and (pv.get('label') == lbl or pv.get('value') == lbl):
+                        return pv.get('value')
+        except Exception:
+            pass
+        # fallback: if opt looks like a value token, return it
+        if not isinstance(opt, dict):
+            return str(opt)
+        return None
+
     # Added fields
     for fld in added:
         meta = find_field_meta(obj, fld, simplified_dir, baseline_dir)
@@ -217,6 +250,78 @@ def summarize_report(path: Path, simplified_dir: Path, baseline_dir: Path) -> Li
                                         found = pv
                                         break
                             picklist_removed_list.append(_fmt_pick_item(found) if found else str(x))
+                    # detect removed+added pairs that represent a value rename (same label)
+                    paired_indices = set()
+                    try:
+                        # normalize helper to get label
+                        def _label_of(it):
+                            return (it.get('label') if isinstance(it, dict) else str(it))
+
+                        for i, rem in enumerate(list(removed_vals)):
+                            if i in paired_indices:
+                                continue
+                            rem_label = _label_of(rem)
+                            for j, add in enumerate(list(added_vals)):
+                                if j in paired_indices:
+                                    continue
+                                add_label = _label_of(add)
+                                if rem_label == add_label:
+                                    # consider this a value rename -> emit picklist_value_modified
+                                    old_opt = rem if isinstance(rem, dict) else None
+                                    new_opt = add if isinstance(add, dict) else None
+                                    old_val_field = _resolve_pick_value(old_opt if old_opt is not None else rem, obj, fld)
+                                    new_val_field = _resolve_pick_value(new_opt if new_opt is not None else add, obj, fld)
+                                    old_active = old_opt.get('active') if isinstance(old_opt, dict) else None
+                                    new_active = new_opt.get('active') if isinstance(new_opt, dict) else None
+                                    # build minimal old/new objects containing only label and changed attrs
+                                    min_old = {}
+                                    min_new = {}
+                                    lab = (new_opt.get('label') if isinstance(new_opt, dict) else (old_opt.get('label') if isinstance(old_opt, dict) else rem_label))
+                                    if lab is not None:
+                                        min_old['label'] = lab
+                                        min_new['label'] = lab
+                                    if old_val_field is not None or new_val_field is not None:
+                                        min_old['value'] = old_val_field
+                                        min_new['value'] = new_val_field
+                                    if old_active is not None or new_active is not None:
+                                        min_old['active'] = old_active
+                                        min_new['active'] = new_active
+                                    nr = {
+                                        'objeto': obj,
+                                        'change_type': 'picklist_value_modified',
+                                        '_parent_change_type': 'modified',
+                                        'api_name': api_name,
+                                        'label': label,
+                                        'type': dtype,
+                                        'attribute': attr,
+                                        'old': json.dumps(min_old, ensure_ascii=False, separators=(',', ':')),
+                                        'new': json.dumps(min_new, ensure_ascii=False, separators=(',', ':')),
+                                        'detail': json.dumps({'changed': {'value': (old_val_field, new_val_field), 'active': (old_active, new_active)}}, ensure_ascii=False, separators=(',', ':')),
+                                        'picklist_added': '',
+                                        'picklist_removed': '',
+                                        'picklist_value_label': lab or '',
+                                        'picklist_value_api': (new_val_field or old_val_field or ''),
+                                        'picklist_value_active': (str(new_active) if new_active is not None else (str(old_active) if old_active is not None else '')),
+                                        'fields_old': fields_old,
+                                        'fields_new': fields_new,
+                                        'added_count': added_count,
+                                        'removed_count': removed_count,
+                                        'modified_count': modified_count,
+                                    }
+                                    rows.append(nr)
+                                    paired_indices.add(i)
+                                    paired_indices.add(j)
+                                    break
+                    except Exception:
+                        paired_indices = set()
+
+                    # remove paired items from added_vals/removed_vals so they don't become separate added/removed rows
+                    if paired_indices:
+                        new_added = [v for idx, v in enumerate(added_vals) if idx not in paired_indices]
+                        new_removed = [v for idx, v in enumerate(removed_vals) if idx not in paired_indices]
+                        added_vals = new_added
+                        removed_vals = new_removed
+
                     picklist_added_field = ';'.join(picklist_added_list) if picklist_added_list else ''
                     picklist_removed_field = ';'.join(picklist_removed_list) if picklist_removed_list else ''
                     # prepare detail for changed items too
@@ -236,6 +341,55 @@ def summarize_report(path: Path, simplified_dir: Path, baseline_dir: Path) -> Li
                             else:
                                 changed_parts.append(str(val))
                         parts.append('changed:' + ';'.join(changed_parts))
+                    # emit per-option modified rows when value or active changed
+                    if changed_vals:
+                        for c in changed_vals:
+                            old_opt = c.get('old') if isinstance(c.get('old'), dict) else None
+                            new_opt = c.get('new') if isinstance(c.get('new'), dict) else None
+                            old_val_field = _resolve_pick_value(old_opt, obj, fld)
+                            new_val_field = _resolve_pick_value(new_opt, obj, fld)
+                            old_active = bool(old_opt.get('active')) if isinstance(old_opt, dict) and 'active' in old_opt else None
+                            new_active = bool(new_opt.get('active')) if isinstance(new_opt, dict) and 'active' in new_opt else None
+                            # treat label-only changes as removed+added (don't emit modified)
+                            value_changed = (old_val_field != new_val_field)
+                            active_changed = (old_active is not None and new_active is not None and old_active != new_active)
+                            if value_changed or active_changed:
+                                # build minimal old/new objects with label and changed attrs
+                                min_old = {}
+                                min_new = {}
+                                lab = (new_opt.get('label') if isinstance(new_opt, dict) else (old_opt.get('label') if isinstance(old_opt, dict) else ''))
+                                if lab is not None:
+                                    min_old['label'] = lab
+                                    min_new['label'] = lab
+                                if old_val_field is not None or new_val_field is not None:
+                                    min_old['value'] = old_val_field
+                                    min_new['value'] = new_val_field
+                                if old_active is not None or new_active is not None:
+                                    min_old['active'] = old_active
+                                    min_new['active'] = new_active
+                                nr = {
+                                    'objeto': obj,
+                                    'change_type': 'picklist_value_modified',
+                                    '_parent_change_type': 'modified',
+                                    'api_name': api_name,
+                                    'label': label,
+                                    'type': dtype,
+                                    'attribute': attr,
+                                    'old': json.dumps(min_old, ensure_ascii=False, separators=(',', ':')),
+                                    'new': json.dumps(min_new, ensure_ascii=False, separators=(',', ':')),
+                                    'detail': json.dumps({'changed': {'value': (old_val_field, new_val_field), 'active': (old_active, new_active)}}, ensure_ascii=False, separators=(',', ':')),
+                                    'picklist_added': '',
+                                    'picklist_removed': '',
+                                    'picklist_value_label': lab or '',
+                                    'picklist_value_api': (new_val_field or old_val_field or ''),
+                                    'picklist_value_active': (str(new_active) if new_active is not None else (str(old_active) if old_active is not None else '')),
+                                    'fields_old': fields_old,
+                                    'fields_new': fields_new,
+                                    'added_count': added_count,
+                                    'removed_count': removed_count,
+                                    'modified_count': modified_count,
+                                }
+                                rows.append(nr)
                     detail = '; '.join(parts) if parts else _details(d.get('detail'))
                     old_val = ''
                     new_val = ''
@@ -280,8 +434,8 @@ def summarize_report(path: Path, simplified_dir: Path, baseline_dir: Path) -> Li
                     'old': old_val,
                     'new': new_val,
                     'detail': detail,
-                    'picklist_added': picklist_added_field,
-                    'picklist_removed': picklist_removed_field,
+                            'picklist_added': picklist_added_field,
+                            'picklist_removed': picklist_removed_field,
                     'fields_old': fields_old,
                     'fields_new': fields_new,
                     'added_count': added_count,
@@ -485,6 +639,8 @@ def main() -> int:
                 except Exception:
                     nr['detail'] = r.get('detail', '')
                 final_rows.append(nr)
+        # NOTE: do not re-append rows of type 'picklist_value_modified' here — they are already
+        # present in `rows` and were added to final_rows by the initial append above. Avoid duplication.
 
     # split final_rows into two CSVs:
     #  - additions/removals (and their per-option rows)
@@ -508,6 +664,12 @@ def main() -> int:
                 modified_rows.append(r)
             else:
                 # if no parent info, conservatively place in additions/removals
+                addrem_rows.append(r)
+        elif ct == 'picklist_value_modified':
+            # per-option modified rows should go to modified CSV when parent is modified
+            if parent == 'modified' or parent is None:
+                modified_rows.append(r)
+            else:
                 addrem_rows.append(r)
         elif ct == 'modified':
             modified_rows.append(r)

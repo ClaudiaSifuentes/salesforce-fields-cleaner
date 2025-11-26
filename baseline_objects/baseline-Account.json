@@ -155,24 +155,24 @@
       "custom": false,
       "picklistValues": [
         {
-          "active": false,
+          "active": true,
           "label": "Near Address",
-          "value": "nulo"
+          "value": "NearAddress"
         },
         {
           "active": true,
-          "label": "NuevoBlock",
+          "label": "Block",
           "value": "Block"
         },
         {
-          "active": true,
+          "active": false,
           "label": "Street",
           "value": "Street"
         },
         {
           "active": true,
           "label": "Extended Zip",
-          "value": "ExtendedZip"
+          "value": "NuevoValor"
         },
         {
           "active": true,

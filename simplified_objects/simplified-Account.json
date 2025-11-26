@@ -208,7 +208,7 @@
         {
           "active": true,
           "label": "Address",
-          "value": "Address"
+          "value": "NuevoAddress"
         },
         {
           "active": true,
@@ -231,14 +231,14 @@
           "value": "Zip"
         },
         {
-          "active": true,
+          "active": false,
           "label": "Neighborhood",
           "value": "Neighborhood"
         },
         {
           "active": true,
           "label": "City",
-          "value": "City"
+          "value": "Ciudad"
         },
         {
           "active": true,
@@ -252,7 +252,7 @@
         },
         {
           "active": true,
-          "label": "Unknown",
+          "label": "desconocido",
           "value": "Unknown"
         }
       ],

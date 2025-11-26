@@ -226,18 +226,18 @@
           "value": "Address"
         },
         {
-          "active": true,
+          "active": false,
           "label": "Near Address",
           "value": "NearAddress"
         },
         {
           "active": true,
           "label": "Block",
-          "value": "Block"
+          "value": "Block_Nuevo"
         },
         {
           "active": true,
-          "label": "Street",
+          "label": "Street2",
           "value": "Street"
         },
         {
@@ -247,7 +247,7 @@
         },
         {
           "active": true,
-          "label": "Zip",
+          "label": "Zipp",
           "value": "Zip"
         },
         {

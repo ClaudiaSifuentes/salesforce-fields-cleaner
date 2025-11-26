@@ -1,9 +1,11 @@
 objeto,tipo de cambio,api_name,attribute,old,new,diff,picklist_value_label,picklist_value_api,picklist_value_active
-Account,modified,BillingGeocodeAccuracy,picklistValues,,,"added:value=Address,label=Address,active=True;value=NearAddress,label=Near Address,active=True; removed:ExtendedZip;nulo; changed:Block: NuevoBlock -> Block",,,
-Account,picklist_value_added,BillingGeocodeAccuracy,picklistValues,,,"{""active"":true,""label"":""Address"",""value"":""Address""}",Address,Address,True
-Account,picklist_value_added,BillingGeocodeAccuracy,picklistValues,,,"{""active"":true,""label"":""Near Address"",""value"":""NearAddress""}",Near Address,NearAddress,True
-Account,picklist_value_removed,BillingGeocodeAccuracy,picklistValues,,,"{""active"":null,""label"":""ExtendedZip"",""value"":""ExtendedZip""}",ExtendedZip,ExtendedZip,
-Account,picklist_value_removed,BillingGeocodeAccuracy,picklistValues,,,"{""active"":null,""label"":""nulo"",""value"":""nulo""}",nulo,nulo,
+Account,picklist_value_modified,BillingGeocodeAccuracy,picklistValues,"{""label"":""Street"",""value"":""Street"",""active"":false}","{""label"":""Street"",""value"":""Street"",""active"":true}","{""changed"":{""value"":[""Street"",""Street""],""active"":[false,true]}}",Street,Street,True
+Account,picklist_value_modified,BillingGeocodeAccuracy,picklistValues,"{""label"":""Neighborhood"",""value"":""Neighborhood"",""active"":true}","{""label"":""Neighborhood"",""value"":""Neighborhood"",""active"":false}","{""changed"":{""value"":[""Neighborhood"",""Neighborhood""],""active"":[true,false]}}",Neighborhood,Neighborhood,False
+Account,modified,BillingGeocodeAccuracy,picklistValues,,,"added:value=Ciudad,label=City,active=True;value=NuevoAddress,label=Address,active=True; removed:value=Ciudad,label=City,active=True;NuevoValor; changed:Street: Street -> Street;Neighborhood: Neighborhood -> Neighborhood;Unknown: Unknown -> desconocido",,,
+Account,picklist_value_added,BillingGeocodeAccuracy,picklistValues,,,"{""active"":true,""label"":""City"",""value"":""Ciudad""}",City,Ciudad,True
+Account,picklist_value_added,BillingGeocodeAccuracy,picklistValues,,,"{""active"":true,""label"":""Address"",""value"":""NuevoAddress""}",Address,NuevoAddress,True
+Account,picklist_value_removed,BillingGeocodeAccuracy,picklistValues,,,"{""active"":true,""label"":""City"",""value"":""Ciudad""}",City,Ciudad,True
+Account,picklist_value_removed,BillingGeocodeAccuracy,picklistValues,,,"{""active"":null,""label"":""NuevoValor"",""value"":""NuevoValor""}",NuevoValor,NuevoValor,
 Account,modified,IsDeleted,label,Deleted,Deeleted,,,,
 Account,modified,IsDeleted,custom,False,True,,,,
 Account,modified,IsDeleted,type,boolean,int,,,,
@@ -11,3 +13,8 @@ Account,modified,IsDeleted,precision,0,3,,,,
 Account,modified,IsDeleted,scale,0,4,,,,
 Account,modified,IsDeleted,length,0,5,,,,
 Account,modified,RecordTypeId,referenceTo,"[""RecordType"",""Otro1__c""]","[""RecordType""]",removed:Otro1__c,,,
+Contact,picklist_value_modified,OtherGeocodeAccuracy,picklistValues,"{""label"":""Address"",""value"":""Address"",""active"":true}","{""label"":""Address"",""value"":""Address"",""active"":false}","{""changed"":{""value"":[""Address"",""Address""],""active"":[true,false]}}",Address,Address,False
+Contact,picklist_value_modified,OtherGeocodeAccuracy,picklistValues,"{""label"":""Near Address"",""value"":""NearAddress"",""active"":false}","{""label"":""Near Address"",""value"":""NearAddresss"",""active"":false}","{""changed"":{""value"":[""NearAddress"",""NearAddresss""],""active"":[false,false]}}",Near Address,NearAddresss,False
+Contact,modified,OtherGeocodeAccuracy,picklistValues,,,"added:value=Zip,label=Zip,active=True; removed:value=Zip,label=Zipp,active=True; changed:Address: Address -> Address;Near Address: Near Address -> Near Address",,,
+Contact,picklist_value_added,OtherGeocodeAccuracy,picklistValues,,,"{""active"":true,""label"":""Zip"",""value"":""Zip""}",Zip,Zip,True
+Contact,picklist_value_removed,OtherGeocodeAccuracy,picklistValues,,,"{""active"":true,""label"":""Zipp"",""value"":""Zip""}",Zipp,Zip,True

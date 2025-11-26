@@ -124,24 +124,24 @@
         "custom": false,
         "picklistValues": [
           {
-            "active": false,
+            "active": true,
             "label": "Near Address",
-            "value": "nulo"
+            "value": "NearAddress"
           },
           {
             "active": true,
-            "label": "NuevoBlock",
+            "label": "Block",
             "value": "Block"
           },
           {
-            "active": true,
+            "active": false,
             "label": "Street",
             "value": "Street"
           },
           {
             "active": true,
             "label": "Extended Zip",
-            "value": "ExtendedZip"
+            "value": "NuevoValor"
           },
           {
             "active": true,
@@ -188,7 +188,7 @@
           {
             "active": true,
             "label": "Address",
-            "value": "Address"
+            "value": "NuevoAddress"
           },
           {
             "active": true,
@@ -211,14 +211,14 @@
             "value": "Zip"
           },
           {
-            "active": true,
+            "active": false,
             "label": "Neighborhood",
             "value": "Neighborhood"
           },
           {
             "active": true,
             "label": "City",
-            "value": "City"
+            "value": "Ciudad"
           },
           {
             "active": true,
@@ -232,7 +232,7 @@
           },
           {
             "active": true,
-            "label": "Unknown",
+            "label": "desconocido",
             "value": "Unknown"
           }
         ],
@@ -247,22 +247,44 @@
           "attribute": "picklistValues",
           "detail": {
             "added": [
-              "Address",
-              "NearAddress"
+              "Ciudad",
+              "NuevoAddress"
             ],
             "removed": [
-              "ExtendedZip",
-              "nulo"
+              "City",
+              "NuevoValor"
             ],
             "changed": [
               {
-                "value": "Block",
+                "value": "Street",
                 "old": {
-                  "label": "NuevoBlock",
+                  "label": "Street",
+                  "active": false
+                },
+                "new": {
+                  "label": "Street",
+                  "active": true
+                }
+              },
+              {
+                "value": "Neighborhood",
+                "old": {
+                  "label": "Neighborhood",
                   "active": true
                 },
                 "new": {
-                  "label": "Block",
+                  "label": "Neighborhood",
+                  "active": false
+                }
+              },
+              {
+                "value": "Unknown",
+                "old": {
+                  "label": "Unknown",
+                  "active": true
+                },
+                "new": {
+                  "label": "desconocido",
                   "active": true
                 }
               }
@@ -368,5 +390,5 @@
       ]
     }
   },
-  "text_report": "Old fields: 175\nNew fields: 176\nAdded fields: 3\nRemoved fields: 2\nModified fields: 3\n\nAdded:\n  + Naame\n    - label: Account Name type: string custom: False\n  + Type\n    - label: Account Type type: picklist custom: False\n    - picklistValues: Analyst,Competitor,Customer,Integrator,Investor,Partner,Press,Prospect,Reseller,Other\n  + pz_IsInfluential__c\n    - label: Es Influyente type: boolean custom: True\nRemoved:\n  - Id\n    - label: Account ID type: id custom: False\n  - Name\n    - label: Account Name type: string custom: False\n\nModified:\n* BillingGeocodeAccuracy\n    - picklistValues {\"added\": [\"Address\", \"NearAddress\"], \"removed\": [\"ExtendedZip\", \"nulo\"], \"changed\": [{\"value\": \"Block\", \"old\": {\"label\": \"NuevoBlock\", \"active\": true}, \"new\": {\"label\": \"Block\", \"active\": true}}]}\n* IsDeleted\n    - label -> old: Deleted new: Deeleted\n    - custom -> old: False new: True\n    - type -> old: boolean new: int\n    - precision -> old: 0 new: 3\n    - scale -> old: 0 new: 4\n    - length -> old: 0 new: 5\n* RecordTypeId\n    - referenceTo {\"added\": [], \"removed\": [\"Otro1__c\"]}"
+  "text_report": "Old fields: 175\nNew fields: 176\nAdded fields: 3\nRemoved fields: 2\nModified fields: 3\n\nAdded:\n  + Naame\n    - label: Account Name type: string custom: False\n  + Type\n    - label: Account Type type: picklist custom: False\n    - picklistValues: Analyst,Competitor,Customer,Integrator,Investor,Partner,Press,Prospect,Reseller,Other\n  + pz_IsInfluential__c\n    - label: Es Influyente type: boolean custom: True\nRemoved:\n  - Id\n    - label: Account ID type: id custom: False\n  - Name\n    - label: Account Name type: string custom: False\n\nModified:\n* BillingGeocodeAccuracy\n    - picklistValues {\"added\": [\"Ciudad\", \"NuevoAddress\"], \"removed\": [\"City\", \"NuevoValor\"], \"changed\": [{\"value\": \"Street\", \"old\": {\"label\": \"Street\", \"active\": false}, \"new\": {\"label\": \"Street\", \"active\": true}}, {\"value\": \"Neighborhood\", \"old\": {\"label\": \"Neighborhood\", \"active\": true}, \"new\": {\"label\": \"Neighborhood\", \"active\": false}}, {\"value\": \"Unknown\", \"old\": {\"label\": \"Unknown\", \"active\": true}, \"new\": {\"label\": \"desconocido\", \"active\": true}}]}\n* IsDeleted\n    - label -> old: Deleted new: Deeleted\n    - custom -> old: False new: True\n    - type -> old: boolean new: int\n    - precision -> old: 0 new: 3\n    - scale -> old: 0 new: 4\n    - length -> old: 0 new: 5\n* RecordTypeId\n    - referenceTo {\"added\": [], \"removed\": [\"Otro1__c\"]}"
 }

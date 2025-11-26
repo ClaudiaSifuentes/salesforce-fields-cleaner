@@ -26,18 +26,38 @@ def picklist_map(picklist_values):
 
 
 def compare_picklists(old_list, new_list):
-    old_map = picklist_map(old_list)
-    new_map = picklist_map(new_list)
-    old_vals = set(old_map.keys())
-    new_vals = set(new_map.keys())
-    added = sorted(list(new_vals - old_vals))
-    removed = sorted(list(old_vals - new_vals))
+    # Build maps keyed by label (matching should be done by label, not by value)
+    def map_by_label(lst):
+        m = {}
+        for pv in lst or []:
+            if not isinstance(pv, dict):
+                # pv may be a plain token (value or label); use string as label key
+                key = str(pv)
+                m.setdefault(key, {'label': key, 'value': key, 'active': None})
+                continue
+            lab = pv.get('label') if pv.get('label') is not None else (pv.get('value') if pv.get('value') is not None else '')
+            # prefer explicit label when available
+            key = lab
+            # store value and active
+            m[key] = {'label': lab, 'value': pv.get('value'), 'active': pv.get('active')}
+        return m
+
+    old_map = map_by_label(old_list)
+    new_map = map_by_label(new_list)
+    old_labels = set(old_map.keys())
+    new_labels = set(new_map.keys())
+    # For added/removed we want to return rich objects (dicts) when possible so
+    # downstream code (exporter) can display label/value/active consistently.
+    added = [new_map[l] for l in sorted(list(new_labels - old_labels))]
+    removed = [old_map[l] for l in sorted(list(old_labels - new_labels))]
     changed = []
-    for v in old_vals & new_vals:
-        o = old_map[v]
-        n = new_map[v]
-        if o.get('label') != n.get('label') or bool(o.get('active')) != bool(n.get('active')):
-            changed.append({'value': v, 'old': o, 'new': n})
+    for lab in old_labels & new_labels:
+        o = old_map.get(lab, {})
+        n = new_map.get(lab, {})
+        # consider changed if value or active differ
+        if (o.get('value') != n.get('value')) or (bool(o.get('active')) != bool(n.get('active'))):
+            # keep 'value' field containing the identity token (label) for compatibility
+            changed.append({'value': lab, 'old': o, 'new': n})
     return {'added': added, 'removed': removed, 'changed': changed}
 
 

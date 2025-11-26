@@ -4,10 +4,196 @@
     "fields_new": 175,
     "added": 0,
     "removed": 0,
-    "modified": 0
+    "modified": 1
   },
   "added_fields": [],
   "removed_fields": [],
-  "modified_fields": {},
-  "text_report": "Old fields: 175\nNew fields: 175\nAdded fields: 0\nRemoved fields: 0\nModified fields: 0\n"
+  "modified_fields": {
+    "OtherGeocodeAccuracy": {
+      "old": {
+        "label": "Other Geocode Accuracy",
+        "name": "OtherGeocodeAccuracy",
+        "custom": false,
+        "picklistValues": [
+          {
+            "active": true,
+            "label": "Address",
+            "value": "Address"
+          },
+          {
+            "active": false,
+            "label": "Near Address",
+            "value": "NearAddress"
+          },
+          {
+            "active": true,
+            "label": "Block",
+            "value": "Block_Nuevo"
+          },
+          {
+            "active": true,
+            "label": "Street2",
+            "value": "Street"
+          },
+          {
+            "active": true,
+            "label": "Extended Zip",
+            "value": "ExtendedZip"
+          },
+          {
+            "active": true,
+            "label": "Zipp",
+            "value": "Zip"
+          },
+          {
+            "active": true,
+            "label": "Neighborhood",
+            "value": "Neighborhood"
+          },
+          {
+            "active": true,
+            "label": "City",
+            "value": "City"
+          },
+          {
+            "active": true,
+            "label": "County",
+            "value": "County"
+          },
+          {
+            "active": true,
+            "label": "State",
+            "value": "State"
+          },
+          {
+            "active": true,
+            "label": "Unknown",
+            "value": "Unknown"
+          }
+        ],
+        "referenceTo": [],
+        "type": "picklist",
+        "precision": 0,
+        "scale": 0,
+        "length": 40
+      },
+      "new": {
+        "label": "Other Geocode Accuracy",
+        "name": "OtherGeocodeAccuracy",
+        "custom": false,
+        "picklistValues": [
+          {
+            "active": false,
+            "label": "Address",
+            "value": "Address"
+          },
+          {
+            "active": false,
+            "label": "Near Address",
+            "value": "NearAddresss"
+          },
+          {
+            "active": true,
+            "label": "Block",
+            "value": "Block_Nuevo"
+          },
+          {
+            "active": true,
+            "label": "Street2",
+            "value": "Street"
+          },
+          {
+            "active": true,
+            "label": "Extended Zip",
+            "value": "ExtendedZip"
+          },
+          {
+            "active": true,
+            "label": "Zip",
+            "value": "Zip"
+          },
+          {
+            "active": true,
+            "label": "Neighborhood",
+            "value": "Neighborhood"
+          },
+          {
+            "active": true,
+            "label": "City",
+            "value": "City"
+          },
+          {
+            "active": true,
+            "label": "County",
+            "value": "County"
+          },
+          {
+            "active": true,
+            "label": "State",
+            "value": "State"
+          },
+          {
+            "active": true,
+            "label": "Unknown",
+            "value": "Unknown"
+          }
+        ],
+        "referenceTo": [],
+        "type": "picklist",
+        "precision": 0,
+        "scale": 0,
+        "length": 40
+      },
+      "diffs": [
+        {
+          "attribute": "picklistValues",
+          "detail": {
+            "added": [
+              {
+                "label": "Zip",
+                "value": "Zip",
+                "active": true
+              }
+            ],
+            "removed": [
+              {
+                "label": "Zipp",
+                "value": "Zip",
+                "active": true
+              }
+            ],
+            "changed": [
+              {
+                "value": "Address",
+                "old": {
+                  "label": "Address",
+                  "value": "Address",
+                  "active": true
+                },
+                "new": {
+                  "label": "Address",
+                  "value": "Address",
+                  "active": false
+                }
+              },
+              {
+                "value": "Near Address",
+                "old": {
+                  "label": "Near Address",
+                  "value": "NearAddress",
+                  "active": false
+                },
+                "new": {
+                  "label": "Near Address",
+                  "value": "NearAddresss",
+                  "active": false
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  },
+  "text_report": "Old fields: 175\nNew fields: 175\nAdded fields: 0\nRemoved fields: 0\nModified fields: 1\n\n\nModified:\n* OtherGeocodeAccuracy\n    - picklistValues {\"added\": [{\"label\": \"Zip\", \"value\": \"Zip\", \"active\": true}], \"removed\": [{\"label\": \"Zipp\", \"value\": \"Zip\", \"active\": true}], \"changed\": [{\"value\": \"Address\", \"old\": {\"label\": \"Address\", \"value\": \"Address\", \"active\": true}, \"new\": {\"label\": \"Address\", \"value\": \"Address\", \"active\": false}}, {\"value\": \"Near Address\", \"old\": {\"label\": \"Near Address\", \"value\": \"NearAddress\", \"active\": false}, \"new\": {\"label\": \"Near Address\", \"value\": \"NearAddresss\", \"active\": false}}]}"
 }
