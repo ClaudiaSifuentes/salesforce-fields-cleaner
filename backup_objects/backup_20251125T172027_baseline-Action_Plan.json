@@ -56,11 +56,6 @@
           "active": true,
           "label": "Peruvian Sol",
           "value": "PEN"
-        },
-        {
-          "active": true,
-          "label": "U.S. Dollar",
-          "value": "USD"
         }
       ],
       "referenceTo": [],
@@ -161,6 +156,12 @@
         "AssetAccountParticipant",
         "AssetContactParticipant",
         "BusinessLicense",
+        "Campaign",
+        "Case",
+        "ChangeRequest",
+        "Contact",
+        "Contract",
+        "Incident",
         "IndividualApplication",
         "Lead",
         "Opportunity",

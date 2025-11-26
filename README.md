@@ -1,24 +1,20 @@
 # Limpiar JSON de metadata de campos
 
-Este pequeño script simplifica un JSON exportado de metadatos (por ejemplo, la respuesta SOAP/REST de Salesforce) quedándose solo con los campos y sus atributos relevantes.
-
-# Limpiar JSON de metadata de campos
-
-Este repositorio contiene herramientas para simplificar JSONs de metadatos de campos (por ejemplo exportaciones de Salesforce) y comparar versiones para detectar cambios en campos, picklists y referencias.
+Este repositorio contiene herramientas para simplificar JSONs de metadatos de campos (por ejemplo, exportaciones desde Salesforce) y comparar versiones para detectar cambios en campos, picklists y referencias.
 
 Qué hace
-- Extrae y normaliza los atributos relevantes por campo: `name`, `label`, `type`, `picklistValues`, `referenceTo`, `precision`, `scale`, `length`, `custom`.
-- Compara dos versiones simplificadas y genera un reporte estructurado (JSON) y una versión legible embebida en el JSON bajo la clave `text_report`.
+- Extrae y normaliza los atributos relevantes por campo: `name`, `label`, `type`, `picklistValues`, `referenceTo`, `precision`, `scale`, `length`, `custom`, `inlineHelpText`, `soapType`.
+- Compara dos versiones simplificadas y genera un reporte estructurado (JSON) que incluye además una versión legible en `text_report`.
 
 Estructura del proyecto (carpetas y archivos esperados)
-- `scripts/` — contiene los scripts de trabajo:
-	- `clean_campos.py` — limpia un JSON raw y escribe el simplificado.
-	- `diff_campos.py` — compara dos JSON simplificados y genera un reporte.
-- `incoming_objects/` — archivo por defecto `incoming-account.json` (raw que vas a procesar).
-- `simplified_objects/` — `simplified-account.json` (resultado simplificado más reciente).
-- `baseline_objects/` — `baseline-account.json` (baseline usado para comparar).
-- `report_objects/` — `report-account.json` (reporte JSON generado por el pipeline).
-- `backup_objects/` — backups automáticos del baseline (nombres `backup_YYYYMMDDThhmmss_baseline-account.json`).
+- `scripts/` — scripts de trabajo:
+  - `clean_campos.py` — limpia un JSON raw y escribe el simplificado.
+  - `diff_campos.py` — compara dos JSON simplificados y genera un reporte.
+- `incoming_objects/` — archivos raw de entrada (`incoming-<object>.json`).
+- `simplified_objects/` — resultados simplificados (`simplified-<object>.json`).
+- `baseline_objects/` — baseline usados para comparar (`baseline-<object>.json`).
+- `report_objects/` — reportes generados (`report-<object>.json`).
+- `backup_objects/` — backups automáticos del baseline (`backup_YYYYMMDDThhmmss_baseline-<object>.json`).
 
 Uso rápido (PowerShell)
 
@@ -30,11 +26,11 @@ python .\scripts\clean_campos.py .\incoming_objects\incoming-account.json .\simp
 
 2) Ejecutar pipeline (flujo completo)
 
-El pipeline hace lo siguiente:
-- Determina el baseline a usar (`baseline_objects/baseline-account.json` si existe, si no intenta usar cualquier JSON reciente en `baseline_objects/` o crea un baseline vacío).
-- Limpia el `incoming` a un temporal (`simplified_objects/simplified-account.tmp.json`) y ejecuta el diff contra el baseline.
-- Escribe el reporte JSON en `report_objects/report-account.json` (puedes especificar otra ruta con `--report`). El JSON incluye además `text_report` con una versión legible.
-- Si el diff finaliza correctamente, el pipeline promueve los archivos: hace backup del baseline en `backup_objects/`, mueve la versión anterior de `simplified-account.json` a `baseline-account.json` y actualiza `simplified-account.json` con la nueva versión.
+El pipeline realiza el siguiente flujo por objeto:
+- Determina el baseline a usar (`baseline_objects/baseline-<object>.json` si existe, o crea un baseline vacío si no hay ninguno).
+- Limpia el `incoming` a un archivo temporal y ejecuta el diff contra el baseline.
+- Escribe el resultado en `report_objects/report-<object>.json`. El JSON incluye `summary`, `added_fields`, `removed_fields`, `modified_fields` y la clave `text_report` con la versión legible.
+- Si el diff indica que todo está correcto, el pipeline promueve el nuevo simplificado: hace un backup del baseline en `backup_objects/` y actualiza los archivos `baseline-...` y `simplified-...`.
 
 Ejemplo (usar incoming por defecto):
 
@@ -42,25 +38,25 @@ Ejemplo (usar incoming por defecto):
 python .\pipeline_main.py
 ```
 
-Ejemplo especificando un archivo raw y ruta de reporte:
+Ejemplo especificando un raw y ruta de reporte:
 
 ```powershell
 python .\pipeline_main.py .\incoming_objects\otro_raw.json --report .\report_objects\report-account.json
 ```
 
-Opciones útiles:
-- `--report <path>`: escribir el JSON de reporte en la ruta indicada (por defecto `report_objects/report-account.json`).
-- `--keep-temp`: mantener archivos intermedios (por compatibilidad; el pipeline ahora escribe directamente en `simplified_objects`).
+Opciones útiles
+- `--report <path>`: escribir el JSON de reporte en la ruta indicada (por defecto `report_objects/report-<object>.json`).
+- `--keep-temp`: mantener archivos intermedios (por compatibilidad).
 
 Salida del reporte
-- El JSON generado contiene `summary`, `added_fields`, `removed_fields`, `modified_fields` y una clave `text_report` con un bloque de texto legible (idéntico al que se imprime en terminal), para facilitar la lectura.
+- El JSON generado contiene `summary`, `added_fields`, `removed_fields`, `modified_fields` y `text_report` (bloque de texto legible), para facilitar revisiones manuales.
 
 Consideraciones
 - Los backups del baseline se almacenan en `backup_objects/` con timestamp para preservar historial.
-- Si prefieres otro nombre por defecto para el reporte (por ejemplo `report_sccount.json`), puedo cambiarlo rápidamente en `pipeline_main.py`.
+- Si trabajas en Windows/OneDrive ten en cuenta posibles bloqueos de archivos al hacer operaciones sobre `backup_objects/`.
 
 Requisitos
-- Python 3.8+ (sólo librería estándar)
+- Python 3.8+ (solo librería estándar)
 
 Ejemplos rápidos (PowerShell)
 
@@ -75,6 +71,4 @@ python .\pipeline_main.py
 python .\pipeline_main.py .\incoming_objects\incoming-account.json --report .\report_objects\report-account.json
 ```
 
-Si quieres que actualice el nombre por defecto del reporte a `report_sccount.json` o que agregue instrucciones adicionales (por ejemplo cómo integrar esto en CI), dime y lo agrego.
-
-#
+Si quieres que ajuste el nombre por defecto del reporte, agregue instrucciones para CI, o traduzca/expanda secciones, dímelo y lo actualizo.

@@ -1,0 +1,14 @@
+objeto,change_type,api_name,label,type,attribute,old,new,detail,picklist_value_label,picklist_value_api,picklist_value_active
+Account,added,Type,Account Type,picklist,,,,"{""label"":""Account Type"",""name"":""Type"",""custom"":false,""picklistValues"":[{""active"":true,""label"":""Analyst"",""value"":""Analyst""},{""active"":true,""label"":""Competitor"",""value"":""Competitor""},{""active"":true,""label"":""Customer"",""value"":""Customer""},{""active"":true,""label"":""Integrator"",""value"":""Integrator""},{""active"":true,""label"":""Investor"",""value"":""Investor""},{""active"":true,""label"":""Partner"",""value"":""Partner""},{""active"":true,""label"":""Press"",""value"":""Press""},{""active"":true,""label"":""Prospect"",""value"":""Prospect""},{""active"":true,""label"":""Reseller"",""value"":""Reseller""},{""active"":true,""label"":""Other"",""value"":""Other""}],""referenceTo"":[],""type"":""picklist"",""precision"":0,""scale"":0,""length"":255}",,,
+Account,picklist_value_added,Type,Account Type,picklist,,,,"{""active"":true,""label"":""Analyst"",""value"":""Analyst""}",Analyst,Analyst,True
+Account,picklist_value_added,Type,Account Type,picklist,,,,"{""active"":true,""label"":""Competitor"",""value"":""Competitor""}",Competitor,Competitor,True
+Account,picklist_value_added,Type,Account Type,picklist,,,,"{""active"":true,""label"":""Customer"",""value"":""Customer""}",Customer,Customer,True
+Account,picklist_value_added,Type,Account Type,picklist,,,,"{""active"":true,""label"":""Integrator"",""value"":""Integrator""}",Integrator,Integrator,True
+Account,picklist_value_added,Type,Account Type,picklist,,,,"{""active"":true,""label"":""Investor"",""value"":""Investor""}",Investor,Investor,True
+Account,picklist_value_added,Type,Account Type,picklist,,,,"{""active"":true,""label"":""Partner"",""value"":""Partner""}",Partner,Partner,True
+Account,picklist_value_added,Type,Account Type,picklist,,,,"{""active"":true,""label"":""Press"",""value"":""Press""}",Press,Press,True
+Account,picklist_value_added,Type,Account Type,picklist,,,,"{""active"":true,""label"":""Prospect"",""value"":""Prospect""}",Prospect,Prospect,True
+Account,picklist_value_added,Type,Account Type,picklist,,,,"{""active"":true,""label"":""Reseller"",""value"":""Reseller""}",Reseller,Reseller,True
+Account,picklist_value_added,Type,Account Type,picklist,,,,"{""active"":true,""label"":""Other"",""value"":""Other""}",Other,Other,True
+Account,added,pz_IsInfluential__c,Es Influyente,boolean,,,,"{""label"":""Es Influyente"",""name"":""pz_IsInfluential__c"",""custom"":true,""picklistValues"":[],""referenceTo"":[],""type"":""boolean"",""precision"":0,""scale"":0,""length"":0}",,,
+Account,removed,Id,Account ID,id,,,,"{""label"":""Account ID"",""name"":""Id"",""custom"":false,""picklistValues"":[],""referenceTo"":[],""type"":""id"",""precision"":0,""scale"":0,""length"":18}",,,

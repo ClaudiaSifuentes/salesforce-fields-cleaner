@@ -1,17 +1,6 @@
 {
   "fields": [
     {
-      "label": "Account ID",
-      "name": "Id",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "id",
-      "precision": 0,
-      "scale": 0,
-      "length": 18
-    },
-    {
       "label": "Deleted",
       "name": "IsDeleted",
       "custom": false,

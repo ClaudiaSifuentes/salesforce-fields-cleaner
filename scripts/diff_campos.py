@@ -73,23 +73,53 @@ def make_report(old_by_name, new_by_name):
     added = sorted(list(new_names - old_names))
     removed = sorted(list(old_names - new_names))
     common = sorted(list(old_names & new_names))
-
     modified = {}
     for name in common:
         diffs = compare_field(old_by_name.get(name, {}), new_by_name.get(name, {}))
         if diffs:
             modified[name] = {'old': old_by_name.get(name), 'new': new_by_name.get(name), 'diffs': diffs}
+    # helper to extract requested metadata keys from a field dict
+    def _meta_from_field(f):
+        if not isinstance(f, dict):
+            return None
+        return {
+            'label': f.get('label'),
+            'name': f.get('name'),
+            'custom': f.get('custom'),
+            'picklistValues': f.get('picklistValues'),
+            'referenceTo': f.get('referenceTo'),
+            'type': f.get('type'),
+            'precision': f.get('precision'),
+            'scale': f.get('scale'),
+            'length': f.get('length'),
+        }
+
+    # build lists of metadata objects for added/removed
+    added_meta = []
+    for n in added:
+        meta = _meta_from_field(new_by_name.get(n))
+        # if new_by_name missing, fall back to name-only object
+        if not meta:
+            meta = {'name': n}
+        added_meta.append(meta)
+
+    removed_meta = []
+    for n in removed:
+        meta = _meta_from_field(old_by_name.get(n))
+        if not meta:
+            meta = {'name': n}
+        removed_meta.append(meta)
 
     report = {
         'summary': {
             'fields_old': len(old_names),
             'fields_new': len(new_names),
-            'added': len(added),
-            'removed': len(removed),
+            'added': len(added_meta),
+            'removed': len(removed_meta),
             'modified': len(modified),
         },
-        'added_fields': added,
-        'removed_fields': removed,
+        'added_fields': added_meta,
+        'removed_fields': removed_meta,
         'modified_fields': modified,
     }
     return report
@@ -115,12 +145,33 @@ def print_summary(report):
 
     if report.get('added_fields'):
         _safe_print('Added:')
-        for n in report['added_fields']:
-            _safe_print('  +', n)
+        for entry in report['added_fields']:
+            if isinstance(entry, dict):
+                _safe_print('  +', entry.get('name') or entry.get('label') or entry)
+                # print some metadata inline
+                _safe_print('    -', 'label:', entry.get('label'), 'type:', entry.get('type'), 'custom:', entry.get('custom'))
+                if entry.get('picklistValues'):
+                    try:
+                        pv_vals = [p.get('value') or p.get('label') for p in entry.get('picklistValues')]
+                        _safe_print('    -', 'picklistValues:', ','.join(pv_vals))
+                    except Exception:
+                        _safe_print('    -', 'picklistValues: (unprintable)')
+            else:
+                _safe_print('  +', entry)
     if report.get('removed_fields'):
         _safe_print('Removed:')
-        for n in report['removed_fields']:
-            _safe_print('  -', n)
+        for entry in report['removed_fields']:
+            if isinstance(entry, dict):
+                _safe_print('  -', entry.get('name') or entry.get('label') or entry)
+                _safe_print('    -', 'label:', entry.get('label'), 'type:', entry.get('type'), 'custom:', entry.get('custom'))
+                if entry.get('picklistValues'):
+                    try:
+                        pv_vals = [p.get('value') or p.get('label') for p in entry.get('picklistValues')]
+                        _safe_print('    -', 'picklistValues:', ','.join(pv_vals))
+                    except Exception:
+                        _safe_print('    -', 'picklistValues: (unprintable)')
+            else:
+                _safe_print('  -', entry)
     if report.get('modified_fields'):
         _safe_print('\nModified:')
         for name, info in report['modified_fields'].items():
@@ -145,12 +196,34 @@ def format_summary(report):
 
     if report.get('added_fields'):
         out_lines.append('Added:')
-        for n in report['added_fields']:
-            out_lines.append(f"  + {n}")
+        for entry in report['added_fields']:
+            if isinstance(entry, dict):
+                nm = entry.get('name') or entry.get('label') or ''
+                out_lines.append(f"  + {nm}")
+                out_lines.append(f"    - label: {entry.get('label')} type: {entry.get('type')} custom: {entry.get('custom')}")
+                if entry.get('picklistValues'):
+                    try:
+                        pv_vals = [p.get('value') or p.get('label') for p in entry.get('picklistValues')]
+                        out_lines.append(f"    - picklistValues: {','.join(pv_vals)}")
+                    except Exception:
+                        out_lines.append(f"    - picklistValues: (unprintable)")
+            else:
+                out_lines.append(f"  + {entry}")
     if report.get('removed_fields'):
         out_lines.append('Removed:')
-        for n in report['removed_fields']:
-            out_lines.append(f"  - {n}")
+        for entry in report['removed_fields']:
+            if isinstance(entry, dict):
+                nm = entry.get('name') or entry.get('label') or ''
+                out_lines.append(f"  - {nm}")
+                out_lines.append(f"    - label: {entry.get('label')} type: {entry.get('type')} custom: {entry.get('custom')}")
+                if entry.get('picklistValues'):
+                    try:
+                        pv_vals = [p.get('value') or p.get('label') for p in entry.get('picklistValues')]
+                        out_lines.append(f"    - picklistValues: {','.join(pv_vals)}")
+                    except Exception:
+                        out_lines.append(f"    - picklistValues: (unprintable)")
+            else:
+                out_lines.append(f"  - {entry}")
     if report.get('modified_fields'):
         out_lines.append('')
         out_lines.append('Modified:')

@@ -13,7 +13,7 @@
     },
     {
       "label": "Deleted",
-      "name": "IsDeleted",
+      "name": "IsDeeeeleted",
       "custom": false,
       "picklistValues": [],
       "referenceTo": [],
@@ -130,7 +130,7 @@
     {
       "label": "Action Plan Item ID",
       "name": "ItemId",
-      "custom": true,
+      "custom": false,
       "picklistValues": [],
       "referenceTo": [
         "AssessmentTask",

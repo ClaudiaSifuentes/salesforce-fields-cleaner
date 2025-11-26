@@ -47,68 +47,6 @@
       "length": 255
     },
     {
-      "label": "Account Type",
-      "name": "Type",
-      "custom": false,
-      "picklistValues": [
-        {
-          "active": true,
-          "label": "Analyst",
-          "value": "Analyst"
-        },
-        {
-          "active": true,
-          "label": "Competitor",
-          "value": "Competitor"
-        },
-        {
-          "active": true,
-          "label": "Customer",
-          "value": "Customer"
-        },
-        {
-          "active": true,
-          "label": "Integrator",
-          "value": "Integrator"
-        },
-        {
-          "active": true,
-          "label": "Investor",
-          "value": "Investor"
-        },
-        {
-          "active": true,
-          "label": "Partner",
-          "value": "Partner"
-        },
-        {
-          "active": true,
-          "label": "Press",
-          "value": "Press"
-        },
-        {
-          "active": true,
-          "label": "Prospect",
-          "value": "Prospect"
-        },
-        {
-          "active": true,
-          "label": "Reseller",
-          "value": "Reseller"
-        },
-        {
-          "active": true,
-          "label": "Other",
-          "value": "Other"
-        }
-      ],
-      "referenceTo": [],
-      "type": "picklist",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
-    },
-    {
       "label": "Record Type ID",
       "name": "RecordTypeId",
       "custom": false,
@@ -3279,17 +3217,6 @@
     {
       "label": "Es Municipalidad",
       "name": "pz_IsMunicipality__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "boolean",
-      "precision": 0,
-      "scale": 0,
-      "length": 0
-    },
-    {
-      "label": "Es Influyente",
-      "name": "pz_IsInfluential__c",
       "custom": true,
       "picklistValues": [],
       "referenceTo": [],

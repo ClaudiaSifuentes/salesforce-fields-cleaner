@@ -64,52 +64,6 @@
       "length": 18
     },
     {
-      "label": "Product ID",
-      "name": "Product2Id",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [
-        "Product2"
-      ],
-      "type": "reference",
-      "precision": 0,
-      "scale": 0,
-      "length": 18
-    },
-    {
-      "label": "Product Code",
-      "name": "ProductCode",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
-    },
-    {
-      "label": "Product Family",
-      "name": "ProductFamily",
-      "custom": false,
-      "picklistValues": [
-        {
-          "active": true,
-          "label": "None",
-          "value": "None"
-        },
-        {
-          "active": true,
-          "label": "Multiplay",
-          "value": "Multiplay"
-        }
-      ],
-      "referenceTo": [],
-      "type": "picklist",
-      "precision": 0,
-      "scale": 0,
-      "length": 255
-    },
-    {
       "label": "Product Description",
       "name": "ProductDescription",
       "custom": false,
@@ -653,6 +607,21 @@
           "active": true,
           "label": "Near Address",
           "value": "NearAddress"
+        },
+        {
+          "active": true,
+          "label": "Block",
+          "value": "Block"
+        },
+        {
+          "active": true,
+          "label": "Street",
+          "value": "Street"
+        },
+        {
+          "active": true,
+          "label": "Extended Zip",
+          "value": "ExtendedZip"
         },
         {
           "active": true,
