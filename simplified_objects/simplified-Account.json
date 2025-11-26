@@ -1,15 +1,15 @@
 {
   "fields": [
     {
-      "label": "Deleted",
+      "label": "Deeleted",
       "name": "IsDeleted",
-      "custom": false,
+      "custom": true,
       "picklistValues": [],
       "referenceTo": [],
-      "type": "boolean",
-      "precision": 0,
-      "scale": 0,
-      "length": 0
+      "type": "int",
+      "precision": 3,
+      "scale": 4,
+      "length": 5
     },
     {
       "label": "Master Record ID",
@@ -26,7 +26,7 @@
     },
     {
       "label": "Account Name",
-      "name": "Name",
+      "name": "Naame",
       "custom": false,
       "picklistValues": [],
       "referenceTo": [],
@@ -224,11 +224,6 @@
           "active": true,
           "label": "Street",
           "value": "Street"
-        },
-        {
-          "active": true,
-          "label": "Extended Zip",
-          "value": "ExtendedZip"
         },
         {
           "active": true,

@@ -249,8 +249,21 @@ def summarize_report(path: Path, simplified_dir: Path, baseline_dir: Path) -> Li
                     if r:
                         parts.append('removed:' + ','.join(map(str, r)))
                     detail = '; '.join(parts) if parts else _details(d.get('detail'))
-                    old_val = ''
-                    new_val = ''
+                    # Prefer to show the full previous and new referenceTo lists (if available in det)
+                    try:
+                        old_list = det.get('old', {}).get('referenceTo') if isinstance(det, dict) else None
+                        if old_list is None:
+                            old_list = r
+                        old_val = json.dumps(old_list, ensure_ascii=False, separators=(',', ':')) if old_list is not None else ''
+                    except Exception:
+                        old_val = _details(r)
+                    try:
+                        new_list = det.get('new', {}).get('referenceTo') if isinstance(det, dict) else None
+                        if new_list is None:
+                            new_list = a
+                        new_val = json.dumps(new_list, ensure_ascii=False, separators=(',', ':')) if new_list is not None else ''
+                    except Exception:
+                        new_val = _details(a)
                 else:
                     # simple old/new diffs
                     old_val = d.get('old', '')
@@ -377,7 +390,8 @@ def main() -> int:
     p.add_argument('--reports-dir', '-r', default='report_objects', help='Directory with report-*.json files')
     p.add_argument('--simplified-dir', '-s', default='simplified_objects', help='Directory with simplified-<object>.json')
     p.add_argument('--baseline-dir', '-b', default='baseline_objects', help='Directory with baseline-<object>.json')
-    p.add_argument('--out', '-o', default=os.path.join('report_objects', 'reports_summary.csv'), help='Output CSV file')
+    p.add_argument('--out', '-o', default=os.path.join('report_objects', 'reports_summary.csv'), help='Output CSV file for additions/removals')
+    p.add_argument('--out-modified', '-m', default=os.path.join('report_objects', 'reports_modified.csv'), help='Output CSV file for modifications')
     args = p.parse_args()
 
     reports_dir = Path(args.reports_dir)
@@ -444,6 +458,7 @@ def main() -> int:
             for it in items:
                 lbl, api, act, obj = _parse_pick_item_str(it)
                 nr = r.copy()
+                nr['_parent_change_type'] = r.get('change_type')
                 nr['change_type'] = 'picklist_value_added'
                 nr['picklist_value_label'] = lbl or ''
                 nr['picklist_value_api'] = api or ''
@@ -460,6 +475,7 @@ def main() -> int:
             for it in items:
                 lbl, api, act, obj = _parse_pick_item_str(it)
                 nr = r.copy()
+                nr['_parent_change_type'] = r.get('change_type')
                 nr['change_type'] = 'picklist_value_removed'
                 nr['picklist_value_label'] = lbl or ''
                 nr['picklist_value_api'] = api or ''
@@ -470,14 +486,70 @@ def main() -> int:
                     nr['detail'] = r.get('detail', '')
                 final_rows.append(nr)
 
+    # split final_rows into two CSVs:
+    #  - additions/removals (and their per-option rows)
+    #  - modifications (and per-option rows that came from modified parents)
+    out_modified = Path(args.out_modified)
+    addrem_cols = ['objeto', 'change_type', 'api_name', 'label', 'type', 'detail', 'picklist_value_label', 'picklist_value_api', 'picklist_value_active']
+    modified_cols = ['objeto', 'tipo de cambio', 'api_name', 'attribute', 'old', 'new', 'diff', 'picklist_value_label', 'picklist_value_api', 'picklist_value_active']
+
+    addrem_rows = []
+    modified_rows = []
+    for r in final_rows:
+        ct = r.get('change_type')
+        parent = r.get('_parent_change_type')
+        if ct in ('added', 'removed'):
+            addrem_rows.append(r)
+        elif ct in ('picklist_value_added', 'picklist_value_removed'):
+            # route per-option rows based on their parent change type
+            if parent in ('added', 'removed'):
+                addrem_rows.append(r)
+            elif parent == 'modified':
+                modified_rows.append(r)
+            else:
+                # if no parent info, conservatively place in additions/removals
+                addrem_rows.append(r)
+        elif ct == 'modified':
+            modified_rows.append(r)
+
+    # write additions/removals CSV
     with out_csv.open('w', encoding='utf-8', newline='') as outf:
-        writer = csv.DictWriter(outf, fieldnames=cols)
+        writer = csv.DictWriter(outf, fieldnames=addrem_cols)
         writer.writeheader()
-        for r in final_rows:
-            outrow = {k: (r.get(k) if r.get(k) is not None else '') for k in cols}
+        for r in addrem_rows:
+            outrow = {k: '' for k in addrem_cols}
+            outrow['objeto'] = r.get('objeto', '')
+            outrow['change_type'] = r.get('change_type', '')
+            outrow['api_name'] = r.get('api_name', '')
+            outrow['label'] = r.get('label', '')
+            outrow['type'] = r.get('type', '')
+            outrow['detail'] = r.get('detail', '')
+            outrow['picklist_value_label'] = r.get('picklist_value_label', '')
+            outrow['picklist_value_api'] = r.get('picklist_value_api', '')
+            outrow['picklist_value_active'] = r.get('picklist_value_active', '')
             writer.writerow(outrow)
 
-    print('Wrote', len(rows), 'rows to', out_csv)
+    # write modifications CSV
+    out_modified.parent.mkdir(parents=True, exist_ok=True)
+    with out_modified.open('w', encoding='utf-8', newline='') as outf2:
+        writer2 = csv.DictWriter(outf2, fieldnames=modified_cols)
+        writer2.writeheader()
+        for r in modified_rows:
+            outrow = {k: '' for k in modified_cols}
+            outrow['objeto'] = r.get('objeto', '')
+            outrow['tipo de cambio'] = r.get('change_type', '')
+            outrow['api_name'] = r.get('api_name', '')
+            outrow['attribute'] = r.get('attribute', '')
+            outrow['old'] = r.get('old', '')
+            outrow['new'] = r.get('new', '')
+            outrow['picklist_value_label'] = r.get('picklist_value_label', '')
+            outrow['picklist_value_api'] = r.get('picklist_value_api', '')
+            outrow['picklist_value_active'] = r.get('picklist_value_active', '')
+            outrow['diff'] = r.get('detail', '')
+            writer2.writerow(outrow)
+
+    print('Wrote', len(addrem_rows), 'rows to', out_csv)
+    print('Wrote', len(modified_rows), 'rows to', out_modified)
     return 0
 
 

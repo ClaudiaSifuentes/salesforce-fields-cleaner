@@ -52,7 +52,7 @@
       "custom": false,
       "picklistValues": [],
       "referenceTo": [
-        "RecordType"
+        "RecordType", "Otro1__c"
       ],
       "type": "reference",
       "precision": 0,
@@ -155,18 +155,13 @@
       "custom": false,
       "picklistValues": [
         {
-          "active": true,
-          "label": "Address",
-          "value": "Address"
-        },
-        {
-          "active": true,
+          "active": false,
           "label": "Near Address",
-          "value": "NearAddress"
+          "value": "nulo"
         },
         {
           "active": true,
-          "label": "Block",
+          "label": "NuevoBlock",
           "value": "Block"
         },
         {
