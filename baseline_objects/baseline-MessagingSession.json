@@ -1,0 +1,1792 @@
+{
+  "fields": [
+    {
+      "label": "Messaging Session ID",
+      "name": "Id",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "id",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Owner ID",
+      "name": "OwnerId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Group",
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Deleted",
+      "name": "IsDeleted",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Messaging Session Name",
+      "name": "Name",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Currency ISO Code",
+      "name": "CurrencyIsoCode",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Peruvian Sol",
+          "value": "PEN"
+        },
+        {
+          "active": true,
+          "label": "U.S. Dollar",
+          "value": "USD"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 3
+    },
+    {
+      "label": "Created Date",
+      "name": "CreatedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Created By ID",
+      "name": "CreatedById",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Last Modified Date",
+      "name": "LastModifiedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Modified By ID",
+      "name": "LastModifiedById",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "System Modstamp",
+      "name": "SystemModstamp",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Viewed Date",
+      "name": "LastViewedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Referenced Date",
+      "name": "LastReferencedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Messaging Channel ID",
+      "name": "MessagingChannelId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "MessagingChannel"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Messaging User ID",
+      "name": "MessagingEndUserId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "MessagingEndUser"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Status",
+      "name": "Status",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Active",
+          "value": "Active"
+        },
+        {
+          "active": true,
+          "label": "Ended",
+          "value": "Ended"
+        },
+        {
+          "active": true,
+          "label": "Waiting",
+          "value": "Waiting"
+        },
+        {
+          "active": true,
+          "label": "New",
+          "value": "New"
+        },
+        {
+          "active": true,
+          "label": "Consent",
+          "value": "Consent"
+        },
+        {
+          "active": true,
+          "label": "Inactive",
+          "value": "Inactive"
+        },
+        {
+          "active": true,
+          "label": "Error",
+          "value": "Error"
+        },
+        {
+          "active": true,
+          "label": "Paused",
+          "value": "Paused"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Case ID",
+      "name": "CaseId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Case"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Lead ID",
+      "name": "LeadId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Lead"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Opportunity ID",
+      "name": "OpportunityId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Opportunity"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Accept Time",
+      "name": "AcceptTime",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Start Time",
+      "name": "StartTime",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "End Time",
+      "name": "EndTime",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Origin",
+      "name": "Origin",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Inbound Initiated",
+          "value": "InboundInitiated"
+        },
+        {
+          "active": true,
+          "label": "Triggered Outbound",
+          "value": "TriggeredOutbound"
+        },
+        {
+          "active": true,
+          "label": "Opt-Out Status Change",
+          "value": "OptOut"
+        },
+        {
+          "active": true,
+          "label": "Opt In Status Change",
+          "value": "OptIn"
+        },
+        {
+          "active": true,
+          "label": "Conversation Closed",
+          "value": "ConversationClose"
+        },
+        {
+          "active": true,
+          "label": "Agent Initiated",
+          "value": "AgentInitiated"
+        },
+        {
+          "active": true,
+          "label": "Help",
+          "value": "Help"
+        },
+        {
+          "active": true,
+          "label": "Conversation Control Transferred",
+          "value": "ConversationControlLost"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Agent Type",
+      "name": "AgentType",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Agent",
+          "value": "Agent"
+        },
+        {
+          "active": true,
+          "label": "Bot",
+          "value": "Bot"
+        },
+        {
+          "active": true,
+          "label": "Bot & Agent",
+          "value": "BotToAgent"
+        },
+        {
+          "active": true,
+          "label": "System",
+          "value": "System"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Session Key",
+      "name": "SessionKey",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 36
+    },
+    {
+      "label": "User ID",
+      "name": "TargetUserId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Group",
+      "name": "ChannelGroup",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Intent",
+      "name": "ChannelIntent",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Locale",
+      "name": "ChannelLocale",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Messaging User Language",
+      "name": "EndUserLanguage",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "English",
+          "value": "en_US"
+        },
+        {
+          "active": true,
+          "label": "German",
+          "value": "de"
+        },
+        {
+          "active": true,
+          "label": "Spanish",
+          "value": "es"
+        },
+        {
+          "active": true,
+          "label": "French",
+          "value": "fr"
+        },
+        {
+          "active": true,
+          "label": "Italian",
+          "value": "it"
+        },
+        {
+          "active": true,
+          "label": "Japanese",
+          "value": "ja"
+        },
+        {
+          "active": true,
+          "label": "Swedish",
+          "value": "sv"
+        },
+        {
+          "active": true,
+          "label": "Korean",
+          "value": "ko"
+        },
+        {
+          "active": true,
+          "label": "Chinese (Traditional)",
+          "value": "zh_TW"
+        },
+        {
+          "active": true,
+          "label": "Chinese (Simplified)",
+          "value": "zh_CN"
+        },
+        {
+          "active": true,
+          "label": "Portuguese (Brazil)",
+          "value": "pt_BR"
+        },
+        {
+          "active": true,
+          "label": "Dutch",
+          "value": "nl_NL"
+        },
+        {
+          "active": true,
+          "label": "Danish",
+          "value": "da"
+        },
+        {
+          "active": true,
+          "label": "Thai",
+          "value": "th"
+        },
+        {
+          "active": true,
+          "label": "Finnish",
+          "value": "fi"
+        },
+        {
+          "active": true,
+          "label": "Russian",
+          "value": "ru"
+        },
+        {
+          "active": true,
+          "label": "Spanish (Mexico)",
+          "value": "es_MX"
+        },
+        {
+          "active": true,
+          "label": "Norwegian",
+          "value": "no"
+        },
+        {
+          "active": false,
+          "label": "Hungarian",
+          "value": "hu"
+        },
+        {
+          "active": false,
+          "label": "Polish",
+          "value": "pl"
+        },
+        {
+          "active": false,
+          "label": "Czech",
+          "value": "cs"
+        },
+        {
+          "active": false,
+          "label": "Turkish",
+          "value": "tr"
+        },
+        {
+          "active": false,
+          "label": "Indonesian",
+          "value": "in"
+        },
+        {
+          "active": false,
+          "label": "Romanian",
+          "value": "ro"
+        },
+        {
+          "active": false,
+          "label": "Vietnamese",
+          "value": "vi"
+        },
+        {
+          "active": false,
+          "label": "Ukrainian",
+          "value": "uk"
+        },
+        {
+          "active": false,
+          "label": "Hebrew",
+          "value": "iw"
+        },
+        {
+          "active": false,
+          "label": "Greek",
+          "value": "el"
+        },
+        {
+          "active": false,
+          "label": "Bulgarian",
+          "value": "bg"
+        },
+        {
+          "active": false,
+          "label": "English (UK)",
+          "value": "en_GB"
+        },
+        {
+          "active": false,
+          "label": "Arabic",
+          "value": "ar"
+        },
+        {
+          "active": false,
+          "label": "Slovak",
+          "value": "sk"
+        },
+        {
+          "active": false,
+          "label": "Portuguese (European)",
+          "value": "pt_PT"
+        },
+        {
+          "active": false,
+          "label": "Croatian",
+          "value": "hr"
+        },
+        {
+          "active": false,
+          "label": "Slovene",
+          "value": "sl"
+        },
+        {
+          "active": false,
+          "label": "French (Canadian)",
+          "value": "fr_CA"
+        },
+        {
+          "active": false,
+          "label": "Georgian",
+          "value": "ka"
+        },
+        {
+          "active": false,
+          "label": "Serbian (Cyrillic)",
+          "value": "sr"
+        },
+        {
+          "active": false,
+          "label": "Serbian (Latin)",
+          "value": "sh"
+        },
+        {
+          "active": false,
+          "label": "English (Australian)",
+          "value": "en_AU"
+        },
+        {
+          "active": false,
+          "label": "English (Malaysian)",
+          "value": "en_MY"
+        },
+        {
+          "active": false,
+          "label": "English (Indian)",
+          "value": "en_IN"
+        },
+        {
+          "active": false,
+          "label": "English (Phillipines)",
+          "value": "en_PH"
+        },
+        {
+          "active": false,
+          "label": "English (Canadian)",
+          "value": "en_CA"
+        },
+        {
+          "active": false,
+          "label": "Romanian (Moldova)",
+          "value": "ro_MD"
+        },
+        {
+          "active": false,
+          "label": "Bosnian",
+          "value": "bs"
+        },
+        {
+          "active": false,
+          "label": "Macedonian",
+          "value": "mk"
+        },
+        {
+          "active": false,
+          "label": "Latvian",
+          "value": "lv"
+        },
+        {
+          "active": false,
+          "label": "Lithuanian",
+          "value": "lt"
+        },
+        {
+          "active": false,
+          "label": "Estonian",
+          "value": "et"
+        },
+        {
+          "active": false,
+          "label": "Albanian",
+          "value": "sq"
+        },
+        {
+          "active": false,
+          "label": "Montenegrin",
+          "value": "sh_ME"
+        },
+        {
+          "active": false,
+          "label": "Maltese",
+          "value": "mt"
+        },
+        {
+          "active": false,
+          "label": "Irish",
+          "value": "ga"
+        },
+        {
+          "active": false,
+          "label": "Basque",
+          "value": "eu"
+        },
+        {
+          "active": false,
+          "label": "Welsh",
+          "value": "cy"
+        },
+        {
+          "active": false,
+          "label": "Icelandic",
+          "value": "is"
+        },
+        {
+          "active": false,
+          "label": "Chuj",
+          "value": "cac"
+        },
+        {
+          "active": false,
+          "label": "Kiche",
+          "value": "quc"
+        },
+        {
+          "active": false,
+          "label": "Kaqchikel",
+          "value": "cak"
+        },
+        {
+          "active": false,
+          "label": "Malay",
+          "value": "ms"
+        },
+        {
+          "active": false,
+          "label": "Tagalog",
+          "value": "tl"
+        },
+        {
+          "active": false,
+          "label": "Luxembourgish",
+          "value": "lb"
+        },
+        {
+          "active": false,
+          "label": "Romansh",
+          "value": "rm"
+        },
+        {
+          "active": false,
+          "label": "Armenian",
+          "value": "hy"
+        },
+        {
+          "active": false,
+          "label": "Hindi",
+          "value": "hi"
+        },
+        {
+          "active": false,
+          "label": "Urdu",
+          "value": "ur"
+        },
+        {
+          "active": false,
+          "label": "Bengali",
+          "value": "bn"
+        },
+        {
+          "active": false,
+          "label": "German (Austria)",
+          "value": "de_AT"
+        },
+        {
+          "active": false,
+          "label": "German (Switzerland)",
+          "value": "de_CH"
+        },
+        {
+          "active": false,
+          "label": "Tamil",
+          "value": "ta"
+        },
+        {
+          "active": false,
+          "label": "Arabic (Algeria)",
+          "value": "ar_DZ"
+        },
+        {
+          "active": false,
+          "label": "Arabic (Bahrain)",
+          "value": "ar_BH"
+        },
+        {
+          "active": false,
+          "label": "Arabic (Egypt)",
+          "value": "ar_EG"
+        },
+        {
+          "active": false,
+          "label": "Arabic (Iraq)",
+          "value": "ar_IQ"
+        },
+        {
+          "active": false,
+          "label": "Arabic (Jordan)",
+          "value": "ar_JO"
+        },
+        {
+          "active": false,
+          "label": "Arabic (Kuwait)",
+          "value": "ar_KW"
+        },
+        {
+          "active": false,
+          "label": "Arabic (Lebanon)",
+          "value": "ar_LB"
+        },
+        {
+          "active": false,
+          "label": "Arabic (Libya)",
+          "value": "ar_LY"
+        },
+        {
+          "active": false,
+          "label": "Arabic (Morocco)",
+          "value": "ar_MA"
+        },
+        {
+          "active": false,
+          "label": "Arabic (Oman)",
+          "value": "ar_OM"
+        },
+        {
+          "active": false,
+          "label": "Arabic (Qatar)",
+          "value": "ar_QA"
+        },
+        {
+          "active": false,
+          "label": "Arabic (Saudi Arabia)",
+          "value": "ar_SA"
+        },
+        {
+          "active": false,
+          "label": "Arabic (Sudan)",
+          "value": "ar_SD"
+        },
+        {
+          "active": false,
+          "label": "Arabic (Syria)",
+          "value": "ar_SY"
+        },
+        {
+          "active": false,
+          "label": "Arabic (Tunisia)",
+          "value": "ar_TN"
+        },
+        {
+          "active": false,
+          "label": "Arabic (United Arab Emirates)",
+          "value": "ar_AE"
+        },
+        {
+          "active": false,
+          "label": "Arabic (Yemen)",
+          "value": "ar_YE"
+        },
+        {
+          "active": false,
+          "label": "Chinese (Singapore)",
+          "value": "zh_SG"
+        },
+        {
+          "active": false,
+          "label": "Chinese (Hong Kong)",
+          "value": "zh_HK"
+        },
+        {
+          "active": false,
+          "label": "English (Hong Kong)",
+          "value": "en_HK"
+        },
+        {
+          "active": false,
+          "label": "English (Ireland)",
+          "value": "en_IE"
+        },
+        {
+          "active": false,
+          "label": "English (Singapore)",
+          "value": "en_SG"
+        },
+        {
+          "active": false,
+          "label": "English (South Africa)",
+          "value": "en_ZA"
+        },
+        {
+          "active": false,
+          "label": "French (Belgium)",
+          "value": "fr_BE"
+        },
+        {
+          "active": false,
+          "label": "French (Luxembourg)",
+          "value": "fr_LU"
+        },
+        {
+          "active": false,
+          "label": "French (Switzerland)",
+          "value": "fr_CH"
+        },
+        {
+          "active": false,
+          "label": "German (Belgium)",
+          "value": "de_BE"
+        },
+        {
+          "active": false,
+          "label": "German (Luxembourg)",
+          "value": "de_LU"
+        },
+        {
+          "active": false,
+          "label": "Italian (Switzerland)",
+          "value": "it_CH"
+        },
+        {
+          "active": false,
+          "label": "Dutch (Belgium)",
+          "value": "nl_BE"
+        },
+        {
+          "active": true,
+          "label": "Spanish (Argentina)",
+          "value": "es_AR"
+        },
+        {
+          "active": false,
+          "label": "Spanish (Bolivia)",
+          "value": "es_BO"
+        },
+        {
+          "active": true,
+          "label": "Spanish (Chile)",
+          "value": "es_CL"
+        },
+        {
+          "active": true,
+          "label": "Spanish (Colombia)",
+          "value": "es_CO"
+        },
+        {
+          "active": false,
+          "label": "Spanish (Costa Rica)",
+          "value": "es_CR"
+        },
+        {
+          "active": false,
+          "label": "Spanish (Dominican Republic)",
+          "value": "es_DO"
+        },
+        {
+          "active": false,
+          "label": "Spanish (Ecuador)",
+          "value": "es_EC"
+        },
+        {
+          "active": false,
+          "label": "Spanish (El Salvador)",
+          "value": "es_SV"
+        },
+        {
+          "active": false,
+          "label": "Spanish (Guatemala)",
+          "value": "es_GT"
+        },
+        {
+          "active": false,
+          "label": "Spanish (Honduras)",
+          "value": "es_HN"
+        },
+        {
+          "active": false,
+          "label": "Spanish (Nicaragua)",
+          "value": "es_NI"
+        },
+        {
+          "active": false,
+          "label": "Spanish (Panama)",
+          "value": "es_PA"
+        },
+        {
+          "active": false,
+          "label": "Spanish (Paraguay)",
+          "value": "es_PY"
+        },
+        {
+          "active": true,
+          "label": "Spanish (Peru)",
+          "value": "es_PE"
+        },
+        {
+          "active": false,
+          "label": "Spanish (Puerto Rico)",
+          "value": "es_PR"
+        },
+        {
+          "active": false,
+          "label": "Spanish (United States)",
+          "value": "es_US"
+        },
+        {
+          "active": false,
+          "label": "Spanish (Uruguay)",
+          "value": "es_UY"
+        },
+        {
+          "active": false,
+          "label": "Spanish (Venezuela)",
+          "value": "es_VE"
+        },
+        {
+          "active": false,
+          "label": "Catalan",
+          "value": "ca"
+        },
+        {
+          "active": false,
+          "label": "Afrikaans",
+          "value": "af"
+        },
+        {
+          "active": false,
+          "label": "Swahili",
+          "value": "sw"
+        },
+        {
+          "active": false,
+          "label": "Zulu",
+          "value": "zu"
+        },
+        {
+          "active": false,
+          "label": "Xhosa",
+          "value": "xh"
+        },
+        {
+          "active": false,
+          "label": "Telugu",
+          "value": "te"
+        },
+        {
+          "active": false,
+          "label": "Malayalam",
+          "value": "ml"
+        },
+        {
+          "active": false,
+          "label": "Kannada",
+          "value": "kn"
+        },
+        {
+          "active": false,
+          "label": "Marathi",
+          "value": "mr"
+        },
+        {
+          "active": false,
+          "label": "Gujarati",
+          "value": "gu"
+        },
+        {
+          "active": false,
+          "label": "Punjabi",
+          "value": "pa"
+        },
+        {
+          "active": false,
+          "label": "English (New Zealand)",
+          "value": "en_NZ"
+        },
+        {
+          "active": false,
+          "label": "Te reo",
+          "value": "mi"
+        },
+        {
+          "active": false,
+          "label": "Burmese",
+          "value": "my"
+        },
+        {
+          "active": false,
+          "label": "Farsi",
+          "value": "fa"
+        },
+        {
+          "active": false,
+          "label": "Khmer",
+          "value": "km"
+        },
+        {
+          "active": false,
+          "label": "Amharic",
+          "value": "am"
+        },
+        {
+          "active": false,
+          "label": "Kazakh",
+          "value": "kk"
+        },
+        {
+          "active": false,
+          "label": "Haitian Creole",
+          "value": "ht"
+        },
+        {
+          "active": false,
+          "label": "Samoan",
+          "value": "sm"
+        },
+        {
+          "active": false,
+          "label": "Hawaiian",
+          "value": "haw"
+        },
+        {
+          "active": false,
+          "label": "Chinese (Malaysia)",
+          "value": "zh_MY"
+        },
+        {
+          "active": false,
+          "label": "Russian (Lithuania)",
+          "value": "ru_LT"
+        },
+        {
+          "active": false,
+          "label": "Russian (Poland)",
+          "value": "ru_PL"
+        },
+        {
+          "active": false,
+          "label": "Russian (Armenia)",
+          "value": "ru_AM"
+        },
+        {
+          "active": false,
+          "label": "Russian (Kazakhstan)",
+          "value": "ru_KZ"
+        },
+        {
+          "active": false,
+          "label": "Russian (Kyrgyzstan)",
+          "value": "ru_KG"
+        },
+        {
+          "active": false,
+          "label": "Russian (Belarus)",
+          "value": "ru_BY"
+        },
+        {
+          "active": false,
+          "label": "Russian (Moldova)",
+          "value": "ru_MD"
+        },
+        {
+          "active": false,
+          "label": "Russian (Ukraine)",
+          "value": "ru_UA"
+        },
+        {
+          "active": false,
+          "label": "English (United Arab Emirates)",
+          "value": "en_AE"
+        },
+        {
+          "active": false,
+          "label": "English (Belgium)",
+          "value": "en_BE"
+        },
+        {
+          "active": false,
+          "label": "English (Cyprus)",
+          "value": "en_CY"
+        },
+        {
+          "active": false,
+          "label": "English (Germany)",
+          "value": "en_DE"
+        },
+        {
+          "active": false,
+          "label": "English (Israel)",
+          "value": "en_IL"
+        },
+        {
+          "active": false,
+          "label": "English (Italy)",
+          "value": "en_IT"
+        },
+        {
+          "active": false,
+          "label": "English (Netherlands)",
+          "value": "en_NL"
+        },
+        {
+          "active": false,
+          "label": "English (Malta)",
+          "value": "en_MT"
+        },
+        {
+          "active": false,
+          "label": "English (Spain)",
+          "value": "en_ES"
+        },
+        {
+          "active": false,
+          "label": "English (Poland)",
+          "value": "en_PL"
+        },
+        {
+          "active": false,
+          "label": "English (Denmark)",
+          "value": "en_DK"
+        },
+        {
+          "active": false,
+          "label": "English (Sweden)",
+          "value": "en_SE"
+        },
+        {
+          "active": false,
+          "label": "English (Norway)",
+          "value": "en_NO"
+        },
+        {
+          "active": false,
+          "label": "English (France)",
+          "value": "en_FR"
+        },
+        {
+          "active": false,
+          "label": "English (Hungary)",
+          "value": "en_HU"
+        },
+        {
+          "active": false,
+          "label": "English (Czechia)",
+          "value": "en_CZ"
+        },
+        {
+          "active": false,
+          "label": "English (Slovakia)",
+          "value": "en_SK"
+        },
+        {
+          "active": false,
+          "label": "English (Romania)",
+          "value": "en_RO"
+        },
+        {
+          "active": false,
+          "label": "English (Switzerland)",
+          "value": "en_CH"
+        },
+        {
+          "active": false,
+          "label": "English (Albania)",
+          "value": "en_AL"
+        },
+        {
+          "active": false,
+          "label": "English (Andorra)",
+          "value": "en_AD"
+        },
+        {
+          "active": false,
+          "label": "English (Antigua and Barbuda)",
+          "value": "en_AG"
+        },
+        {
+          "active": false,
+          "label": "English (Austria)",
+          "value": "en_AT"
+        },
+        {
+          "active": false,
+          "label": "English (Bahamas)",
+          "value": "en_BS"
+        },
+        {
+          "active": false,
+          "label": "English (Barbados)",
+          "value": "en_BB"
+        },
+        {
+          "active": false,
+          "label": "English (Belize)",
+          "value": "en_BZ"
+        },
+        {
+          "active": false,
+          "label": "English (Bosnia and Herzegovina)",
+          "value": "en_BA"
+        },
+        {
+          "active": false,
+          "label": "English (Bulgaria)",
+          "value": "en_BG"
+        },
+        {
+          "active": false,
+          "label": "English (Croatia)",
+          "value": "en_HR"
+        },
+        {
+          "active": false,
+          "label": "English (Dominica)",
+          "value": "en_DM"
+        },
+        {
+          "active": false,
+          "label": "English (Estonia)",
+          "value": "en_EE"
+        },
+        {
+          "active": false,
+          "label": "English (Finland)",
+          "value": "en_FI"
+        },
+        {
+          "active": false,
+          "label": "English (Gibraltar)",
+          "value": "en_GI"
+        },
+        {
+          "active": false,
+          "label": "English (Greece)",
+          "value": "en_GR"
+        },
+        {
+          "active": false,
+          "label": "English (Grenada)",
+          "value": "en_GD"
+        },
+        {
+          "active": false,
+          "label": "English (Guyana)",
+          "value": "en_GY"
+        },
+        {
+          "active": false,
+          "label": "English (Iceland)",
+          "value": "en_IS"
+        },
+        {
+          "active": false,
+          "label": "English (Jamaica)",
+          "value": "en_JM"
+        },
+        {
+          "active": false,
+          "label": "English (Japan)",
+          "value": "en_JP"
+        },
+        {
+          "active": false,
+          "label": "English (Latvia)",
+          "value": "en_LV"
+        },
+        {
+          "active": false,
+          "label": "English (Liechtenstein)",
+          "value": "en_LI"
+        },
+        {
+          "active": false,
+          "label": "English (Lithuania)",
+          "value": "en_LT"
+        },
+        {
+          "active": false,
+          "label": "English (Luxembourg)",
+          "value": "en_LU"
+        },
+        {
+          "active": false,
+          "label": "English (Monaco)",
+          "value": "en_MC"
+        },
+        {
+          "active": false,
+          "label": "English (Montenegro)",
+          "value": "en_ME"
+        },
+        {
+          "active": false,
+          "label": "English (North Macedonia)",
+          "value": "en_MK"
+        },
+        {
+          "active": false,
+          "label": "English (Portugal)",
+          "value": "en_PT"
+        },
+        {
+          "active": false,
+          "label": "English (Serbia)",
+          "value": "en_RS"
+        },
+        {
+          "active": false,
+          "label": "English (Slovenia)",
+          "value": "en_SI"
+        },
+        {
+          "active": false,
+          "label": "English (South Korea)",
+          "value": "en_KR"
+        },
+        {
+          "active": false,
+          "label": "English (St. Kitts and Nevis)",
+          "value": "en_KN"
+        },
+        {
+          "active": false,
+          "label": "English (St. Lucia)",
+          "value": "en_LC"
+        },
+        {
+          "active": false,
+          "label": "English (St. Vincent and the Grenadines)",
+          "value": "en_VC"
+        },
+        {
+          "active": false,
+          "label": "English (Taiwan)",
+          "value": "en_TW"
+        },
+        {
+          "active": false,
+          "label": "English (Thailand)",
+          "value": "en_TH"
+        },
+        {
+          "active": false,
+          "label": "English (Trinidad and Tobago)",
+          "value": "en_TT"
+        },
+        {
+          "active": false,
+          "label": "English (Turkey)",
+          "value": "en_TR"
+        },
+        {
+          "active": false,
+          "label": "Dutch (Suriname)",
+          "value": "nl_SR"
+        },
+        {
+          "active": false,
+          "label": "French (Haiti)",
+          "value": "fr_HT"
+        },
+        {
+          "active": false,
+          "label": "German (Liechtenstein)",
+          "value": "de_LI"
+        },
+        {
+          "active": false,
+          "label": "Spanish (Andorra)",
+          "value": "es_AD"
+        },
+        {
+          "active": false,
+          "label": "Swedish (Finland)",
+          "value": "sv_FI"
+        },
+        {
+          "active": false,
+          "label": "Greek (Cyprus)",
+          "value": "el_CY"
+        },
+        {
+          "active": false,
+          "label": "French (Morocco)",
+          "value": "fr_MA"
+        },
+        {
+          "active": false,
+          "label": "Greenlandic",
+          "value": "kl"
+        },
+        {
+          "active": false,
+          "label": "Yiddish",
+          "value": "ji"
+        },
+        {
+          "active": false,
+          "label": "Hmong",
+          "value": "hmn"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Conversation ID",
+      "name": "ConversationId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Conversation"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Account ID",
+      "name": "EndUserAccountId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Account"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Contact ID",
+      "name": "EndUserContactId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Contact"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Channel Type",
+      "name": "ChannelType",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Text",
+          "value": "Text"
+        },
+        {
+          "active": true,
+          "label": "Facebook",
+          "value": "Facebook"
+        },
+        {
+          "active": true,
+          "label": "Line",
+          "value": "Line"
+        },
+        {
+          "active": true,
+          "label": "Google Home",
+          "value": "GoogleHome"
+        },
+        {
+          "active": true,
+          "label": "Alexa",
+          "value": "Alexa"
+        },
+        {
+          "active": true,
+          "label": "Omega",
+          "value": "Omega"
+        },
+        {
+          "active": true,
+          "label": "Apple Messages for Business",
+          "value": "AppleBusinessChat"
+        },
+        {
+          "active": true,
+          "label": "WeChat",
+          "value": "WeChat"
+        },
+        {
+          "active": true,
+          "label": "Chat",
+          "value": "WebChat"
+        },
+        {
+          "active": true,
+          "label": "WhatsApp",
+          "value": "WhatsApp"
+        },
+        {
+          "active": true,
+          "label": "Phone",
+          "value": "Phone"
+        },
+        {
+          "active": true,
+          "label": "Embedded Messaging",
+          "value": "EmbeddedMessaging"
+        },
+        {
+          "active": true,
+          "label": "Voice",
+          "value": "Voice"
+        },
+        {
+          "active": true,
+          "label": "Custom",
+          "value": "Custom"
+        },
+        {
+          "active": true,
+          "label": "Internal Copilot",
+          "value": "InternalCopilot"
+        },
+        {
+          "active": true,
+          "label": "Voice Integration Pilot",
+          "value": "VoiceIntegrationPilot"
+        },
+        {
+          "active": true,
+          "label": "Pstn Voice",
+          "value": "PstnVoice"
+        },
+        {
+          "active": true,
+          "label": "WhatsApp Voice",
+          "value": "WhatsAppVoice"
+        },
+        {
+          "active": true,
+          "label": "Sip Voice",
+          "value": "SipVoice"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Channel Name",
+      "name": "ChannelName",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 80
+    },
+    {
+      "label": "Channel Key",
+      "name": "ChannelKey",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 150
+    },
+    {
+      "label": "Preview Details",
+      "name": "PreviewDetails",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "End User Message Count",
+      "name": "EndUserMessageCount",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "int",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Agent Message Count",
+      "name": "AgentMessageCount",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "int",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Ended By Type",
+      "name": "EndedByType",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Agent",
+          "value": "Agent"
+        },
+        {
+          "active": true,
+          "label": "Bot",
+          "value": "Bot"
+        },
+        {
+          "active": true,
+          "label": "End User",
+          "value": "EndUser"
+        },
+        {
+          "active": true,
+          "label": "System",
+          "value": "System"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Concatenated Messaging Channel and Messaging User",
+      "name": "ChannelEndUserFormula",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 50
+    },
+    {
+      "label": "QueueName",
+      "name": "pz_QueueName__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 100
+    }
+  ]
+}

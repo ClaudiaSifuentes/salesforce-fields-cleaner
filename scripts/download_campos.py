@@ -8,24 +8,39 @@ login_cmd = "sf force:auth:web:login -a pluz--dev -d --instance-url https://pluz
 
 # default objects list
 objects = [
-    {"label": "Account", "apiName": "Account"},
-    {"label": "Contact", "apiName": "Contact"},
-    {"label": "Party_Relationship", "apiName": "vlocity_cmt__PartyRelationship__c"},
-    {"label": "Premises", "apiName": "vlocity_cmt__Premises__c"},
-    {"label": "Service_Point", "apiName": "vlocity_cmt__ServicePoint__c"},
-    {"label": "Inventory_Item", "apiName": "vlocity_cmt__InventoryItem__c"},
-    {"label": "Case", "apiName": "Case"},
-    {"label": "Contract", "apiName": "Contract"},
-    {"label": "Asset", "apiName": "Asset"},
-    {"label": "Action_Plan", "apiName": "ActionPlan"},
-    {"label": "Action_Plan_Item", "apiName": "ActionPlanItem"},
-    {"label": "Quote", "apiName": "Quote"},
-    {"label": "Quote_Line_Item", "apiName": "QuoteLineItem"},
-    {"label": "Work_Order", "apiName": "WorkOrder"},
-    {"label": "Task", "apiName": "Task"},
-    {"label": "Payment_Adjustment", "apiName": "vlocity_cmt__PaymentAdjustment__c"},
-]
-
+        {"label": "Lead", "apiName": "Lead"},
+        {"label": "Contact", "apiName": "Contact"},
+        {"label": "Account", "apiName": "Account"},
+        {"label": "Party_Relationship", "apiName": "vlocity_cmt__PartyRelationship__c"},
+        {"label": "Opportunity", "apiName": "Opportunity"},
+        {"label": "Action_Plan", "apiName": "ActionPlan"},
+        {"label": "Action_Plan_Item", "apiName": "ActionPlanItem"},
+        {"label": "Premise", "apiName": "vlocity_cmt__Premises__c"},
+        {"label": "Quote", "apiName": "Quote"},
+        {"label": "Quote_Line_Item", "apiName": "QuoteLineItem"},
+        {"label": "Contract", "apiName": "Contract"},
+        {"label": "Order", "apiName": "Order"},
+        {"label": "Order_Product", "apiName": "OrderItem"},
+        {"label": "Work_Order", "apiName": "WorkOrder"},
+        {"label": "Fulfilment_Request", "apiName": "vlocity_cmt__FulfilmentRequest__c"},
+        {"label": "Fulfilment_Request_Line", "apiName": "vlocity_cmt__FulfilmentRequestLine__c"},
+        {"label": "Task", "apiName": "Task"},
+        {"label": "Service_Point", "apiName": "vlocity_cmt__ServicePoint__c"},
+        {"label": "Asset", "apiName": "Asset"},
+        {"label": "MessagingSession", "apiName": "MessagingSession"},
+        {"label": "Messaging_User", "apiName": "MessagingEndUser"},
+        {"label": "Approval_Submission", "apiName": "ApprovalSubmission"},
+        {"label": "Approval_Submission_Detail", "apiName": "ApprovalSubmissionDetail"},
+        {"label": "Case", "apiName": "Case"},
+        {"label": "Email_Message", "apiName": "EmailMessage"},
+        {"label": "Inventory_Item", "apiName": "vlocity_cmt__InventoryItem__c"},
+        {"label": "Ubigeo", "apiName": "pz_AddressStandardLocation__c"},
+        {"label": "User", "apiName": "User"},
+        {"label": "Party", "apiName": "vlocity_cmt__Party__c"},
+        {"label": "Product", "apiName": "Product2"},
+        {"label": "Payment_Adjustment", "apiName": "vlocity_cmt__PaymentAdjustment__c"},
+        {"label": "Store_Location", "apiName": "vlocity_cmt__BusinessSite__c"}
+    ]
 
 def run_cmd(cmd, dry_run=False):
     print(cmd)

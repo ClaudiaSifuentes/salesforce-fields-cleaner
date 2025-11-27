@@ -1,0 +1,4122 @@
+{
+  "fields": [
+    {
+      "label": "Opportunity ID",
+      "name": "Id",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "id",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Deleted",
+      "name": "IsDeleted",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Account ID",
+      "name": "AccountId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Account"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Record Type ID",
+      "name": "RecordTypeId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "RecordType"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Private",
+      "name": "IsPrivate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Name",
+      "name": "Name",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 120
+    },
+    {
+      "label": "Description",
+      "name": "Description",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 32000
+    },
+    {
+      "label": "Stage",
+      "name": "StageName",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Solicitud",
+          "value": "Solicitud"
+        },
+        {
+          "active": true,
+          "label": "Factibilidad",
+          "value": "Factibilidad"
+        },
+        {
+          "active": true,
+          "label": "Contrato y Orden",
+          "value": "Contrato y Orden"
+        },
+        {
+          "active": true,
+          "label": "Gestión de Proyecto",
+          "value": "Gestión de Proyecto"
+        },
+        {
+          "active": true,
+          "label": "Mantenimiento",
+          "value": "Mantenimiento"
+        },
+        {
+          "active": true,
+          "label": "Gestión de Obra",
+          "value": "Gestión de Obra"
+        },
+        {
+          "active": true,
+          "label": "Activación Técnica",
+          "value": "Activación Técnica"
+        },
+        {
+          "active": true,
+          "label": "Activación Comercial",
+          "value": "Activación Comercial"
+        },
+        {
+          "active": true,
+          "label": "Planificación",
+          "value": "Planificación"
+        },
+        {
+          "active": true,
+          "label": "Recaudación",
+          "value": "Recaudación"
+        },
+        {
+          "active": true,
+          "label": "Trabajo",
+          "value": "Trabajo"
+        },
+        {
+          "active": true,
+          "label": "Finalización",
+          "value": "Finalización"
+        },
+        {
+          "active": true,
+          "label": "Anulada",
+          "value": "Anulada"
+        },
+        {
+          "active": true,
+          "label": "Presupuesto enviado",
+          "value": "Presupuesto enviado"
+        },
+        {
+          "active": true,
+          "label": "Contrato Pendiente",
+          "value": "Contrato Pendiente"
+        },
+        {
+          "active": true,
+          "label": "Contrato Firmado",
+          "value": "Contrato Firmado"
+        },
+        {
+          "active": true,
+          "label": "Oportunidad Ganada",
+          "value": "Oportunidad Ganada"
+        },
+        {
+          "active": true,
+          "label": "Oportunidad Perdida",
+          "value": "Oportunidad Perdida"
+        },
+        {
+          "active": true,
+          "label": "Cierre Global",
+          "value": "Cierre Global"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Amount",
+      "name": "Amount",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Probability (%)",
+      "name": "Probability",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "percent",
+      "precision": 3,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Expected Amount",
+      "name": "ExpectedRevenue",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Quantity",
+      "name": "TotalOpportunityQuantity",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Close Date",
+      "name": "CloseDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Opportunity Type",
+      "name": "Type",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Requisitos y Proforma",
+          "value": "Requisitos y Proforma"
+        },
+        {
+          "active": true,
+          "label": "Factibilidad Técnica",
+          "value": "Factibilidad Tecnica"
+        },
+        {
+          "active": true,
+          "label": "Venta",
+          "value": "Venta Formal"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Next Step",
+      "name": "NextStep",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Lead Source",
+      "name": "LeadSource",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Publicidad",
+          "value": "Publicidad"
+        },
+        {
+          "active": true,
+          "label": "Foro de negocios",
+          "value": "Foro de negocios"
+        },
+        {
+          "active": true,
+          "label": "Cámara de comercio",
+          "value": "Cámara de comercio"
+        },
+        {
+          "active": true,
+          "label": "Referido de la empresa",
+          "value": "Referido de la empresa"
+        },
+        {
+          "active": true,
+          "label": "Evento empresarial",
+          "value": "Evento empresarial"
+        },
+        {
+          "active": true,
+          "label": "PERUMIN",
+          "value": "PERUMIN"
+        },
+        {
+          "active": true,
+          "label": "Feria de negocios",
+          "value": "Feria de negocios"
+        },
+        {
+          "active": true,
+          "label": "Referido externo",
+          "value": "Referido externo"
+        },
+        {
+          "active": true,
+          "label": "Sitio Web",
+          "value": "Sitio Web"
+        },
+        {
+          "active": true,
+          "label": "Otros",
+          "value": "Otros"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Closed",
+      "name": "IsClosed",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Won",
+      "name": "IsWon",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Forecast Category",
+      "name": "ForecastCategory",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Omitted",
+          "value": "Omitted"
+        },
+        {
+          "active": true,
+          "label": "Pipeline",
+          "value": "Pipeline"
+        },
+        {
+          "active": true,
+          "label": "Best Case",
+          "value": "BestCase"
+        },
+        {
+          "active": true,
+          "label": "Most Likely",
+          "value": "MostLikely"
+        },
+        {
+          "active": true,
+          "label": "Commit",
+          "value": "Forecast"
+        },
+        {
+          "active": true,
+          "label": "Closed",
+          "value": "Closed"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Forecast Category",
+      "name": "ForecastCategoryName",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Omitido",
+          "value": "Omitted"
+        },
+        {
+          "active": true,
+          "label": "En Curso",
+          "value": "Pipeline"
+        },
+        {
+          "active": true,
+          "label": "Mejor Escenario",
+          "value": "Best Case"
+        },
+        {
+          "active": true,
+          "label": "Comprometido",
+          "value": "Commit"
+        },
+        {
+          "active": true,
+          "label": "Cerrada",
+          "value": "Closed"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Opportunity Currency",
+      "name": "CurrencyIsoCode",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Peruvian Sol",
+          "value": "PEN"
+        },
+        {
+          "active": true,
+          "label": "U.S. Dollar",
+          "value": "USD"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 3
+    },
+    {
+      "label": "Campaign ID",
+      "name": "CampaignId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Campaign"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Has Line Item",
+      "name": "HasOpportunityLineItem",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Price Book ID",
+      "name": "Pricebook2Id",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Pricebook2"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Owner ID",
+      "name": "OwnerId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Created Date",
+      "name": "CreatedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Age",
+      "name": "AgeInDays",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "int",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Created By ID",
+      "name": "CreatedById",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Last Modified Date",
+      "name": "LastModifiedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Modified By ID",
+      "name": "LastModifiedById",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "System Modstamp",
+      "name": "SystemModstamp",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Activity",
+      "name": "LastActivityDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Recent Activity",
+      "name": "LastActivityInDays",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "int",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Push Count",
+      "name": "PushCount",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "int",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Stage Change Date",
+      "name": "LastStageChangeDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Days In Stage",
+      "name": "LastStageChangeInDays",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "int",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fiscal Quarter",
+      "name": "FiscalQuarter",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "int",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fiscal Year",
+      "name": "FiscalYear",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "int",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fiscal Period",
+      "name": "Fiscal",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 6
+    },
+    {
+      "label": "Contact ID",
+      "name": "ContactId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Contact"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Last Viewed Date",
+      "name": "LastViewedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Referenced Date",
+      "name": "LastReferencedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Partner Account ID",
+      "name": "PartnerAccountId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Account"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Quote ID",
+      "name": "SyncedQuoteId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Quote"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Contract ID",
+      "name": "ContractId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Contract"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Has Open Activity",
+      "name": "HasOpenActivity",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Has Overdue Task",
+      "name": "HasOverdueTask",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Opportunity History ID",
+      "name": "LastAmountChangedHistoryId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "OpportunityHistory"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Opportunity History ID",
+      "name": "LastCloseDateChangedHistoryId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "OpportunityHistory"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Important",
+      "name": "IsPriorityRecord",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Budget Confirmed",
+      "name": "Budget_Confirmed__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Discovery Completed",
+      "name": "Discovery_Completed__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "ROI Analysis Completed",
+      "name": "ROI_Analysis_Completed__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Async Job",
+      "name": "vlocity_cmt__AsyncJobId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 80
+    },
+    {
+      "label": "Loss Reason",
+      "name": "Loss_Reason__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Lost to Competitor",
+          "value": "Lost to Competitor"
+        },
+        {
+          "active": true,
+          "label": "No Budget / Lost Funding",
+          "value": "No Budget / Lost Funding"
+        },
+        {
+          "active": true,
+          "label": "No Decision / Non-Responsive",
+          "value": "No Decision / Non-Responsive"
+        },
+        {
+          "active": true,
+          "label": "Price",
+          "value": "Price"
+        },
+        {
+          "active": true,
+          "label": "Other",
+          "value": "Other"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Async Operation",
+      "name": "vlocity_cmt__AsyncOperation__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Price",
+          "value": "Price"
+        },
+        {
+          "active": true,
+          "label": "Validate",
+          "value": "Validate"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Budget Amount",
+      "name": "vlocity_cmt__BudgetAmount__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Default Currency Payment Mode",
+      "name": "vlocity_cmt__DefaultCurrencyPaymentMode__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Currency",
+          "value": "Currency"
+        },
+        {
+          "active": true,
+          "label": "Loyalty",
+          "value": "Loyalty"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Effective Total: Base One Time Charges",
+      "name": "vlocity_cmt__EffectiveBaseOneTimeCharge__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Effective Total: Base Recurring Charges",
+      "name": "vlocity_cmt__EffectiveBaseRecurringCharge__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Effective Total: One Time Costs",
+      "name": "vlocity_cmt__EffectiveOneTimeCostTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 16,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Effective Total: One Time Loyalty",
+      "name": "vlocity_cmt__EffectiveOneTimeLoyaltyTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Effective Total: Recurring Costs",
+      "name": "vlocity_cmt__EffectiveRecurringCostTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 16,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Usage Cost Total",
+      "name": "vlocity_cmt__EffectiveUsageCostTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Usage Price Total",
+      "name": "vlocity_cmt__EffectiveUsagePriceTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Email",
+      "name": "vlocity_cmt__Email__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "email",
+      "precision": 0,
+      "scale": 0,
+      "length": 80
+    },
+    {
+      "label": "Fax",
+      "name": "vlocity_cmt__Fax__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "phone",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Follow Up To",
+      "name": "vlocity_cmt__FollowUpTo__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Frame Contract",
+      "name": "vlocity_cmt__FrameContractId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "Contract"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Require Contract",
+      "name": "vlocity_cmt__IsContractRequired__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Locked By User",
+      "name": "vlocity_cmt__LockedBy__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Locked For",
+      "name": "vlocity_cmt__LockedFor__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Async Operation",
+          "value": "Async Operation"
+        },
+        {
+          "active": true,
+          "label": "Manual Edit",
+          "value": "Manual Edit"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Number Of Contracted Months",
+      "name": "vlocity_cmt__NumberOfContractedMonths__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "One Time Loyalty Total",
+      "name": "vlocity_cmt__OneTimeLoyaltyTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "One Time Margin Total",
+      "name": "vlocity_cmt__OneTimeMarginTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "percent",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Opportunity Margin Total",
+      "name": "vlocity_cmt__OpportunityMarginTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "percent",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Order Number",
+      "name": "vlocity_cmt__OrderNumber__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 8
+    },
+    {
+      "label": "Originating Channel",
+      "name": "vlocity_cmt__OriginatingChannel__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Web",
+          "value": "Web"
+        },
+        {
+          "active": true,
+          "label": "Call Center",
+          "value": "Call Center"
+        },
+        {
+          "active": true,
+          "label": "Retail",
+          "value": "Retail"
+        },
+        {
+          "active": true,
+          "label": "Dealer",
+          "value": "Dealer"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Originating Contract",
+      "name": "vlocity_cmt__OriginatingContractId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "Contract"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Referral Source",
+      "name": "vlocity_cmt__PartyId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "vlocity_cmt__Party__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Phone",
+      "name": "vlocity_cmt__Phone__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "phone",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Price List",
+      "name": "vlocity_cmt__PriceListId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "vlocity_cmt__PriceList__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Recurring Margin Total",
+      "name": "vlocity_cmt__RecurringMarginTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "percent",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Shipping Postal Code",
+      "name": "vlocity_cmt__ShippingPostalCode__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1300
+    },
+    {
+      "label": "Shipping State",
+      "name": "vlocity_cmt__ShippingState__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1300
+    },
+    {
+      "label": "Tracking Number",
+      "name": "vlocity_cmt__TrackingNumber__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 12
+    },
+    {
+      "label": "Usage Margin Total",
+      "name": "vlocity_cmt__UsageMarginTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "percent",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Validation Date",
+      "name": "vlocity_cmt__ValidationDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Validation Message",
+      "name": "vlocity_cmt__ValidationMessage__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 32768
+    },
+    {
+      "label": "Validation Status",
+      "name": "vlocity_cmt__ValidationStatus__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Not yet run",
+          "value": "Not yet run"
+        },
+        {
+          "active": true,
+          "label": "Passed",
+          "value": "Passed"
+        },
+        {
+          "active": true,
+          "label": "Failed",
+          "value": "Failed"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Effective One Time Total",
+      "name": "vlocity_cmt__EffectiveOneTimeTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Effective Recurring Total",
+      "name": "vlocity_cmt__EffectiveRecurringTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "One Time Total",
+      "name": "vlocity_cmt__OneTimeTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Recurring Total",
+      "name": "vlocity_cmt__RecurringTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Account Record Type",
+      "name": "vlocity_cmt__AccountRecordType__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1300
+    },
+    {
+      "label": "Account SLA",
+      "name": "vlocity_cmt__AccountSLA__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1300
+    },
+    {
+      "label": "Effective Opportunity Total",
+      "name": "vlocity_cmt__EffectiveOpportunityTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Opportunity Total",
+      "name": "vlocity_cmt__OpportunityTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Caso Origen",
+      "name": "pz_RootCase__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "Case"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Sub Segmento",
+      "name": "pz_SubSegment__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Residencial",
+          "value": "Residencial"
+        },
+        {
+          "active": true,
+          "label": "Expansión",
+          "value": "Expansión"
+        },
+        {
+          "active": true,
+          "label": "Grandes Clientes",
+          "value": "Grandes Clientes"
+        },
+        {
+          "active": true,
+          "label": "Inmobiliario",
+          "value": "Inmobiliario"
+        },
+        {
+          "active": true,
+          "label": "Institucional",
+          "value": "Institucional"
+        },
+        {
+          "active": true,
+          "label": "Libres",
+          "value": "Libres"
+        },
+        {
+          "active": true,
+          "label": "Propios",
+          "value": "Propios"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Segmento",
+      "name": "pz_Segment__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Residencial",
+          "value": "Residencial"
+        },
+        {
+          "active": true,
+          "label": "Grandes Clientes e Institucional",
+          "value": "Grandes Clientes e Institucional"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Equipo Comercial",
+      "name": "pz_SalesTeam__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "PLUZ Energía",
+          "value": "PLUZ Energía"
+        },
+        {
+          "active": true,
+          "label": "PLUZ Soluciones",
+          "value": "PLUZ Soluciones"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Tipo de Venta",
+      "name": "pz_SaleType__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Individual",
+          "value": "Individual"
+        },
+        {
+          "active": true,
+          "label": "Masivo",
+          "value": "Masivo"
+        },
+        {
+          "active": true,
+          "label": "No Aplica",
+          "value": "No Aplica"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Total Potencia Contratada",
+      "name": "pz_TotalContractedPower__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Contact Por Conversión",
+      "name": "pz_ConversionContact__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "Contact"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Nivel de Tensión",
+      "name": "pz_VoltageLevel__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Baja Tensión",
+          "value": "Baja Tension"
+        },
+        {
+          "active": true,
+          "label": "Media Tensión",
+          "value": "Media Tension"
+        },
+        {
+          "active": true,
+          "label": "NO APLICA",
+          "value": "NO APLICA"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "X,Y (Latitude)",
+      "name": "pz_XY__Latitude__s",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 10,
+      "scale": 7,
+      "length": 0
+    },
+    {
+      "label": "X,Y (Longitude)",
+      "name": "pz_XY__Longitude__s",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 10,
+      "scale": 7,
+      "length": 0
+    },
+    {
+      "label": "X,Y",
+      "name": "pz_XY__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "location",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Predio",
+      "name": "pz_Premisse__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "vlocity_cmt__Premises__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Contacto Técnico Cliente",
+      "name": "pz_ResponsibleClientContact__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "Contact"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Celular Contacto Técnico",
+      "name": "pz_ResponsibleClientContactMobile__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "phone",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Fase",
+      "name": "pz_ElectricalPhase__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "NO APLICA",
+          "value": "NO APLICA"
+        },
+        {
+          "active": true,
+          "label": "Monofásica",
+          "value": "Monofásica"
+        },
+        {
+          "active": true,
+          "label": "Trifásica",
+          "value": "Trifásica"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Tipo Acometida",
+      "name": "pz_TypeOfElectricalConnection__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Aérea",
+          "value": "Aérea"
+        },
+        {
+          "active": true,
+          "label": "Mixta",
+          "value": "Mixta"
+        },
+        {
+          "active": true,
+          "label": "Subterránea",
+          "value": "Subterránea"
+        },
+        {
+          "active": true,
+          "label": "NO APLICA",
+          "value": "No Aplica"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Descripción Necesidad Prospecto",
+      "name": "pz_LeadRequirementDescripcion__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 1000
+    },
+    {
+      "label": "Fecha Admisión Comercial",
+      "name": "pz_SalesAcceptanceDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Nombre Persona Contacto",
+      "name": "pz_ContactName__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 120
+    },
+    {
+      "label": "Total potencia contratada",
+      "name": "pz_TotalContractPower__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 14,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Lista de Documentos",
+      "name": "PZ_DocumentList__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 131072
+    },
+    {
+      "label": "Tipo de Obra",
+      "name": "pz_TypeOfWork__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Rutina",
+          "value": "SinReforma"
+        },
+        {
+          "active": true,
+          "label": "Reforma",
+          "value": "Reforma"
+        },
+        {
+          "active": true,
+          "label": "Reforma Sustancial",
+          "value": "ReformaSustancial"
+        },
+        {
+          "active": true,
+          "label": "No Aplica",
+          "value": "No Aplica"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Forma de Pago",
+      "name": "pz_PaymentMethod__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Pago al Contado",
+          "value": "CONTADO"
+        },
+        {
+          "active": true,
+          "label": "Pago a Crédito",
+          "value": "CREDITO"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "¿Requiere cesión de área?",
+      "name": "pz_WithAreaConcession__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Si",
+          "value": "Si"
+        },
+        {
+          "active": true,
+          "label": "No",
+          "value": "No"
+        },
+        {
+          "active": true,
+          "label": "No Aplica",
+          "value": "No Aplica"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "¿Presupuesto Pagado?",
+      "name": "pz_Budgetpaid__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "No",
+          "value": "No"
+        },
+        {
+          "active": true,
+          "label": "Si",
+          "value": "Si"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Porcentaje Pagado",
+      "name": "pz_RunningPaidQuotes__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "percent",
+      "precision": 18,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Is From Lead",
+      "name": "pz_IsFromLead__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Motivo",
+      "name": "pz_Reason__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Modificaciones generales",
+          "value": "Modificaciones generales"
+        },
+        {
+          "active": true,
+          "label": "Electrificación",
+          "value": "Electrificacion"
+        },
+        {
+          "active": true,
+          "label": "Provisionales",
+          "value": "Provisionales"
+        },
+        {
+          "active": true,
+          "label": "Sist. Distribución - Contribución Reembolsable",
+          "value": "Sist. Distribución - Contribución Reembolsable"
+        },
+        {
+          "active": true,
+          "label": "Modificación de suministro",
+          "value": "Modificación de suministro"
+        },
+        {
+          "active": true,
+          "label": "Retiro de suministro",
+          "value": "Retiro de suministro"
+        },
+        {
+          "active": true,
+          "label": "Venta adicional",
+          "value": "Venta adicional"
+        },
+        {
+          "active": true,
+          "label": "Oportunidad de Venta",
+          "value": "Oportunidad de Venta"
+        },
+        {
+          "active": true,
+          "label": "Facturación",
+          "value": "Facturación"
+        },
+        {
+          "active": true,
+          "label": "Activar/desactivar restricciones",
+          "value": "Activar/desactivar restricciones"
+        },
+        {
+          "active": true,
+          "label": "Corte y reconexión",
+          "value": "Corte y reconexión"
+        },
+        {
+          "active": true,
+          "label": "Devolución en efectivo",
+          "value": "Devolución en efectivo"
+        },
+        {
+          "active": true,
+          "label": "Devolución por transferencia Bancaria",
+          "value": "Devolución por transferencia Bancaria"
+        },
+        {
+          "active": true,
+          "label": "Información Adicional",
+          "value": "Información Adicional"
+        },
+        {
+          "active": true,
+          "label": "Recaudación",
+          "value": "Recaudación"
+        },
+        {
+          "active": true,
+          "label": "Sistema Distribución Contribución Reembolsable",
+          "value": "Sistema Distribución Contribución Reembolsable"
+        },
+        {
+          "active": true,
+          "label": "Suministro",
+          "value": "Suministro"
+        },
+        {
+          "active": true,
+          "label": "Alquiler de infraestructura",
+          "value": "Alquiler de infraestructura"
+        },
+        {
+          "active": true,
+          "label": "Alumbrado Público",
+          "value": "Alumbrado Público"
+        },
+        {
+          "active": true,
+          "label": "Denuncias",
+          "value": "Denuncias"
+        },
+        {
+          "active": true,
+          "label": "Fise",
+          "value": "Fise"
+        },
+        {
+          "active": true,
+          "label": "Gestión canales de atención",
+          "value": "Gestión canales de atención"
+        },
+        {
+          "active": true,
+          "label": "Indemnizaciones",
+          "value": "Indemnizaciones"
+        },
+        {
+          "active": true,
+          "label": "Pluz Seguros",
+          "value": "Pluz Seguros"
+        },
+        {
+          "active": true,
+          "label": "Redes",
+          "value": "Redes"
+        },
+        {
+          "active": true,
+          "label": "Subestaciones",
+          "value": "Subestaciones"
+        },
+        {
+          "active": true,
+          "label": "Trabajo contratistas",
+          "value": "Trabajo contratistas"
+        },
+        {
+          "active": true,
+          "label": "Denuncia Masiva",
+          "value": "Denuncia Masiva"
+        },
+        {
+          "active": true,
+          "label": "Info. Adicional",
+          "value": "Info. Adicional"
+        },
+        {
+          "active": true,
+          "label": "Calidad de suministro",
+          "value": "Calidad de suministro"
+        },
+        {
+          "active": true,
+          "label": "Calidad del producto",
+          "value": "Calidad del producto"
+        },
+        {
+          "active": true,
+          "label": "Calidad del servicio",
+          "value": "Calidad del servicio"
+        },
+        {
+          "active": true,
+          "label": "Consultas",
+          "value": "Consultas"
+        },
+        {
+          "active": true,
+          "label": "Falta de suministro y electrodependientes",
+          "value": "Falta de suministro y electrodependientes"
+        },
+        {
+          "active": true,
+          "label": "Inicio de supervisión",
+          "value": "Inicio de supervisión"
+        },
+        {
+          "active": true,
+          "label": "Oficio queja por Osinergmin",
+          "value": "Oficio queja por Osinergmin"
+        },
+        {
+          "active": true,
+          "label": "Proceso impugnación",
+          "value": "Proceso impugnación"
+        },
+        {
+          "active": true,
+          "label": "Proceso sancionador",
+          "value": "Proceso sancionador"
+        },
+        {
+          "active": true,
+          "label": "Proceso supervisión",
+          "value": "Proceso supervisión"
+        },
+        {
+          "active": true,
+          "label": "Requerimientos comerciales y técnicos",
+          "value": "Requerimientos comerciales y técnicos"
+        },
+        {
+          "active": true,
+          "label": "Riesgo eléctrico",
+          "value": "Riesgo eléctrico"
+        },
+        {
+          "active": true,
+          "label": "Traslado de atención comercial",
+          "value": "Traslado de atención comercial"
+        },
+        {
+          "active": true,
+          "label": "Nueva conexión",
+          "value": "Nueva conexion"
+        },
+        {
+          "active": true,
+          "label": "Retiro de conexión",
+          "value": "Retiro de conexión"
+        },
+        {
+          "active": true,
+          "label": "Reinstalación de conexión",
+          "value": "Reinstalación de conexión"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Fecha de pago de producto(s) regulado(s)",
+      "name": "pz_RegulatedProductPaymentDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha Ejecución Agendada",
+      "name": "pz_ScheduledExecutionDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha Ejecución Deseada",
+      "name": "pz_ProposedExecutionDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha Ejecución Finalizada",
+      "name": "pz_CompletedExecutionDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha Instalación",
+      "name": "pz_InstalledDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Empresa",
+      "name": "pz_Company__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "PLUZ Energía",
+          "value": "3"
+        },
+        {
+          "active": true,
+          "label": "PLUZ Soluciones",
+          "value": "2"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Submotivo",
+      "name": "pz_SubMotive__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Corrección de dirección",
+          "value": "Corrección de dirección"
+        },
+        {
+          "active": true,
+          "label": "Correción de nombre y/o apellidos",
+          "value": "Correción de nombre y/o apellidos"
+        },
+        {
+          "active": true,
+          "label": "Datos comerciales - Masivo",
+          "value": "Datos comerciales - Masivo"
+        },
+        {
+          "active": true,
+          "label": "Corrección de datos de documento de identidad",
+          "value": "Corrección de datos de documento de identidad"
+        },
+        {
+          "active": true,
+          "label": "Consentimiento Uso Datos Personales (Ley de Protección de Datos)",
+          "value": "Consentimiento Uso Datos Personales (Ley de Protección de Datos"
+        },
+        {
+          "active": true,
+          "label": "No Consentimiento Uso Datos Personales para otras finalidades",
+          "value": "No Consentimiento Uso Datos Personales para otras finalidades"
+        },
+        {
+          "active": true,
+          "label": "SI Consentimiento Uso Datos Personales para otras finalidades",
+          "value": "SI Consentimiento Uso Datos Personales para otras finalidades"
+        },
+        {
+          "active": true,
+          "label": "Cambio de titularidad",
+          "value": "Cambio de titularidad"
+        },
+        {
+          "active": true,
+          "label": "Modificación de marca de predio en litigio",
+          "value": "Modificación de marca de predio en litigio"
+        },
+        {
+          "active": true,
+          "label": "Modificación de marca de cliente sensible",
+          "value": "Modificación de marca de electrodependiente"
+        },
+        {
+          "active": true,
+          "label": "Modificación de giro, actividad económica y comercial",
+          "value": "Modificación de giro, actividad económica y comercial"
+        },
+        {
+          "active": true,
+          "label": "Modificación de marca de restricción de convenio para el suministro",
+          "value": "Modificación de marca de restricción de convenio para el suministro"
+        },
+        {
+          "active": true,
+          "label": "Modificación de dirección contractual del suministro",
+          "value": "Modificación de dirección del suministro"
+        },
+        {
+          "active": true,
+          "label": "Corrección de nombre y/o apellidos del contacto",
+          "value": "Corrección de nombre y/o apellidos del contacto"
+        },
+        {
+          "active": true,
+          "label": "Venta individual",
+          "value": "Venta individual"
+        },
+        {
+          "active": true,
+          "label": "Venta masiva",
+          "value": "Venta masiva"
+        },
+        {
+          "active": true,
+          "label": "Reinstalación",
+          "value": "Reinstalación"
+        },
+        {
+          "active": true,
+          "label": "Traslado",
+          "value": "Traslado"
+        },
+        {
+          "active": true,
+          "label": "Cambio de tarifa",
+          "value": "Cambio de tarifa"
+        },
+        {
+          "active": true,
+          "label": "Incremento de Carga",
+          "value": "Incremento de Carga"
+        },
+        {
+          "active": true,
+          "label": "Reducción de Carga",
+          "value": "Reducción de Carga"
+        },
+        {
+          "active": true,
+          "label": "Productos y servicios de valor añadido",
+          "value": "Productos y servicios de valor añadido"
+        },
+        {
+          "active": true,
+          "label": "Productos y servicios de valor añadido - Facturación externa",
+          "value": "Productos y servicios de valor añadido - Facturación externa"
+        },
+        {
+          "active": true,
+          "label": "Consulta requisitos",
+          "value": "Consulta requisitos"
+        },
+        {
+          "active": true,
+          "label": "Información relacionada a la venta",
+          "value": "Información relacionada a la venta"
+        },
+        {
+          "active": true,
+          "label": "Documentos complementarios",
+          "value": "Documentos complementarios"
+        },
+        {
+          "active": true,
+          "label": "Área de servidumbre",
+          "value": "Área de servidumbre"
+        },
+        {
+          "active": true,
+          "label": "Subsanar observaciones técnicas",
+          "value": "Subsanar observaciones técnicas"
+        },
+        {
+          "active": true,
+          "label": "Presupuesto de conexiones",
+          "value": "Presupuesto de conexiones"
+        },
+        {
+          "active": true,
+          "label": "Reconsideración de factibilidad",
+          "value": "Reconsideración de factibilidad"
+        },
+        {
+          "active": true,
+          "label": "Revisión de sistema de utilización",
+          "value": "Revisión de sistema de utilización"
+        },
+        {
+          "active": true,
+          "label": "Oposición de Terceros",
+          "value": "Oposición de Terceros"
+        },
+        {
+          "active": true,
+          "label": "Programación de ventas",
+          "value": "Programación de ventas"
+        },
+        {
+          "active": true,
+          "label": "Solicitud Punto de Diseño",
+          "value": "Solicitud Punto de Diseño"
+        },
+        {
+          "active": true,
+          "label": "Subsanar requisitos comerciales",
+          "value": "Subsanar requisitos comerciales"
+        },
+        {
+          "active": true,
+          "label": "Aprobación de área para Subestación",
+          "value": "Aprobación de área para Subestación"
+        },
+        {
+          "active": true,
+          "label": "Levantamiento de observaciones en obras",
+          "value": "Levantamiento de observaciones en obras"
+        },
+        {
+          "active": true,
+          "label": "Ejecución de pruebas electricas",
+          "value": "Ejecución de pruebas electricas"
+        },
+        {
+          "active": true,
+          "label": "Recepción o Conformidad y Puesta en servicio",
+          "value": "Recepción o Conformidad y Puesta en servicio"
+        },
+        {
+          "active": true,
+          "label": "Inicio de Obras particulares (cliente)",
+          "value": "Inicio de Obras particulares (cliente)"
+        },
+        {
+          "active": true,
+          "label": "Devolución de obras civiles",
+          "value": "Devolución de obras civiles"
+        },
+        {
+          "active": true,
+          "label": "Aprobación de banco de medidores",
+          "value": "Aprobación de banco de medidores"
+        },
+        {
+          "active": true,
+          "label": "Proforma de venta",
+          "value": "Proforma de venta"
+        },
+        {
+          "active": true,
+          "label": "Emisión Copia Digital",
+          "value": "Emisión Copia Digital"
+        },
+        {
+          "active": true,
+          "label": "Reporte de cartola",
+          "value": "Reporte de cartola"
+        },
+        {
+          "active": true,
+          "label": "Reporte de consumos",
+          "value": "Reporte de consumos"
+        },
+        {
+          "active": true,
+          "label": "Reporte de facturación",
+          "value": "Reporte de facturación"
+        },
+        {
+          "active": true,
+          "label": "Reporte de pagos",
+          "value": "Reporte de pagos"
+        },
+        {
+          "active": true,
+          "label": "Activar/ Desactivar Restricción de Convenio",
+          "value": "Activar/ Desactivar Restricción de Convenio"
+        },
+        {
+          "active": true,
+          "label": "Corte Indebido",
+          "value": "Corte Indebido"
+        },
+        {
+          "active": true,
+          "label": "Plazo de Reconexion Vencido >=24 hrs",
+          "value": "Plazo de Reconexion Vencido >=24 hrs"
+        },
+        {
+          "active": true,
+          "label": "Prórroga o bloqueo de Corte",
+          "value": "Prórroga o bloqueo de Corte"
+        },
+        {
+          "active": true,
+          "label": "Reconexión Condicionada",
+          "value": "Reconexión Condicionada"
+        },
+        {
+          "active": true,
+          "label": "Suspensión Temporal Suministro",
+          "value": "Suspensión Temporal Suministro"
+        },
+        {
+          "active": true,
+          "label": "Devolución por exceso facturado",
+          "value": "Devolución por exceso facturado"
+        },
+        {
+          "active": true,
+          "label": "Devolución por pago equivocado",
+          "value": "Devolución por pago equivocado"
+        },
+        {
+          "active": true,
+          "label": "Devolución por venta no efectiva",
+          "value": "Devolución por venta no efectiva"
+        },
+        {
+          "active": true,
+          "label": "Devolución por pago duplicado",
+          "value": "Devolución por pago duplicado"
+        },
+        {
+          "active": true,
+          "label": "Afiliación al RDE - Grandes clientes",
+          "value": "Afiliación al RDE - Grandes clientes"
+        },
+        {
+          "active": true,
+          "label": "Afiliación al RDE - Reemplazo físico",
+          "value": "Afiliación al RDE - Reemplazo físico"
+        },
+        {
+          "active": true,
+          "label": "Afiliación Copia Recibo Digital - Grandes clientes",
+          "value": "Afiliación Copia Recibo Digital - Grandes clientes"
+        },
+        {
+          "active": true,
+          "label": "Anormalidad en el Reparto",
+          "value": "Anormalidad en el Reparto"
+        },
+        {
+          "active": true,
+          "label": "Boleta Braile",
+          "value": "Boleta Braile"
+        },
+        {
+          "active": true,
+          "label": "Desafiliación al  RDE",
+          "value": "Desafiliación al  RDE"
+        },
+        {
+          "active": true,
+          "label": "Desafiliación al RDE - Grandes clientes",
+          "value": "Desafiliación al RDE - Grandes clientes"
+        },
+        {
+          "active": true,
+          "label": "Desafiliación Copia Recibo Digital - Grandes clientes",
+          "value": "Desafiliación Copia Recibo Digital - Grandes clientes"
+        },
+        {
+          "active": true,
+          "label": "Emisión 2º original",
+          "value": "Emisión 2º original"
+        },
+        {
+          "active": true,
+          "label": "Autolectura",
+          "value": "Autolectura"
+        },
+        {
+          "active": true,
+          "label": "Cargos Facturados/Servicios varios",
+          "value": "Cargos Facturados/Servicios varios"
+        },
+        {
+          "active": true,
+          "label": "Consumo - Solución con financiamiento",
+          "value": "Consumo - Solución con financiamiento"
+        },
+        {
+          "active": true,
+          "label": "Consumo - Solución con rebaja",
+          "value": "Consumo - Solución con rebaja"
+        },
+        {
+          "active": true,
+          "label": "Corte Facturado",
+          "value": "Corte Facturado"
+        },
+        {
+          "active": true,
+          "label": "Facturación de Consumos",
+          "value": "Facturación de Consumos"
+        },
+        {
+          "active": true,
+          "label": "Validación de lectura de cliente",
+          "value": "Validación de lectura de cliente"
+        },
+        {
+          "active": true,
+          "label": "Verificación de lectura",
+          "value": "Verificación de lectura"
+        },
+        {
+          "active": true,
+          "label": "Información adicional",
+          "value": "Información adicional"
+        },
+        {
+          "active": true,
+          "label": "Facilidades de pago",
+          "value": "Facilidades de pago"
+        },
+        {
+          "active": true,
+          "label": "Transferencia por pago equivocado",
+          "value": "Transferencia por pago equivocado"
+        },
+        {
+          "active": true,
+          "label": "Factibilidad de suministro eléctrico",
+          "value": "Factibilidad de suministro eléctrico"
+        },
+        {
+          "active": true,
+          "label": "Solicitud de inicio de obras",
+          "value": "Solicitud de inicio de obras"
+        },
+        {
+          "active": true,
+          "label": "Conformidad y puesta en servicio",
+          "value": "Conformidad y puesta en servicio"
+        },
+        {
+          "active": true,
+          "label": "Solicitud Ejecución de Pruebas Eléctricas",
+          "value": "Solicitud Ejecución de Pruebas Eléctricas"
+        },
+        {
+          "active": true,
+          "label": "Aprobación del proyecto",
+          "value": "Aprobación del proyecto"
+        },
+        {
+          "active": true,
+          "label": "Punto de diseño",
+          "value": "Punto de diseño"
+        },
+        {
+          "active": true,
+          "label": "Revisión de proyectos de sistemas de distribución",
+          "value": "Revisión de proyectos de sistemas de distribución"
+        },
+        {
+          "active": true,
+          "label": "Riesgo eléctrico",
+          "value": "Riesgo eléctrico"
+        },
+        {
+          "active": true,
+          "label": "Alquiler de postes e inf. eléctrica para fibra óptica, Cámaras, antenas, etc.",
+          "value": "Alquiler de postes e inf. eléctrica para fibra óptica, Cámaras, antenas, etc."
+        },
+        {
+          "active": true,
+          "label": "Reemplazo de alumbrado LED - Clientes residenciales",
+          "value": "Reemplazo de alumbrado LED - Clientes residenciales"
+        },
+        {
+          "active": true,
+          "label": "Solicitud de mantenimiento / mejoramiento / reposición / reparación de poste de ALP",
+          "value": "Solicitud de mantenimiento / mejoramiento / reposición / reparación de poste de ALP"
+        },
+        {
+          "active": true,
+          "label": "Solicitud de nuevo AP -Expansión",
+          "value": "Solicitud de nuevo AP -Expansión"
+        },
+        {
+          "active": true,
+          "label": "Denuncia contra personal",
+          "value": "Denuncia contra personal"
+        },
+        {
+          "active": true,
+          "label": "Hurto de energía",
+          "value": "Hurto de energía"
+        },
+        {
+          "active": true,
+          "label": "Cliente No se Factura",
+          "value": "Cliente No se Factura"
+        },
+        {
+          "active": true,
+          "label": "Devolución Contribución Reembolsable (CFR)",
+          "value": "Devolución Contribución Reembolsable (CFR)"
+        },
+        {
+          "active": true,
+          "label": "Inversion de Suministro",
+          "value": "Inversion de Suministro"
+        },
+        {
+          "active": true,
+          "label": "Quiebre de Deuda",
+          "value": "Quiebre de Deuda"
+        },
+        {
+          "active": true,
+          "label": "Recupero Consumo (RE92/Art. 177)",
+          "value": "Recupero Consumo (RE92/Art. 177)"
+        },
+        {
+          "active": true,
+          "label": "Empadronamiento FISE",
+          "value": "Empadronamiento FISE"
+        },
+        {
+          "active": true,
+          "label": "No recibí mi vale FISE este mes",
+          "value": "No recibí mi vale FISE este mes"
+        },
+        {
+          "active": true,
+          "label": "No recibir los Vales de Descuento FISE como medio de pago del balón de GLP con los Usuarios FISE.",
+          "value": "No recibir los Vales de Descuento FISE como medio de pago del balón de GLP con los Usuarios FISE."
+        },
+        {
+          "active": true,
+          "label": "Comprar, vender o transferir los Vales de Descuento FISE entregados por los benefi ciarios FISE (con excepción de las transferencias entre Agentes Aut",
+          "value": "Comprar, vender o transferir los Vales de Descuento FISE entregados por los benefi ciarios FISE (con excepción de las transferencias entre Agentes Aut"
+        },
+        {
+          "active": true,
+          "label": "Solicitud de verificación del mal uso del beneficio del vale, incumplimiento de la declaración jurada.",
+          "value": "Solicitud de verificación del mal uso del beneficio del vale, incumplimiento de la declaración jurada."
+        },
+        {
+          "active": true,
+          "label": "Recibir Vales de descuento FISE de agentes que no cuenten con Convenio Vigente con la Distribuidora Eléctrica que emitió los Vales.",
+          "value": "Recibir Vales de descuento FISE de agentes que no cuenten con Convenio Vigente con la Distribuidora Eléctrica que emitió los Vales."
+        },
+        {
+          "active": true,
+          "label": "Solicitud de verificación de POTENCIALES BENEFICIARIOS que SI deben de estar en el Padrón y actualmente no están (SI tienen suministro eléctrico).",
+          "value": "Solicitud de verificación de POTENCIALES BENEFICIARIOS que SI deben de estar en el Padrón y actualmente no están (SI tienen suministro eléctrico)."
+        },
+        {
+          "active": true,
+          "label": "Otras denuncias sobre FISE",
+          "value": "Otras denuncias sobre FISE"
+        },
+        {
+          "active": true,
+          "label": "Gestión de colas",
+          "value": "Gestión de colas"
+        },
+        {
+          "active": true,
+          "label": "Infraestructura OC",
+          "value": "Infraestructura OC"
+        },
+        {
+          "active": true,
+          "label": "Soporte sobre APP",
+          "value": "Soporte sobre APP"
+        },
+        {
+          "active": true,
+          "label": "Desconoce afiliación de seguro",
+          "value": "Desconoce afiliación de seguro"
+        },
+        {
+          "active": true,
+          "label": "No reconoce venta, anulación",
+          "value": "No reconoce venta, anulación"
+        },
+        {
+          "active": true,
+          "label": "Debito por Banco",
+          "value": "Debito por Banco"
+        },
+        {
+          "active": true,
+          "label": "Estado de Cuenta de años Anteriores",
+          "value": "Estado de Cuenta de años Anteriores"
+        },
+        {
+          "active": true,
+          "label": "Pago Duplicado",
+          "value": "Pago Duplicado"
+        },
+        {
+          "active": true,
+          "label": "Pago no ingresado",
+          "value": "Pago no ingresado"
+        },
+        {
+          "active": true,
+          "label": "Cambio de Redes (Aéreo por Subterráneo/Viceversa)",
+          "value": "Cambio de Redes (Aéreo por Subterráneo/Viceversa)"
+        },
+        {
+          "active": true,
+          "label": "Constancia de Existencia y Suficiencia de redes",
+          "value": "Constancia de Existencia y Suficiencia de redes"
+        },
+        {
+          "active": true,
+          "label": "Copia de Planos",
+          "value": "Copia de Planos"
+        },
+        {
+          "active": true,
+          "label": "Cumplimiento distancia mínima de seguridad (DMS)",
+          "value": "Cumplimiento distancia mínima de seguridad (DMS)"
+        },
+        {
+          "active": true,
+          "label": "Movimiento/ Traslado / Reordenamiento /  Retiro de Redes BT, MT, AT",
+          "value": "Movimiento/ Traslado / Reordenamiento /  Retiro de Redes BT, MT, AT"
+        },
+        {
+          "active": true,
+          "label": "Poste de apoyo en mal estado",
+          "value": "Poste de apoyo en mal estado"
+        },
+        {
+          "active": true,
+          "label": "Servidumbre",
+          "value": "Servidumbre"
+        },
+        {
+          "active": true,
+          "label": "Solicitud de movimiento / traslado de postes",
+          "value": "Solicitud de movimiento / traslado de postes"
+        },
+        {
+          "active": true,
+          "label": "Solicitud de traslado de redes eléctricas - Privado",
+          "value": "Solicitud de traslado de redes eléctricas - Privado"
+        },
+        {
+          "active": true,
+          "label": "Solicitud de traslado de redes eléctricas - Público",
+          "value": "Solicitud de traslado de redes eléctricas - Público"
+        },
+        {
+          "active": true,
+          "label": "Mantenimiento / Limpieza",
+          "value": "Mantenimiento / Limpieza"
+        },
+        {
+          "active": true,
+          "label": "Reubicación/Traslados de Subestaciones",
+          "value": "Reubicación/Traslados de Subestaciones"
+        },
+        {
+          "active": true,
+          "label": "Seguridad (Protección de Subestación)",
+          "value": "Seguridad (Protección de Subestación)"
+        },
+        {
+          "active": true,
+          "label": "Cambio/Reposicion:Medidor/Accesorios",
+          "value": "Cambio/Reposicion:Medidor/Accesorios"
+        },
+        {
+          "active": true,
+          "label": "Copia de Contratos de Suministro",
+          "value": "Copia de Contratos de Suministro"
+        },
+        {
+          "active": true,
+          "label": "Elaborar diagrama de carga",
+          "value": "Elaborar diagrama de carga"
+        },
+        {
+          "active": true,
+          "label": "Información de datos comerciales / Certificado de conexión",
+          "value": "Información de datos comerciales / Certificado de conexión"
+        },
+        {
+          "active": true,
+          "label": "Movimiento/ Traslado / Reordenamiento /  Retiro de acometida",
+          "value": "Movimiento/ Traslado / Reordenamiento /  Retiro de acometida"
+        },
+        {
+          "active": true,
+          "label": "Normalización de cajas/banco de medidores",
+          "value": "Normalización de cajas/banco de medidores"
+        },
+        {
+          "active": true,
+          "label": "Oposición a instalación de conexión",
+          "value": "Oposición a instalación de conexión"
+        },
+        {
+          "active": true,
+          "label": "Oposición Cambio de Medidores/Accesorios",
+          "value": "Oposición Cambio de Medidores/Accesorios"
+        },
+        {
+          "active": true,
+          "label": "Servicio eléctrico",
+          "value": "Servicio eléctrico"
+        },
+        {
+          "active": true,
+          "label": "Reparación / Resanamiento de veredas y recojo de desmonte",
+          "value": "Reparación / Resanamiento de veredas y recojo de desmonte"
+        },
+        {
+          "active": true,
+          "label": "Trabajo mal efectuado",
+          "value": "Trabajo mal efectuado"
+        },
+        {
+          "active": true,
+          "label": "Devolución de Contribuciones reembolsables",
+          "value": "Devolución de Contribuciones reembolsables"
+        },
+        {
+          "active": true,
+          "label": "Acuerdo de devolución",
+          "value": "Acuerdo de devolución"
+        },
+        {
+          "active": true,
+          "label": "Modificación de nombre de ejecutivo y area encargada solo para suministros de grandes clientes",
+          "value": "Modificación de nombre de ejecutivo y area encargada solo para suministros de grandes clientes"
+        },
+        {
+          "active": true,
+          "label": "Deterioro de artefactos eléctricos por sobretensión",
+          "value": "Deterioro de artefactos eléctricos por sobretensión"
+        },
+        {
+          "active": true,
+          "label": "Falta de toma de lectura",
+          "value": "Falta de toma de lectura"
+        },
+        {
+          "active": true,
+          "label": "Proceso de facturación irregular",
+          "value": "Proceso de facturación irregular"
+        },
+        {
+          "active": true,
+          "label": "[LPDP-OTROSNO] No Consentimiento Uso Datos Personales para otras finalidades",
+          "value": "[LPDP-OTROSNO] No Consentimiento Uso Datos Personales para otras finalidades"
+        },
+        {
+          "active": true,
+          "label": "[LPDP-OTROSSI] SI Consentimiento Uso Datos Personales para otras finalidades",
+          "value": "[LPDP-OTROSSI] SI Consentimiento Uso Datos Personales para otras finalidades"
+        },
+        {
+          "active": true,
+          "label": "Actualización datos corte/ reconex. en sistema",
+          "value": "Actualización datos corte/ reconex. en sistema"
+        },
+        {
+          "active": true,
+          "label": "Indemnización por  accidente / daño material",
+          "value": "Indemnización por  accidente / daño material"
+        },
+        {
+          "active": true,
+          "label": "Desafiliación de la asistencia / seguro",
+          "value": "Desafiliación de la asistencia / seguro"
+        },
+        {
+          "active": true,
+          "label": "AP encendido",
+          "value": "AP encendido"
+        },
+        {
+          "active": true,
+          "label": "Difusor inoperativo (DT5)",
+          "value": "Difusor inoperativo (DT5)"
+        },
+        {
+          "active": true,
+          "label": "Hurto - Falta de UAP (DT3)",
+          "value": "Hurto - Falta de UAP (DT3)"
+        },
+        {
+          "active": true,
+          "label": "Interferencia de árbol (DT4)",
+          "value": "Interferencia de árbol (DT4)"
+        },
+        {
+          "active": true,
+          "label": "Lámpara apagada (DT1)",
+          "value": "Lámpara apagada (DT1)"
+        },
+        {
+          "active": true,
+          "label": "Pastoral (DT2)",
+          "value": "Pastoral (DT2)"
+        },
+        {
+          "active": true,
+          "label": "Poste caído (DT3)",
+          "value": "Poste caído (DT3)"
+        },
+        {
+          "active": true,
+          "label": "Poste en mal estado",
+          "value": "Poste en mal estado"
+        },
+        {
+          "active": true,
+          "label": "SED AP fuera de servicio (DT1)",
+          "value": "SED AP fuera de servicio (DT1)"
+        },
+        {
+          "active": true,
+          "label": "Zona sin AP (DT1)",
+          "value": "Zona sin AP (DT1)"
+        },
+        {
+          "active": true,
+          "label": "Interrupciones de Servicio",
+          "value": "Interrupciones de Servicio"
+        },
+        {
+          "active": true,
+          "label": "Bajo Voltaje / Sobretensión / Perturbaciones",
+          "value": "Bajo Voltaje / Sobretensión / Perturbaciones"
+        },
+        {
+          "active": true,
+          "label": "Cobro de corte / reconexión",
+          "value": "Cobro de corte / reconexión"
+        },
+        {
+          "active": true,
+          "label": "Excesiva facturación",
+          "value": "Excesiva facturación"
+        },
+        {
+          "active": true,
+          "label": "Excesivo consumo",
+          "value": "Excesivo consumo"
+        },
+        {
+          "active": true,
+          "label": "Saldo en disputa liberado",
+          "value": "Saldo en disputa liberado"
+        },
+        {
+          "active": true,
+          "label": "Datos Comerciales del Suministro",
+          "value": "Datos Comerciales del Suministro"
+        },
+        {
+          "active": true,
+          "label": "Factibilidad de Conexión",
+          "value": "Factibilidad de Conexión"
+        },
+        {
+          "active": true,
+          "label": "Instalación de la Conexión",
+          "value": "Instalación de la Conexión"
+        },
+        {
+          "active": true,
+          "label": "Negativa al cambio de opción tarifaria",
+          "value": "Negativa al cambio de opción tarifaria"
+        },
+        {
+          "active": true,
+          "label": "Negativa al incremento o disminución de potencia",
+          "value": "Negativa al incremento o disminución de potencia"
+        },
+        {
+          "active": true,
+          "label": "Pago de Presupuesto",
+          "value": "Pago de Presupuesto"
+        },
+        {
+          "active": true,
+          "label": "Requisito Venta Suministro",
+          "value": "Requisito Venta Suministro"
+        },
+        {
+          "active": true,
+          "label": "Consulta corte programado",
+          "value": "Consulta corte programado"
+        },
+        {
+          "active": true,
+          "label": "Consulta de Caso",
+          "value": "Consulta de Caso"
+        },
+        {
+          "active": true,
+          "label": "Ley 29733 - Protección de datos",
+          "value": "Ley 29733 - Protección de datos"
+        },
+        {
+          "active": true,
+          "label": "Temas no relacionados al servicio eléctrico",
+          "value": "Temas no relacionados al servicio eléctrico"
+        },
+        {
+          "active": true,
+          "label": "Fecha de corte",
+          "value": "Fecha de corte"
+        },
+        {
+          "active": true,
+          "label": "Reconexion Solicitada dentro de Plazo",
+          "value": "Reconexion Solicitada dentro de Plazo"
+        },
+        {
+          "active": true,
+          "label": "Consulta sobre el proceso o devolución en curso",
+          "value": "Consulta sobre el proceso o devolución en curso"
+        },
+        {
+          "active": true,
+          "label": "Información general sobre la facturación",
+          "value": "Información general sobre la facturación"
+        },
+        {
+          "active": true,
+          "label": "Información sobre el recibo digital",
+          "value": "Información sobre el recibo digital"
+        },
+        {
+          "active": true,
+          "label": "Entrega de vales FISE",
+          "value": "Entrega de vales FISE"
+        },
+        {
+          "active": true,
+          "label": "Informacion FISE",
+          "value": "Informacion FISE"
+        },
+        {
+          "active": true,
+          "label": "Renuncia al programa",
+          "value": "Renuncia al programa"
+        },
+        {
+          "active": true,
+          "label": "Información sobre APP",
+          "value": "Información sobre APP"
+        },
+        {
+          "active": true,
+          "label": "Información sobre la página web",
+          "value": "Información sobre la página web"
+        },
+        {
+          "active": true,
+          "label": "Requisitos para Modificación de Datos",
+          "value": "Requisitos para Modificación de Datos"
+        },
+        {
+          "active": true,
+          "label": "Comprobante de pago - Energía",
+          "value": "Comprobante de pago - Energía"
+        },
+        {
+          "active": true,
+          "label": "Comprobante de pago - PSVA",
+          "value": "Comprobante de pago - PSVA"
+        },
+        {
+          "active": true,
+          "label": "Lugares y horarios de pago",
+          "value": "Lugares y horarios de pago"
+        },
+        {
+          "active": true,
+          "label": "Solicitud de poda de arbol por afectación de redes (AP o conexiones)",
+          "value": "Solicitud de poda de arbol por afectación de redes (AP o conexiones)"
+        },
+        {
+          "active": true,
+          "label": "Bajo voltaje",
+          "value": "Bajo voltaje"
+        },
+        {
+          "active": true,
+          "label": "Microcortes, oscilaciones (cortes breves)",
+          "value": "Microcortes, oscilaciones (cortes breves)"
+        },
+        {
+          "active": true,
+          "label": "Sobretensión",
+          "value": "Sobretensión"
+        },
+        {
+          "active": true,
+          "label": "Cliente Sensible",
+          "value": "Cliente electrodependiente"
+        },
+        {
+          "active": true,
+          "label": "Una casa sin luz - Toma sin tensión",
+          "value": "Una casa sin luz - Toma sin tensión"
+        },
+        {
+          "active": true,
+          "label": "Varias casas sin luz",
+          "value": "Varias casas sin luz"
+        },
+        {
+          "active": true,
+          "label": "Cables colgando",
+          "value": "Cables colgando"
+        },
+        {
+          "active": true,
+          "label": "Cortocircuito, sale chispas u olor a quemado",
+          "value": "Cortocircuito, sale chispas u olor a quemado"
+        },
+        {
+          "active": true,
+          "label": "Medidor o subestación con la puerta abierta o sin tapa",
+          "value": "Medidor o subestación con la puerta abierta o sin tapa"
+        },
+        {
+          "active": true,
+          "label": "Poste caído, inclinado, torcido o roto",
+          "value": "Poste caído, inclinado, torcido o roto"
+        },
+        {
+          "active": true,
+          "label": "Servicio electrizado",
+          "value": "Servicio electrizado"
+        },
+        {
+          "active": true,
+          "label": "Toma defectuosa u otras anomalías",
+          "value": "Toma defectuosa u otras anomalías"
+        },
+        {
+          "active": true,
+          "label": "Ampliación de plazo",
+          "value": "Ampliación de plazo"
+        },
+        {
+          "active": true,
+          "label": "Inicio de cobranza coactiva",
+          "value": "Inicio de cobranza coactiva"
+        },
+        {
+          "active": true,
+          "label": "Inicio de multa coercitiva",
+          "value": "Inicio de multa coercitiva"
+        },
+        {
+          "active": true,
+          "label": "Plan de inversiones de transmisión (198)",
+          "value": "Plan de inversiones de transmisión (198)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de Atención Telefónica (266)",
+          "value": "Supervisión de Atención Telefónica (266)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de Contraste (227)",
+          "value": "Supervisión de Contraste (227)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de Contribuciones Reembolsables (283)",
+          "value": "Supervisión de Contribuciones Reembolsables (283)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de Corte y Reconexiones (153)",
+          "value": "Supervisión de Corte y Reconexiones (153)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de Cumplimiento (269-2014)",
+          "value": "Supervisión de Cumplimiento (269-2014)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de deficiencias en líneas de transmisión (264)",
+          "value": "Supervisión de deficiencias en líneas de transmisión (264)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de Denuncias (094)",
+          "value": "Supervisión de Denuncias (094)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de Facturación (115)",
+          "value": "Supervisión de Facturación (115)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de Facturación, Cobranza y Atención (047)",
+          "value": "Supervisión de Facturación, Cobranza y Atención (047)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de Instalaciones de Distribución (228)",
+          "value": "Supervisión de Instalaciones de Distribución (228)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de la operación de los sistemas eléctricos (074)",
+          "value": "Supervisión de la operación de los sistemas eléctricos (074)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de NTCSE (686)",
+          "value": "Supervisión de NTCSE (686)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de oficios Osinergmin",
+          "value": "Supervisión de oficios Osinergmin"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de Operatividad de ALP (078)",
+          "value": "Supervisión de Operatividad de ALP (078)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de operatividad de generación en sistemas aislados (220)",
+          "value": "Supervisión de operatividad de generación en sistemas aislados (220)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de performance de transmisión (091)",
+          "value": "Supervisión de performance de transmisión (091)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de planes de contingencia (264)",
+          "value": "Supervisión de planes de contingencia (264)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de Reintegros y Recuperos (722)",
+          "value": "Supervisión de Reintegros y Recuperos (722)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión de Venta en Bloque (213)",
+          "value": "Supervisión de Venta en Bloque (213)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión del reglamento de seguirdad y salud en el trabajo (111)",
+          "value": "Supervisión del reglamento de seguirdad y salud en el trabajo (111)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión FISE (066)",
+          "value": "Supervisión FISE (066)"
+        },
+        {
+          "active": true,
+          "label": "Supervisión otros",
+          "value": "Supervisión otros"
+        },
+        {
+          "active": true,
+          "label": "Reconexión de suministro",
+          "value": "Reconexión de suministro"
+        },
+        {
+          "active": true,
+          "label": "Emisión de presupuesto",
+          "value": "Emisión de presupuesto"
+        },
+        {
+          "active": true,
+          "label": "Factibilidad de suministro (comercial)",
+          "value": "Factibilidad de suministro (comercial)"
+        },
+        {
+          "active": true,
+          "label": "Factibilidad de suministro (técnica)",
+          "value": "Factibilidad de suministro (técnica)"
+        },
+        {
+          "active": true,
+          "label": "Instalación de suministro / Ampliación de carga",
+          "value": "Instalación de suministro / Ampliación de carga"
+        },
+        {
+          "active": true,
+          "label": "Otros",
+          "value": "Otros"
+        },
+        {
+          "active": true,
+          "label": "Reincorporación de suministro retirado",
+          "value": "Reincorporación de suministro retirado"
+        },
+        {
+          "active": true,
+          "label": "Retiro de Suministro a Solicitud del Cliente",
+          "value": "Retiro de Suministro a Solicitud del Cliente"
+        },
+        {
+          "active": true,
+          "label": "Aplicación del Silencio Administrativo Positivo",
+          "value": "Aplicación del Silencio Administrativo Positivo"
+        },
+        {
+          "active": true,
+          "label": "Corte Estando En Reclamo",
+          "value": "Corte Estando En Reclamo"
+        },
+        {
+          "active": true,
+          "label": "Defecto de Tramitación",
+          "value": "Defecto de Tramitación"
+        },
+        {
+          "active": true,
+          "label": "Facturar Deuda Materia de Reclamo",
+          "value": "Facturar Deuda Materia de Reclamo"
+        },
+        {
+          "active": true,
+          "label": "No Admitir Reclamo",
+          "value": "No Admitir Reclamo"
+        },
+        {
+          "active": true,
+          "label": "No Elevar el Expediente de Apelación",
+          "value": "No Elevar el Expediente de Apelación"
+        },
+        {
+          "active": true,
+          "label": "Suspender injustificadamente el procedimiento de reclamo",
+          "value": "Suspender injustificadamente el procedimiento de reclamo"
+        },
+        {
+          "active": true,
+          "label": "Reemplazo de alumbrado LED - Autoridades",
+          "value": "Reemplazo de alumbrado LED - Autoridades"
+        },
+        {
+          "active": true,
+          "label": "Solicitud de mantenimiento/reposición / reparación de postes",
+          "value": "Solicitud de mantenimiento/reposición / reparación de postes"
+        },
+        {
+          "active": true,
+          "label": "Requerimiento diversos (otros)",
+          "value": "Requerimiento diversos (otros)"
+        },
+        {
+          "active": true,
+          "label": "Solicitud de inspección conjunta",
+          "value": "Solicitud de inspección conjunta"
+        },
+        {
+          "active": true,
+          "label": "Solicitud de reunión",
+          "value": "Solicitud de reunión"
+        },
+        {
+          "active": true,
+          "label": "Verificación y erradicación de riesgo eléctrico",
+          "value": "Verificación y erradicación de riesgo eléctrico"
+        },
+        {
+          "active": true,
+          "label": "Información sobre situación de conexiones eléctricas",
+          "value": "Información sobre situación de conexiones eléctricas"
+        },
+        {
+          "active": true,
+          "label": "Ampliación de plazo de Oficios",
+          "value": "Ampliación de plazo de Oficios"
+        },
+        {
+          "active": true,
+          "label": "Información complementaria de un proceso",
+          "value": "Información complementaria de un proceso"
+        },
+        {
+          "active": true,
+          "label": "Traslado de un Reclamo",
+          "value": "Traslado de un Reclamo"
+        },
+        {
+          "active": true,
+          "label": "Traslado de una impugnación (apelación)",
+          "value": "Traslado de una impugnación (apelación)"
+        },
+        {
+          "active": true,
+          "label": "Traslado de una impugnación (reconsideración)",
+          "value": "Traslado de una impugnación (reconsideración)"
+        },
+        {
+          "active": true,
+          "label": "Traslado de una queja",
+          "value": "Traslado de una queja"
+        },
+        {
+          "active": true,
+          "label": "Cambio/Reposición de medidor/accesorios",
+          "value": "Cambio/Reposición de medidor/accesorios"
+        },
+        {
+          "active": true,
+          "label": "Consulta corte por deuda",
+          "value": "Consulta corte por deuda"
+        },
+        {
+          "active": true,
+          "label": "Corrección de datos (nombre, documento, dirección, contacto)",
+          "value": "Corrección de datos (nombre, documento, dirección, contacto)"
+        },
+        {
+          "active": true,
+          "label": "Desafiliación al RDE (general y grandes clientes)",
+          "value": "Desafiliación al RDE (general y grandes clientes)"
+        },
+        {
+          "active": true,
+          "label": "Devolución por exceso facturado / pago duplicado / pago equivocado / venta no efectiva",
+          "value": "Devolución por exceso facturado / pago duplicado / pago equivocado / venta no efectiva"
+        },
+        {
+          "active": true,
+          "label": "Factibilidad de suministro (comercial, técnica, eléctrico)",
+          "value": "Factibilidad de suministro (comercial, técnica, eléctrico)"
+        },
+        {
+          "active": true,
+          "label": "Información adicional / general sobre facturación / recibo digital",
+          "value": "Información adicional / general sobre facturación / recibo digital"
+        },
+        {
+          "active": true,
+          "label": "Información contribución reembolsable",
+          "value": "Información contribución reembolsable"
+        },
+        {
+          "active": true,
+          "label": "Información sobre APP / página web / situación de conexiones",
+          "value": "Información sobre APP / página web / situación de conexiones"
+        },
+        {
+          "active": true,
+          "label": "Movimiento / traslado / retiro de redes (incluye BT, MT, AT, acometida)",
+          "value": "Movimiento / traslado / retiro de redes (incluye BT, MT, AT, acometida)"
+        },
+        {
+          "active": true,
+          "label": "Oposición a instalación de conexión / cambio de medidores",
+          "value": "Oposición a instalación de conexión / cambio de medidores"
+        },
+        {
+          "active": true,
+          "label": "Otros / Requerimiento diversos",
+          "value": "Otros / Requerimiento diversos"
+        },
+        {
+          "active": true,
+          "label": "Perturbaciones / Oscilaciones / Microcortes",
+          "value": "Perturbaciones / Oscilaciones / Microcortes"
+        },
+        {
+          "active": true,
+          "label": "Poste caído (DT3) / inclinado / torcido / roto / de apoyo en mal estado",
+          "value": "Poste caído (DT3) / inclinado / torcido / roto / de apoyo en mal estado"
+        },
+        {
+          "active": true,
+          "label": "Recaudación consumo (RE92 / Art. 177)",
+          "value": "Recaudación consumo (RE92 / Art. 177)"
+        },
+        {
+          "active": true,
+          "label": "Reposición alumbrado LED (autoridades, clientes residenciales)",
+          "value": "Reposición alumbrado LED (autoridades, clientes residenciales)"
+        },
+        {
+          "active": true,
+          "label": "Reposición / reparación de poste ALP",
+          "value": "Reposición / reparación de poste ALP"
+        },
+        {
+          "active": true,
+          "label": "Reposición / poda de árbol por afectación de redes",
+          "value": "Reposición / poda de árbol por afectación de redes"
+        },
+        {
+          "active": true,
+          "label": "Reposición / traslado de redes (privado, público)",
+          "value": "Reposición / traslado de redes (privado, público)"
+        },
+        {
+          "active": true,
+          "label": "Reposición / traslado de subestaciones",
+          "value": "Reposición / traslado de subestaciones"
+        },
+        {
+          "active": true,
+          "label": "Reposición / traslado de postes",
+          "value": "Reposición / traslado de postes"
+        },
+        {
+          "active": true,
+          "label": "Repositorio de contratos de suministro",
+          "value": "Repositorio de contratos de suministro"
+        },
+        {
+          "active": true,
+          "label": "Reposición de redes eléctricas - privado/público",
+          "value": "Reposición de redes eléctricas - privado/público"
+        },
+        {
+          "active": true,
+          "label": "Repositorio de planos",
+          "value": "Repositorio de planos"
+        },
+        {
+          "active": true,
+          "label": "Riesgo eléctrico / verificación y erradicación",
+          "value": "Riesgo eléctrico / verificación y erradicación"
+        },
+        {
+          "active": true,
+          "label": "Solicitud de mantenimiento/reposición de postes",
+          "value": "Solicitud de mantenimiento/reposición de postes"
+        },
+        {
+          "active": true,
+          "label": "Solicitud de traslado de redes",
+          "value": "Solicitud de traslado de redes"
+        },
+        {
+          "active": true,
+          "label": "Solicitud verificación mal uso beneficio FISE",
+          "value": "Solicitud verificación mal uso beneficio FISE"
+        },
+        {
+          "active": true,
+          "label": "Solicitud verificación de potenciales beneficiarios FISE",
+          "value": "Solicitud verificación de potenciales beneficiarios FISE"
+        },
+        {
+          "active": true,
+          "label": "Solicitud verificación situación conexiones eléctricas",
+          "value": "Solicitud verificación situación conexiones eléctricas"
+        },
+        {
+          "active": true,
+          "label": "Una casa sin luz / varias casas sin luz",
+          "value": "Una casa sin luz / varias casas sin luz"
+        },
+        {
+          "active": true,
+          "label": "Validación / verificación de lectura cliente",
+          "value": "Validación / verificación de lectura cliente"
+        },
+        {
+          "active": true,
+          "label": "Mantenimiento",
+          "value": "Mantenimiento"
+        },
+        {
+          "active": true,
+          "label": "Movimiento/ Traslado / Retiro de Redes",
+          "value": "Movimiento/ Traslado / Retiro de Redes"
+        },
+        {
+          "active": true,
+          "label": "Llamada / Conversación  interrumpida",
+          "value": "Llamada / Conversación  interrumpida"
+        },
+        {
+          "active": true,
+          "label": "Perturbaciones / Oscilaciones",
+          "value": "Perturbaciones / Oscilaciones"
+        },
+        {
+          "active": true,
+          "label": "Bajo Voltaje / Sobretensión",
+          "value": "Bajo Voltaje / Sobretensión"
+        },
+        {
+          "active": true,
+          "label": "Modificación de nombre de ejecutivo y área encargada",
+          "value": "Modificación de nombre de ejecutivo y área encargada"
+        },
+        {
+          "active": true,
+          "label": "Incremento de Potencia",
+          "value": "Incremento de Potencia"
+        },
+        {
+          "active": true,
+          "label": "Reducción de Potencia",
+          "value": "Reduccion de Potencia"
+        },
+        {
+          "active": true,
+          "label": "Desafiliación Copia Recibo Digital",
+          "value": "Desafiliación Copia Recibo Digital"
+        },
+        {
+          "active": true,
+          "label": "Factibilidad Tecnica",
+          "value": "Factibilidad Tecnica"
+        },
+        {
+          "active": true,
+          "label": "Marca legal",
+          "value": "Marca legal"
+        },
+        {
+          "active": true,
+          "label": "Reparto postal",
+          "value": "Reparto postal"
+        },
+        {
+          "active": true,
+          "label": "Solicitud de contrato de compartición",
+          "value": "Solicitud de contrato de compartición"
+        },
+        {
+          "active": true,
+          "label": "Solicitud de instalación de puntos de apoyo",
+          "value": "Solicitud de instalación de puntos de apoyo"
+        },
+        {
+          "active": true,
+          "label": "Referido a Provisionales",
+          "value": "Referido a Provisionales"
+        },
+        {
+          "active": true,
+          "label": "Consulta Requisitos y Proforma",
+          "value": "Consulta Requisitos y Proforma"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Suministro",
+      "name": "pz_ServicePoint__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 100
+    },
+    {
+      "label": "Tarifa",
+      "name": "pz_ElectricBaseTariff__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "BT2",
+          "value": "BT2"
+        },
+        {
+          "active": true,
+          "label": "BT3",
+          "value": "BT3"
+        },
+        {
+          "active": true,
+          "label": "BT4",
+          "value": "BT4"
+        },
+        {
+          "active": true,
+          "label": "BT5A",
+          "value": "BT5A"
+        },
+        {
+          "active": true,
+          "label": "BT5B",
+          "value": "BT5B"
+        },
+        {
+          "active": true,
+          "label": "BT5C",
+          "value": "BT5C"
+        },
+        {
+          "active": true,
+          "label": "BT5C-AP",
+          "value": "BT5C-AP"
+        },
+        {
+          "active": true,
+          "label": "BT5D",
+          "value": "BT5D"
+        },
+        {
+          "active": true,
+          "label": "BT5E",
+          "value": "BT5E"
+        },
+        {
+          "active": true,
+          "label": "BT5I",
+          "value": "BT5I"
+        },
+        {
+          "active": true,
+          "label": "BT6",
+          "value": "BT6"
+        },
+        {
+          "active": true,
+          "label": "BT7",
+          "value": "BT7"
+        },
+        {
+          "active": true,
+          "label": "MT2",
+          "value": "MT2"
+        },
+        {
+          "active": true,
+          "label": "MT3",
+          "value": "MT3"
+        },
+        {
+          "active": true,
+          "label": "MT4",
+          "value": "MT4"
+        },
+        {
+          "active": true,
+          "label": "BT5F",
+          "value": "BT5F"
+        },
+        {
+          "active": true,
+          "label": "NO APLICA",
+          "value": "NO APLICA"
+        },
+        {
+          "active": true,
+          "label": "VARIAS",
+          "value": "VARIAS"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Distrito de Predio",
+      "name": "pz_ServicePointDistrict__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1300
+    },
+    {
+      "label": "Motivo Anulación",
+      "name": "pz_ReasonsforCancellation__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Cliente desistió",
+          "value": "1"
+        },
+        {
+          "active": true,
+          "label": "Cliente no cumplió obligaciones",
+          "value": "2"
+        },
+        {
+          "active": true,
+          "label": "Desestimados",
+          "value": "3"
+        },
+        {
+          "active": true,
+          "label": "En reclamo",
+          "value": "4"
+        },
+        {
+          "active": true,
+          "label": "Otros motivos",
+          "value": "5"
+        },
+        {
+          "active": true,
+          "label": "Anulación de la orden por anulación de la solicitud",
+          "value": "6"
+        },
+        {
+          "active": true,
+          "label": "Anulación de la orden por anulación de sus presupuestos",
+          "value": "7"
+        },
+        {
+          "active": true,
+          "label": "Anulación de la solicitud por anulación de sus presupuestos",
+          "value": "8"
+        },
+        {
+          "active": true,
+          "label": "Anulación de la solicitud por anulación de sus ordenes",
+          "value": "9"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Id Lead",
+      "name": "pz_IdLead__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 50
+    },
+    {
+      "label": "Tipo Documento",
+      "name": "pz_DocumentType__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 20
+    },
+    {
+      "label": "Número Doc. Contacto",
+      "name": "pz_DocumentNumber__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Cargo",
+      "name": "pz_Title__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 80
+    },
+    {
+      "label": "Celular",
+      "name": "pz_MobilePhone__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "phone",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Fecha PUSER (Activación)",
+      "name": "pz_ActivationDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Tipo Gestión",
+      "name": "pz_ManagementType__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Tradicional",
+          "value": "Tradicional"
+        },
+        {
+          "active": true,
+          "label": "Pluz",
+          "value": "Pluz"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Fecha de pago de producto(s) no regulado",
+      "name": "pz_NonRegulatedProductPaymentDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha de pago total",
+      "name": "pz_TotalPaymentDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Facturación externa",
+      "name": "Semaforo__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1300
+    },
+    {
+      "label": "Indicador",
+      "name": "pz_StageIndicator__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1300
+    },
+    {
+      "label": "Facturación Externa",
+      "name": "Facturaci_n_Externa2__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Inmovilizar",
+      "name": "pz_freeze__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    }
+  ]
+}

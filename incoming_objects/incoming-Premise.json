@@ -4438,77 +4438,77 @@
           {
             "active": true,
             "defaultValue": false,
-            "label": "Alameda",
+            "label": "ALAMEDA",
             "validFor": null,
             "value": "Al."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Autopista",
+            "label": "AUTOPISTA",
             "validFor": null,
             "value": "Aut."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Avenida",
+            "label": "AVENIDA",
             "validFor": null,
             "value": "Av."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Calle",
+            "label": "CALLE",
             "validFor": null,
             "value": "Cl."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Carretera",
+            "label": "CARRETERA",
             "validFor": null,
             "value": "Car."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Malecón",
+            "label": "MALECÓN",
             "validFor": null,
             "value": "Mal."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Jirón",
+            "label": "JIRÓN",
             "validFor": null,
             "value": "Jr."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Óvalo",
+            "label": "ÓVALO",
             "validFor": null,
             "value": "Ovl."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Plaza",
+            "label": "PLAZA",
             "validFor": null,
             "value": "Plz."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Parque",
+            "label": "PARQUE",
             "validFor": null,
             "value": "Prq."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Pasaje",
+            "label": "PASAJE",
             "validFor": null,
             "value": "Psj."
           },
@@ -4522,21 +4522,21 @@
           {
             "active": true,
             "defaultValue": false,
-            "label": "Prolongación",
+            "label": "PROLONGACIÓN",
             "validFor": null,
             "value": "Prlg."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Cer.",
+            "label": "CER.",
             "validFor": null,
             "value": "Cer."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Otro",
+            "label": "OTRO",
             "validFor": null,
             "value": "Otro"
           }
@@ -5273,21 +5273,21 @@
           {
             "active": true,
             "defaultValue": false,
-            "label": "Interior",
+            "label": "INTERIOR",
             "validFor": null,
             "value": "Interior"
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Departamento",
+            "label": "DEPARTAMENTO",
             "validFor": null,
             "value": "Departamento"
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Puerta",
+            "label": "PUERTA",
             "validFor": null,
             "value": "Puerta"
           }
@@ -5413,28 +5413,28 @@
           {
             "active": true,
             "defaultValue": false,
-            "label": "Sector",
+            "label": "SECTOR",
             "validFor": null,
             "value": "Sector"
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Etapa",
+            "label": "ETAPA",
             "validFor": null,
             "value": "Etapa"
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Bloque",
+            "label": "BLOQUE",
             "validFor": null,
             "value": "Bloque"
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Edificio",
+            "label": "EDIFICIO",
             "validFor": null,
             "value": "Edificio"
           }
@@ -5988,77 +5988,77 @@
           {
             "active": true,
             "defaultValue": false,
-            "label": "Alameda",
+            "label": "ALAMEDA",
             "validFor": null,
             "value": "Al."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Autopista",
+            "label": "AUTOPISTA",
             "validFor": null,
             "value": "Aut."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Avenida",
+            "label": "AVENIDA",
             "validFor": null,
             "value": "Av."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Calle",
+            "label": "CALLE",
             "validFor": null,
             "value": "Cl."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Carretera",
+            "label": "CARRETERA",
             "validFor": null,
             "value": "Car."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Malecón",
+            "label": "MALECÓN",
             "validFor": null,
             "value": "Mal."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Jirón",
+            "label": "JIRÓN",
             "validFor": null,
             "value": "Jr."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Óvalo",
+            "label": "ÓVALO",
             "validFor": null,
             "value": "Ovl."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Plaza",
+            "label": "PLAZA",
             "validFor": null,
             "value": "Plz."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Parque",
+            "label": "PARQUE",
             "validFor": null,
             "value": "Prq."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Pasaje",
+            "label": "PASAJE",
             "validFor": null,
             "value": "Psj."
           },
@@ -6072,21 +6072,21 @@
           {
             "active": true,
             "defaultValue": false,
-            "label": "Prolongación",
+            "label": "PROLONGACIÓN",
             "validFor": null,
             "value": "Prlg."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Cer.",
+            "label": "CER.",
             "validFor": null,
             "value": "Cer."
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Otro",
+            "label": "OTRO",
             "validFor": null,
             "value": "Otro"
           }
@@ -6764,21 +6764,21 @@
           {
             "active": true,
             "defaultValue": false,
-            "label": "Interior",
+            "label": "INTERIOR",
             "validFor": null,
             "value": "Interior"
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Departamento",
+            "label": "DEPARTAMENTO",
             "validFor": null,
             "value": "Departamento"
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Puerta",
+            "label": "PUERTA",
             "validFor": null,
             "value": "Puerta"
           }
@@ -6845,28 +6845,28 @@
           {
             "active": true,
             "defaultValue": false,
-            "label": "Sector",
+            "label": "SECTOR",
             "validFor": null,
             "value": "Sector"
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Etapa",
+            "label": "ETAPA",
             "validFor": null,
             "value": "Etapa"
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Bloque",
+            "label": "BLOQUE",
             "validFor": null,
             "value": "Bloque"
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Edificio",
+            "label": "EDIFICIO",
             "validFor": null,
             "value": "Edificio"
           }

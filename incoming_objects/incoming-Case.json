@@ -7387,7 +7387,7 @@
             "active": true,
             "defaultValue": false,
             "label": "Provisionales",
-            "validFor": "ACAA",
+            "validFor": "ICAA",
             "value": "Provisionales"
           }
         ],
@@ -7654,7 +7654,7 @@
             "active": true,
             "defaultValue": false,
             "label": "Oportunidad de Venta",
-            "validFor": "AQAA",
+            "validFor": "CQAA",
             "value": "Oportunidad de Venta"
           },
           {

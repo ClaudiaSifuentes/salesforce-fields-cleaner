@@ -1,0 +1,701 @@
+{
+  "fields": [
+    {
+      "label": "Email Message ID",
+      "name": "Id",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "id",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Case ID",
+      "name": "ParentId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Case"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Activity ID",
+      "name": "ActivityId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Task"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Created By ID",
+      "name": "CreatedById",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Created Date",
+      "name": "CreatedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Modified Date",
+      "name": "LastModifiedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Modified By ID",
+      "name": "LastModifiedById",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "System Modstamp",
+      "name": "SystemModstamp",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Text Body",
+      "name": "TextBody",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 131072
+    },
+    {
+      "label": "HTML Body",
+      "name": "HtmlBody",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 131072
+    },
+    {
+      "label": "Headers",
+      "name": "Headers",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 32000
+    },
+    {
+      "label": "Subject",
+      "name": "Subject",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 3000
+    },
+    {
+      "label": "Email Message Name",
+      "name": "Name",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "From Name",
+      "name": "FromName",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1000
+    },
+    {
+      "label": "From Address",
+      "name": "FromAddress",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "email",
+      "precision": 0,
+      "scale": 0,
+      "length": 1000
+    },
+    {
+      "label": "From",
+      "name": "ValidatedFromAddress",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Claudia Sifuentes <claudialetizia.sifuentesmendieta.st@emeal.nttdata.com>",
+          "value": "claudialetizia.sifuentesmendieta.st@emeal.nttdata.com"
+        },
+        {
+          "active": true,
+          "label": "Pluz <donal1512@gmail.com>",
+          "value": "donal1512@gmail.com"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "To Address",
+      "name": "ToAddress",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 4000
+    },
+    {
+      "label": "CC Address",
+      "name": "CcAddress",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 4000
+    },
+    {
+      "label": "BCC Address",
+      "name": "BccAddress",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 4000
+    },
+    {
+      "label": "Is Incoming",
+      "name": "Incoming",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Has Attachment",
+      "name": "HasAttachment",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Status",
+      "name": "Status",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "New",
+          "value": "0"
+        },
+        {
+          "active": true,
+          "label": "Read",
+          "value": "1"
+        },
+        {
+          "active": true,
+          "label": "Replied",
+          "value": "2"
+        },
+        {
+          "active": true,
+          "label": "Sent",
+          "value": "3"
+        },
+        {
+          "active": true,
+          "label": "Forwarded",
+          "value": "4"
+        },
+        {
+          "active": true,
+          "label": "Draft",
+          "value": "5"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Message Date",
+      "name": "MessageDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Deleted",
+      "name": "IsDeleted",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Email Message ID",
+      "name": "ReplyToEmailMessageId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "EmailMessage"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Is Externally Visible",
+      "name": "IsExternallyVisible",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Message ID",
+      "name": "MessageIdentifier",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 765
+    },
+    {
+      "label": "Thread ID",
+      "name": "ThreadIdentifier",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 765
+    },
+    {
+      "label": "Client Thread ID",
+      "name": "ClientThreadIdentifier",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 765
+    },
+    {
+      "label": "From ID",
+      "name": "FromId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Contact",
+        "Lead",
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Is Client Managed",
+      "name": "IsClientManaged",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Attachment Ids",
+      "name": "AttachmentIds",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 32768
+    },
+    {
+      "label": "Related To ID",
+      "name": "RelatedToId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Account",
+        "AccountAccountRelation",
+        "AssessmentIndicatorDefinition",
+        "AssessmentTask",
+        "AssessmentTaskContentDocument",
+        "AssessmentTaskDefinition",
+        "AssessmentTaskOrder",
+        "Asset",
+        "AssetAccountParticipant",
+        "AssetContactParticipant",
+        "AssetRelationship",
+        "AttrPicklistExcludedValue",
+        "AttributeCategory",
+        "AttributeCategoryAttribute",
+        "AttributeDefinition",
+        "AttributePicklist",
+        "AttributePicklistValue",
+        "BusinessLicense",
+        "CalculationMatrix",
+        "CalculationMatrixVersion",
+        "CalculationProcedure",
+        "CalculationProcedureVersion",
+        "Campaign",
+        "Case",
+        "ChangeRequest",
+        "ChannelProgram",
+        "ChannelProgramLevel",
+        "CodeSetRelationship",
+        "CommSubscriptionConsent",
+        "ContactRequest",
+        "ContentLink",
+        "ContentSource",
+        "Contract",
+        "ContractLineItem",
+        "DevopsEnvironment",
+        "DevopsRequestInfo",
+        "DocTemplateSectionCondition",
+        "DocumentChecklistItem",
+        "DocumentDecisionRequirement",
+        "DocumentEnvelope",
+        "DocumentRecipient",
+        "DocumentTemplate",
+        "DocumentTemplateContentDoc",
+        "DocumentTemplateSection",
+        "DocumentTemplateToken",
+        "EngagementAttendee",
+        "EngagementInteraction",
+        "EngagementTopic",
+        "Entitlement",
+        "ExpressionSet",
+        "ExpressionSetVersion",
+        "GeneratedDocument",
+        "GeneratedDocumentSection",
+        "GenericVisitTask",
+        "GenericVisitTaskContext",
+        "GnrcVstKeyPerformanceInd",
+        "GnrcVstTaskContextRelation",
+        "Image",
+        "Incident",
+        "IndividualApplication",
+        "IntegrationProviderDcsnRqmt",
+        "IntegrationProviderExecution",
+        "ListEmail",
+        "LiveAgentSession",
+        "LiveChatTranscript",
+        "Location",
+        "OmniScriptSavedSession",
+        "Opportunity",
+        "Order",
+        "PZ_RecordAttributeBasePricing__c",
+        "PartyConsent",
+        "PartyRoleRelation",
+        "Problem",
+        "ProcessException",
+        "Product2",
+        "ProductAttributeDefinition",
+        "ProductCatalog",
+        "ProductClassification",
+        "ProductClassificationAttr",
+        "ProductComponentGroup",
+        "ProductComponentGrpOverride",
+        "ProductFaultCode",
+        "ProductLaborCode",
+        "ProductRelComponentOverride",
+        "ProductRelatedMaterial",
+        "ProductRequest",
+        "ProductRequestLineItem",
+        "ProductSellingModel",
+        "Quote",
+        "RecordAlert",
+        "RecordAlertActionableTarget",
+        "ReturnOrder",
+        "ReturnOrderLineItem",
+        "ServiceContract",
+        "ServiceResource",
+        "Shipment",
+        "ShipmentItem",
+        "Solution",
+        "Supplier",
+        "SupplierProduct",
+        "UserEsignVendorIdentifier",
+        "Visit",
+        "VisitedParty",
+        "WorkOrder",
+        "WorkOrderLineItem",
+        "WorkPlan",
+        "WorkPlanTemplate",
+        "WorkPlanTemplateEntry",
+        "WorkStep",
+        "WorkStepTemplate",
+        "et4ae5__Triggered_Send_Execution__c",
+        "pz_PrintHistory__c",
+        "pz_QSFUserandOfficeJunction__c",
+        "pz_QSF_Audio_Recording__c",
+        "pz_QSF_Office__c",
+        "pz_QSF_Quenda_WS__c",
+        "vlocity_cmt__AccountAdServer__c",
+        "vlocity_cmt__ActivityTemplate__c",
+        "vlocity_cmt__AdServer__c",
+        "vlocity_cmt__ApplicationPartyRelationship__c",
+        "vlocity_cmt__ApplicationTemplate__c",
+        "vlocity_cmt__Application__c",
+        "vlocity_cmt__AssessmentAnswer__c",
+        "vlocity_cmt__AssessmentQuestion__c",
+        "vlocity_cmt__Assessment__c",
+        "vlocity_cmt__CampaignMemberActionLog__c",
+        "vlocity_cmt__Catalog__c",
+        "vlocity_cmt__ContractTerm__c",
+        "vlocity_cmt__DocumentTemplateElement__c",
+        "vlocity_cmt__Element__c",
+        "vlocity_cmt__Household__c",
+        "vlocity_cmt__MediaProperty__c",
+        "vlocity_cmt__OmniScriptDefinition__c",
+        "vlocity_cmt__OrchestrationItem__c",
+        "vlocity_cmt__OrderItemAdPlacement__c",
+        "vlocity_cmt__OrderPayment__c",
+        "vlocity_cmt__OutboundConfiguration__c",
+        "vlocity_cmt__PartyRelationship__c",
+        "vlocity_cmt__QuoteLineItemAdPlacement__c",
+        "vlocity_cmt__RuleProperty__c",
+        "vlocity_cmt__ScreeningRuleGroup__c",
+        "vlocity_cmt__ScreeningRule__c",
+        "vlocity_cmt__StateTransition__c",
+        "vlocity_cmt__StatementLineItem__c",
+        "vlocity_cmt__UserAdServer__c",
+        "vlocity_cmt__VlocityScheduledJob__c",
+        "vlocity_cmt__VlocityUILayout__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Is Tracked",
+      "name": "IsTracked",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Opened?",
+      "name": "IsOpened",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "First Opened",
+      "name": "FirstOpenedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Opened",
+      "name": "LastOpenedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Bounced?",
+      "name": "IsBounced",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Email Template ID",
+      "name": "EmailTemplateId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "EmailTemplate"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "EmailRoutingAddress ID",
+      "name": "EmailRoutingAddressId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "EmailRoutingAddress"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Automation Type",
+      "name": "AutomationType",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "AI-Assisted",
+          "value": "AiAssisted"
+        },
+        {
+          "active": true,
+          "label": "AI-Automated",
+          "value": "AiAutomated"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Email Source",
+      "name": "Source",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Einstein Activity Capture",
+          "value": "Einstein Activity Capture"
+        },
+        {
+          "active": true,
+          "label": "Einstein Activity Capture Limited",
+          "value": "Einstein Activity Capture Limited"
+        },
+        {
+          "active": true,
+          "label": "Email Integration App Manual",
+          "value": "Email Integration App Manual"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    }
+  ]
+}

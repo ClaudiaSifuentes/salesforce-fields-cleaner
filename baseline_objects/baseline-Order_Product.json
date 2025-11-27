@@ -1,0 +1,2049 @@
+{
+  "fields": [
+    {
+      "label": "Order Product ID",
+      "name": "Id",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "id",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Product ID",
+      "name": "Product2Id",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Product2"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Deleted",
+      "name": "IsDeleted",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Order ID",
+      "name": "OrderId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Order"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Price Book Entry ID",
+      "name": "PricebookEntryId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "PricebookEntry"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Original Order Item ID",
+      "name": "OriginalOrderItemId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "OrderItem"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Available Quantity",
+      "name": "AvailableQuantity",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Quantity",
+      "name": "Quantity",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Currency ISO Code",
+      "name": "CurrencyIsoCode",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Peruvian Sol",
+          "value": "PEN"
+        },
+        {
+          "active": true,
+          "label": "U.S. Dollar",
+          "value": "USD"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 3
+    },
+    {
+      "label": "Unit Price",
+      "name": "UnitPrice",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "List Price",
+      "name": "ListPrice",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Total Price",
+      "name": "TotalPrice",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Start Date",
+      "name": "ServiceDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "End Date",
+      "name": "EndDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Line Description",
+      "name": "Description",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Created Date",
+      "name": "CreatedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Created By ID",
+      "name": "CreatedById",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Last Modified Date",
+      "name": "LastModifiedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Modified By ID",
+      "name": "LastModifiedById",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "System Modstamp",
+      "name": "SystemModstamp",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Order Product Number",
+      "name": "OrderItemNumber",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 30
+    },
+    {
+      "label": "Action",
+      "name": "vlocity_cmt__Action__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Add",
+          "value": "Add"
+        },
+        {
+          "active": true,
+          "label": "Change",
+          "value": "Change"
+        },
+        {
+          "active": true,
+          "label": "Disconnect",
+          "value": "Disconnect"
+        },
+        {
+          "active": true,
+          "label": "Existing",
+          "value": "Existing"
+        },
+        {
+          "active": true,
+          "label": "Suspend",
+          "value": "Suspend"
+        },
+        {
+          "active": true,
+          "label": "Resume",
+          "value": "Resume"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Activation Name",
+      "name": "vlocity_cmt__ActivationName__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Additional Discount",
+      "name": "vlocity_cmt__Additional_Discount__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "percent",
+      "precision": 4,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Asset",
+      "name": "vlocity_cmt__AssetId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "Asset"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Asset Reference Id",
+      "name": "vlocity_cmt__AssetReferenceId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Async Operation",
+      "name": "vlocity_cmt__AsyncOperation__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Price",
+          "value": "Price"
+        },
+        {
+          "active": true,
+          "label": "Validate",
+          "value": "Validate"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Attribute Metadata Changes",
+      "name": "vlocity_cmt__AttributeMetadataChanges__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 131072
+    },
+    {
+      "label": "Attribute Selected Values",
+      "name": "vlocity_cmt__AttributeSelectedValues__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 32768
+    },
+    {
+      "label": "Base One Time Charge",
+      "name": "vlocity_cmt__BaseOneTimeCharge__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Base One Time Total",
+      "name": "vlocity_cmt__BaseOneTimeTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Base Recurring Charge",
+      "name": "vlocity_cmt__BaseRecurringCharge__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Base Recurring Total",
+      "name": "vlocity_cmt__BaseRecurringTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Billing Account",
+      "name": "vlocity_cmt__BillingAccountId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "Account"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Reference Time",
+      "name": "vlocity_cmt__CatalogItemReferenceDateTime__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Connect Date",
+      "name": "vlocity_cmt__ConnectDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Cpq Cardinality Message",
+      "name": "vlocity_cmt__CpqCardinalityMessage__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 32768
+    },
+    {
+      "label": "Cpq Message Data",
+      "name": "vlocity_cmt__CpqMessageData__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 32768
+    },
+    {
+      "label": "Cpq Pricing Message",
+      "name": "vlocity_cmt__CpqPricingMessage__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 32768
+    },
+    {
+      "label": "Currency Payment Mode",
+      "name": "vlocity_cmt__CurrencyPaymentMode__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Currency",
+          "value": "Currency"
+        },
+        {
+          "active": true,
+          "label": "Loyalty",
+          "value": "Loyalty"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Disconnect Date",
+      "name": "vlocity_cmt__DisconnectDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Effective Base One Time Total",
+      "name": "vlocity_cmt__EffectiveBaseOneTimeTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Effective Base Recurring Total",
+      "name": "vlocity_cmt__EffectiveBaseRecurringTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Effective One Time Cost Total",
+      "name": "vlocity_cmt__EffectiveOneTimeCostTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Effective One Time Loyalty Total",
+      "name": "vlocity_cmt__EffectiveOneTimeLoyaltyTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Effective One Time Total",
+      "name": "vlocity_cmt__EffectiveOneTimeTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Effective Quantity",
+      "name": "vlocity_cmt__EffectiveQuantity__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Effective Recurring Cost Total",
+      "name": "vlocity_cmt__EffectiveRecurringCostTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Effective Recurring Total",
+      "name": "vlocity_cmt__EffectiveRecurringTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Effective Usage Cost Total",
+      "name": "vlocity_cmt__EffectiveUsageCostTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Effective Usage Price Total",
+      "name": "vlocity_cmt__EffectiveUsagePriceTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Effective Usage Quantity",
+      "name": "vlocity_cmt__EffectiveUsageQuantity__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Expected Completion Date",
+      "name": "vlocity_cmt__ExpectedCompletionDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Filter",
+      "name": "vlocity_cmt__Filter__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Financed Amount Total",
+      "name": "vlocity_cmt__FinancedAmountTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Financed Amount",
+      "name": "vlocity_cmt__FinancedAmount__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Financed Installment Amount",
+      "name": "vlocity_cmt__FinancedInstallmentAmount__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "First Order Product Version",
+      "name": "vlocity_cmt__FirstVersionOrderItemId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "OrderItem"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Fulfillment Status",
+      "name": "vlocity_cmt__FulfilmentStatus__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "En Proceso",
+          "value": "In Progress"
+        },
+        {
+          "active": true,
+          "label": "Cancelado",
+          "value": "Cancelled"
+        },
+        {
+          "active": true,
+          "label": "Punto de No Retorno",
+          "value": "PONR"
+        },
+        {
+          "active": true,
+          "label": "Pendiente",
+          "value": "Pending"
+        },
+        {
+          "active": true,
+          "label": "Rechazado",
+          "value": "Rejected"
+        },
+        {
+          "active": true,
+          "label": "Error Activación Comercial",
+          "value": "Error Activación Comercial"
+        },
+        {
+          "active": true,
+          "label": "Error Activación Técnica",
+          "value": "Error Activación Técnica"
+        },
+        {
+          "active": true,
+          "label": "Activado Comercialmente",
+          "value": "Activado Comercialmente"
+        },
+        {
+          "active": true,
+          "label": "Activado Técnicamente Parcialmente",
+          "value": "Activado Técnicamente Parcialmente"
+        },
+        {
+          "active": true,
+          "label": "Activado Técnicamente",
+          "value": "Activado Técnicamente"
+        },
+        {
+          "active": true,
+          "label": "Completado",
+          "value": "Completado"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "In Cart Quantity Map",
+      "name": "vlocity_cmt__InCartQuantityMap__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 131072
+    },
+    {
+      "label": "Changes Accepted",
+      "name": "vlocity_cmt__IsChangesAccepted__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Changes Allowed",
+      "name": "vlocity_cmt__IsChangesAllowed__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "IsEditable",
+      "name": "vlocity_cmt__IsEditable__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Is Orchestration Items In Final State",
+      "name": "vlocity_cmt__IsOrchestrationItemsInFinalState__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Is PONR Reached",
+      "name": "vlocity_cmt__IsPONRReached__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Is Ready For Activation",
+      "name": "vlocity_cmt__IsReadyForActivation__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Item Name",
+      "name": "vlocity_cmt__ItemName__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "JSONAttribute",
+      "name": "vlocity_cmt__JSONAttribute__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 131072
+    },
+    {
+      "label": "JSONNode",
+      "name": "vlocity_cmt__JSONNode__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Last Priced At",
+      "name": "vlocity_cmt__LastPricedAt__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "LineItemNumString",
+      "name": "vlocity_cmt__LineItemNumString__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Line Item Number",
+      "name": "vlocity_cmt__LineItemNumber__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 10,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Line Number",
+      "name": "vlocity_cmt__LineNumber__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Locked By User",
+      "name": "vlocity_cmt__LockedBy__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Locked For",
+      "name": "vlocity_cmt__LockedFor__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Async Operation",
+          "value": "Async Operation"
+        },
+        {
+          "active": true,
+          "label": "Manual Edit",
+          "value": "Manual Edit"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "MRC",
+      "name": "vlocity_cmt__MRC__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Main Order Item Id",
+      "name": "vlocity_cmt__MainOrderItemId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "OrderItem"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Modification#",
+      "name": "vlocity_cmt__Modification__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "One Time Calculated Price",
+      "name": "vlocity_cmt__OneTimeCalculatedPrice__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "One Time Charge",
+      "name": "vlocity_cmt__OneTimeCharge__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "One Time Cost Total",
+      "name": "vlocity_cmt__OneTimeCostTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "One Time Cost",
+      "name": "vlocity_cmt__OneTimeCost__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "One Time Discount Price",
+      "name": "vlocity_cmt__OneTimeDiscountPrice__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "One Time Loyalty Price",
+      "name": "vlocity_cmt__OneTimeLoyaltyPrice__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "One Time Loyalty Total",
+      "name": "vlocity_cmt__OneTimeLoyaltyTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "One Time Manual Discount",
+      "name": "vlocity_cmt__OneTimeManualDiscount__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "percent",
+      "precision": 5,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "One Time Margin",
+      "name": "vlocity_cmt__OneTimeMargin__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "percent",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "One Time Total",
+      "name": "vlocity_cmt__OneTimeTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Order Group",
+      "name": "vlocity_cmt__OrderGroupId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "vlocity_cmt__OrderGroup__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Order Member",
+      "name": "vlocity_cmt__OrderMemberId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "vlocity_cmt__OrderMember__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Overage Calculated Price",
+      "name": "vlocity_cmt__OverageCalculatedPrice__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Overage Charge",
+      "name": "vlocity_cmt__OverageCharge__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Overage Discount Price",
+      "name": "vlocity_cmt__OverageDiscountPrice__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Overage Manual Discount",
+      "name": "vlocity_cmt__OverageManualDiscount__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "percent",
+      "precision": 5,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Overage Total",
+      "name": "vlocity_cmt__OverageTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Overage UOM",
+      "name": "vlocity_cmt__OverageUOM__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Per Minute",
+          "value": "Per Minute"
+        },
+        {
+          "active": true,
+          "label": "Per Text",
+          "value": "Per Text"
+        },
+        {
+          "active": true,
+          "label": "Per Gigabyte",
+          "value": "Per Gigabyte"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Parent Item ID",
+      "name": "vlocity_cmt__ParentItemId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Parent Line Item Number",
+      "name": "vlocity_cmt__ParentLineItemNumber__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 10,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "ParentOrderProduct",
+      "name": "vlocity_cmt__ParentOrderProduct__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "OrderItem"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Premises",
+      "name": "vlocity_cmt__PremisesId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "vlocity_cmt__Premises__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Pricing Log",
+      "name": "vlocity_cmt__PricingLogData__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 131072
+    },
+    {
+      "label": "Product",
+      "name": "vlocity_cmt__Product2Id__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "Product2"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "ProductAttribXN",
+      "name": "vlocity_cmt__ProductAttribXN__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "vlocity_cmt__ProductAttribXN__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Product Hierarchy Group Key Path",
+      "name": "vlocity_cmt__ProductHierarchyGroupKeyPath__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 32768
+    },
+    {
+      "label": "Product Hierarchy Path",
+      "name": "vlocity_cmt__ProductHierarchyPath__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Provisioning Status",
+      "name": "vlocity_cmt__ProvisioningStatus__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Push Event Data",
+      "name": "vlocity_cmt__PushEventData__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 32768
+    },
+    {
+      "label": "Query",
+      "name": "vlocity_cmt__Query__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Recurring Calculated Price",
+      "name": "vlocity_cmt__RecurringCalculatedPrice__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Recurring Charge",
+      "name": "vlocity_cmt__RecurringCharge__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Recurring Cost Total",
+      "name": "vlocity_cmt__RecurringCostTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Recurring Cost",
+      "name": "vlocity_cmt__RecurringCost__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Recurring Discount Price",
+      "name": "vlocity_cmt__RecurringDiscountPrice__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Recurring Manual Discount",
+      "name": "vlocity_cmt__RecurringManualDiscount__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "percent",
+      "precision": 5,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Recurring Margin",
+      "name": "vlocity_cmt__RecurringMargin__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "percent",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Recurring Total",
+      "name": "vlocity_cmt__RecurringTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Recurring UOM",
+      "name": "vlocity_cmt__RecurringUOM__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Monthly",
+          "value": "Monthly"
+        },
+        {
+          "active": true,
+          "label": "Yearly",
+          "value": "Yearly"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "RelationshipType",
+      "name": "vlocity_cmt__RelationshipType__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Child",
+          "value": "Child"
+        },
+        {
+          "active": true,
+          "label": "Realization",
+          "value": "Realization"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Relies on Item",
+      "name": "vlocity_cmt__ReliesOnItemId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Requested Change",
+      "name": "vlocity_cmt__RequestedChange__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Add",
+          "value": "Add"
+        },
+        {
+          "active": true,
+          "label": "Change",
+          "value": "Change"
+        },
+        {
+          "active": true,
+          "label": "Delete",
+          "value": "Delete"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Requested Completion Date",
+      "name": "vlocity_cmt__RequestedCompletionDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Root Item ID",
+      "name": "vlocity_cmt__RootItemId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Sequence Number",
+      "name": "vlocity_cmt__SequenceNumber__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Serial Number",
+      "name": "vlocity_cmt__SerialNumber__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Service Account",
+      "name": "vlocity_cmt__ServiceAccountId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "Account"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Service Identifier",
+      "name": "vlocity_cmt__ServiceIdentifier__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 80
+    },
+    {
+      "label": "Service Point",
+      "name": "vlocity_cmt__ServicePointId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "vlocity_cmt__ServicePoint__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Sub Action",
+      "name": "vlocity_cmt__SubAction__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Move",
+          "value": "Move"
+        },
+        {
+          "active": true,
+          "label": "Cancel",
+          "value": "Cancel"
+        },
+        {
+          "active": true,
+          "label": "Replace",
+          "value": "Replace"
+        },
+        {
+          "active": true,
+          "label": "Reassign",
+          "value": "Reassign"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Subscription",
+      "name": "vlocity_cmt__SubscriptionId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "vlocity_cmt__Subscription__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Superseded Order Product",
+      "name": "vlocity_cmt__SupersededOrderItemId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "OrderItem"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Supplemental Action",
+      "name": "vlocity_cmt__SupplementalAction__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "No Change",
+          "value": "No Change"
+        },
+        {
+          "active": true,
+          "label": "Amend",
+          "value": "Amend"
+        },
+        {
+          "active": true,
+          "label": "Cancel",
+          "value": "Cancel"
+        },
+        {
+          "active": true,
+          "label": "Create",
+          "value": "Create"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Jeopardy Status",
+      "name": "vlocity_cmt__ThorJeopardyStatus__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Green",
+          "value": "Green"
+        },
+        {
+          "active": true,
+          "label": "Yellow",
+          "value": "Yellow"
+        },
+        {
+          "active": true,
+          "label": "Red",
+          "value": "Red"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Usage Cost Total",
+      "name": "vlocity_cmt__UsageCostTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Usage Margin",
+      "name": "vlocity_cmt__UsageMargin__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "percent",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Usage Unit of Measure",
+      "name": "vlocity_cmt__UsageMeasurementId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "vlocity_cmt__ChargeMeasurement__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Usage Price Total",
+      "name": "vlocity_cmt__UsagePriceTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Usage Quantity",
+      "name": "vlocity_cmt__UsageQuantity__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Usage Cost",
+      "name": "vlocity_cmt__UsageUnitCost__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 5,
+      "length": 0
+    },
+    {
+      "label": "Usage Price",
+      "name": "vlocity_cmt__UsageUnitPrice__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 5,
+      "length": 0
+    },
+    {
+      "label": "Validation Date",
+      "name": "vlocity_cmt__ValidationDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Priced",
+      "name": "vlocity_cmt__IsPriced__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Is Product Track Agreement",
+      "name": "vlocity_cmt__IsProductTrackAgreement__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Validated",
+      "name": "vlocity_cmt__IsValidated__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Monthly Total",
+      "name": "vlocity_cmt__MonthlyTotal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 2,
+      "length": 0
+    },
+    {
+      "label": "Product Group Key",
+      "name": "vlocity_cmt__ProductGroupKey__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1300
+    },
+    {
+      "label": "Request Date",
+      "name": "vlocity_cmt__RequestDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Requested Start Date",
+      "name": "vlocity_cmt__RequestedStartDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Estado Permisos Municipales",
+      "name": "pz_MunicipallyPermissionsStatus__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Enviado",
+          "value": "Enviado"
+        },
+        {
+          "active": true,
+          "label": "Completado",
+          "value": "Completado"
+        },
+        {
+          "active": true,
+          "label": "Rechazado",
+          "value": "Rechazado"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Resultado Activación",
+      "name": "pz_ActivationDetailResult__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Estado Adecuaciones del Cliente",
+      "name": "pz_ClientAdjustments__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Enviado",
+          "value": "Enviado"
+        },
+        {
+          "active": true,
+          "label": "Completado",
+          "value": "Completado"
+        },
+        {
+          "active": true,
+          "label": "Rechazado",
+          "value": "Rechazado"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Estado Conexión",
+      "name": "pz_ConnectionStatus__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Enviado",
+          "value": "Enviado"
+        },
+        {
+          "active": true,
+          "label": "Completado",
+          "value": "Completado"
+        },
+        {
+          "active": true,
+          "label": "Rechazado",
+          "value": "Rechazado"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Estado Activacion Comercial",
+      "name": "pz_CommercialActivationStatus__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Enviado",
+          "value": "Enviado"
+        },
+        {
+          "active": true,
+          "label": "Completado",
+          "value": "Completado"
+        },
+        {
+          "active": true,
+          "label": "Rechazado",
+          "value": "Rechazado"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Agenda de Visita Lista",
+      "name": "pz_VisitAgendaOk__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Equipo en Camino Listo",
+      "name": "pz_TeamOnTheWayOk__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    }
+  ]
+}

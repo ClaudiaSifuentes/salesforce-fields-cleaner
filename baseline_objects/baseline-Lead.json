@@ -1,0 +1,3286 @@
+{
+  "fields": [
+    {
+      "label": "Lead ID",
+      "name": "Id",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "id",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Deleted",
+      "name": "IsDeleted",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Master Record ID",
+      "name": "MasterRecordId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Lead"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Last Name",
+      "name": "LastName",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 80
+    },
+    {
+      "label": "First Name",
+      "name": "FirstName",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Salutation",
+      "name": "Salutation",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Sr.",
+          "value": "Sr."
+        },
+        {
+          "active": true,
+          "label": "Sra.",
+          "value": "Sra."
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Middle Name",
+      "name": "MiddleName",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Suffix",
+      "name": "Suffix",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Full Name",
+      "name": "Name",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 121
+    },
+    {
+      "label": "Record Type ID",
+      "name": "RecordTypeId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "RecordType"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Title",
+      "name": "Title",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 128
+    },
+    {
+      "label": "Company",
+      "name": "Company",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Street",
+      "name": "Street",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "City",
+      "name": "City",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "State/Province",
+      "name": "State",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 80
+    },
+    {
+      "label": "Zip/Postal Code",
+      "name": "PostalCode",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 20
+    },
+    {
+      "label": "Country",
+      "name": "Country",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 80
+    },
+    {
+      "label": "Latitude",
+      "name": "Latitude",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 15,
+      "length": 0
+    },
+    {
+      "label": "Longitude",
+      "name": "Longitude",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 15,
+      "length": 0
+    },
+    {
+      "label": "Geocode Accuracy",
+      "name": "GeocodeAccuracy",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Address",
+          "value": "Address"
+        },
+        {
+          "active": true,
+          "label": "Near Address",
+          "value": "NearAddress"
+        },
+        {
+          "active": true,
+          "label": "Block",
+          "value": "Block"
+        },
+        {
+          "active": true,
+          "label": "Street",
+          "value": "Street"
+        },
+        {
+          "active": true,
+          "label": "Extended Zip",
+          "value": "ExtendedZip"
+        },
+        {
+          "active": true,
+          "label": "Zip",
+          "value": "Zip"
+        },
+        {
+          "active": true,
+          "label": "Neighborhood",
+          "value": "Neighborhood"
+        },
+        {
+          "active": true,
+          "label": "City",
+          "value": "City"
+        },
+        {
+          "active": true,
+          "label": "County",
+          "value": "County"
+        },
+        {
+          "active": true,
+          "label": "State",
+          "value": "State"
+        },
+        {
+          "active": true,
+          "label": "Unknown",
+          "value": "Unknown"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Address",
+      "name": "Address",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "address",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Phone",
+      "name": "Phone",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "phone",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Mobile Phone",
+      "name": "MobilePhone",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "phone",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Fax",
+      "name": "Fax",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "phone",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Email",
+      "name": "Email",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "email",
+      "precision": 0,
+      "scale": 0,
+      "length": 80
+    },
+    {
+      "label": "Website",
+      "name": "Website",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "url",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Photo URL",
+      "name": "PhotoUrl",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "url",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Description",
+      "name": "Description",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 32000
+    },
+    {
+      "label": "Lead Source",
+      "name": "LeadSource",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Publicidad",
+          "value": "Publicidad"
+        },
+        {
+          "active": true,
+          "label": "Foro de negocios",
+          "value": "Foro de negocios"
+        },
+        {
+          "active": true,
+          "label": "Cámara de comercio",
+          "value": "Cámara de comercio"
+        },
+        {
+          "active": true,
+          "label": "Referido de la empresa",
+          "value": "Referido de la empresa"
+        },
+        {
+          "active": true,
+          "label": "Evento empresarial",
+          "value": "Evento empresarial"
+        },
+        {
+          "active": true,
+          "label": "PERUMIN",
+          "value": "PERUMIN"
+        },
+        {
+          "active": true,
+          "label": "Feria de negocios",
+          "value": "Feria de negocios"
+        },
+        {
+          "active": true,
+          "label": "Referido externo",
+          "value": "Referido externo"
+        },
+        {
+          "active": true,
+          "label": "Sitio Web",
+          "value": "Sitio Web"
+        },
+        {
+          "active": true,
+          "label": "Otros",
+          "value": "Otros"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Status",
+      "name": "Status",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Nuevo",
+          "value": "Nuevo"
+        },
+        {
+          "active": true,
+          "label": "En Proceso",
+          "value": "En Proceso"
+        },
+        {
+          "active": true,
+          "label": "Convertido",
+          "value": "Convertido"
+        },
+        {
+          "active": true,
+          "label": "Desestimado",
+          "value": "Desestimado"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Industry",
+      "name": "Industry",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Agriculture",
+          "value": "Agriculture"
+        },
+        {
+          "active": true,
+          "label": "Apparel",
+          "value": "Apparel"
+        },
+        {
+          "active": true,
+          "label": "Banking",
+          "value": "Banking"
+        },
+        {
+          "active": true,
+          "label": "Biotechnology",
+          "value": "Biotechnology"
+        },
+        {
+          "active": true,
+          "label": "Chemicals",
+          "value": "Chemicals"
+        },
+        {
+          "active": true,
+          "label": "Communications",
+          "value": "Communications"
+        },
+        {
+          "active": true,
+          "label": "Construction",
+          "value": "Construction"
+        },
+        {
+          "active": true,
+          "label": "Consulting",
+          "value": "Consulting"
+        },
+        {
+          "active": true,
+          "label": "Education",
+          "value": "Education"
+        },
+        {
+          "active": true,
+          "label": "Electronics",
+          "value": "Electronics"
+        },
+        {
+          "active": true,
+          "label": "Energy",
+          "value": "Energy"
+        },
+        {
+          "active": true,
+          "label": "Engineering",
+          "value": "Engineering"
+        },
+        {
+          "active": true,
+          "label": "Entertainment",
+          "value": "Entertainment"
+        },
+        {
+          "active": true,
+          "label": "Environmental",
+          "value": "Environmental"
+        },
+        {
+          "active": true,
+          "label": "Finance",
+          "value": "Finance"
+        },
+        {
+          "active": true,
+          "label": "Food & Beverage",
+          "value": "Food & Beverage"
+        },
+        {
+          "active": true,
+          "label": "Government",
+          "value": "Government"
+        },
+        {
+          "active": true,
+          "label": "Healthcare",
+          "value": "Healthcare"
+        },
+        {
+          "active": true,
+          "label": "Hospitality",
+          "value": "Hospitality"
+        },
+        {
+          "active": true,
+          "label": "Insurance",
+          "value": "Insurance"
+        },
+        {
+          "active": true,
+          "label": "Machinery",
+          "value": "Machinery"
+        },
+        {
+          "active": true,
+          "label": "Manufacturing",
+          "value": "Manufacturing"
+        },
+        {
+          "active": true,
+          "label": "Media",
+          "value": "Media"
+        },
+        {
+          "active": true,
+          "label": "Not For Profit",
+          "value": "Not For Profit"
+        },
+        {
+          "active": true,
+          "label": "Other",
+          "value": "Other"
+        },
+        {
+          "active": true,
+          "label": "Recreation",
+          "value": "Recreation"
+        },
+        {
+          "active": true,
+          "label": "Retail",
+          "value": "Retail"
+        },
+        {
+          "active": true,
+          "label": "Shipping",
+          "value": "Shipping"
+        },
+        {
+          "active": true,
+          "label": "Technology",
+          "value": "Technology"
+        },
+        {
+          "active": true,
+          "label": "Telecommunications",
+          "value": "Telecommunications"
+        },
+        {
+          "active": true,
+          "label": "Transportation",
+          "value": "Transportation"
+        },
+        {
+          "active": true,
+          "label": "Utilities",
+          "value": "Utilities"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Rating",
+      "name": "Rating",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Hot",
+          "value": "Hot"
+        },
+        {
+          "active": true,
+          "label": "Warm",
+          "value": "Warm"
+        },
+        {
+          "active": true,
+          "label": "Cold",
+          "value": "Cold"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Lead Currency",
+      "name": "CurrencyIsoCode",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Peruvian Sol",
+          "value": "PEN"
+        },
+        {
+          "active": true,
+          "label": "U.S. Dollar",
+          "value": "USD"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 3
+    },
+    {
+      "label": "Annual Revenue",
+      "name": "AnnualRevenue",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "currency",
+      "precision": 18,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Employees",
+      "name": "NumberOfEmployees",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "int",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Owner ID",
+      "name": "OwnerId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Group",
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Email Opt Out",
+      "name": "HasOptedOutOfEmail",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Converted",
+      "name": "IsConverted",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Converted Date",
+      "name": "ConvertedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Converted Account ID",
+      "name": "ConvertedAccountId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Account"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Converted Contact ID",
+      "name": "ConvertedContactId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Contact"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Converted Opportunity ID",
+      "name": "ConvertedOpportunityId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Opportunity"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Unread By Owner",
+      "name": "IsUnreadByOwner",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Created Date",
+      "name": "CreatedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Created By ID",
+      "name": "CreatedById",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Last Modified Date",
+      "name": "LastModifiedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Modified By ID",
+      "name": "LastModifiedById",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "System Modstamp",
+      "name": "SystemModstamp",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Activity",
+      "name": "LastActivityDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Do Not Call",
+      "name": "DoNotCall",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fax Opt Out",
+      "name": "HasOptedOutOfFax",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Viewed Date",
+      "name": "LastViewedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Referenced Date",
+      "name": "LastReferencedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Transfer Date",
+      "name": "LastTransferDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Partner Account ID",
+      "name": "PartnerAccountId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Account"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Data.com Key",
+      "name": "Jigsaw",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 20
+    },
+    {
+      "label": "Jigsaw Contact ID",
+      "name": "JigsawContactId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 20
+    },
+    {
+      "label": "Email Bounced Reason",
+      "name": "EmailBouncedReason",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Email Bounced Date",
+      "name": "EmailBouncedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Individual ID",
+      "name": "IndividualId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Individual"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Pronouns",
+      "name": "Pronouns",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "He/Him",
+          "value": "He/Him"
+        },
+        {
+          "active": true,
+          "label": "She/Her",
+          "value": "She/Her"
+        },
+        {
+          "active": true,
+          "label": "They/Them",
+          "value": "They/Them"
+        },
+        {
+          "active": true,
+          "label": "He/They",
+          "value": "He/They"
+        },
+        {
+          "active": true,
+          "label": "She/They",
+          "value": "She/They"
+        },
+        {
+          "active": true,
+          "label": "Not Listed",
+          "value": "Not Listed"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Gender Identity",
+      "name": "GenderIdentity",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Male",
+          "value": "Male"
+        },
+        {
+          "active": true,
+          "label": "Female",
+          "value": "Female"
+        },
+        {
+          "active": true,
+          "label": "Nonbinary",
+          "value": "Nonbinary"
+        },
+        {
+          "active": true,
+          "label": "Not Listed",
+          "value": "Not Listed"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Important",
+      "name": "IsPriorityRecord",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Current Generator(s)",
+      "name": "vlocity_cmt__CurrentGenerators__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 100
+    },
+    {
+      "label": "Number of Locations",
+      "name": "vlocity_cmt__NumberofLocations__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 3,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Premises",
+      "name": "vlocity_cmt__PremisesId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "vlocity_cmt__Premises__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Primary",
+      "name": "vlocity_cmt__Primary__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "No",
+          "value": "No"
+        },
+        {
+          "active": true,
+          "label": "Yes",
+          "value": "Yes"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Product Interest Data",
+      "name": "vlocity_cmt__ProductInterestData__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 131072
+    },
+    {
+      "label": "Product Interest",
+      "name": "vlocity_cmt__ProductInterest__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "GC1000 series",
+          "value": "GC1000 series"
+        },
+        {
+          "active": true,
+          "label": "GC5000 series",
+          "value": "GC5000 series"
+        },
+        {
+          "active": true,
+          "label": "GC3000 series",
+          "value": "GC3000 series"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "SIC Code",
+      "name": "vlocity_cmt__SICCode__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 15
+    },
+    {
+      "label": "Propietario del Prospecto",
+      "name": "pz_LeadOwner__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1300
+    },
+    {
+      "label": "Nombre Prospecto (Empresa o Persona)",
+      "name": "pz_ProspectName__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1300
+    },
+    {
+      "label": "Descripción Necesidad Prospecto",
+      "name": "pz_LeadRequirementDescripcion__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 1000
+    },
+    {
+      "label": "ID de prospecto",
+      "name": "pz_LeadId__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 30
+    },
+    {
+      "label": "Empresa que Realiza Venta",
+      "name": "pz_Company__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "PLUZ Energía",
+          "value": "3"
+        },
+        {
+          "active": true,
+          "label": "PLUZ Soluciones",
+          "value": "2"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Tipo Número",
+      "name": "pz_AddressNumberType__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "MANZANA - LOTE",
+          "value": "MANZANA - LOTE"
+        },
+        {
+          "active": true,
+          "label": "NUMERO MUNICIPAL",
+          "value": "NUMERO MUNICIPAL"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Tipo Vía",
+      "name": "pz_AddressWayType__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "ALAMEDA",
+          "value": "Al."
+        },
+        {
+          "active": true,
+          "label": "AUTOPISTA",
+          "value": "Aut."
+        },
+        {
+          "active": true,
+          "label": "AVENIDA",
+          "value": "Av."
+        },
+        {
+          "active": true,
+          "label": "CALLE",
+          "value": "Cl."
+        },
+        {
+          "active": true,
+          "label": "CARRETERA",
+          "value": "Car."
+        },
+        {
+          "active": true,
+          "label": "MALECÓN",
+          "value": "Mal."
+        },
+        {
+          "active": true,
+          "label": "JIRÓN",
+          "value": "Jr."
+        },
+        {
+          "active": true,
+          "label": "ÓVALO",
+          "value": "Ovl."
+        },
+        {
+          "active": true,
+          "label": "PLAZA",
+          "value": "Plz."
+        },
+        {
+          "active": true,
+          "label": "PARQUE",
+          "value": "Prq."
+        },
+        {
+          "active": true,
+          "label": "PASAJE",
+          "value": "Psj."
+        },
+        {
+          "active": true,
+          "label": "V.Ex.",
+          "value": "V.Ex."
+        },
+        {
+          "active": true,
+          "label": "PROLONGACIÓN",
+          "value": "Prlg."
+        },
+        {
+          "active": true,
+          "label": "CER.",
+          "value": "Cer."
+        },
+        {
+          "active": true,
+          "label": "OTRO",
+          "value": "Otro"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Nombre Calle",
+      "name": "pz_AddressStreetName__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 100
+    },
+    {
+      "label": "Número",
+      "name": "pz_AddressStreetNumber__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 15
+    },
+    {
+      "label": "Tipo Agrupación",
+      "name": "pz_AddressGroupType__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "URBANIZACIÓN",
+          "value": "URBANIZACION"
+        },
+        {
+          "active": true,
+          "label": "UNIDAD VECINAL",
+          "value": "UNIDAD VECINAL"
+        },
+        {
+          "active": true,
+          "label": "PUEBLO JOVEN",
+          "value": "PUEBLO JOVEN"
+        },
+        {
+          "active": true,
+          "label": "CONJUNTO RESIDENCIAL",
+          "value": "CONJUNTO RESIDENCIAL"
+        },
+        {
+          "active": true,
+          "label": "CONJUNTO HABITACIONAL",
+          "value": "CONJUNTO HABITACIONAL"
+        },
+        {
+          "active": true,
+          "label": "ASENTAMIENTO HUMANO",
+          "value": "ASENTAMIENTO HUMANO"
+        },
+        {
+          "active": true,
+          "label": "CENTRO POBLADO",
+          "value": "CENTRO POBLADO"
+        },
+        {
+          "active": true,
+          "label": "AGRUPACION",
+          "value": "AGRUPACION"
+        },
+        {
+          "active": true,
+          "label": "PARQUE INDUSTRIAL",
+          "value": "PARQUE INDUSTRIAL"
+        },
+        {
+          "active": true,
+          "label": "COOPERATIVA",
+          "value": "COOPERATIVA"
+        },
+        {
+          "active": true,
+          "label": "GALERIA",
+          "value": "GALERIA"
+        },
+        {
+          "active": true,
+          "label": "BARRIO",
+          "value": "BARRIO"
+        },
+        {
+          "active": true,
+          "label": "ASOCIACION",
+          "value": "ASOCIACION"
+        },
+        {
+          "active": true,
+          "label": "AMPLIACION",
+          "value": "AMPLIACION"
+        },
+        {
+          "active": true,
+          "label": "CIUDAD",
+          "value": "CIUDAD"
+        },
+        {
+          "active": true,
+          "label": "COMITÉ",
+          "value": "COMITÉ"
+        },
+        {
+          "active": true,
+          "label": "FUNDO",
+          "value": "FUNDO"
+        },
+        {
+          "active": true,
+          "label": "HACIENDA",
+          "value": "HACIENDA"
+        },
+        {
+          "active": true,
+          "label": "URBANIZACION POPULAR",
+          "value": "URBANIZACION POPULAR"
+        },
+        {
+          "active": true,
+          "label": "LOTIZACION",
+          "value": "LOTIZACION"
+        },
+        {
+          "active": true,
+          "label": "OTROS",
+          "value": "OTROS"
+        },
+        {
+          "active": true,
+          "label": "Programa de Vivienda",
+          "value": "Programa de Vivienda"
+        },
+        {
+          "active": true,
+          "label": "JUNTA DE PROPIETARIOS",
+          "value": "JUNTA DE PROPIETARIOS"
+        },
+        {
+          "active": true,
+          "label": "PROGRAMA RESIDENCIAL DE VIVIENDA",
+          "value": "PROGRAMA RESIDENCIAL DE VIVIENDA"
+        },
+        {
+          "active": true,
+          "label": "PROGRAMA RESIDENCIAL",
+          "value": "PROGRAMA RESIDENCIAL"
+        },
+        {
+          "active": true,
+          "label": "JUNTA DE POSESIONARIOS",
+          "value": "JUNTA DE POSESIONARIOS"
+        },
+        {
+          "active": true,
+          "label": "ORGANIZACION VECINAL",
+          "value": "ORGANIZACION VECINAL"
+        },
+        {
+          "active": true,
+          "label": "EXPANSION URBANA",
+          "value": "EXPANSION URBANA"
+        },
+        {
+          "active": true,
+          "label": "AGRUPACION FAMILIAR",
+          "value": "AGRUPACION FAMILIAR"
+        },
+        {
+          "active": true,
+          "label": "COMUNIDAD CAMPESINA",
+          "value": "COMUNIDAD CAMPESINA"
+        },
+        {
+          "active": true,
+          "label": "HABILITACION URBANA",
+          "value": "HABILITACION URBANA"
+        },
+        {
+          "active": true,
+          "label": "AGRUPACION DE FAMILIAS",
+          "value": "AGRUPACION DE FAMILIAS"
+        },
+        {
+          "active": true,
+          "label": "ASOCIACION DE VIVIENDA DE PROPIETARIOS",
+          "value": "ASOCIACION DE VIVIENDA DE PROPIETARIOS"
+        },
+        {
+          "active": true,
+          "label": "ASOCIACION DE POBLADORES",
+          "value": "ASOCIACION DE POBLADORES"
+        },
+        {
+          "active": true,
+          "label": "JUNTA VECINAL",
+          "value": "JUNTA VECINAL"
+        },
+        {
+          "active": true,
+          "label": "ASOCIACION DE POSESIONARIOS",
+          "value": "ASOCIACION DE POSESIONARIOS"
+        },
+        {
+          "active": true,
+          "label": "AGRUPACION DE VIVIENDA",
+          "value": "AGRUPACION DE VIVIENDA"
+        },
+        {
+          "active": true,
+          "label": "ANEXO COMUNAL",
+          "value": "ANEXO COMUNAL"
+        },
+        {
+          "active": true,
+          "label": "AGRUPACION VECINAL",
+          "value": "AGRUPACION VECINAL"
+        },
+        {
+          "active": true,
+          "label": "RESIDENCIAL",
+          "value": "RESIDENCIAL"
+        },
+        {
+          "active": true,
+          "label": "LOTIZADORA",
+          "value": "LOTIZADORA"
+        },
+        {
+          "active": true,
+          "label": "ASOCIACION DE VIVIENDA",
+          "value": "ASOCIACION DE VIVIENDA"
+        },
+        {
+          "active": true,
+          "label": "EDIFICIO",
+          "value": "EDIFICIO"
+        },
+        {
+          "active": true,
+          "label": "ASOCIACION DE PROPIETARIOS",
+          "value": "ASOCIACION DE PROPIETARIOS"
+        },
+        {
+          "active": true,
+          "label": "ASOCIACION PRO VIVIENDA",
+          "value": "ASOCIACION PRO VIVIENDA"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Manzana",
+      "name": "pz_AddressApple__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 10
+    },
+    {
+      "label": "Lote",
+      "name": "pz_AddressLot__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 10
+    },
+    {
+      "label": "Tipo Interior",
+      "name": "pz_AddressInternalType__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "INTERIOR",
+          "value": "Interior"
+        },
+        {
+          "active": true,
+          "label": "DEPARTAMENTO",
+          "value": "Departamento"
+        },
+        {
+          "active": true,
+          "label": "PUERTA",
+          "value": "Puerta"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Interior",
+      "name": "pz_AddressInternalNumber__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 30
+    },
+    {
+      "label": "Tipo Sector",
+      "name": "pz_AddressSectorType__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "SECTOR",
+          "value": "Sector"
+        },
+        {
+          "active": true,
+          "label": "ETAPA",
+          "value": "Etapa"
+        },
+        {
+          "active": true,
+          "label": "BLOQUE",
+          "value": "Bloque"
+        },
+        {
+          "active": true,
+          "label": "EDIFICIO",
+          "value": "Edificio"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Sector",
+      "name": "pz_AddressSectorName__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 30
+    },
+    {
+      "label": "X,Y (Latitude)",
+      "name": "pz_AddressXY__Latitude__s",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 9,
+      "scale": 6,
+      "length": 0
+    },
+    {
+      "label": "X,Y (Longitude)",
+      "name": "pz_AddressXY__Longitude__s",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 9,
+      "scale": 6,
+      "length": 0
+    },
+    {
+      "label": "X,Y",
+      "name": "pz_AddressXY__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "location",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Referencia",
+      "name": "pz_AddressReference__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Is Lead",
+      "name": "pz_IsLead__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Número Doc. Cliente",
+      "name": "pz_IdDocNumber__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 15
+    },
+    {
+      "label": "Tipo Documento",
+      "name": "pz_IdDoc__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "RUC",
+          "value": "RUC"
+        },
+        {
+          "active": true,
+          "label": "DNI",
+          "value": "DNI"
+        },
+        {
+          "active": true,
+          "label": "CE",
+          "value": "CE"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Tipo Cliente",
+      "name": "pz_PersonType__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Persona Natural",
+          "value": "N"
+        },
+        {
+          "active": true,
+          "label": "Persona Jurídica",
+          "value": "J"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Relación con Cuenta",
+      "name": "pz_ReferenceAccount__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "Account"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Fecha Próximo Paso",
+      "name": "pz_NextStepDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Detalle estado del prospecto",
+      "name": "pz_ProspectStatusNotes__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 1000
+    },
+    {
+      "label": "Doc. Identificador",
+      "name": "pz_IdentityDocNumber__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1300
+    },
+    {
+      "label": "Motivo Desestimación",
+      "name": "pz_DismissedReason__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Cliente No Interesado",
+          "value": "Cliente No Interesado"
+        },
+        {
+          "active": true,
+          "label": "Pluz decide no participar",
+          "value": "Pluz decide no participar"
+        },
+        {
+          "active": true,
+          "label": "Producto o Servicio no ofrecido en PLUZ",
+          "value": "Producto o Servicio no ofrecido en PLUZ"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Ubigeo",
+      "name": "pz_AddressStandardLocation__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "pz_AddressStandardLocation__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Distrito",
+      "name": "pz_AddressDistrictText__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1300
+    },
+    {
+      "label": "Provincia",
+      "name": "pz_AddressProvinceCodeText__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1300
+    },
+    {
+      "label": "Nombre Agrupación",
+      "name": "pz_AddressGroupName__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 100
+    },
+    {
+      "label": "Mobile Opt Out",
+      "name": "et4ae5__HasOptedOutOfMobile__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Mobile Country Code",
+      "name": "et4ae5__Mobile_Country_Code__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "US",
+          "value": "US"
+        },
+        {
+          "active": true,
+          "label": "AC",
+          "value": "AC"
+        },
+        {
+          "active": true,
+          "label": "AD",
+          "value": "AD"
+        },
+        {
+          "active": true,
+          "label": "AE",
+          "value": "AE"
+        },
+        {
+          "active": true,
+          "label": "AF",
+          "value": "AF"
+        },
+        {
+          "active": true,
+          "label": "AG",
+          "value": "AG"
+        },
+        {
+          "active": true,
+          "label": "AI",
+          "value": "AI"
+        },
+        {
+          "active": true,
+          "label": "AL",
+          "value": "AL"
+        },
+        {
+          "active": true,
+          "label": "AM",
+          "value": "AM"
+        },
+        {
+          "active": true,
+          "label": "AO",
+          "value": "AO"
+        },
+        {
+          "active": true,
+          "label": "AQ",
+          "value": "AQ"
+        },
+        {
+          "active": true,
+          "label": "AR",
+          "value": "AR"
+        },
+        {
+          "active": true,
+          "label": "AS",
+          "value": "AS"
+        },
+        {
+          "active": true,
+          "label": "AT",
+          "value": "AT"
+        },
+        {
+          "active": true,
+          "label": "AU",
+          "value": "AU"
+        },
+        {
+          "active": true,
+          "label": "AW",
+          "value": "AW"
+        },
+        {
+          "active": true,
+          "label": "AX",
+          "value": "AX"
+        },
+        {
+          "active": true,
+          "label": "AZ",
+          "value": "AZ"
+        },
+        {
+          "active": true,
+          "label": "BA",
+          "value": "BA"
+        },
+        {
+          "active": true,
+          "label": "BB",
+          "value": "BB"
+        },
+        {
+          "active": true,
+          "label": "BD",
+          "value": "BD"
+        },
+        {
+          "active": true,
+          "label": "BE",
+          "value": "BE"
+        },
+        {
+          "active": true,
+          "label": "BF",
+          "value": "BF"
+        },
+        {
+          "active": true,
+          "label": "BG",
+          "value": "BG"
+        },
+        {
+          "active": true,
+          "label": "BH",
+          "value": "BH"
+        },
+        {
+          "active": true,
+          "label": "BI",
+          "value": "BI"
+        },
+        {
+          "active": true,
+          "label": "BJ",
+          "value": "BJ"
+        },
+        {
+          "active": true,
+          "label": "BL",
+          "value": "BL"
+        },
+        {
+          "active": true,
+          "label": "BM",
+          "value": "BM"
+        },
+        {
+          "active": true,
+          "label": "BN",
+          "value": "BN"
+        },
+        {
+          "active": true,
+          "label": "BO",
+          "value": "BO"
+        },
+        {
+          "active": true,
+          "label": "BQ",
+          "value": "BQ"
+        },
+        {
+          "active": true,
+          "label": "BR",
+          "value": "BR"
+        },
+        {
+          "active": true,
+          "label": "BS",
+          "value": "BS"
+        },
+        {
+          "active": true,
+          "label": "BT",
+          "value": "BT"
+        },
+        {
+          "active": true,
+          "label": "BV",
+          "value": "BV"
+        },
+        {
+          "active": true,
+          "label": "BW",
+          "value": "BW"
+        },
+        {
+          "active": true,
+          "label": "BY",
+          "value": "BY"
+        },
+        {
+          "active": true,
+          "label": "BZ",
+          "value": "BZ"
+        },
+        {
+          "active": true,
+          "label": "CA",
+          "value": "CA"
+        },
+        {
+          "active": true,
+          "label": "CC",
+          "value": "CC"
+        },
+        {
+          "active": true,
+          "label": "CD",
+          "value": "CD"
+        },
+        {
+          "active": true,
+          "label": "CF",
+          "value": "CF"
+        },
+        {
+          "active": true,
+          "label": "CG",
+          "value": "CG"
+        },
+        {
+          "active": true,
+          "label": "CH",
+          "value": "CH"
+        },
+        {
+          "active": true,
+          "label": "CI",
+          "value": "CI"
+        },
+        {
+          "active": true,
+          "label": "CK",
+          "value": "CK"
+        },
+        {
+          "active": true,
+          "label": "CL",
+          "value": "CL"
+        },
+        {
+          "active": true,
+          "label": "CM",
+          "value": "CM"
+        },
+        {
+          "active": true,
+          "label": "CN",
+          "value": "CN"
+        },
+        {
+          "active": true,
+          "label": "CO",
+          "value": "CO"
+        },
+        {
+          "active": true,
+          "label": "CR",
+          "value": "CR"
+        },
+        {
+          "active": true,
+          "label": "CU",
+          "value": "CU"
+        },
+        {
+          "active": true,
+          "label": "CV",
+          "value": "CV"
+        },
+        {
+          "active": true,
+          "label": "CW",
+          "value": "CW"
+        },
+        {
+          "active": true,
+          "label": "CX",
+          "value": "CX"
+        },
+        {
+          "active": true,
+          "label": "CY",
+          "value": "CY"
+        },
+        {
+          "active": true,
+          "label": "CZ",
+          "value": "CZ"
+        },
+        {
+          "active": true,
+          "label": "DE",
+          "value": "DE"
+        },
+        {
+          "active": true,
+          "label": "DJ",
+          "value": "DJ"
+        },
+        {
+          "active": true,
+          "label": "DK",
+          "value": "DK"
+        },
+        {
+          "active": true,
+          "label": "DM",
+          "value": "DM"
+        },
+        {
+          "active": true,
+          "label": "DO",
+          "value": "DO"
+        },
+        {
+          "active": true,
+          "label": "DZ",
+          "value": "DZ"
+        },
+        {
+          "active": true,
+          "label": "EC",
+          "value": "EC"
+        },
+        {
+          "active": true,
+          "label": "EE",
+          "value": "EE"
+        },
+        {
+          "active": true,
+          "label": "EG",
+          "value": "EG"
+        },
+        {
+          "active": true,
+          "label": "ER",
+          "value": "ER"
+        },
+        {
+          "active": true,
+          "label": "ES",
+          "value": "ES"
+        },
+        {
+          "active": true,
+          "label": "ET",
+          "value": "ET"
+        },
+        {
+          "active": true,
+          "label": "FI",
+          "value": "FI"
+        },
+        {
+          "active": true,
+          "label": "FJ",
+          "value": "FJ"
+        },
+        {
+          "active": true,
+          "label": "FK",
+          "value": "FK"
+        },
+        {
+          "active": true,
+          "label": "FM",
+          "value": "FM"
+        },
+        {
+          "active": true,
+          "label": "FO",
+          "value": "FO"
+        },
+        {
+          "active": true,
+          "label": "FR",
+          "value": "FR"
+        },
+        {
+          "active": true,
+          "label": "GA",
+          "value": "GA"
+        },
+        {
+          "active": true,
+          "label": "GB",
+          "value": "GB"
+        },
+        {
+          "active": true,
+          "label": "GD",
+          "value": "GD"
+        },
+        {
+          "active": true,
+          "label": "GE",
+          "value": "GE"
+        },
+        {
+          "active": true,
+          "label": "GF",
+          "value": "GF"
+        },
+        {
+          "active": true,
+          "label": "GG",
+          "value": "GG"
+        },
+        {
+          "active": true,
+          "label": "GH",
+          "value": "GH"
+        },
+        {
+          "active": true,
+          "label": "GI",
+          "value": "GI"
+        },
+        {
+          "active": true,
+          "label": "GL",
+          "value": "GL"
+        },
+        {
+          "active": true,
+          "label": "GM",
+          "value": "GM"
+        },
+        {
+          "active": true,
+          "label": "GN",
+          "value": "GN"
+        },
+        {
+          "active": true,
+          "label": "GP",
+          "value": "GP"
+        },
+        {
+          "active": true,
+          "label": "GQ",
+          "value": "GQ"
+        },
+        {
+          "active": true,
+          "label": "GR",
+          "value": "GR"
+        },
+        {
+          "active": true,
+          "label": "GS",
+          "value": "GS"
+        },
+        {
+          "active": true,
+          "label": "GT",
+          "value": "GT"
+        },
+        {
+          "active": true,
+          "label": "GU",
+          "value": "GU"
+        },
+        {
+          "active": true,
+          "label": "GW",
+          "value": "GW"
+        },
+        {
+          "active": true,
+          "label": "GY",
+          "value": "GY"
+        },
+        {
+          "active": true,
+          "label": "HK",
+          "value": "HK"
+        },
+        {
+          "active": true,
+          "label": "HM",
+          "value": "HM"
+        },
+        {
+          "active": true,
+          "label": "HN",
+          "value": "HN"
+        },
+        {
+          "active": true,
+          "label": "HR",
+          "value": "HR"
+        },
+        {
+          "active": true,
+          "label": "HT",
+          "value": "HT"
+        },
+        {
+          "active": true,
+          "label": "HU",
+          "value": "HU"
+        },
+        {
+          "active": true,
+          "label": "ID",
+          "value": "ID"
+        },
+        {
+          "active": true,
+          "label": "IE",
+          "value": "IE"
+        },
+        {
+          "active": true,
+          "label": "IL",
+          "value": "IL"
+        },
+        {
+          "active": true,
+          "label": "IM",
+          "value": "IM"
+        },
+        {
+          "active": true,
+          "label": "IN",
+          "value": "IN"
+        },
+        {
+          "active": true,
+          "label": "IO",
+          "value": "IO"
+        },
+        {
+          "active": true,
+          "label": "IQ",
+          "value": "IQ"
+        },
+        {
+          "active": true,
+          "label": "IR",
+          "value": "IR"
+        },
+        {
+          "active": true,
+          "label": "IS",
+          "value": "IS"
+        },
+        {
+          "active": true,
+          "label": "IT",
+          "value": "IT"
+        },
+        {
+          "active": true,
+          "label": "JE",
+          "value": "JE"
+        },
+        {
+          "active": true,
+          "label": "JM",
+          "value": "JM"
+        },
+        {
+          "active": true,
+          "label": "JO",
+          "value": "JO"
+        },
+        {
+          "active": true,
+          "label": "JP",
+          "value": "JP"
+        },
+        {
+          "active": true,
+          "label": "KE",
+          "value": "KE"
+        },
+        {
+          "active": true,
+          "label": "KG",
+          "value": "KG"
+        },
+        {
+          "active": true,
+          "label": "KH",
+          "value": "KH"
+        },
+        {
+          "active": true,
+          "label": "KI",
+          "value": "KI"
+        },
+        {
+          "active": true,
+          "label": "KM",
+          "value": "KM"
+        },
+        {
+          "active": true,
+          "label": "KN",
+          "value": "KN"
+        },
+        {
+          "active": true,
+          "label": "KP",
+          "value": "KP"
+        },
+        {
+          "active": true,
+          "label": "KR",
+          "value": "KR"
+        },
+        {
+          "active": true,
+          "label": "KW",
+          "value": "KW"
+        },
+        {
+          "active": true,
+          "label": "KY",
+          "value": "KY"
+        },
+        {
+          "active": true,
+          "label": "KZ",
+          "value": "KZ"
+        },
+        {
+          "active": true,
+          "label": "LA",
+          "value": "LA"
+        },
+        {
+          "active": true,
+          "label": "LB",
+          "value": "LB"
+        },
+        {
+          "active": true,
+          "label": "LC",
+          "value": "LC"
+        },
+        {
+          "active": true,
+          "label": "LI",
+          "value": "LI"
+        },
+        {
+          "active": true,
+          "label": "LK",
+          "value": "LK"
+        },
+        {
+          "active": true,
+          "label": "LR",
+          "value": "LR"
+        },
+        {
+          "active": true,
+          "label": "LS",
+          "value": "LS"
+        },
+        {
+          "active": true,
+          "label": "LT",
+          "value": "LT"
+        },
+        {
+          "active": true,
+          "label": "LU",
+          "value": "LU"
+        },
+        {
+          "active": true,
+          "label": "LV",
+          "value": "LV"
+        },
+        {
+          "active": true,
+          "label": "LY",
+          "value": "LY"
+        },
+        {
+          "active": true,
+          "label": "MA",
+          "value": "MA"
+        },
+        {
+          "active": true,
+          "label": "MC",
+          "value": "MC"
+        },
+        {
+          "active": true,
+          "label": "MD",
+          "value": "MD"
+        },
+        {
+          "active": true,
+          "label": "ME",
+          "value": "ME"
+        },
+        {
+          "active": true,
+          "label": "MF",
+          "value": "MF"
+        },
+        {
+          "active": true,
+          "label": "MG",
+          "value": "MG"
+        },
+        {
+          "active": true,
+          "label": "MH",
+          "value": "MH"
+        },
+        {
+          "active": true,
+          "label": "MK",
+          "value": "MK"
+        },
+        {
+          "active": true,
+          "label": "ML",
+          "value": "ML"
+        },
+        {
+          "active": true,
+          "label": "MM",
+          "value": "MM"
+        },
+        {
+          "active": true,
+          "label": "MN",
+          "value": "MN"
+        },
+        {
+          "active": true,
+          "label": "MO",
+          "value": "MO"
+        },
+        {
+          "active": true,
+          "label": "MP",
+          "value": "MP"
+        },
+        {
+          "active": true,
+          "label": "MQ",
+          "value": "MQ"
+        },
+        {
+          "active": true,
+          "label": "MR",
+          "value": "MR"
+        },
+        {
+          "active": true,
+          "label": "MS",
+          "value": "MS"
+        },
+        {
+          "active": true,
+          "label": "MT",
+          "value": "MT"
+        },
+        {
+          "active": true,
+          "label": "MU",
+          "value": "MU"
+        },
+        {
+          "active": true,
+          "label": "MV",
+          "value": "MV"
+        },
+        {
+          "active": true,
+          "label": "MW",
+          "value": "MW"
+        },
+        {
+          "active": true,
+          "label": "MX",
+          "value": "MX"
+        },
+        {
+          "active": true,
+          "label": "MY",
+          "value": "MY"
+        },
+        {
+          "active": true,
+          "label": "MZ",
+          "value": "MZ"
+        },
+        {
+          "active": true,
+          "label": "NA",
+          "value": "NA"
+        },
+        {
+          "active": true,
+          "label": "NC",
+          "value": "NC"
+        },
+        {
+          "active": true,
+          "label": "NE",
+          "value": "NE"
+        },
+        {
+          "active": true,
+          "label": "NF",
+          "value": "NF"
+        },
+        {
+          "active": true,
+          "label": "NG",
+          "value": "NG"
+        },
+        {
+          "active": true,
+          "label": "NI",
+          "value": "NI"
+        },
+        {
+          "active": true,
+          "label": "NL",
+          "value": "NL"
+        },
+        {
+          "active": true,
+          "label": "NO",
+          "value": "NO"
+        },
+        {
+          "active": true,
+          "label": "NP",
+          "value": "NP"
+        },
+        {
+          "active": true,
+          "label": "NR",
+          "value": "NR"
+        },
+        {
+          "active": true,
+          "label": "NU",
+          "value": "NU"
+        },
+        {
+          "active": true,
+          "label": "NZ",
+          "value": "NZ"
+        },
+        {
+          "active": true,
+          "label": "OM",
+          "value": "OM"
+        },
+        {
+          "active": true,
+          "label": "PA",
+          "value": "PA"
+        },
+        {
+          "active": true,
+          "label": "PE",
+          "value": "PE"
+        },
+        {
+          "active": true,
+          "label": "PF",
+          "value": "PF"
+        },
+        {
+          "active": true,
+          "label": "PG",
+          "value": "PG"
+        },
+        {
+          "active": true,
+          "label": "PH",
+          "value": "PH"
+        },
+        {
+          "active": true,
+          "label": "PK",
+          "value": "PK"
+        },
+        {
+          "active": true,
+          "label": "PL",
+          "value": "PL"
+        },
+        {
+          "active": true,
+          "label": "PM",
+          "value": "PM"
+        },
+        {
+          "active": true,
+          "label": "PN",
+          "value": "PN"
+        },
+        {
+          "active": true,
+          "label": "PR",
+          "value": "PR"
+        },
+        {
+          "active": true,
+          "label": "PS",
+          "value": "PS"
+        },
+        {
+          "active": true,
+          "label": "PT",
+          "value": "PT"
+        },
+        {
+          "active": true,
+          "label": "PW",
+          "value": "PW"
+        },
+        {
+          "active": true,
+          "label": "PY",
+          "value": "PY"
+        },
+        {
+          "active": true,
+          "label": "QA",
+          "value": "QA"
+        },
+        {
+          "active": true,
+          "label": "RE",
+          "value": "RE"
+        },
+        {
+          "active": true,
+          "label": "RO",
+          "value": "RO"
+        },
+        {
+          "active": true,
+          "label": "RS",
+          "value": "RS"
+        },
+        {
+          "active": true,
+          "label": "RU",
+          "value": "RU"
+        },
+        {
+          "active": true,
+          "label": "RW",
+          "value": "RW"
+        },
+        {
+          "active": true,
+          "label": "SA",
+          "value": "SA"
+        },
+        {
+          "active": true,
+          "label": "SB",
+          "value": "SB"
+        },
+        {
+          "active": true,
+          "label": "SC",
+          "value": "SC"
+        },
+        {
+          "active": true,
+          "label": "SD",
+          "value": "SD"
+        },
+        {
+          "active": true,
+          "label": "SE",
+          "value": "SE"
+        },
+        {
+          "active": true,
+          "label": "SG",
+          "value": "SG"
+        },
+        {
+          "active": true,
+          "label": "SH",
+          "value": "SH"
+        },
+        {
+          "active": true,
+          "label": "SI",
+          "value": "SI"
+        },
+        {
+          "active": true,
+          "label": "SJ",
+          "value": "SJ"
+        },
+        {
+          "active": true,
+          "label": "SK",
+          "value": "SK"
+        },
+        {
+          "active": true,
+          "label": "SL",
+          "value": "SL"
+        },
+        {
+          "active": true,
+          "label": "SM",
+          "value": "SM"
+        },
+        {
+          "active": true,
+          "label": "SN",
+          "value": "SN"
+        },
+        {
+          "active": true,
+          "label": "SO",
+          "value": "SO"
+        },
+        {
+          "active": true,
+          "label": "SR",
+          "value": "SR"
+        },
+        {
+          "active": true,
+          "label": "SS",
+          "value": "SS"
+        },
+        {
+          "active": true,
+          "label": "ST",
+          "value": "ST"
+        },
+        {
+          "active": true,
+          "label": "SV",
+          "value": "SV"
+        },
+        {
+          "active": true,
+          "label": "SX",
+          "value": "SX"
+        },
+        {
+          "active": true,
+          "label": "SY",
+          "value": "SY"
+        },
+        {
+          "active": true,
+          "label": "SZ",
+          "value": "SZ"
+        },
+        {
+          "active": true,
+          "label": "TA",
+          "value": "TA"
+        },
+        {
+          "active": true,
+          "label": "TC",
+          "value": "TC"
+        },
+        {
+          "active": true,
+          "label": "TD",
+          "value": "TD"
+        },
+        {
+          "active": true,
+          "label": "TG",
+          "value": "TG"
+        },
+        {
+          "active": true,
+          "label": "TH",
+          "value": "TH"
+        },
+        {
+          "active": true,
+          "label": "TJ",
+          "value": "TJ"
+        },
+        {
+          "active": true,
+          "label": "TK",
+          "value": "TK"
+        },
+        {
+          "active": true,
+          "label": "TL",
+          "value": "TL"
+        },
+        {
+          "active": true,
+          "label": "TM",
+          "value": "TM"
+        },
+        {
+          "active": true,
+          "label": "TN",
+          "value": "TN"
+        },
+        {
+          "active": true,
+          "label": "TO",
+          "value": "TO"
+        },
+        {
+          "active": true,
+          "label": "TR",
+          "value": "TR"
+        },
+        {
+          "active": true,
+          "label": "TT",
+          "value": "TT"
+        },
+        {
+          "active": true,
+          "label": "TV",
+          "value": "TV"
+        },
+        {
+          "active": true,
+          "label": "TW",
+          "value": "TW"
+        },
+        {
+          "active": true,
+          "label": "TZ",
+          "value": "TZ"
+        },
+        {
+          "active": true,
+          "label": "UA",
+          "value": "UA"
+        },
+        {
+          "active": true,
+          "label": "UG",
+          "value": "UG"
+        },
+        {
+          "active": true,
+          "label": "UY",
+          "value": "UY"
+        },
+        {
+          "active": true,
+          "label": "UZ",
+          "value": "UZ"
+        },
+        {
+          "active": true,
+          "label": "VA",
+          "value": "VA"
+        },
+        {
+          "active": true,
+          "label": "VC",
+          "value": "VC"
+        },
+        {
+          "active": true,
+          "label": "VE",
+          "value": "VE"
+        },
+        {
+          "active": true,
+          "label": "VG",
+          "value": "VG"
+        },
+        {
+          "active": true,
+          "label": "VI",
+          "value": "VI"
+        },
+        {
+          "active": true,
+          "label": "VN",
+          "value": "VN"
+        },
+        {
+          "active": true,
+          "label": "VU",
+          "value": "VU"
+        },
+        {
+          "active": true,
+          "label": "WF",
+          "value": "WF"
+        },
+        {
+          "active": true,
+          "label": "WS",
+          "value": "WS"
+        },
+        {
+          "active": true,
+          "label": "YE",
+          "value": "YE"
+        },
+        {
+          "active": true,
+          "label": "YT",
+          "value": "YT"
+        },
+        {
+          "active": true,
+          "label": "ZA",
+          "value": "ZA"
+        },
+        {
+          "active": true,
+          "label": "ZM",
+          "value": "ZM"
+        },
+        {
+          "active": true,
+          "label": "ZW",
+          "value": "ZW"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Departamento",
+      "name": "pz_DepartmentText__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1300
+    },
+    {
+      "label": "Número Doc. Contacto",
+      "name": "pz_IdDocNumberContact__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 15
+    },
+    {
+      "label": "Tipo Documento",
+      "name": "pz_IdDocContact__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "RUC",
+          "value": "RUC"
+        },
+        {
+          "active": true,
+          "label": "DNI",
+          "value": "DNI"
+        },
+        {
+          "active": true,
+          "label": "CE",
+          "value": "CE"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    }
+  ]
+}

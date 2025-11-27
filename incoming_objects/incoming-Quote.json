@@ -34846,21 +34846,21 @@
           {
             "active": true,
             "defaultValue": false,
-            "label": "Interior",
+            "label": "INTERIOR",
             "validFor": null,
             "value": "Interior"
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Departamento",
+            "label": "DEPARTAMENTO",
             "validFor": null,
             "value": "Departamento"
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Puerta",
+            "label": "PUERTA",
             "validFor": null,
             "value": "Puerta"
           }
@@ -34986,28 +34986,28 @@
           {
             "active": true,
             "defaultValue": false,
-            "label": "Sector",
+            "label": "SECTOR",
             "validFor": null,
             "value": "Sector"
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Etapa",
+            "label": "ETAPA",
             "validFor": null,
             "value": "Etapa"
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Bloque",
+            "label": "BLOQUE",
             "validFor": null,
             "value": "Bloque"
           },
           {
             "active": true,
             "defaultValue": false,
-            "label": "Edificio",
+            "label": "EDIFICIO",
             "validFor": null,
             "value": "Edificio"
           }
