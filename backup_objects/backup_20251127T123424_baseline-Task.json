@@ -1,0 +1,5890 @@
+{
+  "fields": [
+    {
+      "label": "Activity ID",
+      "name": "Id",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "id",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Task Record Type ID",
+      "name": "RecordTypeId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "RecordType"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Name ID",
+      "name": "WhoId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Contact",
+        "Lead"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Related To ID",
+      "name": "WhatId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Account",
+        "AccountAccountRelation",
+        "AssessmentIndicatorDefinition",
+        "AssessmentTask",
+        "AssessmentTaskContentDocument",
+        "AssessmentTaskDefinition",
+        "AssessmentTaskOrder",
+        "Asset",
+        "AssetAccountParticipant",
+        "AssetContactParticipant",
+        "AssetRelationship",
+        "AttrPicklistExcludedValue",
+        "AttributeCategory",
+        "AttributeCategoryAttribute",
+        "AttributeDefinition",
+        "AttributePicklist",
+        "AttributePicklistValue",
+        "BusinessLicense",
+        "CalculationMatrix",
+        "CalculationMatrixVersion",
+        "CalculationProcedure",
+        "CalculationProcedureVersion",
+        "Campaign",
+        "Case",
+        "ChangeRequest",
+        "ChannelProgram",
+        "ChannelProgramLevel",
+        "CodeSetRelationship",
+        "CommSubscriptionConsent",
+        "ContactRequest",
+        "ContentLink",
+        "ContentSource",
+        "Contract",
+        "ContractLineItem",
+        "DevopsEnvironment",
+        "DevopsRequestInfo",
+        "DocTemplateSectionCondition",
+        "DocumentChecklistItem",
+        "DocumentDecisionRequirement",
+        "DocumentEnvelope",
+        "DocumentRecipient",
+        "DocumentTemplate",
+        "DocumentTemplateContentDoc",
+        "DocumentTemplateSection",
+        "DocumentTemplateToken",
+        "EngagementAttendee",
+        "EngagementInteraction",
+        "EngagementTopic",
+        "Entitlement",
+        "ExpressionSet",
+        "ExpressionSetVersion",
+        "GeneratedDocument",
+        "GeneratedDocumentSection",
+        "GenericVisitTask",
+        "GenericVisitTaskContext",
+        "GnrcVstKeyPerformanceInd",
+        "GnrcVstTaskContextRelation",
+        "Image",
+        "Incident",
+        "IndividualApplication",
+        "IntegrationProviderDcsnRqmt",
+        "IntegrationProviderExecution",
+        "ListEmail",
+        "LiveAgentSession",
+        "LiveChatTranscript",
+        "Location",
+        "OmniScriptSavedSession",
+        "Opportunity",
+        "Order",
+        "PZ_RecordAttributeBasePricing__c",
+        "PartyConsent",
+        "PartyRoleRelation",
+        "Problem",
+        "ProcessException",
+        "Product2",
+        "ProductAttributeDefinition",
+        "ProductCatalog",
+        "ProductClassification",
+        "ProductClassificationAttr",
+        "ProductComponentGroup",
+        "ProductComponentGrpOverride",
+        "ProductFaultCode",
+        "ProductLaborCode",
+        "ProductRelComponentOverride",
+        "ProductRelatedMaterial",
+        "ProductRequest",
+        "ProductRequestLineItem",
+        "ProductSellingModel",
+        "Quote",
+        "RecordAlert",
+        "RecordAlertActionableTarget",
+        "ReturnOrder",
+        "ReturnOrderLineItem",
+        "ServiceContract",
+        "ServiceResource",
+        "Shipment",
+        "ShipmentItem",
+        "Solution",
+        "Supplier",
+        "SupplierProduct",
+        "UserEsignVendorIdentifier",
+        "Visit",
+        "VisitedParty",
+        "WorkOrder",
+        "WorkOrderLineItem",
+        "WorkPlan",
+        "WorkPlanTemplate",
+        "WorkPlanTemplateEntry",
+        "WorkStep",
+        "WorkStepTemplate",
+        "et4ae5__Triggered_Send_Execution__c",
+        "pz_PrintHistory__c",
+        "pz_QSFUserandOfficeJunction__c",
+        "pz_QSF_Audio_Recording__c",
+        "pz_QSF_Office__c",
+        "pz_QSF_Quenda_WS__c",
+        "vlocity_cmt__AccountAdServer__c",
+        "vlocity_cmt__ActivityTemplate__c",
+        "vlocity_cmt__AdServer__c",
+        "vlocity_cmt__ApplicationPartyRelationship__c",
+        "vlocity_cmt__ApplicationTemplate__c",
+        "vlocity_cmt__Application__c",
+        "vlocity_cmt__AssessmentAnswer__c",
+        "vlocity_cmt__AssessmentQuestion__c",
+        "vlocity_cmt__Assessment__c",
+        "vlocity_cmt__CampaignMemberActionLog__c",
+        "vlocity_cmt__Catalog__c",
+        "vlocity_cmt__ContractTerm__c",
+        "vlocity_cmt__DocumentTemplateElement__c",
+        "vlocity_cmt__Element__c",
+        "vlocity_cmt__Household__c",
+        "vlocity_cmt__MediaProperty__c",
+        "vlocity_cmt__OmniScriptDefinition__c",
+        "vlocity_cmt__OrchestrationItem__c",
+        "vlocity_cmt__OrderItemAdPlacement__c",
+        "vlocity_cmt__OrderPayment__c",
+        "vlocity_cmt__OutboundConfiguration__c",
+        "vlocity_cmt__PartyRelationship__c",
+        "vlocity_cmt__QuoteLineItemAdPlacement__c",
+        "vlocity_cmt__RuleProperty__c",
+        "vlocity_cmt__ScreeningRuleGroup__c",
+        "vlocity_cmt__ScreeningRule__c",
+        "vlocity_cmt__StateTransition__c",
+        "vlocity_cmt__StatementLineItem__c",
+        "vlocity_cmt__UserAdServer__c",
+        "vlocity_cmt__VlocityScheduledJob__c",
+        "vlocity_cmt__VlocityUILayout__c"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Relation Count",
+      "name": "WhoCount",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "int",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Related To Count",
+      "name": "WhatCount",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "int",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Subject",
+      "name": "Subject",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Send Letter",
+          "value": "Send Letter"
+        },
+        {
+          "active": true,
+          "label": "Send Quote",
+          "value": "Send Quote"
+        },
+        {
+          "active": true,
+          "label": "Generar constancia de atención",
+          "value": "Generar constancia de atención"
+        },
+        {
+          "active": true,
+          "label": "Generar carta resolutiva",
+          "value": "Generar carta resolutiva"
+        },
+        {
+          "active": true,
+          "label": "Carta Informativa",
+          "value": "Carta Informativa"
+        },
+        {
+          "active": true,
+          "label": "Carta Resolutiva",
+          "value": "Carta Resolutiva"
+        }
+      ],
+      "referenceTo": [],
+      "type": "combobox",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Due Date Only",
+      "name": "ActivityDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Status",
+      "name": "Status",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "No Comenzada",
+          "value": "Not Started"
+        },
+        {
+          "active": true,
+          "label": "En Proceso",
+          "value": "In Progress"
+        },
+        {
+          "active": true,
+          "label": "Suspendida",
+          "value": "On Hold"
+        },
+        {
+          "active": true,
+          "label": "Rechazada",
+          "value": "Rejected"
+        },
+        {
+          "active": true,
+          "label": "Completada",
+          "value": "Completed"
+        },
+        {
+          "active": true,
+          "label": "Exonerado por Aprobación",
+          "value": "Exception for Approval"
+        },
+        {
+          "active": true,
+          "label": "Exonerado por Cambio de Plan",
+          "value": "Exception for Plan Change"
+        },
+        {
+          "active": true,
+          "label": "Anulada",
+          "value": "Canceled"
+        },
+        {
+          "active": true,
+          "label": "No Aplica",
+          "value": "Not Applicable"
+        },
+        {
+          "active": true,
+          "label": "Pendiente",
+          "value": "Pendiente"
+        },
+        {
+          "active": true,
+          "label": "Despachada",
+          "value": "Despachada"
+        },
+        {
+          "active": true,
+          "label": "Descargada",
+          "value": "Descargada"
+        },
+        {
+          "active": true,
+          "label": "Notificada",
+          "value": "Notificada"
+        },
+        {
+          "active": true,
+          "label": "Carta Rechazada",
+          "value": "Carta Rechazada"
+        },
+        {
+          "active": true,
+          "label": "Iniciado",
+          "value": "Iniciado"
+        },
+        {
+          "active": true,
+          "label": "Despacho",
+          "value": "Despacho"
+        },
+        {
+          "active": true,
+          "label": "Notificado",
+          "value": "Notificado"
+        },
+        {
+          "active": true,
+          "label": "Descargado",
+          "value": "Descargado"
+        },
+        {
+          "active": true,
+          "label": "Revisión Pluz",
+          "value": "Revisión Pluz"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Priority",
+      "name": "Priority",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Alta",
+          "value": "High"
+        },
+        {
+          "active": true,
+          "label": "Normal",
+          "value": "Normal"
+        },
+        {
+          "active": true,
+          "label": "Simple",
+          "value": "Simple"
+        },
+        {
+          "active": true,
+          "label": "Urgente",
+          "value": "Urgente"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 20
+    },
+    {
+      "label": "High Priority",
+      "name": "IsHighPriority",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Assigned To ID",
+      "name": "OwnerId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Group",
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Description",
+      "name": "Description",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 32000
+    },
+    {
+      "label": "Currency ISO Code",
+      "name": "CurrencyIsoCode",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Peruvian Sol",
+          "value": "PEN"
+        },
+        {
+          "active": true,
+          "label": "U.S. Dollar",
+          "value": "USD"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 3
+    },
+    {
+      "label": "Type",
+      "name": "Type",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "CALIDAD DE MEDIDA",
+          "value": "CALIDAD DE MEDIDA"
+        },
+        {
+          "active": true,
+          "label": "Meeting",
+          "value": "Meeting"
+        },
+        {
+          "active": true,
+          "label": "Other",
+          "value": "Other"
+        },
+        {
+          "active": true,
+          "label": "Call",
+          "value": "Call"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Deleted",
+      "name": "IsDeleted",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Account ID",
+      "name": "AccountId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Account"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Closed",
+      "name": "IsClosed",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Created Date",
+      "name": "CreatedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Created By ID",
+      "name": "CreatedById",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Last Modified Date",
+      "name": "LastModifiedDate",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Last Modified By ID",
+      "name": "LastModifiedById",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "System Modstamp",
+      "name": "SystemModstamp",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Archived",
+      "name": "IsArchived",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Public",
+      "name": "IsVisibleInSelfService",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Call Duration",
+      "name": "CallDurationInSeconds",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "int",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Call Type",
+      "name": "CallType",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Internal",
+          "value": "Internal"
+        },
+        {
+          "active": true,
+          "label": "Inbound",
+          "value": "Inbound"
+        },
+        {
+          "active": true,
+          "label": "Outbound",
+          "value": "Outbound"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Call Result",
+      "name": "CallDisposition",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Call Object Identifier",
+      "name": "CallObject",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Reminder Date/Time",
+      "name": "ReminderDateTime",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Reminder Set",
+      "name": "IsReminderSet",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Recurrence Activity ID",
+      "name": "RecurrenceActivityId",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [
+        "Task"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Create Recurring Series of Tasks",
+      "name": "IsRecurrence",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Recurrence Start",
+      "name": "RecurrenceStartDateOnly",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Recurrence End",
+      "name": "RecurrenceEndDateOnly",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Recurrence Time Zone",
+      "name": "RecurrenceTimeZoneSidKey",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "(GMT+14:00) Line Islands Time (Pacific/Kiritimati)",
+          "value": "Pacific/Kiritimati"
+        },
+        {
+          "active": true,
+          "label": "(GMT+13:45) Chatham Daylight Time (Pacific/Chatham)",
+          "value": "Pacific/Chatham"
+        },
+        {
+          "active": true,
+          "label": "(GMT+13:00) New Zealand Daylight Time (Antarctica/McMurdo)",
+          "value": "Antarctica/McMurdo"
+        },
+        {
+          "active": true,
+          "label": "(GMT+13:00) Apia Standard Time (Pacific/Apia)",
+          "value": "Pacific/Apia"
+        },
+        {
+          "active": true,
+          "label": "(GMT+13:00) New Zealand Daylight Time (Pacific/Auckland)",
+          "value": "Pacific/Auckland"
+        },
+        {
+          "active": true,
+          "label": "(GMT+13:00) Phoenix Islands Time (Pacific/Enderbury)",
+          "value": "Pacific/Enderbury"
+        },
+        {
+          "active": true,
+          "label": "(GMT+13:00) Tokelau Time (Pacific/Fakaofo)",
+          "value": "Pacific/Fakaofo"
+        },
+        {
+          "active": true,
+          "label": "(GMT+13:00) Tonga Standard Time (Pacific/Tongatapu)",
+          "value": "Pacific/Tongatapu"
+        },
+        {
+          "active": true,
+          "label": "(GMT+12:00) Anadyr Standard Time (Asia/Anadyr)",
+          "value": "Asia/Anadyr"
+        },
+        {
+          "active": true,
+          "label": "(GMT+12:00) Petropavlovsk-Kamchatski Standard Time (Asia/Kamchatka)",
+          "value": "Asia/Kamchatka"
+        },
+        {
+          "active": true,
+          "label": "(GMT+12:00) Fiji Standard Time (Pacific/Fiji)",
+          "value": "Pacific/Fiji"
+        },
+        {
+          "active": true,
+          "label": "(GMT+12:00) Tuvalu Time (Pacific/Funafuti)",
+          "value": "Pacific/Funafuti"
+        },
+        {
+          "active": true,
+          "label": "(GMT+12:00) Marshall Islands Time (Pacific/Kwajalein)",
+          "value": "Pacific/Kwajalein"
+        },
+        {
+          "active": true,
+          "label": "(GMT+12:00) Marshall Islands Time (Pacific/Majuro)",
+          "value": "Pacific/Majuro"
+        },
+        {
+          "active": true,
+          "label": "(GMT+12:00) Nauru Time (Pacific/Nauru)",
+          "value": "Pacific/Nauru"
+        },
+        {
+          "active": true,
+          "label": "(GMT+12:00) Norfolk Island Daylight Time (Pacific/Norfolk)",
+          "value": "Pacific/Norfolk"
+        },
+        {
+          "active": true,
+          "label": "(GMT+12:00) Gilbert Islands Time (Pacific/Tarawa)",
+          "value": "Pacific/Tarawa"
+        },
+        {
+          "active": true,
+          "label": "(GMT+12:00) Wake Island Time (Pacific/Wake)",
+          "value": "Pacific/Wake"
+        },
+        {
+          "active": true,
+          "label": "(GMT+12:00) Wallis & Futuna Time (Pacific/Wallis)",
+          "value": "Pacific/Wallis"
+        },
+        {
+          "active": true,
+          "label": "(GMT+11:00) Australian Eastern Daylight Time (Antarctica/Macquarie)",
+          "value": "Antarctica/Macquarie"
+        },
+        {
+          "active": true,
+          "label": "(GMT+11:00) Magadan Standard Time (Asia/Magadan)",
+          "value": "Asia/Magadan"
+        },
+        {
+          "active": true,
+          "label": "(GMT+11:00) Sakhalin Standard Time (Asia/Sakhalin)",
+          "value": "Asia/Sakhalin"
+        },
+        {
+          "active": true,
+          "label": "(GMT+11:00) Magadan Standard Time (Asia/Srednekolymsk)",
+          "value": "Asia/Srednekolymsk"
+        },
+        {
+          "active": true,
+          "label": "(GMT+11:00) Australian Eastern Daylight Time (Australia/Currie)",
+          "value": "Australia/Currie"
+        },
+        {
+          "active": true,
+          "label": "(GMT+11:00) Australian Eastern Daylight Time (Australia/Hobart)",
+          "value": "Australia/Hobart"
+        },
+        {
+          "active": true,
+          "label": "(GMT+11:00) Lord Howe Daylight Time (Australia/Lord_Howe)",
+          "value": "Australia/Lord_Howe"
+        },
+        {
+          "active": true,
+          "label": "(GMT+11:00) Australian Eastern Daylight Time (Australia/Melbourne)",
+          "value": "Australia/Melbourne"
+        },
+        {
+          "active": true,
+          "label": "(GMT+11:00) Australian Eastern Daylight Time (Australia/Sydney)",
+          "value": "Australia/Sydney"
+        },
+        {
+          "active": true,
+          "label": "(GMT+11:00) Bougainville Standard Time (Pacific/Bougainville)",
+          "value": "Pacific/Bougainville"
+        },
+        {
+          "active": true,
+          "label": "(GMT+11:00) Vanuatu Standard Time (Pacific/Efate)",
+          "value": "Pacific/Efate"
+        },
+        {
+          "active": true,
+          "label": "(GMT+11:00) Solomon Islands Time (Pacific/Guadalcanal)",
+          "value": "Pacific/Guadalcanal"
+        },
+        {
+          "active": true,
+          "label": "(GMT+11:00) Kosrae Time (Pacific/Kosrae)",
+          "value": "Pacific/Kosrae"
+        },
+        {
+          "active": true,
+          "label": "(GMT+11:00) New Caledonia Standard Time (Pacific/Noumea)",
+          "value": "Pacific/Noumea"
+        },
+        {
+          "active": true,
+          "label": "(GMT+11:00) Ponape Time (Pacific/Ponape)",
+          "value": "Pacific/Ponape"
+        },
+        {
+          "active": true,
+          "label": "(GMT+10:30) Australian Central Daylight Time (Australia/Adelaide)",
+          "value": "Australia/Adelaide"
+        },
+        {
+          "active": true,
+          "label": "(GMT+10:30) Australian Central Daylight Time (Australia/Broken_Hill)",
+          "value": "Australia/Broken_Hill"
+        },
+        {
+          "active": true,
+          "label": "(GMT+10:00) Dumont-d’Urville Time (Antarctica/DumontDUrville)",
+          "value": "Antarctica/DumontDUrville"
+        },
+        {
+          "active": true,
+          "label": "(GMT+10:00) Vladivostok Standard Time (Asia/Ust-Nera)",
+          "value": "Asia/Ust-Nera"
+        },
+        {
+          "active": true,
+          "label": "(GMT+10:00) Vladivostok Standard Time (Asia/Vladivostok)",
+          "value": "Asia/Vladivostok"
+        },
+        {
+          "active": true,
+          "label": "(GMT+10:00) Australian Eastern Standard Time (Australia/Brisbane)",
+          "value": "Australia/Brisbane"
+        },
+        {
+          "active": true,
+          "label": "(GMT+10:00) Australian Eastern Standard Time (Australia/Lindeman)",
+          "value": "Australia/Lindeman"
+        },
+        {
+          "active": true,
+          "label": "(GMT+10:00) Chamorro Standard Time (Pacific/Guam)",
+          "value": "Pacific/Guam"
+        },
+        {
+          "active": true,
+          "label": "(GMT+10:00) Papua New Guinea Time (Pacific/Port_Moresby)",
+          "value": "Pacific/Port_Moresby"
+        },
+        {
+          "active": true,
+          "label": "(GMT+10:00) Chamorro Standard Time (Pacific/Saipan)",
+          "value": "Pacific/Saipan"
+        },
+        {
+          "active": true,
+          "label": "(GMT+10:00) Chuuk Time (Pacific/Truk)",
+          "value": "Pacific/Truk"
+        },
+        {
+          "active": true,
+          "label": "(GMT+09:30) Australian Central Standard Time (Australia/Darwin)",
+          "value": "Australia/Darwin"
+        },
+        {
+          "active": true,
+          "label": "(GMT+09:00) Yakutsk Standard Time (Asia/Chita)",
+          "value": "Asia/Chita"
+        },
+        {
+          "active": true,
+          "label": "(GMT+09:00) East Timor Time (Asia/Dili)",
+          "value": "Asia/Dili"
+        },
+        {
+          "active": true,
+          "label": "(GMT+09:00) Eastern Indonesia Time (Asia/Jayapura)",
+          "value": "Asia/Jayapura"
+        },
+        {
+          "active": true,
+          "label": "(GMT+09:00) Yakutsk Standard Time (Asia/Khandyga)",
+          "value": "Asia/Khandyga"
+        },
+        {
+          "active": true,
+          "label": "(GMT+09:00) Korean Standard Time (Asia/Seoul)",
+          "value": "Asia/Seoul"
+        },
+        {
+          "active": true,
+          "label": "(GMT+09:00) Japan Standard Time (Asia/Tokyo)",
+          "value": "Asia/Tokyo"
+        },
+        {
+          "active": true,
+          "label": "(GMT+09:00) Yakutsk Standard Time (Asia/Yakutsk)",
+          "value": "Asia/Yakutsk"
+        },
+        {
+          "active": true,
+          "label": "(GMT+09:00) Palau Time (Pacific/Palau)",
+          "value": "Pacific/Palau"
+        },
+        {
+          "active": true,
+          "label": "(GMT+08:45) Australian Central Western Standard Time (Australia/Eucla)",
+          "value": "Australia/Eucla"
+        },
+        {
+          "active": true,
+          "label": "(GMT+08:00) Casey Time (Antarctica/Casey)",
+          "value": "Antarctica/Casey"
+        },
+        {
+          "active": true,
+          "label": "(GMT+08:00) Brunei Darussalam Time (Asia/Brunei)",
+          "value": "Asia/Brunei"
+        },
+        {
+          "active": true,
+          "label": "(GMT+08:00) Ulaanbaatar Standard Time (Asia/Choibalsan)",
+          "value": "Asia/Choibalsan"
+        },
+        {
+          "active": true,
+          "label": "(GMT+08:00) Hong Kong Standard Time (Asia/Hong_Kong)",
+          "value": "Asia/Hong_Kong"
+        },
+        {
+          "active": true,
+          "label": "(GMT+08:00) Irkutsk Standard Time (Asia/Irkutsk)",
+          "value": "Asia/Irkutsk"
+        },
+        {
+          "active": true,
+          "label": "(GMT+08:00) Malaysia Time (Asia/Kuala_Lumpur)",
+          "value": "Asia/Kuala_Lumpur"
+        },
+        {
+          "active": true,
+          "label": "(GMT+08:00) Malaysia Time (Asia/Kuching)",
+          "value": "Asia/Kuching"
+        },
+        {
+          "active": true,
+          "label": "(GMT+08:00) China Standard Time (Asia/Macau)",
+          "value": "Asia/Macau"
+        },
+        {
+          "active": true,
+          "label": "(GMT+08:00) Central Indonesia Time (Asia/Makassar)",
+          "value": "Asia/Makassar"
+        },
+        {
+          "active": true,
+          "label": "(GMT+08:00) Philippine Standard Time (Asia/Manila)",
+          "value": "Asia/Manila"
+        },
+        {
+          "active": true,
+          "label": "(GMT+08:00) China Standard Time (Asia/Shanghai)",
+          "value": "Asia/Shanghai"
+        },
+        {
+          "active": true,
+          "label": "(GMT+08:00) Singapore Standard Time (Asia/Singapore)",
+          "value": "Asia/Singapore"
+        },
+        {
+          "active": true,
+          "label": "(GMT+08:00) Taipei Standard Time (Asia/Taipei)",
+          "value": "Asia/Taipei"
+        },
+        {
+          "active": true,
+          "label": "(GMT+08:00) Ulaanbaatar Standard Time (Asia/Ulaanbaatar)",
+          "value": "Asia/Ulaanbaatar"
+        },
+        {
+          "active": true,
+          "label": "(GMT+08:00) Australian Western Standard Time (Australia/Perth)",
+          "value": "Australia/Perth"
+        },
+        {
+          "active": true,
+          "label": "(GMT+07:00) Davis Time (Antarctica/Davis)",
+          "value": "Antarctica/Davis"
+        },
+        {
+          "active": true,
+          "label": "(GMT+07:00) Indochina Time (Asia/Bangkok)",
+          "value": "Asia/Bangkok"
+        },
+        {
+          "active": true,
+          "label": "(GMT+07:00) Moscow Standard Time + 4 (Asia/Barnaul)",
+          "value": "Asia/Barnaul"
+        },
+        {
+          "active": true,
+          "label": "(GMT+07:00) Indochina Time (Asia/Ho_Chi_Minh)",
+          "value": "Asia/Ho_Chi_Minh"
+        },
+        {
+          "active": true,
+          "label": "(GMT+07:00) Hovd Standard Time (Asia/Hovd)",
+          "value": "Asia/Hovd"
+        },
+        {
+          "active": true,
+          "label": "(GMT+07:00) Western Indonesia Time (Asia/Jakarta)",
+          "value": "Asia/Jakarta"
+        },
+        {
+          "active": true,
+          "label": "(GMT+07:00) Krasnoyarsk Standard Time (Asia/Krasnoyarsk)",
+          "value": "Asia/Krasnoyarsk"
+        },
+        {
+          "active": true,
+          "label": "(GMT+07:00) Krasnoyarsk Standard Time (Asia/Novokuznetsk)",
+          "value": "Asia/Novokuznetsk"
+        },
+        {
+          "active": true,
+          "label": "(GMT+07:00) Novosibirsk Standard Time (Asia/Novosibirsk)",
+          "value": "Asia/Novosibirsk"
+        },
+        {
+          "active": true,
+          "label": "(GMT+07:00) Indochina Time (Asia/Phnom_Penh)",
+          "value": "Asia/Phnom_Penh"
+        },
+        {
+          "active": true,
+          "label": "(GMT+07:00) Western Indonesia Time (Asia/Pontianak)",
+          "value": "Asia/Pontianak"
+        },
+        {
+          "active": true,
+          "label": "(GMT+07:00) Moscow Standard Time + 4 (Asia/Tomsk)",
+          "value": "Asia/Tomsk"
+        },
+        {
+          "active": true,
+          "label": "(GMT+07:00) Indochina Time (Asia/Vientiane)",
+          "value": "Asia/Vientiane"
+        },
+        {
+          "active": true,
+          "label": "(GMT+07:00) Christmas Island Time (Indian/Christmas)",
+          "value": "Indian/Christmas"
+        },
+        {
+          "active": true,
+          "label": "(GMT+06:30) Myanmar Time (Asia/Rangoon)",
+          "value": "Asia/Rangoon"
+        },
+        {
+          "active": true,
+          "label": "(GMT+06:30) Cocos Islands Time (Indian/Cocos)",
+          "value": "Indian/Cocos"
+        },
+        {
+          "active": true,
+          "label": "(GMT+06:00) Kyrgyzstan Time (Asia/Bishkek)",
+          "value": "Asia/Bishkek"
+        },
+        {
+          "active": true,
+          "label": "(GMT+06:00) Bangladesh Standard Time (Asia/Dhaka)",
+          "value": "Asia/Dhaka"
+        },
+        {
+          "active": true,
+          "label": "(GMT+06:00) Omsk Standard Time (Asia/Omsk)",
+          "value": "Asia/Omsk"
+        },
+        {
+          "active": true,
+          "label": "(GMT+06:00) Bhutan Time (Asia/Thimphu)",
+          "value": "Asia/Thimphu"
+        },
+        {
+          "active": true,
+          "label": "(GMT+06:00) China Standard Time (Asia/Urumqi)",
+          "value": "Asia/Urumqi"
+        },
+        {
+          "active": true,
+          "label": "(GMT+06:00) Indian Ocean Time (Indian/Chagos)",
+          "value": "Indian/Chagos"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:45) Nepal Time (Asia/Kathmandu)",
+          "value": "Asia/Kathmandu"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:30) India Standard Time (Asia/Colombo)",
+          "value": "Asia/Colombo"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:30) India Standard Time (Asia/Kolkata)",
+          "value": "Asia/Kolkata"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:00) Mawson Time (Antarctica/Mawson)",
+          "value": "Antarctica/Mawson"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:00) Vostok Time (Antarctica/Vostok)",
+          "value": "Antarctica/Vostok"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:00) East Kazakhstan Time (Asia/Almaty)",
+          "value": "Asia/Almaty"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:00) West Kazakhstan Time (Asia/Aqtau)",
+          "value": "Asia/Aqtau"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:00) West Kazakhstan Time (Asia/Aqtobe)",
+          "value": "Asia/Aqtobe"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:00) Turkmenistan Standard Time (Asia/Ashgabat)",
+          "value": "Asia/Ashgabat"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:00) West Kazakhstan Time (Asia/Atyrau)",
+          "value": "Asia/Atyrau"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:00) Tajikistan Time (Asia/Dushanbe)",
+          "value": "Asia/Dushanbe"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:00) Pakistan Standard Time (Asia/Karachi)",
+          "value": "Asia/Karachi"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:00) West Kazakhstan Time (Asia/Oral)",
+          "value": "Asia/Oral"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:00) East Kazakhstan Time (Asia/Qostanay)",
+          "value": "Asia/Qostanay"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:00) West Kazakhstan Time (Asia/Qyzylorda)",
+          "value": "Asia/Qyzylorda"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:00) Uzbekistan Standard Time (Asia/Samarkand)",
+          "value": "Asia/Samarkand"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:00) Uzbekistan Standard Time (Asia/Tashkent)",
+          "value": "Asia/Tashkent"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:00) Yekaterinburg Standard Time (Asia/Yekaterinburg)",
+          "value": "Asia/Yekaterinburg"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:00) French Southern & Antarctic Time (Indian/Kerguelen)",
+          "value": "Indian/Kerguelen"
+        },
+        {
+          "active": true,
+          "label": "(GMT+05:00) Maldives Time (Indian/Maldives)",
+          "value": "Indian/Maldives"
+        },
+        {
+          "active": true,
+          "label": "(GMT+04:30) Afghanistan Time (Asia/Kabul)",
+          "value": "Asia/Kabul"
+        },
+        {
+          "active": true,
+          "label": "(GMT+04:00) Azerbaijan Standard Time (Asia/Baku)",
+          "value": "Asia/Baku"
+        },
+        {
+          "active": true,
+          "label": "(GMT+04:00) Gulf Standard Time (Asia/Dubai)",
+          "value": "Asia/Dubai"
+        },
+        {
+          "active": true,
+          "label": "(GMT+04:00) Gulf Standard Time (Asia/Muscat)",
+          "value": "Asia/Muscat"
+        },
+        {
+          "active": true,
+          "label": "(GMT+04:00) Georgia Standard Time (Asia/Tbilisi)",
+          "value": "Asia/Tbilisi"
+        },
+        {
+          "active": true,
+          "label": "(GMT+04:00) Armenia Standard Time (Asia/Yerevan)",
+          "value": "Asia/Yerevan"
+        },
+        {
+          "active": true,
+          "label": "(GMT+04:00) Samara Standard Time (Europe/Astrakhan)",
+          "value": "Europe/Astrakhan"
+        },
+        {
+          "active": true,
+          "label": "(GMT+04:00) Samara Standard Time (Europe/Samara)",
+          "value": "Europe/Samara"
+        },
+        {
+          "active": true,
+          "label": "(GMT+04:00) Moscow Standard Time + 1 (Europe/Saratov)",
+          "value": "Europe/Saratov"
+        },
+        {
+          "active": true,
+          "label": "(GMT+04:00) Moscow Standard Time + 1 (Europe/Ulyanovsk)",
+          "value": "Europe/Ulyanovsk"
+        },
+        {
+          "active": true,
+          "label": "(GMT+04:00) Seychelles Time (Indian/Mahe)",
+          "value": "Indian/Mahe"
+        },
+        {
+          "active": true,
+          "label": "(GMT+04:00) Mauritius Standard Time (Indian/Mauritius)",
+          "value": "Indian/Mauritius"
+        },
+        {
+          "active": true,
+          "label": "(GMT+04:00) Réunion Time (Indian/Reunion)",
+          "value": "Indian/Reunion"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) East Africa Time (Africa/Addis_Ababa)",
+          "value": "Africa/Addis_Ababa"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) East Africa Time (Africa/Asmera)",
+          "value": "Africa/Asmera"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) East Africa Time (Africa/Dar_es_Salaam)",
+          "value": "Africa/Dar_es_Salaam"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) East Africa Time (Africa/Djibouti)",
+          "value": "Africa/Djibouti"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) East Africa Time (Africa/Kampala)",
+          "value": "Africa/Kampala"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) East Africa Time (Africa/Mogadishu)",
+          "value": "Africa/Mogadishu"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) East Africa Time (Africa/Nairobi)",
+          "value": "Africa/Nairobi"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) Syowa Time (Antarctica/Syowa)",
+          "value": "Antarctica/Syowa"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) Arabian Standard Time (Asia/Aden)",
+          "value": "Asia/Aden"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) Eastern European Standard Time (Asia/Amman)",
+          "value": "Asia/Amman"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) Arabian Standard Time (Asia/Baghdad)",
+          "value": "Asia/Baghdad"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) Arabian Standard Time (Asia/Bahrain)",
+          "value": "Asia/Bahrain"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) Arabian Standard Time (Asia/Kuwait)",
+          "value": "Asia/Kuwait"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) Arabian Standard Time (Asia/Qatar)",
+          "value": "Asia/Qatar"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) Arabian Standard Time (Asia/Riyadh)",
+          "value": "Asia/Riyadh"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) Eastern European Standard Time (Europe/Istanbul)",
+          "value": "Europe/Istanbul"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) Moscow Standard Time (Europe/Kirov)",
+          "value": "Europe/Kirov"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) Moscow Standard Time (Europe/Minsk)",
+          "value": "Europe/Minsk"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) Moscow Standard Time (Europe/Moscow)",
+          "value": "Europe/Moscow"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) Volgograd Standard Time (Europe/Volgograd)",
+          "value": "Europe/Volgograd"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) East Africa Time (Indian/Antananarivo)",
+          "value": "Indian/Antananarivo"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) East Africa Time (Indian/Comoro)",
+          "value": "Indian/Comoro"
+        },
+        {
+          "active": true,
+          "label": "(GMT+03:00) East Africa Time (Indian/Mayotte)",
+          "value": "Indian/Mayotte"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Central Africa Time (Africa/Blantyre)",
+          "value": "Africa/Blantyre"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Central Africa Time (Africa/Bujumbura)",
+          "value": "Africa/Bujumbura"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Africa/Cairo)",
+          "value": "Africa/Cairo"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Central Africa Time (Africa/Gaborone)",
+          "value": "Africa/Gaborone"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Central Africa Time (Africa/Harare)",
+          "value": "Africa/Harare"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) South Africa Standard Time (Africa/Johannesburg)",
+          "value": "Africa/Johannesburg"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Central Africa Time (Africa/Juba)",
+          "value": "Africa/Juba"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Central Africa Time (Africa/Khartoum)",
+          "value": "Africa/Khartoum"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Central Africa Time (Africa/Kigali)",
+          "value": "Africa/Kigali"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Central Africa Time (Africa/Lubumbashi)",
+          "value": "Africa/Lubumbashi"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Central Africa Time (Africa/Lusaka)",
+          "value": "Africa/Lusaka"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Central Africa Time (Africa/Maputo)",
+          "value": "Africa/Maputo"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) South Africa Standard Time (Africa/Maseru)",
+          "value": "Africa/Maseru"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) South Africa Standard Time (Africa/Mbabane)",
+          "value": "Africa/Mbabane"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Africa/Tripoli)",
+          "value": "Africa/Tripoli"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Central Africa Time (Africa/Windhoek)",
+          "value": "Africa/Windhoek"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Asia/Beirut)",
+          "value": "Asia/Beirut"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Asia/Famagusta)",
+          "value": "Asia/Famagusta"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Asia/Gaza)",
+          "value": "Asia/Gaza"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Asia/Hebron)",
+          "value": "Asia/Hebron"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Israel Standard Time (Asia/Jerusalem)",
+          "value": "Asia/Jerusalem"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Asia/Nicosia)",
+          "value": "Asia/Nicosia"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Europe/Athens)",
+          "value": "Europe/Athens"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Europe/Bucharest)",
+          "value": "Europe/Bucharest"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Europe/Chisinau)",
+          "value": "Europe/Chisinau"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Europe/Helsinki)",
+          "value": "Europe/Helsinki"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Europe/Kaliningrad)",
+          "value": "Europe/Kaliningrad"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Europe/Kyiv)",
+          "value": "Europe/Kiev"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Europe/Mariehamn)",
+          "value": "Europe/Mariehamn"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Europe/Riga)",
+          "value": "Europe/Riga"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Europe/Sofia)",
+          "value": "Europe/Sofia"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Europe/Tallinn)",
+          "value": "Europe/Tallinn"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Europe/Uzhgorod)",
+          "value": "Europe/Uzhgorod"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Europe/Vilnius)",
+          "value": "Europe/Vilnius"
+        },
+        {
+          "active": true,
+          "label": "(GMT+02:00) Eastern European Standard Time (Europe/Zaporozhye)",
+          "value": "Europe/Zaporozhye"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Africa/Algiers)",
+          "value": "Africa/Algiers"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) West Africa Standard Time (Africa/Bangui)",
+          "value": "Africa/Bangui"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) West Africa Standard Time (Africa/Brazzaville)",
+          "value": "Africa/Brazzaville"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Western European Summer Time (Africa/Casablanca)",
+          "value": "Africa/Casablanca"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Africa/Ceuta)",
+          "value": "Africa/Ceuta"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) West Africa Standard Time (Africa/Douala)",
+          "value": "Africa/Douala"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Western European Summer Time (Africa/El_Aaiun)",
+          "value": "Africa/El_Aaiun"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) West Africa Standard Time (Africa/Kinshasa)",
+          "value": "Africa/Kinshasa"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) West Africa Standard Time (Africa/Lagos)",
+          "value": "Africa/Lagos"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) West Africa Standard Time (Africa/Libreville)",
+          "value": "Africa/Libreville"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) West Africa Standard Time (Africa/Luanda)",
+          "value": "Africa/Luanda"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) West Africa Standard Time (Africa/Malabo)",
+          "value": "Africa/Malabo"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) West Africa Standard Time (Africa/Ndjamena)",
+          "value": "Africa/Ndjamena"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) West Africa Standard Time (Africa/Niamey)",
+          "value": "Africa/Niamey"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) West Africa Standard Time (Africa/Porto-Novo)",
+          "value": "Africa/Porto-Novo"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Africa/Tunis)",
+          "value": "Africa/Tunis"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Arctic/Longyearbyen)",
+          "value": "Arctic/Longyearbyen"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Amsterdam)",
+          "value": "Europe/Amsterdam"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Andorra)",
+          "value": "Europe/Andorra"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Belgrade)",
+          "value": "Europe/Belgrade"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Berlin)",
+          "value": "Europe/Berlin"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Bratislava)",
+          "value": "Europe/Bratislava"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Brussels)",
+          "value": "Europe/Brussels"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Budapest)",
+          "value": "Europe/Budapest"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Busingen)",
+          "value": "Europe/Busingen"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Copenhagen)",
+          "value": "Europe/Copenhagen"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Gibraltar)",
+          "value": "Europe/Gibraltar"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Ljubljana)",
+          "value": "Europe/Ljubljana"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Luxembourg)",
+          "value": "Europe/Luxembourg"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Madrid)",
+          "value": "Europe/Madrid"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Malta)",
+          "value": "Europe/Malta"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Monaco)",
+          "value": "Europe/Monaco"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Oslo)",
+          "value": "Europe/Oslo"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Paris)",
+          "value": "Europe/Paris"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Podgorica)",
+          "value": "Europe/Podgorica"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Prague)",
+          "value": "Europe/Prague"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Rome)",
+          "value": "Europe/Rome"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/San_Marino)",
+          "value": "Europe/San_Marino"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Sarajevo)",
+          "value": "Europe/Sarajevo"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Skopje)",
+          "value": "Europe/Skopje"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Stockholm)",
+          "value": "Europe/Stockholm"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Tirane)",
+          "value": "Europe/Tirane"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Vaduz)",
+          "value": "Europe/Vaduz"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Vatican)",
+          "value": "Europe/Vatican"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Vienna)",
+          "value": "Europe/Vienna"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Warsaw)",
+          "value": "Europe/Warsaw"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Zagreb)",
+          "value": "Europe/Zagreb"
+        },
+        {
+          "active": true,
+          "label": "(GMT+01:00) Central European Standard Time (Europe/Zurich)",
+          "value": "Europe/Zurich"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Africa/Abidjan)",
+          "value": "Africa/Abidjan"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Africa/Accra)",
+          "value": "Africa/Accra"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Africa/Bamako)",
+          "value": "Africa/Bamako"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Africa/Banjul)",
+          "value": "Africa/Banjul"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Africa/Bissau)",
+          "value": "Africa/Bissau"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Africa/Conakry)",
+          "value": "Africa/Conakry"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Africa/Dakar)",
+          "value": "Africa/Dakar"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Africa/Freetown)",
+          "value": "Africa/Freetown"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Africa/Lome)",
+          "value": "Africa/Lome"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Africa/Monrovia)",
+          "value": "Africa/Monrovia"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Africa/Nouakchott)",
+          "value": "Africa/Nouakchott"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Africa/Ouagadougou)",
+          "value": "Africa/Ouagadougou"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Africa/Sao_Tome)",
+          "value": "Africa/Sao_Tome"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (America/Danmarkshavn)",
+          "value": "America/Danmarkshavn"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Antarctica/Troll)",
+          "value": "Antarctica/Troll"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Western European Standard Time (Atlantic/Canary)",
+          "value": "Atlantic/Canary"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Western European Standard Time (Atlantic/Faeroe)",
+          "value": "Atlantic/Faeroe"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Western European Standard Time (Atlantic/Madeira)",
+          "value": "Atlantic/Madeira"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Atlantic/Reykjavik)",
+          "value": "Atlantic/Reykjavik"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Atlantic/St_Helena)",
+          "value": "Atlantic/St_Helena"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Europe/Dublin)",
+          "value": "Europe/Dublin"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Europe/Guernsey)",
+          "value": "Europe/Guernsey"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Europe/Isle_of_Man)",
+          "value": "Europe/Isle_of_Man"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Europe/Jersey)",
+          "value": "Europe/Jersey"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Western European Standard Time (Europe/Lisbon)",
+          "value": "Europe/Lisbon"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (Europe/London)",
+          "value": "Europe/London"
+        },
+        {
+          "active": true,
+          "label": "(GMT+00:00) Greenwich Mean Time (GMT)",
+          "value": "GMT"
+        },
+        {
+          "active": true,
+          "label": "(GMT-01:00) Azores Standard Time (Atlantic/Azores)",
+          "value": "Atlantic/Azores"
+        },
+        {
+          "active": true,
+          "label": "(GMT-01:00) Cape Verde Standard Time (Atlantic/Cape_Verde)",
+          "value": "Atlantic/Cape_Verde"
+        },
+        {
+          "active": true,
+          "label": "(GMT-02:00) West Greenland Standard Time (America/Godthab)",
+          "value": "America/Godthab"
+        },
+        {
+          "active": true,
+          "label": "(GMT-02:00) Fernando de Noronha Standard Time (America/Noronha)",
+          "value": "America/Noronha"
+        },
+        {
+          "active": true,
+          "label": "(GMT-02:00) East Greenland Standard Time (America/Scoresbysund)",
+          "value": "America/Scoresbysund"
+        },
+        {
+          "active": true,
+          "label": "(GMT-02:00) South Georgia Time (Atlantic/South_Georgia)",
+          "value": "Atlantic/South_Georgia"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Brasilia Standard Time (America/Araguaina)",
+          "value": "America/Araguaina"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Argentina Standard Time (America/Argentina/Buenos_Aires)",
+          "value": "America/Argentina/Buenos_Aires"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Argentina Standard Time (America/Argentina/La_Rioja)",
+          "value": "America/Argentina/La_Rioja"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Argentina Standard Time (America/Argentina/Rio_Gallegos)",
+          "value": "America/Argentina/Rio_Gallegos"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Argentina Standard Time (America/Argentina/Salta)",
+          "value": "America/Argentina/Salta"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Argentina Standard Time (America/Argentina/San_Juan)",
+          "value": "America/Argentina/San_Juan"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Argentina Standard Time (America/Argentina/San_Luis)",
+          "value": "America/Argentina/San_Luis"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Argentina Standard Time (America/Argentina/Tucuman)",
+          "value": "America/Argentina/Tucuman"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Argentina Standard Time (America/Argentina/Ushuaia)",
+          "value": "America/Argentina/Ushuaia"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Paraguay Standard Time (America/Asuncion)",
+          "value": "America/Asuncion"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Brasilia Standard Time (America/Bahia)",
+          "value": "America/Bahia"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Brasilia Standard Time (America/Belem)",
+          "value": "America/Belem"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Argentina Standard Time (America/Catamarca)",
+          "value": "America/Catamarca"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) French Guiana Time (America/Cayenne)",
+          "value": "America/Cayenne"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Argentina Standard Time (America/Cordoba)",
+          "value": "America/Cordoba"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Brasilia Standard Time (America/Fortaleza)",
+          "value": "America/Fortaleza"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Argentina Standard Time (America/Jujuy)",
+          "value": "America/Jujuy"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Brasilia Standard Time (America/Maceio)",
+          "value": "America/Maceio"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Argentina Standard Time (America/Mendoza)",
+          "value": "America/Mendoza"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) St Pierre & Miquelon Standard Time (America/Miquelon)",
+          "value": "America/Miquelon"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Uruguay Standard Time (America/Montevideo)",
+          "value": "America/Montevideo"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Suriname Time (America/Paramaribo)",
+          "value": "America/Paramaribo"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Chile Standard Time (America/Punta_Arenas)",
+          "value": "America/Punta_Arenas"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Brasilia Standard Time (America/Recife)",
+          "value": "America/Recife"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Brasilia Standard Time (America/Santarem)",
+          "value": "America/Santarem"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Chile Summer Time (America/Santiago)",
+          "value": "America/Santiago"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Brasilia Standard Time (America/Sao_Paulo)",
+          "value": "America/Sao_Paulo"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Chile Standard Time (Antarctica/Palmer)",
+          "value": "Antarctica/Palmer"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Rothera Time (Antarctica/Rothera)",
+          "value": "Antarctica/Rothera"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:00) Falkland Islands Standard Time (Atlantic/Stanley)",
+          "value": "Atlantic/Stanley"
+        },
+        {
+          "active": true,
+          "label": "(GMT-03:30) Newfoundland Standard Time (America/St_Johns)",
+          "value": "America/St_Johns"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Anguilla)",
+          "value": "America/Anguilla"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Antigua)",
+          "value": "America/Antigua"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Aruba)",
+          "value": "America/Aruba"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Barbados)",
+          "value": "America/Barbados"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Blanc-Sablon)",
+          "value": "America/Blanc-Sablon"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Amazon Standard Time (America/Boa_Vista)",
+          "value": "America/Boa_Vista"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Amazon Standard Time (America/Campo_Grande)",
+          "value": "America/Campo_Grande"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Venezuela Time (America/Caracas)",
+          "value": "America/Caracas"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Amazon Standard Time (America/Cuiaba)",
+          "value": "America/Cuiaba"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Curacao)",
+          "value": "America/Curacao"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Dominica)",
+          "value": "America/Dominica"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Glace_Bay)",
+          "value": "America/Glace_Bay"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Goose_Bay)",
+          "value": "America/Goose_Bay"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Grenada)",
+          "value": "America/Grenada"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Guadeloupe)",
+          "value": "America/Guadeloupe"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Guyana Time (America/Guyana)",
+          "value": "America/Guyana"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Halifax)",
+          "value": "America/Halifax"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Kralendijk)",
+          "value": "America/Kralendijk"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Bolivia Time (America/La_Paz)",
+          "value": "America/La_Paz"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Lower_Princes)",
+          "value": "America/Lower_Princes"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Amazon Standard Time (America/Manaus)",
+          "value": "America/Manaus"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Marigot)",
+          "value": "America/Marigot"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Martinique)",
+          "value": "America/Martinique"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Moncton)",
+          "value": "America/Moncton"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Montserrat)",
+          "value": "America/Montserrat"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Port_of_Spain)",
+          "value": "America/Port_of_Spain"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Amazon Standard Time (America/Porto_Velho)",
+          "value": "America/Porto_Velho"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Puerto_Rico)",
+          "value": "America/Puerto_Rico"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Santo_Domingo)",
+          "value": "America/Santo_Domingo"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/St_Barthelemy)",
+          "value": "America/St_Barthelemy"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/St_Kitts)",
+          "value": "America/St_Kitts"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/St_Lucia)",
+          "value": "America/St_Lucia"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/St_Thomas)",
+          "value": "America/St_Thomas"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/St_Vincent)",
+          "value": "America/St_Vincent"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Thule)",
+          "value": "America/Thule"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (America/Tortola)",
+          "value": "America/Tortola"
+        },
+        {
+          "active": true,
+          "label": "(GMT-04:00) Atlantic Standard Time (Atlantic/Bermuda)",
+          "value": "Atlantic/Bermuda"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Colombia Standard Time (America/Bogota)",
+          "value": "America/Bogota"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Cancun)",
+          "value": "America/Cancun"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Cayman)",
+          "value": "America/Cayman"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Coral_Harbour)",
+          "value": "America/Coral_Harbour"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Detroit)",
+          "value": "America/Detroit"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Acre Standard Time (America/Eirunepe)",
+          "value": "America/Eirunepe"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Grand_Turk)",
+          "value": "America/Grand_Turk"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Ecuador Time (America/Guayaquil)",
+          "value": "America/Guayaquil"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Indiana/Indianapolis)",
+          "value": "America/Indiana/Indianapolis"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Indiana/Marengo)",
+          "value": "America/Indiana/Marengo"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Indiana/Petersburg)",
+          "value": "America/Indiana/Petersburg"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Indiana/Vevay)",
+          "value": "America/Indiana/Vevay"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Indiana/Vincennes)",
+          "value": "America/Indiana/Vincennes"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Indiana/Winamac)",
+          "value": "America/Indiana/Winamac"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Iqaluit)",
+          "value": "America/Iqaluit"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Jamaica)",
+          "value": "America/Jamaica"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Kentucky/Monticello)",
+          "value": "America/Kentucky/Monticello"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Peru Standard Time (America/Lima)",
+          "value": "America/Lima"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Louisville)",
+          "value": "America/Louisville"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Montreal)",
+          "value": "America/Montreal"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Nassau)",
+          "value": "America/Nassau"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/New_York)",
+          "value": "America/New_York"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Nipigon)",
+          "value": "America/Nipigon"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Panama)",
+          "value": "America/Panama"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Pangnirtung)",
+          "value": "America/Pangnirtung"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Port-au-Prince)",
+          "value": "America/Port-au-Prince"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Acre Standard Time (America/Rio_Branco)",
+          "value": "America/Rio_Branco"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Thunder_Bay)",
+          "value": "America/Thunder_Bay"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Eastern Standard Time (America/Toronto)",
+          "value": "America/Toronto"
+        },
+        {
+          "active": true,
+          "label": "(GMT-05:00) Easter Island Summer Time (Pacific/Easter)",
+          "value": "Pacific/Easter"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Bahia_Banderas)",
+          "value": "America/Bahia_Banderas"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Belize)",
+          "value": "America/Belize"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Chicago)",
+          "value": "America/Chicago"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Mexican Pacific Standard Time (America/Chihuahua)",
+          "value": "America/Chihuahua"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Costa_Rica)",
+          "value": "America/Costa_Rica"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/El_Salvador)",
+          "value": "America/El_Salvador"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Guatemala)",
+          "value": "America/Guatemala"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Indiana/Knox)",
+          "value": "America/Indiana/Knox"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Indiana/Tell_City)",
+          "value": "America/Indiana/Tell_City"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Managua)",
+          "value": "America/Managua"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Matamoros)",
+          "value": "America/Matamoros"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Menominee)",
+          "value": "America/Menominee"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Merida)",
+          "value": "America/Merida"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Mexico_City)",
+          "value": "America/Mexico_City"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Monterrey)",
+          "value": "America/Monterrey"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/North_Dakota/Beulah)",
+          "value": "America/North_Dakota/Beulah"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/North_Dakota/Center)",
+          "value": "America/North_Dakota/Center"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/North_Dakota/New_Salem)",
+          "value": "America/North_Dakota/New_Salem"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Mountain Standard Time (America/Ojinaga)",
+          "value": "America/Ojinaga"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Rainy_River)",
+          "value": "America/Rainy_River"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Rankin_Inlet)",
+          "value": "America/Rankin_Inlet"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Regina)",
+          "value": "America/Regina"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Resolute)",
+          "value": "America/Resolute"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Swift_Current)",
+          "value": "America/Swift_Current"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Tegucigalpa)",
+          "value": "America/Tegucigalpa"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Central Standard Time (America/Winnipeg)",
+          "value": "America/Winnipeg"
+        },
+        {
+          "active": true,
+          "label": "(GMT-06:00) Galapagos Time (Pacific/Galapagos)",
+          "value": "Pacific/Galapagos"
+        },
+        {
+          "active": true,
+          "label": "(GMT-07:00) Mountain Standard Time (America/Boise)",
+          "value": "America/Boise"
+        },
+        {
+          "active": true,
+          "label": "(GMT-07:00) Mountain Standard Time (America/Cambridge_Bay)",
+          "value": "America/Cambridge_Bay"
+        },
+        {
+          "active": true,
+          "label": "(GMT-07:00) Mountain Standard Time (America/Creston)",
+          "value": "America/Creston"
+        },
+        {
+          "active": true,
+          "label": "(GMT-07:00) Yukon Time (America/Dawson)",
+          "value": "America/Dawson"
+        },
+        {
+          "active": true,
+          "label": "(GMT-07:00) Mountain Standard Time (America/Dawson_Creek)",
+          "value": "America/Dawson_Creek"
+        },
+        {
+          "active": true,
+          "label": "(GMT-07:00) Mountain Standard Time (America/Denver)",
+          "value": "America/Denver"
+        },
+        {
+          "active": true,
+          "label": "(GMT-07:00) Mountain Standard Time (America/Edmonton)",
+          "value": "America/Edmonton"
+        },
+        {
+          "active": true,
+          "label": "(GMT-07:00) Mountain Standard Time (America/Fort_Nelson)",
+          "value": "America/Fort_Nelson"
+        },
+        {
+          "active": true,
+          "label": "(GMT-07:00) Mexican Pacific Standard Time (America/Hermosillo)",
+          "value": "America/Hermosillo"
+        },
+        {
+          "active": true,
+          "label": "(GMT-07:00) Mountain Standard Time (America/Inuvik)",
+          "value": "America/Inuvik"
+        },
+        {
+          "active": true,
+          "label": "(GMT-07:00) Mexican Pacific Standard Time (America/Mazatlan)",
+          "value": "America/Mazatlan"
+        },
+        {
+          "active": true,
+          "label": "(GMT-07:00) Mountain Standard Time (America/Phoenix)",
+          "value": "America/Phoenix"
+        },
+        {
+          "active": true,
+          "label": "(GMT-07:00) Yukon Time (America/Whitehorse)",
+          "value": "America/Whitehorse"
+        },
+        {
+          "active": true,
+          "label": "(GMT-07:00) Mountain Standard Time (America/Yellowknife)",
+          "value": "America/Yellowknife"
+        },
+        {
+          "active": true,
+          "label": "(GMT-08:00) Pacific Standard Time (America/Los_Angeles)",
+          "value": "America/Los_Angeles"
+        },
+        {
+          "active": true,
+          "label": "(GMT-08:00) Northwest Mexico Standard Time (America/Santa_Isabel)",
+          "value": "America/Santa_Isabel"
+        },
+        {
+          "active": true,
+          "label": "(GMT-08:00) Pacific Standard Time (America/Tijuana)",
+          "value": "America/Tijuana"
+        },
+        {
+          "active": true,
+          "label": "(GMT-08:00) Pacific Standard Time (America/Vancouver)",
+          "value": "America/Vancouver"
+        },
+        {
+          "active": true,
+          "label": "(GMT-08:00) Pitcairn Time (Pacific/Pitcairn)",
+          "value": "Pacific/Pitcairn"
+        },
+        {
+          "active": true,
+          "label": "(GMT-09:00) Alaska Standard Time (America/Anchorage)",
+          "value": "America/Anchorage"
+        },
+        {
+          "active": true,
+          "label": "(GMT-09:00) Alaska Standard Time (America/Juneau)",
+          "value": "America/Juneau"
+        },
+        {
+          "active": true,
+          "label": "(GMT-09:00) Alaska Standard Time (America/Metlakatla)",
+          "value": "America/Metlakatla"
+        },
+        {
+          "active": true,
+          "label": "(GMT-09:00) Alaska Standard Time (America/Nome)",
+          "value": "America/Nome"
+        },
+        {
+          "active": true,
+          "label": "(GMT-09:00) Alaska Standard Time (America/Sitka)",
+          "value": "America/Sitka"
+        },
+        {
+          "active": true,
+          "label": "(GMT-09:00) Alaska Standard Time (America/Yakutat)",
+          "value": "America/Yakutat"
+        },
+        {
+          "active": true,
+          "label": "(GMT-09:00) Gambier Time (Pacific/Gambier)",
+          "value": "Pacific/Gambier"
+        },
+        {
+          "active": true,
+          "label": "(GMT-09:30) Marquesas Time (Pacific/Marquesas)",
+          "value": "Pacific/Marquesas"
+        },
+        {
+          "active": true,
+          "label": "(GMT-10:00) Hawaii-Aleutian Standard Time (America/Adak)",
+          "value": "America/Adak"
+        },
+        {
+          "active": true,
+          "label": "(GMT-10:00) Hawaii-Aleutian Standard Time (Pacific/Honolulu)",
+          "value": "Pacific/Honolulu"
+        },
+        {
+          "active": true,
+          "label": "(GMT-10:00) Hawaii-Aleutian Standard Time (Pacific/Johnston)",
+          "value": "Pacific/Johnston"
+        },
+        {
+          "active": true,
+          "label": "(GMT-10:00) Cook Islands Standard Time (Pacific/Rarotonga)",
+          "value": "Pacific/Rarotonga"
+        },
+        {
+          "active": true,
+          "label": "(GMT-10:00) Tahiti Time (Pacific/Tahiti)",
+          "value": "Pacific/Tahiti"
+        },
+        {
+          "active": true,
+          "label": "(GMT-11:00) Samoa Standard Time (Pacific/Midway)",
+          "value": "Pacific/Midway"
+        },
+        {
+          "active": true,
+          "label": "(GMT-11:00) Niue Time (Pacific/Niue)",
+          "value": "Pacific/Niue"
+        },
+        {
+          "active": true,
+          "label": "(GMT-11:00) Samoa Standard Time (Pacific/Pago_Pago)",
+          "value": "Pacific/Pago_Pago"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Recurrence Type",
+      "name": "RecurrenceType",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Recurs Daily",
+          "value": "RecursDaily"
+        },
+        {
+          "active": true,
+          "label": "Recurs Every Weekday",
+          "value": "RecursEveryWeekday"
+        },
+        {
+          "active": true,
+          "label": "Recurs Monthly",
+          "value": "RecursMonthly"
+        },
+        {
+          "active": true,
+          "label": "Recurs Monthly Nth",
+          "value": "RecursMonthlyNth"
+        },
+        {
+          "active": true,
+          "label": "Recurs Weekly",
+          "value": "RecursWeekly"
+        },
+        {
+          "active": true,
+          "label": "Recurs Yearly",
+          "value": "RecursYearly"
+        },
+        {
+          "active": true,
+          "label": "Recurs Yearly Nth",
+          "value": "RecursYearlyNth"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Recurrence Interval",
+      "name": "RecurrenceInterval",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "int",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Recurrence Day of Week Mask",
+      "name": "RecurrenceDayOfWeekMask",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "int",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Recurrence Day of Month",
+      "name": "RecurrenceDayOfMonth",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "int",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Recurrence Instance",
+      "name": "RecurrenceInstance",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "1st",
+          "value": "First"
+        },
+        {
+          "active": true,
+          "label": "2nd",
+          "value": "Second"
+        },
+        {
+          "active": true,
+          "label": "3rd",
+          "value": "Third"
+        },
+        {
+          "active": true,
+          "label": "4th",
+          "value": "Fourth"
+        },
+        {
+          "active": true,
+          "label": "last",
+          "value": "Last"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Recurrence Month of Year",
+      "name": "RecurrenceMonthOfYear",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "January",
+          "value": "January"
+        },
+        {
+          "active": true,
+          "label": "February",
+          "value": "February"
+        },
+        {
+          "active": true,
+          "label": "March",
+          "value": "March"
+        },
+        {
+          "active": true,
+          "label": "April",
+          "value": "April"
+        },
+        {
+          "active": true,
+          "label": "May",
+          "value": "May"
+        },
+        {
+          "active": true,
+          "label": "June",
+          "value": "June"
+        },
+        {
+          "active": true,
+          "label": "July",
+          "value": "July"
+        },
+        {
+          "active": true,
+          "label": "August",
+          "value": "August"
+        },
+        {
+          "active": true,
+          "label": "September",
+          "value": "September"
+        },
+        {
+          "active": true,
+          "label": "October",
+          "value": "October"
+        },
+        {
+          "active": true,
+          "label": "November",
+          "value": "November"
+        },
+        {
+          "active": true,
+          "label": "December",
+          "value": "December"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Repeat This Task",
+      "name": "RecurrenceRegeneratedType",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "After due date",
+          "value": "RecurrenceRegenerateAfterDueDate"
+        },
+        {
+          "active": true,
+          "label": "After date completed",
+          "value": "RecurrenceRegenerateAfterToday"
+        },
+        {
+          "active": true,
+          "label": "(Task Closed)",
+          "value": "RecurrenceRegenerated"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Task Subtype",
+      "name": "TaskSubtype",
+      "custom": false,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Task",
+          "value": "Task"
+        },
+        {
+          "active": true,
+          "label": "Email",
+          "value": "Email"
+        },
+        {
+          "active": true,
+          "label": "List Email",
+          "value": "ListEmail"
+        },
+        {
+          "active": true,
+          "label": "Cadence",
+          "value": "Cadence"
+        },
+        {
+          "active": true,
+          "label": "Call",
+          "value": "Call"
+        },
+        {
+          "active": true,
+          "label": "LinkedIn",
+          "value": "LinkedIn"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 40
+    },
+    {
+      "label": "Completed Date/Time",
+      "name": "CompletedDateTime",
+      "custom": false,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Completed Date",
+      "name": "vlocity_cmt__CompletedDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Due in (days)",
+      "name": "vlocity_cmt__DueInDays__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Event Status",
+      "name": "vlocity_cmt__EventStatus__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Not Started",
+          "value": "Not Started"
+        },
+        {
+          "active": true,
+          "label": "In Progress",
+          "value": "In Progress"
+        },
+        {
+          "active": true,
+          "label": "Shared",
+          "value": "Shared"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Follow Up To",
+      "name": "vlocity_cmt__FollowUpTo__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Verification Timestamp",
+      "name": "vlocity_cmt__VerificationTimestamp__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Verified Agent Name",
+      "name": "vlocity_cmt__VerifiedAgentName__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Verified",
+      "name": "vlocity_cmt__Verified__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Orden de trabajo",
+      "name": "pz_WorkOrder__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "WorkOrder"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Generar Work Order",
+      "name": "pz_IsWorkOrder__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha de notificación a cliente",
+      "name": "pz_CustomerNotificationDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha de despacho",
+      "name": "pz_Shippingdate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha de descargo",
+      "name": "pz_DateDischarge__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Prioridad",
+      "name": "pz_Priority__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Simple",
+          "value": "Simple"
+        },
+        {
+          "active": true,
+          "label": "Normal",
+          "value": "Normal"
+        },
+        {
+          "active": true,
+          "label": "Urgente",
+          "value": "Urgente"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Fecha de emisión",
+      "name": "pz_Dateofissue__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Estado",
+      "name": "pz_Status__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "En proceso",
+          "value": "En proceso"
+        },
+        {
+          "active": true,
+          "label": "En Despacho",
+          "value": "En Despacho"
+        },
+        {
+          "active": true,
+          "label": "Carta rechazada",
+          "value": "Carta rechazada"
+        },
+        {
+          "active": true,
+          "label": "Notificada",
+          "value": "Notificada"
+        },
+        {
+          "active": true,
+          "label": "Descargada",
+          "value": "Descargada"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Crear tarea de correspondencia",
+      "name": "pz_CorrespondenceTask__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Estado servicio SCOM",
+      "name": "pz_SCOMStatus__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Enviado",
+          "value": "Enviado"
+        },
+        {
+          "active": true,
+          "label": "Error en el envio",
+          "value": "Error en el envio"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Cerrar caso",
+      "name": "pz_IsCloseCase__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Track Number",
+      "name": "pz_Track_Number__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "TIpo de carta",
+      "name": "pz_TypeCard__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Carta Informativa",
+          "value": "Carta Informativa"
+        },
+        {
+          "active": true,
+          "label": "Carta Resolutiva",
+          "value": "Carta Resolutiva"
+        },
+        {
+          "active": true,
+          "label": "Carta Osinermig",
+          "value": "Carta Osinermig"
+        },
+        {
+          "active": true,
+          "label": "Carta de Contraste",
+          "value": "Carta de Contraste"
+        },
+        {
+          "active": true,
+          "label": "Carta de Suspension",
+          "value": "Carta de Suspension"
+        },
+        {
+          "active": true,
+          "label": "Carta de Subsanacion",
+          "value": "Carta de Subsanacion"
+        },
+        {
+          "active": true,
+          "label": "Carta de Elevación",
+          "value": "Carta de Elevación"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Nro. Orden de Tarea",
+      "name": "pz_nro_task__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 10
+    },
+    {
+      "label": "Nro. Track",
+      "name": "pz_Track__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 5
+    },
+    {
+      "label": "Sub estado el caso al completar tarea",
+      "name": "pz_SubStatusCompletedTask__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Verificado ok",
+          "value": "Verificado ok"
+        },
+        {
+          "active": true,
+          "label": "Verificado No ok",
+          "value": "Verificado No ok"
+        },
+        {
+          "active": true,
+          "label": "Expediente elevado",
+          "value": "Expediente elevado"
+        },
+        {
+          "active": true,
+          "label": "Gestionar subsanación",
+          "value": "Gestionar subsanación"
+        },
+        {
+          "active": true,
+          "label": "En espera de subsanación",
+          "value": "En espera de subsanación"
+        },
+        {
+          "active": true,
+          "label": "Emisión de inadmisibilidad",
+          "value": "Emisión de inadmisibilidad"
+        },
+        {
+          "active": true,
+          "label": "Suspensión",
+          "value": "Suspensión"
+        },
+        {
+          "active": true,
+          "label": "Revisar próxima lectura",
+          "value": "Revisar próxima lectura"
+        },
+        {
+          "active": true,
+          "label": "Armado de expediente",
+          "value": "Armado de expediente"
+        },
+        {
+          "active": true,
+          "label": "Espera de resolución",
+          "value": "Espera de resolución"
+        },
+        {
+          "active": true,
+          "label": "Respuesta JARU",
+          "value": "Respuesta JARU"
+        },
+        {
+          "active": true,
+          "label": "En proceso",
+          "value": "En proceso"
+        },
+        {
+          "active": true,
+          "label": "Despacho",
+          "value": "Despacho"
+        },
+        {
+          "active": true,
+          "label": "Carta rechazada",
+          "value": "Carta rechazada"
+        },
+        {
+          "active": true,
+          "label": "Notificada",
+          "value": "Notificada"
+        },
+        {
+          "active": true,
+          "label": "Descargada",
+          "value": "Descargada"
+        },
+        {
+          "active": true,
+          "label": "Pendiente de Aprobación",
+          "value": "Pendiente de Aprobación"
+        },
+        {
+          "active": true,
+          "label": "Aprobado",
+          "value": "Aprobado"
+        },
+        {
+          "active": true,
+          "label": "Rechazado",
+          "value": "Rechazado"
+        },
+        {
+          "active": true,
+          "label": "En validación",
+          "value": "En validación"
+        },
+        {
+          "active": true,
+          "label": "Inicio de gestión",
+          "value": "Inicio de gestión"
+        },
+        {
+          "active": true,
+          "label": "Crear Orden",
+          "value": "Crear Orden"
+        },
+        {
+          "active": true,
+          "label": "Espera de ORM",
+          "value": "Espera de ORM"
+        },
+        {
+          "active": true,
+          "label": "Análisis de caso",
+          "value": "Análisis de caso"
+        },
+        {
+          "active": true,
+          "label": "Medida Correctiva",
+          "value": "Medida Correctiva"
+        },
+        {
+          "active": true,
+          "label": "No Procesado",
+          "value": "No Procesado"
+        },
+        {
+          "active": true,
+          "label": "Improcedencia",
+          "value": "Improcedencia"
+        },
+        {
+          "active": true,
+          "label": "Gestión contraste",
+          "value": "Gestión contraste"
+        },
+        {
+          "active": true,
+          "label": "Evaluación 40%",
+          "value": "Evaluación 40%"
+        },
+        {
+          "active": true,
+          "label": "Evaluar contraste",
+          "value": "Evaluar contraste"
+        },
+        {
+          "active": true,
+          "label": "Evaluación de apelación",
+          "value": "Evaluación de apelación"
+        },
+        {
+          "active": true,
+          "label": "Por conciliar",
+          "value": "Por conciliar"
+        },
+        {
+          "active": true,
+          "label": "Respuesta Regulador",
+          "value": "Respuesta Regulador"
+        },
+        {
+          "active": true,
+          "label": "Evaluación de queja",
+          "value": "Evaluación de queja"
+        },
+        {
+          "active": true,
+          "label": "Estado de la tarea de correspondencia",
+          "value": "Estado de la tarea de correspondencia"
+        },
+        {
+          "active": true,
+          "label": "Subsanación",
+          "value": "Subsanación"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Resultado de la tarea",
+      "name": "pz_TaskResult__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Efectivo",
+          "value": "Efectivo"
+        },
+        {
+          "active": true,
+          "label": "No efectivo",
+          "value": "No efectivo"
+        },
+        {
+          "active": true,
+          "label": "Infructuoso",
+          "value": "Infructuoso"
+        },
+        {
+          "active": true,
+          "label": "Error de lectura",
+          "value": "Error de lectura"
+        },
+        {
+          "active": true,
+          "label": "Sin error de lectura",
+          "value": "Sin error de lectura"
+        },
+        {
+          "active": true,
+          "label": "No supera 40%",
+          "value": "No supera 40%"
+        },
+        {
+          "active": true,
+          "label": "Supera 40%",
+          "value": "Supera 40%"
+        },
+        {
+          "active": true,
+          "label": "Corresponde total",
+          "value": "Corresponde total"
+        },
+        {
+          "active": true,
+          "label": "Corresponde Parcial",
+          "value": "Corresponde Parcial"
+        },
+        {
+          "active": true,
+          "label": "No corresponde CNR",
+          "value": "No corresponde CNR"
+        },
+        {
+          "active": true,
+          "label": "Medidor Conforme",
+          "value": "Medidor Conforme"
+        },
+        {
+          "active": true,
+          "label": "Medidor defectuoso",
+          "value": "Medidor defectuoso"
+        },
+        {
+          "active": true,
+          "label": "Cumple",
+          "value": "Cumple"
+        },
+        {
+          "active": true,
+          "label": "No Cumple",
+          "value": "No Cumple"
+        },
+        {
+          "active": true,
+          "label": "Finalizado",
+          "value": "Finalizado"
+        },
+        {
+          "active": true,
+          "label": "Si aplica",
+          "value": "Si aplica"
+        },
+        {
+          "active": true,
+          "label": "No Aplica",
+          "value": "No Aplica"
+        },
+        {
+          "active": true,
+          "label": "Error de facturación y  consumo menor 40% - 10d",
+          "value": "Error de facturación y  consumo menor 40% - 10d"
+        },
+        {
+          "active": true,
+          "label": "Sin error de facturación - 30d",
+          "value": "Sin error de facturación - 30d"
+        },
+        {
+          "active": true,
+          "label": "Error de facturación y consumo excede 40% - 30d",
+          "value": "Error de facturación y consumo excede 40% - 30d"
+        },
+        {
+          "active": true,
+          "label": "Medidor defectuoso - No excede márgen",
+          "value": "Medidor defectuoso - No excede márgen"
+        },
+        {
+          "active": true,
+          "label": "Medidor defectuoso - excede márgen",
+          "value": "Medidor defectuoso - excede márgen"
+        },
+        {
+          "active": true,
+          "label": "Sin quiebre",
+          "value": "Sin quiebre"
+        },
+        {
+          "active": true,
+          "label": "Existe Quiebre",
+          "value": "Existe Quiebre"
+        },
+        {
+          "active": true,
+          "label": "Conciliado",
+          "value": "Conciliado"
+        },
+        {
+          "active": true,
+          "label": "No conciliado",
+          "value": "No conciliado"
+        },
+        {
+          "active": true,
+          "label": "Fundado / Fundado en parte",
+          "value": "Fundado / Fundado en parte"
+        },
+        {
+          "active": true,
+          "label": "Infundado / Improcedente / Carencia de objeto",
+          "value": "Infundado / Improcedente / Carencia de objeto"
+        },
+        {
+          "active": true,
+          "label": "Nulidad - Reclamo / Nulidad - Reconsideración / Nulidad Apelación",
+          "value": "Nulidad - Reclamo / Nulidad - Reconsideración / Nulidad Apelación"
+        },
+        {
+          "active": true,
+          "label": "Descargada",
+          "value": "Descargada"
+        },
+        {
+          "active": true,
+          "label": "Archivado",
+          "value": "Archivado"
+        },
+        {
+          "active": true,
+          "label": "Sancionado",
+          "value": "Sancionado"
+        },
+        {
+          "active": true,
+          "label": "Reconsideración",
+          "value": "Reconsideración"
+        },
+        {
+          "active": true,
+          "label": "Apelación",
+          "value": "Apelación"
+        },
+        {
+          "active": true,
+          "label": "No se impugna",
+          "value": "No se impugna"
+        },
+        {
+          "active": true,
+          "label": "Pagar",
+          "value": "Pagar"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Ejecutar Regla",
+      "name": "PZ_RuleExecute__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Action Plan",
+      "name": "pz_ActionPlan__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "ActionPlan"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Action Plan Order",
+      "name": "pz_ActionPlanOrder__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 3
+    },
+    {
+      "label": "Tipo de orden",
+      "name": "pz_TypeOrder__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Devolución Costo de Obras Civiles",
+          "value": "Devolución Costo de Obras Civiles"
+        },
+        {
+          "active": true,
+          "label": "Ejecución de trabajos (Retiro MT - Mantenimiento)",
+          "value": "Ejecución de trabajos (Retiro MT - Mantenimiento)"
+        },
+        {
+          "active": true,
+          "label": "Firmar Minuta Contrato de Servidumbre",
+          "value": "Firmar Minuta Contrato de Servidumbre"
+        },
+        {
+          "active": true,
+          "label": "Inscribir el Contrato en Registros Públicos",
+          "value": "Inscribir el Contrato en Registros Públicos"
+        },
+        {
+          "active": true,
+          "label": "Orden Activación Comercial",
+          "value": "Orden Activación Comercial"
+        },
+        {
+          "active": true,
+          "label": "Orden Aprobación de Replanteo del Sistema de Utilización",
+          "value": "Orden Aprobación de Replanteo del Sistema de Utilización"
+        },
+        {
+          "active": true,
+          "label": "Orden Conexión",
+          "value": "Orden Conexión"
+        },
+        {
+          "active": true,
+          "label": "Orden de Aprobación de Área de Servidumbre",
+          "value": "Orden de Aprobación de Área de Servidumbre"
+        },
+        {
+          "active": true,
+          "label": "Orden de Banco de Medidores",
+          "value": "Orden de Banco de Medidores"
+        },
+        {
+          "active": true,
+          "label": "Orden de Conformidad y Recepción de Redes Particulares Eléctricas del Cliente",
+          "value": "Orden de Conformidad y Recepción de Redes Particulares Eléctricas del Cliente"
+        },
+        {
+          "active": true,
+          "label": "Orden de Factibilidad Presupuestal",
+          "value": "Orden de Factibilidad Presupuestal"
+        },
+        {
+          "active": true,
+          "label": "Orden de Factibilidad Técnica",
+          "value": "Orden de Factibilidad Técnica"
+        },
+        {
+          "active": true,
+          "label": "Orden de Preinspección Presupuestal",
+          "value": "Orden de Preinspección Presupuestal"
+        },
+        {
+          "active": true,
+          "label": "Orden de Preinspección Técnica",
+          "value": "Orden de Preinspección Técnica"
+        },
+        {
+          "active": true,
+          "label": "Orden de Pruebas Eléctricas",
+          "value": "Orden de Pruebas Eléctricas"
+        },
+        {
+          "active": true,
+          "label": "Orden de Reprogramación",
+          "value": "Orden de Reprogramación"
+        },
+        {
+          "active": true,
+          "label": "Orden de Sistema de Utilización",
+          "value": "Orden de Sistema de Utilización"
+        },
+        {
+          "active": true,
+          "label": "Orden de Supervisión, Recepción y Conformidad de Obras Civiles del Cliente",
+          "value": "Orden de Supervisión, Recepción y Conformidad de Obras Civiles del Cliente"
+        },
+        {
+          "active": true,
+          "label": "Orden de Validación de documentación técnica de Servidumbre",
+          "value": "Orden de Validación de documentación técnica de Servidumbre"
+        },
+        {
+          "active": true,
+          "label": "Orden de Validación Legal de Contrato de Servidumbre",
+          "value": "Orden de Validación Legal de Contrato de Servidumbre"
+        },
+        {
+          "active": true,
+          "label": "Orden Ejecutar Obra Subestación",
+          "value": "Orden Ejecutar Obra Subestación"
+        },
+        {
+          "active": true,
+          "label": "Orden Estudio Ingeniería Obras Civiles",
+          "value": "Orden Estudio Ingeniería Obras Civiles"
+        },
+        {
+          "active": true,
+          "label": "Orden Estudio Ingeniería Redes Eléctricas",
+          "value": "Orden Estudio Ingeniería Redes Eléctricas"
+        },
+        {
+          "active": true,
+          "label": "Orden Estudio Ingeniería Subestación",
+          "value": "Orden Estudio Ingeniería Subestación"
+        },
+        {
+          "active": true,
+          "label": "Orden Inicio de Obra de Redes Particulares Eléctricas del Cliente",
+          "value": "Orden Inicio de Obra de Redes Particulares Eléctricas del Cliente"
+        },
+        {
+          "active": true,
+          "label": "Orden para Obtener Punto de Diseño",
+          "value": "Orden para Obtener Punto de Diseño"
+        },
+        {
+          "active": true,
+          "label": "Orden Permiso Municipal",
+          "value": "Orden Permiso Municipal"
+        },
+        {
+          "active": true,
+          "label": "Orden PSVA",
+          "value": "Orden PSVA"
+        },
+        {
+          "active": true,
+          "label": "Orden Verificar Adecuaciones del Cliente",
+          "value": "Orden Verificar Adecuaciones del Cliente"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "N° de suministro",
+      "name": "pz_MetterNumber__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1300
+    },
+    {
+      "label": "Canal de Notificación",
+      "name": "pz_NotificationChannel__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Fisico",
+          "value": "Fisico"
+        },
+        {
+          "active": true,
+          "label": "Virtual",
+          "value": "Virtual"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Tipo de Acción",
+      "name": "pz_ActionType__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Automático",
+          "value": "Automático"
+        },
+        {
+          "active": true,
+          "label": "Manual",
+          "value": "Manual"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Presupuesto",
+      "name": "pz_Quote__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "Quote"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Fecha Vencimiento Legal",
+      "name": "pz_ExpirationDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Responsable Suspensión / Rechazo",
+      "name": "pz_StopResponsible__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Cliente",
+          "value": "Cliente"
+        },
+        {
+          "active": true,
+          "label": "Empresa",
+          "value": "Empresa"
+        },
+        {
+          "active": true,
+          "label": "Municipalidad",
+          "value": "Municipalidad"
+        },
+        {
+          "active": true,
+          "label": "Terceros",
+          "value": "Terceros"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Motivo Suspensión / Rechazo",
+      "name": "pz_StopReason__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Inclumplimiento de Normas Electricas",
+          "value": "16"
+        },
+        {
+          "active": true,
+          "label": "Faltan obras de cliente",
+          "value": "10"
+        },
+        {
+          "active": true,
+          "label": "Permisos municipales",
+          "value": "11"
+        },
+        {
+          "active": true,
+          "label": "Cliente solicita aplazar obras",
+          "value": "12"
+        },
+        {
+          "active": true,
+          "label": "Falta de materiales",
+          "value": "13"
+        },
+        {
+          "active": true,
+          "label": "Problemas climáticos (plan de emergencia)",
+          "value": "14"
+        },
+        {
+          "active": true,
+          "label": "Aplazamiento de desconexión por despacho",
+          "value": "15"
+        },
+        {
+          "active": true,
+          "label": "En tramite de permiso municipal",
+          "value": "38"
+        },
+        {
+          "active": true,
+          "label": "Cliente Ausente",
+          "value": "39"
+        },
+        {
+          "active": true,
+          "label": "Oposicion por terceros / Trabajos en curso de terceros",
+          "value": "40"
+        },
+        {
+          "active": true,
+          "label": "No cumple DMS",
+          "value": "41"
+        },
+        {
+          "active": true,
+          "label": "Predio deshabitado / Terreno Baldio",
+          "value": "42"
+        },
+        {
+          "active": true,
+          "label": "Predio en Construccion",
+          "value": "43"
+        },
+        {
+          "active": true,
+          "label": "Cliente desiste solicitud",
+          "value": "45"
+        },
+        {
+          "active": true,
+          "label": "Habilitacion Pendiente de Electrificar",
+          "value": "44"
+        },
+        {
+          "active": true,
+          "label": "Faltan Redes",
+          "value": "46"
+        },
+        {
+          "active": true,
+          "label": "Normalizacion de Postes",
+          "value": "47"
+        },
+        {
+          "active": true,
+          "label": "Zona Peligrosa",
+          "value": "48"
+        },
+        {
+          "active": true,
+          "label": "Otro",
+          "value": "29"
+        },
+        {
+          "active": true,
+          "label": "Permiso Denegado",
+          "value": "49"
+        },
+        {
+          "active": true,
+          "label": "Falta Documentación del Cliente",
+          "value": "50"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Motivo Cancelación",
+      "name": "pz_ReasonsforCancellation__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Cliente desistió",
+          "value": "1"
+        },
+        {
+          "active": true,
+          "label": "Cliente no cumplió obligaciones",
+          "value": "2"
+        },
+        {
+          "active": true,
+          "label": "Desestimados",
+          "value": "3"
+        },
+        {
+          "active": true,
+          "label": "En reclamo",
+          "value": "4"
+        },
+        {
+          "active": true,
+          "label": "Otros motivos",
+          "value": "5"
+        },
+        {
+          "active": true,
+          "label": "Anulación de la orden por anulación de la solicitud",
+          "value": "6"
+        },
+        {
+          "active": true,
+          "label": "Anulación de la orden por anulación de sus presupuestos",
+          "value": "7"
+        },
+        {
+          "active": true,
+          "label": "Anulación de la solicitud por anulación de sus presupuestos",
+          "value": "8"
+        },
+        {
+          "active": true,
+          "label": "Anulación de la solicitud por anulación de sus ordenes",
+          "value": "9"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Detalle de la Suspensión",
+      "name": "pz_SuspensionDetails__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Tarea histórica",
+      "name": "pz_IsHistoryTask__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha Inicio",
+      "name": "pz_StartDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha Fin",
+      "name": "pz_EndDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Ordenes Asociadas",
+      "name": "pz_AssociatedOrders__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Días de ampliación",
+      "name": "pz_DaysExtension__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 10,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Submotivo",
+      "name": "pz_SubReason__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "SUMINISTRO",
+          "value": "SUMINISTRO"
+        },
+        {
+          "active": true,
+          "label": "ACTIVAR CLIENTE",
+          "value": "ACTIVAR CLIENTE"
+        },
+        {
+          "active": true,
+          "label": "ACTUALIZACION DE DATOS EN EL SISTEMA",
+          "value": "ACTUALIZACION DE DATOS EN EL SISTEMA"
+        },
+        {
+          "active": true,
+          "label": "ACTUALIZACION DE MEDIDOR EN EL SISTEMA",
+          "value": "ACTUALIZACION DE MEDIDOR EN EL SISTEMA"
+        },
+        {
+          "active": true,
+          "label": "ACTUALIZAR DATOS DE CORTE/RCNX",
+          "value": "ACTUALIZAR DATOS DE CORTE/RCNX"
+        },
+        {
+          "active": true,
+          "label": "ALQUILER DE POSTES E INFRA. ELÉCTRICA PARA FIBRA ÓPTICA, CÁMARAS, ANTENAS, ETC.",
+          "value": "ALQUILER DE POSTES E INFRA. ELÉCTRICA PARA FIBRA ÓPTICA, CÁMARAS, ANTENAS, ETC."
+        },
+        {
+          "active": true,
+          "label": "AVISO PREVIO POR CONTRASTE DE MEDIDOR NTCSE",
+          "value": "AVISO PREVIO POR CONTRASTE DE MEDIDOR NTCSE"
+        },
+        {
+          "active": true,
+          "label": "AVISO PREVIO POR CONTRASTE DE MEDIDOR P227",
+          "value": "AVISO PREVIO POR CONTRASTE DE MEDIDOR P227"
+        },
+        {
+          "active": true,
+          "label": "CALIDAD DE SUMINISTRO - CUMPLIMIENTO JARU",
+          "value": "CALIDAD DE SUMINISTRO - CUMPLIMIENTO JARU"
+        },
+        {
+          "active": true,
+          "label": "CALIDAD DE SUMINISTRO - INTERRUPCIONES",
+          "value": "CALIDAD DE SUMINISTRO - INTERRUPCIONES"
+        },
+        {
+          "active": true,
+          "label": "CONFIRMAR REPARTO RECIBO EN LA ZONA",
+          "value": "CONFIRMAR REPARTO RECIBO EN LA ZONA"
+        },
+        {
+          "active": true,
+          "label": "CUIDADO ESPECIAL EN PROX AGENDA DE LECTURA",
+          "value": "CUIDADO ESPECIAL EN PROX AGENDA DE LECTURA"
+        },
+        {
+          "active": true,
+          "label": "DOCUMENTACION SUELTA PLAZO NORMAL",
+          "value": "DOCUMENTACION SUELTA PLAZO NORMAL"
+        },
+        {
+          "active": true,
+          "label": "EMITIR BOLETA BRAILE SIN COSTO",
+          "value": "EMITIR BOLETA BRAILE SIN COSTO"
+        },
+        {
+          "active": true,
+          "label": "ENVIO RECIBO DIGITAL MES ACTUAL",
+          "value": "ENVIO RECIBO DIGITAL MES ACTUAL"
+        },
+        {
+          "active": true,
+          "label": "INTERRUPCION DE SERVICIO",
+          "value": "INTERRUPCION DE SERVICIO"
+        },
+        {
+          "active": true,
+          "label": "INVESTIGAR DENUNCIA CONTRA PERSONAL",
+          "value": "INVESTIGAR DENUNCIA CONTRA PERSONAL"
+        },
+        {
+          "active": true,
+          "label": "MANTENIMIENTO PREVENTIVO BT",
+          "value": "MANTENIMIENTO PREVENTIVO BT"
+        },
+        {
+          "active": true,
+          "label": "MANTENIMIENTO PREVENTIVO SISTEMA DE UTILIZACIÓN",
+          "value": "MANTENIMIENTO PREVENTIVO SISTEMA DE UTILIZACIÓN"
+        },
+        {
+          "active": true,
+          "label": "MEDICION DE TENSION",
+          "value": "MEDICION DE TENSION"
+        },
+        {
+          "active": true,
+          "label": "MOVIMIENTO DE REDES O POSTES DE AP",
+          "value": "MOVIMIENTO DE REDES O POSTES DE AP"
+        },
+        {
+          "active": true,
+          "label": "NORMALIZAR REPARTO DE RECIBOS",
+          "value": "NORMALIZAR REPARTO DE RECIBOS"
+        },
+        {
+          "active": true,
+          "label": "NORMALIZAR TELEMEDIDA - DESFASE",
+          "value": "NORMALIZAR TELEMEDIDA - DESFASE"
+        },
+        {
+          "active": true,
+          "label": "PNI  BANCOS",
+          "value": "PNI  BANCOS"
+        },
+        {
+          "active": true,
+          "label": "PNI  CAR",
+          "value": "PNI  CAR"
+        },
+        {
+          "active": true,
+          "label": "PNI  MISMO C.S.",
+          "value": "PNI  MISMO C.S."
+        },
+        {
+          "active": true,
+          "label": "RECLAMO CONTRASTE - MEDIDOR/REDUCTORES",
+          "value": "RECLAMO CONTRASTE - MEDIDOR/REDUCTORES"
+        },
+        {
+          "active": true,
+          "label": "RECLAMO CONTRASTE - MEDIDOR/TRAFOMIX",
+          "value": "RECLAMO CONTRASTE - MEDIDOR/TRAFOMIX"
+        },
+        {
+          "active": true,
+          "label": "RECONECTAR SERVICIO",
+          "value": "RECONECTAR SERVICIO"
+        },
+        {
+          "active": true,
+          "label": "RECONEXION CONDICIONADA",
+          "value": "RECONEXION CONDICIONADA"
+        },
+        {
+          "active": true,
+          "label": "REFORMA - VERIFICAR FACTIBILIDAD",
+          "value": "REFORMA - VERIFICAR FACTIBILIDAD"
+        },
+        {
+          "active": true,
+          "label": "REITERACION INCUMPLIMIENTO PLAZO",
+          "value": "REITERACION INCUMPLIMIENTO PLAZO"
+        },
+        {
+          "active": true,
+          "label": "REPARAR VEREDA Y/O RECOGER DESMONTE",
+          "value": "REPARAR VEREDA Y/O RECOGER DESMONTE"
+        },
+        {
+          "active": true,
+          "label": "RETIRO MEDIDOR X CONTRASTE INDECOPI",
+          "value": "RETIRO MEDIDOR X CONTRASTE INDECOPI"
+        },
+        {
+          "active": true,
+          "label": "REUBICACION / TRASLADOS SUBESTACIONES",
+          "value": "REUBICACION / TRASLADOS SUBESTACIONES"
+        },
+        {
+          "active": true,
+          "label": "REVISAR MEDIDOR",
+          "value": "REVISAR MEDIDOR"
+        },
+        {
+          "active": true,
+          "label": "SOLICITUD DE INFRA. ELÉCTRICA PATICULAR, SOLUCIONES FOTOVOLTAICA, MOVILIDAD ELÉCTRICA, IIUMINACIÓN ORNAMENTAL.",
+          "value": "SOLICITUD DE INFRA. ELÉCTRICA PATICULAR, SOLUCIONES FOTOVOLTAICA, MOVILIDAD ELÉCTRICA, IIUMINACIÓN ORNAMENTAL."
+        },
+        {
+          "active": true,
+          "label": "SUSPENDER SUMINISTRO",
+          "value": "SUSPENDER SUMINISTRO"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Tema",
+      "name": "pz_Issue__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "CALIDAD DE MEDIDA",
+          "value": "CALIDAD DE MEDIDA"
+        },
+        {
+          "active": true,
+          "label": "RECLAMO COMERCIAL",
+          "value": "RECLAMO COMERCIAL"
+        },
+        {
+          "active": true,
+          "label": "REQUERIMIENTO COMERCIAL",
+          "value": "REQUERIMIENTO COMERCIAL"
+        },
+        {
+          "active": true,
+          "label": "REQUERIMIENTO TECNICO",
+          "value": "REQUERIMIENTO TECNICO"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Motivo",
+      "name": "pz_Reason__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "CALIDAD DE MEDIDA",
+          "value": "CALIDAD DE MEDIDA"
+        },
+        {
+          "active": true,
+          "label": "CALIDAD DE PRODUCTO",
+          "value": "CALIDAD DE PRODUCTO"
+        },
+        {
+          "active": true,
+          "label": "CALIDAD DE SERVICIO",
+          "value": "CALIDAD DE SERVICIO"
+        },
+        {
+          "active": true,
+          "label": "CALIDAD DE SUMINISTRO",
+          "value": "CALIDAD DE SUMINISTRO"
+        },
+        {
+          "active": true,
+          "label": "CORRESPONDENCIA Y ARCHIVO",
+          "value": "CORRESPONDENCIA Y ARCHIVO"
+        },
+        {
+          "active": true,
+          "label": "CORTE Y RECONEXION",
+          "value": "CORTE Y RECONEXION"
+        },
+        {
+          "active": true,
+          "label": "FACTURACION",
+          "value": "FACTURACION"
+        },
+        {
+          "active": true,
+          "label": "PERDIDAS",
+          "value": "PERDIDAS"
+        },
+        {
+          "active": true,
+          "label": "PLUZ SOLUCIONES",
+          "value": "PLUZ SOLUCIONES"
+        },
+        {
+          "active": true,
+          "label": "POR CALIDAD DE MEDIDA",
+          "value": "POR CALIDAD DE MEDIDA"
+        },
+        {
+          "active": true,
+          "label": "RECAUDACION",
+          "value": "RECAUDACION"
+        },
+        {
+          "active": true,
+          "label": "SUBESTACIONES",
+          "value": "SUBESTACIONES"
+        },
+        {
+          "active": true,
+          "label": "SUMINISTRO",
+          "value": "SUMINISTRO"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Fecha / Hora de Archivo",
+      "name": "pz_LastFileLinkedAt__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Cargado Por",
+      "name": "pz_LastFileLinkedBy__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "User"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Descripción",
+      "name": "pz_Description__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Tipo de Tarea",
+      "name": "pz_TaskType__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Administrativa",
+          "value": "Administrativa"
+        },
+        {
+          "active": true,
+          "label": "Tecnica",
+          "value": "Tecnica"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Nro. Orden tarea administrativa",
+      "name": "pz_NumberTask__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 18,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha de emisión",
+      "name": "pz_DateIssue__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha de notificación a cliente",
+      "name": "pz_NotificationDateCustomer__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Mostar aceptacion de contrato",
+      "name": "pz_ShowAcceptanceContract__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha de Vencimiento",
+      "name": "pz_DueDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "¿Tiene tipo de orden?",
+      "name": "pz_HaveOrderType__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1300
+    },
+    {
+      "label": "Nro. Expediente SIGED",
+      "name": "pz_SIGEDFileNo__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Fecha elevación Expediente",
+      "name": "pz_Date_file_elevation__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha de solicitud de ampliación",
+      "name": "pz_ExtensionRequestDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha máxima de respuesta de la autorida",
+      "name": "pz_DeadlineResponseAuthority__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha de respuesta de la autoridad",
+      "name": "pz_AuthorityResponseDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "¿Respuesta favorable?",
+      "name": "pz_FavorableResponse__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Sí",
+          "value": "Sí"
+        },
+        {
+          "active": true,
+          "label": "No",
+          "value": "No"
+        },
+        {
+          "active": true,
+          "label": "Sin respuesta",
+          "value": "Sin respuesta"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Fecha máxima de impugnación",
+      "name": "pz_DeadlineForAppeal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "¿Se va a impugnar?",
+      "name": "pz_WillItBeChallenged__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "SI",
+          "value": "SI"
+        },
+        {
+          "active": true,
+          "label": "NO",
+          "value": "NO"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Fecha de elevación de la impugnación",
+      "name": "pz_DateFilingTheAppeal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Plazo legal de ejecución",
+      "name": "pz_LegalExecutionPeriod__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 3,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Modalidad de conteo de días",
+      "name": "pz_MethodCountingDays__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Días Hábiles",
+          "value": "Días Hábiles"
+        },
+        {
+          "active": true,
+          "label": "Días Calendarios",
+          "value": "Días Calendarios"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Plazo legal de información",
+      "name": "pz_LegalDeadlineInformation__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 3,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Detalle del plazo de información",
+      "name": "pz_DetailsInformationDeadline__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Desde ejecución",
+          "value": "Desde ejecución"
+        },
+        {
+          "active": true,
+          "label": "Desde notificación",
+          "value": "Desde notificación"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Fecha máxima de respuesta de impugnación",
+      "name": "pz_MaximumDateRespondingAppeal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha de Impugnación",
+      "name": "pz_DateAppeal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha máxima respuesta de impugnación",
+      "name": "pz_MaximumDateRespondingOfAppeal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha de respuesta de la impugnación",
+      "name": "pz_DateResponseToTheAppeal__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Pronunciamiento de Impugnación",
+      "name": "pz_AppealStatement__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Fundado",
+          "value": "Fundado"
+        },
+        {
+          "active": true,
+          "label": "Fundado en parte",
+          "value": "Fundado en parte"
+        },
+        {
+          "active": true,
+          "label": "Infundado",
+          "value": "Infundado"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Tiempo transcurrido de respuesta",
+      "name": "pz_ElapsedResponseTime__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "double",
+      "precision": 3,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha máxima de presentación de reclamo",
+      "name": "pz_ClaimSubmissionDeadline__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "¿Existe reclamo?",
+      "name": "pz_IsThereComplaint__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Si",
+          "value": "Si"
+        },
+        {
+          "active": true,
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Nro del Reclamo",
+      "name": "pz_ClaimNumber__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [
+        "Case"
+      ],
+      "type": "reference",
+      "precision": 0,
+      "scale": 0,
+      "length": 18
+    },
+    {
+      "label": "Fecha de presentación del reclamo",
+      "name": "pz_DateTheClaimWasSubmitted__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "¿Presentó contracautela?",
+      "name": "pz_FileCounterGuarantee__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Si presenta",
+          "value": "Si presenta"
+        },
+        {
+          "active": true,
+          "label": "No presenta",
+          "value": "No presenta"
+        },
+        {
+          "active": true,
+          "label": "Se identifica quiebre",
+          "value": "Se identifica quiebre"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Fecha de contracautela",
+      "name": "pz_DateCounterSecurity__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Motivo de cierre",
+      "name": "pz_ReasonForClosure__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "No presentó reclamo dentro de plazo",
+          "value": "No presentó reclamo dentro de plazo"
+        },
+        {
+          "active": true,
+          "label": "El reclamo concluyó todas sus etapas",
+          "value": "El reclamo concluyó todas sus etapas"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Pronunciamiento del regulador",
+      "name": "PZ_TaskRegulatorStatement__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Archivado",
+          "value": "Archivado"
+        },
+        {
+          "active": true,
+          "label": "Sancionado",
+          "value": "Sancionado"
+        },
+        {
+          "active": true,
+          "label": "Finalizado",
+          "value": "Finalizado"
+        },
+        {
+          "active": true,
+          "label": "Pendiente",
+          "value": "Pendiente"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Modalidad de Impugnación",
+      "name": "PZ_TaskImpugnmentMode__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Reconsideración",
+          "value": "Reconsideración"
+        },
+        {
+          "active": true,
+          "label": "Apelación",
+          "value": "Apelación"
+        },
+        {
+          "active": true,
+          "label": "No se impugna",
+          "value": "No se impugna"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Nivel de Impugnación",
+      "name": "PZ_TaskImpugnmentLevel__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Parcial",
+          "value": "Parcial"
+        },
+        {
+          "active": true,
+          "label": "Total",
+          "value": "Total"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Asunto Tarea Plan de Acción",
+      "name": "pz_ActionPlanTaskSubject__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Proforma",
+          "value": "Proforma"
+        },
+        {
+          "active": true,
+          "label": "Admisibilidad Factibilidad Técnica",
+          "value": "Admisibilidad Factibilidad Técnica"
+        },
+        {
+          "active": true,
+          "label": "Orden de Preinspección Técnica",
+          "value": "Orden de Preinspección Técnica"
+        },
+        {
+          "active": true,
+          "label": "Orden de Preinspección Presupuestal",
+          "value": "Orden de Preinspección Presupuestal"
+        },
+        {
+          "active": true,
+          "label": "Admisibilidad Comercial",
+          "value": "Admisibilidad Comercial"
+        },
+        {
+          "active": true,
+          "label": "Orden de Factibilidad Técnica",
+          "value": "Orden de Factibilidad Técnica"
+        },
+        {
+          "active": true,
+          "label": "Orden de Factibilidad Presupuestal",
+          "value": "Orden de Factibilidad Presupuestal"
+        },
+        {
+          "active": true,
+          "label": "Orden de Banco de Medidores",
+          "value": "Orden de Banco de Medidores"
+        },
+        {
+          "active": true,
+          "label": "Orden de Sistema de Utilización",
+          "value": "Orden de Sistema de Utilización"
+        },
+        {
+          "active": true,
+          "label": "Orden de Aprobación de Área de Servidumbre",
+          "value": "Orden de Aprobación de Área de Servidumbre"
+        },
+        {
+          "active": true,
+          "label": "Orden para Obtener Punto de Diseño",
+          "value": "Orden para Obtener Punto de Diseño"
+        },
+        {
+          "active": true,
+          "label": "Orden de Validación de documentación técnica de Servidumbre",
+          "value": "Orden de Validación de documentación técnica de Servidumbre"
+        },
+        {
+          "active": true,
+          "label": "Orden de Validación Legal de Contrato de Servidumbre",
+          "value": "Orden de Validación Legal de Contrato de Servidumbre"
+        },
+        {
+          "active": true,
+          "label": "Firmar Minuta Contrato de Servidumbre",
+          "value": "Firmar Minuta Contrato de Servidumbre"
+        },
+        {
+          "active": true,
+          "label": "Inscribir el Contrato en Registros Públicos",
+          "value": "Inscribir el Contrato en Registros Públicos"
+        },
+        {
+          "active": true,
+          "label": "Emitir Contrato y/o Presupuesto",
+          "value": "Emitir Contrato y/o Presupuesto"
+        },
+        {
+          "active": true,
+          "label": "Generar Convenio de Financiamiento",
+          "value": "Generar Convenio de Financiamiento"
+        },
+        {
+          "active": true,
+          "label": "Orden de Reprogramación de Medidor",
+          "value": "Orden de Reprogramación de Medidor"
+        },
+        {
+          "active": true,
+          "label": "Solicitud de Emisión Documento de Pago",
+          "value": "Solicitud de Emisión Documento de Pago"
+        },
+        {
+          "active": true,
+          "label": "Pago Recibido",
+          "value": "Pago Recibido"
+        },
+        {
+          "active": true,
+          "label": "Pago Mínimo de 40% - HHUU",
+          "value": "Pago Mínimo de 40% - HHUU"
+        },
+        {
+          "active": true,
+          "label": "Orden Estudio Ingeniería Redes Eléctricas",
+          "value": "Orden Estudio Ingeniería Redes Eléctricas"
+        },
+        {
+          "active": true,
+          "label": "Orden Permiso Municipal para Obras Redes Eléctricas",
+          "value": "Orden Permiso Municipal para Obras Redes Eléctricas"
+        },
+        {
+          "active": true,
+          "label": "Orden Ejecución Obras de Redes Eléctricas",
+          "value": "Orden Ejecución Obras de Redes Eléctricas"
+        },
+        {
+          "active": true,
+          "label": "Ejecución de trabajos (Retiro MT - Mantenimiento)",
+          "value": "Ejecución de trabajos (Retiro MT - Mantenimiento)"
+        },
+        {
+          "active": true,
+          "label": "Orden Estudio Ingeniería Obras Civiles",
+          "value": "Orden Estudio Ingeniería Obras Civiles"
+        },
+        {
+          "active": true,
+          "label": "Orden de Supervisión, Recepción y Conformidad de Obras Civiles del Cliente",
+          "value": "Orden de Supervisión, Recepción y Conformidad de Obras Civiles del Cliente"
+        },
+        {
+          "active": true,
+          "label": "Devolución Costo de Obras Civiles",
+          "value": "Devolución Costo de Obras Civiles"
+        },
+        {
+          "active": true,
+          "label": "Orden Estudio Ingeniería Subestación",
+          "value": "Orden Estudio Ingeniería Subestación"
+        },
+        {
+          "active": true,
+          "label": "Orden Ejecutar Obra Subestación",
+          "value": "Orden Ejecutar Obra Subestación"
+        },
+        {
+          "active": true,
+          "label": "Orden Inicio de Obra de Redes Particulares Eléctricas del Cliente",
+          "value": "Orden Inicio de Obra de Redes Particulares Eléctricas del Cliente"
+        },
+        {
+          "active": true,
+          "label": "Orden Aprobación de Replanteo del Sistema de Utilización",
+          "value": "Orden Aprobación de Replanteo del Sistema de Utilización"
+        },
+        {
+          "active": true,
+          "label": "Orden de Pruebas Eléctricas",
+          "value": "Orden de Pruebas Eléctricas"
+        },
+        {
+          "active": true,
+          "label": "Orden de Conformidad y Recepción de Redes Particulares Eléctricas del Cliente",
+          "value": "Orden de Conformidad y Recepción de Redes Particulares Eléctricas del Cliente"
+        },
+        {
+          "active": true,
+          "label": "Orden Verificar Adecuaciones del Cliente Inmobiliario",
+          "value": "Orden Verificar Adecuaciones del Cliente Inmobiliario"
+        },
+        {
+          "active": true,
+          "label": "Orden Verificar Adecuaciones del Cliente",
+          "value": "Orden Verificar Adecuaciones del Cliente"
+        },
+        {
+          "active": true,
+          "label": "Orden Permiso Municipal",
+          "value": "Orden Permiso Municipal"
+        },
+        {
+          "active": true,
+          "label": "Orden Conexión",
+          "value": "Orden Conexión"
+        },
+        {
+          "active": true,
+          "label": "Orden Activación Comercial",
+          "value": "Orden Activación Comercial"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Tipo de Notificación",
+      "name": "pz_NotificationType__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Notificación física",
+          "value": "Notificación física"
+        },
+        {
+          "active": true,
+          "label": "Notificación virtual",
+          "value": "Notificación virtual"
+        },
+        {
+          "active": true,
+          "label": "Notificación SNE",
+          "value": "Notificación SNE"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Fecha de emisión de la carta",
+      "name": "pz_DateLetterIssued__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Fecha de notificación la carta",
+      "name": "pz_DateNotificationLetter__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Carta observada",
+      "name": "pz_ObservedLetter__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "boolean",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Observaciones",
+      "name": "pz_Observations__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Caso Relacionado",
+      "name": "pz_RelatedCase__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1300
+    },
+    {
+      "label": "Caso Origen Venta",
+      "name": "pz_RootCase__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "string",
+      "precision": 0,
+      "scale": 0,
+      "length": 1300
+    },
+    {
+      "label": "Fecha de evaluación real",
+      "name": "pz_ActualEvaluationDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Sistema de Gestión",
+      "name": "pz_System__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "SAP",
+          "value": "SAP"
+        },
+        {
+          "active": true,
+          "label": "SYNERGIA",
+          "value": "SYNERGIA"
+        },
+        {
+          "active": true,
+          "label": "SALESFORCE",
+          "value": "SALESFORCE"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Control",
+      "name": "Control__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "A",
+          "value": "A"
+        },
+        {
+          "active": true,
+          "label": "B",
+          "value": "B"
+        },
+        {
+          "active": true,
+          "label": "C",
+          "value": "C"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Controlado",
+      "name": "Controlado__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "1",
+          "value": "1"
+        },
+        {
+          "active": true,
+          "label": "2",
+          "value": "2"
+        },
+        {
+          "active": true,
+          "label": "3",
+          "value": "3"
+        },
+        {
+          "active": true,
+          "label": "4",
+          "value": "4"
+        },
+        {
+          "active": true,
+          "label": "5",
+          "value": "5"
+        },
+        {
+          "active": true,
+          "label": "6",
+          "value": "6"
+        },
+        {
+          "active": true,
+          "label": "7",
+          "value": "7"
+        },
+        {
+          "active": true,
+          "label": "8",
+          "value": "8"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Estado Entrega",
+      "name": "pz_DeliveryStatus__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Pendiente",
+          "value": "Pendiente"
+        },
+        {
+          "active": true,
+          "label": "Enviado",
+          "value": "Enviado"
+        },
+        {
+          "active": true,
+          "label": "Leído",
+          "value": "Leído"
+        },
+        {
+          "active": true,
+          "label": "Rebotado",
+          "value": "Rebotado"
+        },
+        {
+          "active": true,
+          "label": "Entregado",
+          "value": "Entregado"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Metodo Entrega",
+      "name": "pz_DeliveryMethod__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Presencial",
+          "value": "Presencial"
+        },
+        {
+          "active": true,
+          "label": "Correo Electrónico",
+          "value": "Correo Electrónico"
+        },
+        {
+          "active": true,
+          "label": "Envío Físico",
+          "value": "Envío Físico"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Admisible",
+      "name": "pz_Admissibility__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Si",
+          "value": "Si"
+        },
+        {
+          "active": true,
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Sustento Evaluación",
+      "name": "pz_EvaluationJustification__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "textarea",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Fecha máxima de respuesta de reclamante",
+      "name": "pz_ClaimantResponseDeadline__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "datetime",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    },
+    {
+      "label": "Subsanó",
+      "name": "pz_Corrected__c",
+      "custom": true,
+      "picklistValues": [
+        {
+          "active": true,
+          "label": "Si",
+          "value": "Si"
+        },
+        {
+          "active": true,
+          "label": "No",
+          "value": "No"
+        }
+      ],
+      "referenceTo": [],
+      "type": "picklist",
+      "precision": 0,
+      "scale": 0,
+      "length": 255
+    },
+    {
+      "label": "Fecha de subsanación",
+      "name": "pz_CorrectionDate__c",
+      "custom": true,
+      "picklistValues": [],
+      "referenceTo": [],
+      "type": "date",
+      "precision": 0,
+      "scale": 0,
+      "length": 0
+    }
+  ]
+}

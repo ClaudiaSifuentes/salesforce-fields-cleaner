@@ -1888,57 +1888,57 @@
       "picklistValues": [
         {
           "active": true,
-          "label": "Alameda",
+          "label": "ALAMEDA",
           "value": "Al."
         },
         {
           "active": true,
-          "label": "Autopista",
+          "label": "AUTOPISTA",
           "value": "Aut."
         },
         {
           "active": true,
-          "label": "Avenida",
+          "label": "AVENIDA",
           "value": "Av."
         },
         {
           "active": true,
-          "label": "Calle",
+          "label": "CALLE",
           "value": "Cl."
         },
         {
           "active": true,
-          "label": "Carretera",
+          "label": "CARRETERA",
           "value": "Car."
         },
         {
           "active": true,
-          "label": "Malecón",
+          "label": "MALECÓN",
           "value": "Mal."
         },
         {
           "active": true,
-          "label": "Jirón",
+          "label": "JIRÓN",
           "value": "Jr."
         },
         {
           "active": true,
-          "label": "Óvalo",
+          "label": "ÓVALO",
           "value": "Ovl."
         },
         {
           "active": true,
-          "label": "Plaza",
+          "label": "PLAZA",
           "value": "Plz."
         },
         {
           "active": true,
-          "label": "Parque",
+          "label": "PARQUE",
           "value": "Prq."
         },
         {
           "active": true,
-          "label": "Pasaje",
+          "label": "PASAJE",
           "value": "Psj."
         },
         {
@@ -1948,17 +1948,17 @@
         },
         {
           "active": true,
-          "label": "Prolongación",
+          "label": "PROLONGACIÓN",
           "value": "Prlg."
         },
         {
           "active": true,
-          "label": "Cer.",
+          "label": "CER.",
           "value": "Cer."
         },
         {
           "active": true,
-          "label": "Otro",
+          "label": "OTRO",
           "value": "Otro"
         }
       ],
@@ -2267,17 +2267,17 @@
       "picklistValues": [
         {
           "active": true,
-          "label": "Interior",
+          "label": "INTERIOR",
           "value": "Interior"
         },
         {
           "active": true,
-          "label": "Departamento",
+          "label": "DEPARTAMENTO",
           "value": "Departamento"
         },
         {
           "active": true,
-          "label": "Puerta",
+          "label": "PUERTA",
           "value": "Puerta"
         }
       ],
@@ -2305,22 +2305,22 @@
       "picklistValues": [
         {
           "active": true,
-          "label": "Sector",
+          "label": "SECTOR",
           "value": "Sector"
         },
         {
           "active": true,
-          "label": "Etapa",
+          "label": "ETAPA",
           "value": "Etapa"
         },
         {
           "active": true,
-          "label": "Bloque",
+          "label": "BLOQUE",
           "value": "Bloque"
         },
         {
           "active": true,
-          "label": "Edificio",
+          "label": "EDIFICIO",
           "value": "Edificio"
         }
       ],

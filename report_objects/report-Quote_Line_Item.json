@@ -1,38 +1,13 @@
 {
   "summary": {
-    "fields_old": 140,
+    "fields_old": 142,
     "fields_new": 142,
-    "added": 2,
+    "added": 0,
     "removed": 0,
     "modified": 0
   },
-  "added_fields": [
-    {
-      "label": "Status",
-      "name": "Status",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "picklist",
-      "precision": 0,
-      "scale": 0,
-      "length": 40
-    },
-    {
-      "label": "Amended Order Item",
-      "name": "vlocity_cmt__AmendedOrderItemId__c",
-      "custom": true,
-      "picklistValues": [],
-      "referenceTo": [
-        "OrderItem"
-      ],
-      "type": "reference",
-      "precision": 0,
-      "scale": 0,
-      "length": 18
-    }
-  ],
+  "added_fields": [],
   "removed_fields": [],
   "modified_fields": {},
-  "text_report": "Old fields: 140\nNew fields: 142\nAdded fields: 2\nRemoved fields: 0\nModified fields: 0\n\nAdded:\n  + Status\n    - label: Status type: picklist custom: False\n  + vlocity_cmt__AmendedOrderItemId__c\n    - label: Amended Order Item type: reference custom: True"
+  "text_report": "Old fields: 142\nNew fields: 142\nAdded fields: 0\nRemoved fields: 0\nModified fields: 0\n"
 }

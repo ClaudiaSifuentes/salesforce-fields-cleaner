@@ -1,25 +1,13 @@
 {
   "summary": {
-    "fields_old": 103,
+    "fields_old": 104,
     "fields_new": 104,
-    "added": 1,
+    "added": 0,
     "removed": 0,
     "modified": 0
   },
-  "added_fields": [
-    {
-      "label": "Contract Name",
-      "name": "Name",
-      "custom": false,
-      "picklistValues": [],
-      "referenceTo": [],
-      "type": "string",
-      "precision": 0,
-      "scale": 0,
-      "length": 80
-    }
-  ],
+  "added_fields": [],
   "removed_fields": [],
   "modified_fields": {},
-  "text_report": "Old fields: 103\nNew fields: 104\nAdded fields: 1\nRemoved fields: 0\nModified fields: 0\n\nAdded:\n  + Name\n    - label: Contract Name type: string custom: False"
+  "text_report": "Old fields: 104\nNew fields: 104\nAdded fields: 0\nRemoved fields: 0\nModified fields: 0\n"
 }

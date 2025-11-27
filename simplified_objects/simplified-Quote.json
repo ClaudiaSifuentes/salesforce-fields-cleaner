@@ -13824,17 +13824,17 @@
       "picklistValues": [
         {
           "active": true,
-          "label": "Interior",
+          "label": "INTERIOR",
           "value": "Interior"
         },
         {
           "active": true,
-          "label": "Departamento",
+          "label": "DEPARTAMENTO",
           "value": "Departamento"
         },
         {
           "active": true,
-          "label": "Puerta",
+          "label": "PUERTA",
           "value": "Puerta"
         }
       ],
@@ -13862,22 +13862,22 @@
       "picklistValues": [
         {
           "active": true,
-          "label": "Sector",
+          "label": "SECTOR",
           "value": "Sector"
         },
         {
           "active": true,
-          "label": "Etapa",
+          "label": "ETAPA",
           "value": "Etapa"
         },
         {
           "active": true,
-          "label": "Bloque",
+          "label": "BLOQUE",
           "value": "Bloque"
         },
         {
           "active": true,
-          "label": "Edificio",
+          "label": "EDIFICIO",
           "value": "Edificio"
         }
       ],
